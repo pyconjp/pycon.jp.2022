@@ -1,1 +1,31 @@
-{}
+{
+  "common": {
+    "menu": {
+      "about": {
+        "about": "開催概要"
+      },
+      "event": {
+        "event": "イベント概要"
+      },
+      "sponsor": {
+        "sponsor": "スポンサー一覧"
+      },
+      "contents": {
+        "contents": "コンテンツ"
+      },
+      "volunteer": {
+        "volunteer": "スタッフ一覧"
+      }
+    },
+    "lang": {
+      "ja": "日本語",
+      "en": "EN"
+    },
+    "sns": "Follow Us!",
+    "contact": {
+      "contact": "お問い合わせ",
+      "description": "事前にFAQをご確認いただけますようにお願いします。\nボランティアによる運営ですので、回答には1週間程度を要します。\n何卒お待ちいただけますようにお願いします。"
+    },
+    "pastPyConJPSites": "過去の PyCon JP のサイト一覧"
+  }
+}

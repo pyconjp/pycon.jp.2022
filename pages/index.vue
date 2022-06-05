@@ -1,5 +1,5 @@
 <template>
-  <span> Top Page </span>
+  <div style="height: 500px">Top Page</div>
 </template>
 
 <script>
