@@ -62,6 +62,8 @@ export default {
     baseURL: '/',
   },
 
+  content: {},
+
   googleFonts: {
     families: {
       Roboto: true,
