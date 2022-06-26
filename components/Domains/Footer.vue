@@ -107,7 +107,7 @@
 </template>
 
 <script>
-import OuterLink from '~/components/OuterLink'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'DefaultFooter',

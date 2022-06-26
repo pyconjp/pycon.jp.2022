@@ -1,13 +1,18 @@
 <template>
   <div>
-    <Header />
+    <default-header />
     <Nuxt />
-    <Footer />
+    <default-footer />
   </div>
 </template>
 
 <script>
-export default {}
+import DefaultHeader from '@/components/Domains/Header'
+import DefaultFooter from '@/components/Domains/Footer'
+
+export default {
+  components: { DefaultFooter, DefaultHeader },
+}
 </script>
 
 <style></style>
