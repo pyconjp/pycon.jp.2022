@@ -27,5 +27,12 @@
       "description": "We ask that you check the FAQ in advance.\nAs this is a volunteer-run service, it will take about a week for a response to be provided.\nPlease be patient."
     },
     "pastPyConJPSites": "List of past PyCon JP sites"
+  },
+  "pages": {
+    "hero": {
+      "venue": "TOC Ariake Convention Hall",
+      "venue-info": "Venue Info",
+      "ticket": "Get Ticket (Coming Soon)"
+    }
   }
 }
