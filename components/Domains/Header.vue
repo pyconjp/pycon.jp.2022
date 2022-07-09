@@ -22,15 +22,27 @@
             class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <div class="child-menu-record">
-              <div class="flex w-full pt-3 pb-2 ml-6">
+              <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
                 <p class="ml-6">COC(行動規範)</p>
               </div>
             </div>
             <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-3 ml-6">
+              <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
                 <p class="ml-6">感染対策ガイドライン</p>
+              </div>
+            </div>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">サポート</p>
+              </div>
+            </div>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">会場案内</p>
               </div>
             </div>
           </div>
@@ -42,7 +54,7 @@
             class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <div class="child-menu-record">
-              <div class="flex w-full pt-3 pb-2 ml-6">
+              <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
                 <p class="ml-6">タイムテーブル</p>
               </div>
@@ -56,7 +68,7 @@
             class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <div class="child-menu-record">
-              <div class="flex w-full pt-3 pb-2 ml-6">
+              <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
                 <a class="ml-6">スポンサー募集要項</a>
               </div>
