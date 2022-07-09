@@ -27,5 +27,12 @@
       "description": "事前にFAQをご確認いただけますようにお願いします。\nボランティアによる運営ですので、回答には1週間程度を要します。\n何卒お待ちいただけますようにお願いします。"
     },
     "pastPyConJPSites": "過去の PyCon JP のサイト一覧"
+  },
+  "pages": {
+    "hero": {
+      "venue": "TOC有明コンベンションホール",
+      "venue-info": "会場案内",
+      "ticket": "チケット案内 (Coming Soon)"
+    }
   }
 }
