@@ -17,10 +17,10 @@
                 class="text-primary-700 mx-4 my-auto w-8 h-8"
               />
               <span class="text-2xl font-bold mr-4">
-                TOC有明コンベンションホール
+                {{ $t('pages.hero.venue') }}
               </span>
               <div class="text-primary-700 font-bold inline-flex items-center">
-                会場案内
+                {{ $t('pages.hero.venue-info') }}
                 <ExternalLinkIcon class="w-5 h-5" />
               </div>
             </div>
@@ -40,15 +40,16 @@
             </div>
           </div>
           <div
-            class="mt-1 bg-primary-700 text-white text-2xl w-full text-center py-2 shadow-md rounded"
+            class="mt-1 bg-primary-700 text-white text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
           >
-            チケット案内
+            {{ $t('pages.hero.ticket') }}
           </div>
         </div>
         <div>
           <Timeline
             id="pyconjapan"
-            sourceType="profile"
+            ref="tweet"
+            source-type="profile"
             :options="{ width: '408', height: '411', theme: 'dark' }"
           />
         </div>
