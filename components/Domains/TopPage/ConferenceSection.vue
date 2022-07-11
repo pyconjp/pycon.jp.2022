@@ -1,13 +1,12 @@
 <template>
   <div>
-    <div class="relative">
-      <div class="flex conference">
+      <div class="mx-auto w-full conference">
         <br />
         <div class="title text-primary-700">CONFERENCE</div>
-        <div class="text-xl text-bold text-tartiary-900">カンファレンス</div>
-
-        <!-- <div class="content-center text-center"> -->
+<br />
+        <div class="subtitle">カンファレンス</div>
         <div class="frame176">
+          <img src="@/assets/images/conference_vector1.svg" alt="Keynote vector" />
           <div class="text-3xl text-bold text-tartiary-900">Keynote</div>
           <div class="text-base text-gray-600">基調講演</div>
           <div
@@ -16,7 +15,7 @@
             class="flex flex-col mt-8 lg:flex-row"
           >
             <div class="flex justify-center w-full mb-6 lg:w-1/4 lg:mb-0">
-              <div class="flex lg:h-full lg:justify-end lg:items-start">
+              <div class="flex keynotebox lg:h-full lg:justify-end lg:items-start">
                 <img
                   :src="require(`@/assets/images/${keynote.image}`)"
                   class="self-center"
@@ -41,7 +40,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -62,7 +60,7 @@ export default {
         {
           name: '',
           title: '',
-          image: 'keynote1.png',
+          image: 'keynote2.png',
           date: 'TBD.',
           desc: `TBD.`,
         },
@@ -78,7 +76,7 @@ export default {
         {
           name: '',
           title: '',
-          image: 'keynote1.png',
+          image: 'keynote2.png',
           date: 'TBD.',
           desc: `TBD.`,
         },
@@ -89,6 +87,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+
 .conference {
   box-sizing: border-box;
 
@@ -126,6 +126,22 @@ export default {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.subtitle {
+/* text / ja / .text-xl.text-bold */
+
+font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 100%;
+/* identical to box height, or 20px */
+
+text-align: center;
+
+/* tartiary / tartiary-900 */
+
+color: #1A1623;
+}
 .frame176 {
   /* Auto layout */
   display: flex;
@@ -142,4 +158,11 @@ export default {
   order: 1;
   flex-grow: 0;
 }
+
+.keynotebox {
+background: url(@/assets/images/keynote2.png);
+  width: 800px;   /* 画像にあわせて適当な幅を指定 */
+  padding: 20px;  /* 適当な余白を指定 */
+}
+
 </style>
