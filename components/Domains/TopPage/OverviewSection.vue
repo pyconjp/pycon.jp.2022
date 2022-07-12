@@ -32,6 +32,9 @@
                 </div>
           </div>
         </div>
+        <div class="mt-2 snake-face"><!--snake face-->
+          <div class="ml-20 snake-face-base" />
+        </div>
       </div>
     <!--</div>-->
   </div>  
@@ -180,6 +183,19 @@ export default {
 
   color: #24222B;
 
+}
+
+.snake-face {
+  width: 100%;
+  height: 90px;
+}
+
+.snake-face-base {
+  background-color: #F3D34F;
+  width: 150px;
+  height: 90px;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 30%, 100% 100%, 0% 100%);
+  position: relative;
 }
 
 </style>
