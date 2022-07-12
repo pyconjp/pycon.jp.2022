@@ -12,16 +12,21 @@
         <div class="flex flex-row mt-10">
           <!-- left image -->
           <div>
-            <div class="mb-10 mr-10 overview-frame">
-              <!--<div class="overview-vector">-->
-              <div class="overview-image" /><!-- image -->
+            <div class="overview-frame">
+              <div class="mt-5 overview-card" />
+              <div class="ml-5 overview-image" /><!-- image -->
               <!--</div>-->
             </div>
           </div>
           
           <!-- right text -->
           <div class="flex flex-col overview-text">
-                <div class="overview-text-title">What is <span style="color:#B32F0F">PyCon</span> ?</div>
+                <div class="flex flex-row">
+                  <div class="mr-2 overview-text-icon">
+                    <div class="overview-text-icon-inner" />
+                  </div>
+                  <div class="overview-text-title">What is <span style="color:#B32F0F">PyCon</span> ?</div>
+                </div>
                 <div class="overview-text-description">
                   {{ $t('pages.index.overviewDescription') }}
                 </div>
@@ -43,30 +48,19 @@ export default {
   flex: none;
   order: 3;
   flex-grow: 0;
-  width: 1440px;
+  width:100%;
   height: 736.64px;
 
   background: #EFEFF1;
 }
-/*
-.overview-inner {
-  top: 0;
-  left: 0;
-  background: #EFEFF1;
-  width: 1440px;
-  height: 713.64px;
-}*/
 
 .rectangle {
-  width: 1440px;
+  width: 100%;
   height: 23px;
   background: #1A1623;
 }
 
 .overview-header {
-  /*width: 303px;
-  height: 96.85px;
-  left: 568px;*/
   top: 71px;
   text-align: center;
 }
@@ -96,27 +90,31 @@ export default {
 }
 
 .overview-frame {
-  width: 595.55px;
-  height: 370px;
-  filter: drop-shadow(-16px 16px 0px #B32F0F);
+  width: 650px;
+  height: 400px;
+  position: relative;
+}
 
-  /*background:
-    linear-gradient(45deg,  transparent 40px, #FCFCFD 40px),
-    linear-gradient(225deg, transparent 40px, #FCFCFD 40px);
-  background-position: bottom left, top right;
-  background-size: 100% 50%;
-  background-repeat: no-repeat;*/
+.overview-card {
+  position: absolute;
+  
+  width: 590px;
+  height: 370px;
+  background-color: #B32F0F;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
 }
 .overview-image {
+  position: absolute;
   /*width: 696.69px;
   height: 504.37px;*/
-  width: 595.55px;
+  width: 590px;
   height: 370px;
 
   background-image: url("@/assets/images/overview.jpg");
   /* secondary / secondary-50 */
 
-  border: 1px solid #FEF9E6
+  border: 1px solid #FEF9E6;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
 }
 
 .overview-text {
@@ -127,6 +125,26 @@ export default {
   height: 360px;
 }
 
+.overview-text-icon {
+  background-color: #1A1623;
+  width: 31px;
+  height: 31px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  position: relative;
+}
+.overview-text-icon-inner {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 7.5px solid #E84118;
+  border-right: 7.5px solid #E84118;
+  border-bottom: 7.5px solid #F3D34F;
+  border-left: 7.5px solid #F3D34F;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .overview-text-title {
   /* text */
   width: 268px;
