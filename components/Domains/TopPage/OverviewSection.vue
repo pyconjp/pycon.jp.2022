@@ -32,8 +32,8 @@
                 </div>
           </div>
         </div>
-        <div class="mt-2 snake-face"><!--snake face-->
-          <div class="ml-20 snake-face-base" />
+        <div class="mt-5 snake-face-base"><!--snake face-->
+          <div class="snake-face" />
         </div>
       </div>
     <!--</div>-->
@@ -185,17 +185,18 @@ export default {
 
 }
 
-.snake-face {
+.snake-face-base {
   width: 100%;
   height: 90px;
 }
 
-.snake-face-base {
-  background-color: #F3D34F;
+.snake-face {
+  position: absolute;
   width: 150px;
   height: 90px;
-  clip-path: polygon(0% 0%, 70% 0%, 100% 30%, 100% 100%, 0% 100%);
-  position: relative;
+  left: 85px;
+  
+  background-image: url("@/assets/images/section_bg_img_right_yellow.png");
 }
 
 </style>
