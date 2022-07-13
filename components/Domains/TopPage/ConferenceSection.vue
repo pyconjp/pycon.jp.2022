@@ -1,12 +1,16 @@
 <template>
-  <div>
-      <div class="mx-auto w-full conference">
+  <div class="relative mt-20 conference">
+      <div class="flex flex-col items-center">
+        <div class="rectangle">
         <br />
-        <div class="title text-primary-700">CONFERENCE</div>
-<br />
-        <div class="subtitle">カンファレンス</div>
-        <div class="frame176">
+        <div class="conference-title text-primary-700">CONFERENCE</div>
+        <div class="conference-subtitle">カンファレンス</div>
+        <br />
+        <br />
+
+       <div class="conference-keynote-frame">
           <img src="@/assets/images/conference_vector1.svg" alt="Keynote vector" />
+
           <div class="text-3xl text-bold text-tartiary-900">Keynote</div>
           <div class="text-base text-gray-600">基調講演</div>
           <div
@@ -40,6 +44,10 @@
           </div>
         </div>
       </div>
+        <div class="mt-5 snake-face-base"><!--snake face-->
+          <div class="snake-face" />
+        </div>
+</div>
   </div>
 </template>
 
@@ -110,7 +118,8 @@ export default {
   flex-grow: 0;
 }
 
-.title {
+
+.conference-title {
   /* h1 */
   font-family: 'Bayon';
   font-style: normal;
@@ -121,12 +130,12 @@ export default {
   /* or 64px */
   text-align: center;
   letter-spacing: 0.02em;
-
   /* shadow / base */
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.subtitle {
+
+.conference-subtitle {
 /* text / ja / .text-xl.text-bold */
 
 font-family: 'Noto Sans JP';
@@ -142,7 +151,7 @@ text-align: center;
 
 color: #1A1623;
 }
-.frame176 {
+.conference-keynote-frame {
   /* Auto layout */
   display: flex;
   flex-direction: column;
@@ -163,6 +172,20 @@ color: #1A1623;
 background: url(@/assets/images/keynote2.png);
   width: 800px;   /* 画像にあわせて適当な幅を指定 */
   padding: 20px;  /* 適当な余白を指定 */
+}
+
+.snake-face-base {
+  width: 100%;
+  height: 90px;
+}
+
+.snake-face {
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  right: 85px;
+
+  background-image: url("@/assets/images/section_bg_img_left_orange.svg");
 }
 
 </style>
