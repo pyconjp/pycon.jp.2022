@@ -2,27 +2,24 @@
   <div class="relative mt-20 conference">
     <div class="flex flex-col conference-fram items-center">
       <!-- 1行目 start -->
-      <div class="flex flex-col items-center conference-header mt-10">
+      <div class="conference-header mt-10">
         <div class="conference-title font-bayon">CONFERENCE</div>
         <div class="conference-subtitle font-noto-sans-js mt-5">
           カンファレンス
         </div>
-        <div class="mt-10"></div>
-        <img
-          src="@/assets/images/conference_vector1.svg"
-          alt="Keynote vector"
-          class="conference-mid-vector"
-        />
       </div>
       <!-- 1行目 end -->
 
       <!-- Keynote1 start -->
       <div class="flex flex-col conference-inner-frame mt-10">
-        <div>
-          <div class="conference-label font-noto-sans-js">Keynote</div>
-          <div class="conference-description font-noto-sans-js mt-1">
-            基調講演
-          </div>
+        <img
+          src="@/assets/images/conference_vector1.svg"
+          alt="Keynote vector"
+          class="conference-mid-vector"
+        />
+        <div class="conference-label font-noto-sans-js mt-10">Keynote</div>
+        <div class="conference-description font-noto-sans-js mt-1">
+          基調講演
         </div>
 
         <div class="flex flex-col mt-10">
@@ -77,33 +74,34 @@
             </div>
           </div>
         </div>
-
-        <div class="conference-timetable text-primary-700 text-bold">
+      <div class="conference-frame-timetable">
+        <div class="conference-timetable font-noto-sans-js">
           タイムテーブル詳細
         </div>
+        <img src="@/assets/images/right_allow.svg" />
+      </div>
 
-        <div class="flex flex-col items-center conference-header mt-10">
-          <img
-            src="@/assets/images/conference_vector2.svg"
-            alt="Keynote vector"
-            class="conference-small-vector"
-          />
-          <div class="mt-10"></div>
-          <div class="conference-label font-noto-sans-js">Documents</div>
-          <div class="conference-description font-noto-sans-js mt-1">
-            当日配布物
-          </div>
-        </div>
+</div>
 
-        <div class="flex flex-col items-center mt-10">
-          <img
-            src="@/assets/images/documents.svg"
-            class="conference-documents-frame"
-          />
+
+      <div class="flex flex-col items-center conference-header mt-10">
+        <img
+          src="@/assets/images/conference_vector2.svg"
+          alt="Keynote vector"
+          class="conference-small-vector"
+        />
+        <div class="mt-10"></div>
+        <div class="conference-label font-noto-sans-js">Documents</div>
+        <div class="conference-description font-noto-sans-js mt-1">
+          当日配布物
         </div>
       </div>
+
+      <div class="flex flex-col items-center mt-10">
+        <img src="@/assets/images/documents.svg" />
+      </div>
     </div>
-    <div class="mt-5 snake-face-base">
+    <div class="mt-10 snake-face-base">
       <!--snake face-->
       <div class="snake-face" />
     </div>
@@ -154,19 +152,19 @@ export default {
 
 .conference {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  /* height: 2198.17px; */
   align-items: center;
   background: #f3d34f;
   border-top: 24px solid #1a1623;
-  flex: none;
   order: 5;
-  align-self: stretch;
+  flex: none;
   flex-grow: 0;
 }
 .conference-header {
-  width: 326.56px;
-  height: 198.25px;
+  /* width: 326.56px; */
+  /* height: 198.25px; */
+  /* text-align: center; */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -192,10 +190,10 @@ export default {
 .conference-mid-vector {
   /* width: 72.28px; */
   height: 23.01px;
-  align-items: center;
+  text-align: center;
 }
 .conference-small-vector {
-  width: 59px;
+  /* width: 59px; */
   height: 23px;
 }
 
@@ -205,7 +203,7 @@ export default {
 }
 .conference-inner-frame {
   width: 960.83px;
-  height: 1158.51px;
+  /* height: 1158.51px; */
 }
 
 .conference-keynote-separator {
@@ -252,22 +250,14 @@ export default {
   top: 211.01px;
 }
 
-.conference-timetable {
-  /* Button/Primitive/Default */
-
+.conference-frame-timetable {
   /* Auto layout */
   display: flex;
   flex-direction: row;
-  align-items: right;
-  /* padding: 10px 36px; */
-
-  /* position: relative; */
-  width: 329.89px;
-  /* height: 44px; */
-  /* left: calc(50% - 329.89px / 2 + 312.27px); */
-  top: 1185.52px;
-
-  /* tartiary/tartiary-50 */
+  padding: 10px 36px;
+  text-align: right;
+  margin-right: 0;
+  margin-left: auto;
   background: #fcfcfd;
 
   /* shadow / base */
@@ -275,20 +265,25 @@ export default {
   border-radius: 4px;
 }
 
-.conference-documents-frame {
-  width: 421.76px;
-  height: 788.55px;
+.conference-timetable {
+  /* width: 179px; */
+  height: 20px;
 
-  /* tartiary/tartiary-50 */
-  background: #fcfcfd;
+  /* text / ja / .text-xl.text-bold */
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
 
-  /* shadow / base */
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
-  transform: rotate(-90deg);
+  /* identical to box height, or 20px */
+
+  /* primary/primary-700 */
+  color: #b32f0f;
 
   /* Inside auto layout */
   flex: none;
-  order: 4;
+  order: 0;
   flex-grow: 0;
 }
 
