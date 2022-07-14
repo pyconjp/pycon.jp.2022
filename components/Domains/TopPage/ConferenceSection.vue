@@ -1,98 +1,105 @@
 <template>
   <div class="relative mt-20 conference">
-    <div class="flex flex-col items-center">
-      <div class="rectangle">
-        <br />
-        <div class="conference-title conference-font-bayon">CONFERENCE</div>
-        <div class="conference-subtitle conference-font-notojs">
+    <div class="flex flex-col conference-fram items-center">
+      <!-- 1行目 start -->
+      <div class="flex flex-col items-center conference-header mt-10">
+        <div class="conference-title font-bayon">CONFERENCE</div>
+        <div class="conference-subtitle font-noto-sans-js mt-5">
           カンファレンス
         </div>
-        <br />
-        <br />
+        <div class="mt-10"></div>
+        <img
+          src="@/assets/images/conference_vector1.svg"
+          alt="Keynote vector"
+          class="conference-mid-vector"
+        />
+      </div>
+      <!-- 1行目 end -->
 
-        <div class="conference-keynote-frame">
-          <img
-            src="@/assets/images/conference_vector1.svg"
-            alt="Keynote vector"
-          />
-
-          <div
-            class="text-3xl text-bold text-tartiary-900 conference-font-notjs"
-          >
-            Keynote
-          </div>
-          <div class="text-base text-gray-600 conference-font-notjs">
+      <!-- Keynote1 start -->
+      <div class="flex flex-col conference-inner-frame mt-10">
+        <div>
+          <div class="conference-label font-noto-sans-js">Keynote</div>
+          <div class="conference-description font-noto-sans-js mt-1">
             基調講演
           </div>
-          <div class="flex flex-col mt-8 lg:flex-row conference-card">
-            <div class="flex justify-center w-full mb-6 lg:w-1/4 lg:mb-0">
-              <div class="flex lg:h-full lg:justify-end lg:items-start">
-                <img
-                  :src="require(`@/assets/images/${keynote1.image}`)"
-                  class="self-center conference-image"
-                />
-              </div>
+        </div>
+
+        <div class="flex flex-col mt-10">
+          <div class="flex flex-row mt-10">
+            <!-- left image -->
+            <div class="conference-image-frame">
+              <img
+                :src="require(`@/assets/images/${keynote1.image}`)"
+                class="self-center"
+              />
             </div>
-            <div class="flex-1 mb-10 ml-6">
-              <div class="text-xs conference-font-firasans">
+
+            <!-- right text -->
+            <div class="flex flex-col conference-description-frame ml-10">
+              <div class="text-tartiary-700 font-fira-sans">
                 {{ keynote1.date }}
               </div>
-              <div
-                class="my-4 text-lg font-bold lg:text-xl text-blue-green corner"
-                v-html="
-                  $i18n.locale === 'ja' ? keynote1.Jp.title : keynote1.En.title
-                "
-              />
-              <div class="my-2 text-base font-bold text-primary-900 text-bold">
+              <div class="font-fira-sans text-primary-900 font-bold mt-1">
                 {{ keynote1.Jp.name }}
               </div>
-              <p class="text-sm leading-7" v-html="keynote1.Jp.desc"></p>
+              <p
+                class="text-tartiary-900 font-bold font-noto-sans-jp"
+                v-html="keynote1.Jp.desc"
+              ></p>
             </div>
           </div>
+        </div>
 
-          <div class="flex flex-col mt-8 lg:flex-row conference-card">
-            <div class="flex justify-center w-full mb-6 lg:w-1/4 lg:mb-0">
-              <div class="flex lg:h-full lg:justify-end lg:items-start">
-                <img
-                  :src="require(`@/assets/images/${keynote2.image}`)"
-                  class="self-center conference-image"
-                />
-              </div>
+        <div class="conference-keynote-separator mt-10" />
+
+        <div class="flex flex-col conference-frame mt-10">
+          <div class="flex flex-row mt-10">
+            <!-- left image -->
+            <div class="conference-image-frame">
+              <img
+                :src="require(`@/assets/images/${keynote2.image}`)"
+                class="self-center"
+              />
             </div>
-            <div class="flex-1 mb-10 ml-6">
-              <div class="text-xs conference-font-firasans">
+            <!-- right text -->
+            <div class="flex flex-col conference-description-frame ml-10">
+              <div class="text-tartiary-700 font-fira-sans">
                 {{ keynote2.date }}
               </div>
-              <div
-                class="my-4 text-lg font-bold lg:text-xl text-blue-green corner"
-                v-html="
-                  $i18n.locale === 'ja' ? keynote2.Jp.title : keynote2.En.title
-                "
-              />
-              <div class="my-2 text-base font-bold text-primary-900 text-bold">
+              <div class="font-fira-sans text-primary-900 font-bold mt-1">
                 {{ keynote2.Jp.name }}
               </div>
-              <p class="text-sm leading-7" v-html="keynote2.Jp.desc"></p>
+              <p
+                class="text-tartiary-900 font-bold font-noto-sans-jp"
+                v-html="keynote2.Jp.desc"
+              ></p>
             </div>
           </div>
-          <div>
-            <img
-              src="@/assets/images/conference_vector2.svg"
-              alt="Keynote vector"
-            />
-          </div>
-          <div class="conference-timetable">
-            <p class="text-primary-700 text-bold">タイムテーブル詳細</p>
-          </div>
-          <div
-            class="text-3xl text-bold text-tartiary-900 conference-font-notjs"
-          >
-            Documents
-          </div>
-          <div class="text-base text-gray-600 conference-font-notjs">
+        </div>
+
+        <div class="conference-timetable text-primary-700 text-bold">
+          タイムテーブル詳細
+        </div>
+
+        <div class="flex flex-col items-center conference-header mt-10">
+          <img
+            src="@/assets/images/conference_vector2.svg"
+            alt="Keynote vector"
+            class="conference-small-vector"
+          />
+          <div class="mt-10"></div>
+          <div class="conference-label font-noto-sans-js">Documents</div>
+          <div class="conference-description font-noto-sans-js mt-1">
             当日配布物
           </div>
-          <img src="@/assets/images/documents.svg" alt="Keynote vector" />
+        </div>
+
+        <div class="flex flex-col items-center mt-10">
+          <img
+            src="@/assets/images/documents.svg"
+            class="conference-documents-frame"
+          />
         </div>
       </div>
     </div>
@@ -147,85 +154,102 @@ export default {
 
 .conference {
   box-sizing: border-box;
-
-  /* Auto layout */
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* secondary/secondary-400 */
   background: #f3d34f;
-
-  /* tartiary / tartiary-900 */
   border-top: 24px solid #1a1623;
-
-  /* Inside auto layout */
   flex: none;
   order: 5;
   align-self: stretch;
   flex-grow: 0;
 }
+.conference-header {
+  width: 326.56px;
+  height: 198.25px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 .conference-title {
-  /* h1 */
   font-weight: 400;
   font-size: 64px;
   line-height: 100%;
-
-  /* or 64px */
   text-align: center;
   letter-spacing: 0.02em;
-  /* shadow / base */
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
   color: #b32f0f;
 }
 
 .conference-subtitle {
-  /* text / ja / .text-xl.text-bold */
-
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
-  /* identical to box height, or 20px */
-
   text-align: center;
-
-  /* tartiary / tartiary-900 */
-
   color: #1a1623;
 }
-.conference-keynote-frame {
-  /* Auto layout */
-  display: flex;
-  flex-direction: column;
+.conference-mid-vector {
+  /* width: 72.28px; */
+  height: 23.01px;
   align-items: center;
-  padding: 0px;
-  gap: 48px;
+}
+.conference-small-vector {
+  width: 59px;
+  height: 23px;
+}
 
+.conference-frame {
   width: 960.83px;
-  height: 1878.78px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  /* height: 1878.78px; */
 }
-.conference-font-bayon {
-  font-family: 'Bayon';
-  font-style: normal;
-}
-.conference-font-notojs {
-  font-family: 'Noto Sans JP';
-  font-style: normal;
+.conference-inner-frame {
+  width: 960.83px;
+  height: 1158.51px;
 }
 
-.conference-font-firasans {
-  font-family: 'Fira Sans';
-  font-style: normal;
+.conference-keynote-separator {
+  width: 942.2px;
+  height: 0px;
+  left: calc(50% - 942.2px / 2 - 9.32px);
+  top: 718.52px;
+  border: 1px solid #fcfcfd;
+  /* tartiary/tartiary-50 */
 }
 
-.keynotebox {
-  width: 800px; /* 画像にあわせて適当な幅を指定 */
-  padding: 20px; /* 適当な余白を指定 */
+.conference-label {
+  height: 30px;
+  left: calc(50% - 143.58px / 2 - 0.42px);
+  top: 71.01px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-align: center;
+  color: #1a1623;
+}
+.conference-description {
+  height: 16px;
+  left: calc(50% - 75.95px / 2 + 0.18px);
+  top: 115.52px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #776103;
+}
+
+.conference-image-frame {
+  width: 504.33px;
+  height: 466.15px;
+  left: -90.96px;
+  top: 199.96px;
+}
+
+.conference-description-frame {
+  width: 619.43px;
+  height: 298px;
+  left: 341.4px;
+  top: 211.01px;
 }
 
 .conference-timetable {
@@ -234,13 +258,13 @@ export default {
   /* Auto layout */
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 10px 36px;
+  align-items: right;
+  /* padding: 10px 36px; */
 
-  position: absolute;
+  /* position: relative; */
   width: 329.89px;
-  height: 44px;
-  left: calc(50% - 329.89px / 2 + 312.27px);
+  /* height: 44px; */
+  /* left: calc(50% - 329.89px / 2 + 312.27px); */
   top: 1185.52px;
 
   /* tartiary/tartiary-50 */
@@ -250,42 +274,38 @@ export default {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
-.confererence-card {
-  position: absolute;
 
-  width: 590px;
-  height: 370px;
-  background-color: #b32f0f;
-  clip-path: polygon(
-    0% 0%,
-    90% 0%,
-    100% 10%,
-    100% 90%,
-    100% 100%,
-    10% 100%,
-    0% 90%
-  );
+.conference-documents-frame {
+  width: 421.76px;
+  height: 788.55px;
+
+  /* tartiary/tartiary-50 */
+  background: #fcfcfd;
+
+  /* shadow / base */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transform: rotate(-90deg);
+
+  /* Inside auto layout */
+  flex: none;
+  order: 4;
+  flex-grow: 0;
 }
-.confererence-image {
-  position: absolute;
-  /*width: 696.69px;
-  height: 504.37px;*/
-  width: 590px;
-  height: 370px;
 
-  /* secondary / secondary-50 */
-
-  border: 1px solid #fef9e6;
-  clip-path: polygon(
-    0% 0%,
-    90% 0%,
-    100% 10%,
-    100% 90%,
-    100% 100%,
-    10% 100%,
-    0% 90%
-  );
+.font-bayon {
+  font-family: 'Bayon';
+  font-style: normal;
 }
+.font-noto-sans-js {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+}
+
+.font-fira-sans {
+  font-family: 'Fira Sans';
+  font-style: normal;
+}
+
 .snake-face-base {
   width: 100%;
   height: 90px;
