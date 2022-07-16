@@ -1,15 +1,10 @@
 <template>
   <div class="relative mt-20 conference">
-    <div class="flex flex-col conference-fram items-center">
-      <!-- 1行目 start -->
-      <div class="conference-header mt-10">
-        <div class="conference-title font-bayon">CONFERENCE</div>
-        <div class="conference-subtitle font-noto-sans-js mt-5">
-          カンファレンス
-        </div>
-      </div>
-      <!-- 1行目 end -->
+    <div class="text-center component-border-top bg-secondary-400">
+      <section-title main="CONFERENCE" sub="カンファレンス" />
+    </div>
 
+    <div class="flex flex-col conference-frame items-center">
       <!-- Keynote1 start -->
       <div class="flex flex-col conference-inner-frame mt-10">
         <img
@@ -74,17 +69,15 @@
             </div>
           </div>
         </div>
-      <div class="conference-frame-timetable">
-        <div class="conference-timetable font-noto-sans-js">
-          タイムテーブル詳細
+        <div class="conference-frame-timetable">
+          <div class="conference-timetable font-noto-sans-js">
+            タイムテーブル詳細
+          </div>
+          <img src="@/assets/images/right_allow.svg" />
         </div>
-        <img src="@/assets/images/right_allow.svg" />
       </div>
 
-</div>
-
-
-      <div class="flex flex-col items-center conference-header mt-10">
+      <div class="flex flex-col items-center mt-10">
         <img
           src="@/assets/images/conference_vector2.svg"
           alt="Keynote vector"
@@ -109,7 +102,13 @@
 </template>
 
 <script>
+import SectionTitle from '@/components/Elements/SectionTitle'
+
 export default {
+  name: 'ConferenceSection',
+  components: {
+    SectionTitle
+  },
   data() {
     return {
       keynote1: {
@@ -156,36 +155,9 @@ export default {
   /* height: 2198.17px; */
   align-items: center;
   background: #f3d34f;
-  border-top: 24px solid #1a1623;
   order: 5;
   flex: none;
   flex-grow: 0;
-}
-.conference-header {
-  /* width: 326.56px; */
-  /* height: 198.25px; */
-  /* text-align: center; */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.conference-title {
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
-  color: #b32f0f;
-}
-
-.conference-subtitle {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
-  text-align: center;
-  color: #1a1623;
 }
 .conference-mid-vector {
   /* width: 72.28px; */
@@ -196,7 +168,6 @@ export default {
   /* width: 59px; */
   height: 23px;
 }
-
 .conference-frame {
   width: 960.83px;
   /* height: 1878.78px; */
