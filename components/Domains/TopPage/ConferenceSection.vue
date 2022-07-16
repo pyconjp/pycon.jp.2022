@@ -1,21 +1,19 @@
 <template>
-  <div class="relative mt-20 conference">
+  <div class="relative items-center mt-20 conference">
     <div class="text-center component-border-top bg-secondary-400">
       <section-title main="CONFERENCE" sub="カンファレンス" />
     </div>
 
-    <div class="flex flex-col conference-frame items-center">
+    <div class="flex flex-col items-center">
       <!-- Keynote1 start -->
-      <div class="flex flex-col conference-inner-frame mt-10">
+      <div class="flex flex-col mt-10 conference-inner-frame">
         <img
           src="@/assets/images/conference_vector1.svg"
           alt="Keynote vector"
           class="conference-mid-vector"
         />
-        <div class="conference-label font-noto-sans-js mt-10">Keynote</div>
-        <div class="conference-description font-noto-sans-js mt-1">
-          基調講演
-        </div>
+        <div class="mt-10 conference-label font-noto">Keynote</div>
+        <div class="mt-1 conference-description font-noto">基調講演</div>
 
         <div class="flex flex-col mt-10">
           <div class="flex flex-row mt-10">
@@ -28,24 +26,25 @@
             </div>
 
             <!-- right text -->
-            <div class="flex flex-col conference-description-frame ml-10">
-              <div class="text-tartiary-700 font-fira-sans">
+            <div class="flex flex-col ml-10 conference-description-frame">
+              <div class="text-tartiary-700 font-fira">
                 {{ keynote1.date }}
               </div>
-              <div class="font-fira-sans text-primary-900 font-bold mt-1">
-                {{ keynote1.Jp.name }}
-              </div>
+              <div
+                class="mt-1 font-bold font-fira text-primary-900"
+                v-html="$t('keynote1.name')"
+              ></div>
               <p
-                class="text-tartiary-900 font-bold font-noto-sans-jp"
-                v-html="keynote1.Jp.desc"
+                class="font-bold text-tartiary-900 font-noto-sans-jp"
+                v-html="$t('keynote1.desc')"
               ></p>
             </div>
           </div>
         </div>
 
-        <div class="conference-keynote-separator mt-10" />
+        <div class="mt-10 conference-keynote-separator" />
 
-        <div class="flex flex-col conference-frame mt-10">
+        <div class="flex flex-col mt-10 conference-frame">
           <div class="flex flex-row mt-10">
             <!-- left image -->
             <div class="conference-image-frame">
@@ -55,24 +54,23 @@
               />
             </div>
             <!-- right text -->
-            <div class="flex flex-col conference-description-frame ml-10">
-              <div class="text-tartiary-700 font-fira-sans">
+            <div class="flex flex-col ml-10 conference-description-frame">
+              <div class="text-tartiary-700 font-fira">
                 {{ keynote2.date }}
               </div>
-              <div class="font-fira-sans text-primary-900 font-bold mt-1">
-                {{ keynote2.Jp.name }}
-              </div>
+              <div
+                class="mt-1 font-bold font-fira text-primary-900"
+                v-html="$t('keynote2.name')"
+              ></div>
               <p
-                class="text-tartiary-900 font-bold font-noto-sans-jp"
-                v-html="keynote2.Jp.desc"
+                class="font-bold text-tartiary-900 font-noto-sans-jp"
+                v-html="$t('keynote2.desc')"
               ></p>
             </div>
           </div>
         </div>
         <div class="conference-frame-timetable">
-          <div class="conference-timetable font-noto-sans-js">
-            タイムテーブル詳細
-          </div>
+          <div class="conference-timetable font-noto">タイムテーブル詳細</div>
           <img src="@/assets/images/right_allow.svg" />
         </div>
       </div>
@@ -84,10 +82,8 @@
           class="conference-small-vector"
         />
         <div class="mt-10"></div>
-        <div class="conference-label font-noto-sans-js">Documents</div>
-        <div class="conference-description font-noto-sans-js mt-1">
-          当日配布物
-        </div>
+        <div class="conference-label font-noto">Documents</div>
+        <div class="mt-1 conference-description font-noto">当日配布物</div>
       </div>
 
       <div class="flex flex-col items-center mt-10">
@@ -107,48 +103,24 @@ import SectionTitle from '@/components/Elements/SectionTitle'
 export default {
   name: 'ConferenceSection',
   components: {
-    SectionTitle
+    SectionTitle,
   },
   data() {
     return {
       keynote1: {
         image: 'keynote1.svg',
         date: '2021.10.15 13:30 -',
-        Jp: {
-          name: '西内 啓 / Hiromu Nishiuchi',
-          title: '',
-          desc: `東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>
-                 自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>
-                 2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。`
-        },
-        En: {
-          name: 'Hiromu Nishiuchi',
-          title: '',
-          desc: `TBD.`
-        }
       },
       keynote2: {
         image: 'keynote2.svg',
         date: 'Comming Soon...',
-        Jp: {
-          name: 'Comming soon...',
-          title: 'Comming soon...',
-          desc: 'Comming soon...'
-        },
-        En: {
-          name: 'Comming soon...',
-          title: 'Comming soon...',
-          desc: 'Comming soon...'
-        }
-      }
+      },
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
-
 .conference {
   box-sizing: border-box;
   width: 100%;
@@ -167,10 +139,6 @@ export default {
 .conference-small-vector {
   /* width: 59px; */
   height: 23px;
-}
-.conference-frame {
-  width: 960.83px;
-  /* height: 1878.78px; */
 }
 .conference-inner-frame {
   width: 960.83px;
@@ -208,14 +176,14 @@ export default {
 }
 
 .conference-image-frame {
-  width: 504.33px;
+  width: 304.33px;
   height: 466.15px;
   left: -90.96px;
   top: 199.96px;
 }
 
 .conference-description-frame {
-  width: 619.43px;
+  width: 519.43px;
   height: 298px;
   left: 341.4px;
   top: 211.01px;
@@ -257,21 +225,6 @@ export default {
   order: 0;
   flex-grow: 0;
 }
-
-.font-bayon {
-  font-family: 'Bayon';
-  font-style: normal;
-}
-.font-noto-sans-js {
-  font-family: 'Noto Sans JP';
-  font-style: normal;
-}
-
-.font-fira-sans {
-  font-family: 'Fira Sans';
-  font-style: normal;
-}
-
 .snake-face-base {
   width: 100%;
   height: 90px;
@@ -286,3 +239,33 @@ export default {
   background-image: url('@/assets/images/section_bg_img_left_orange.svg');
 }
 </style>
+
+<!-- ↓JSONフォーマットです -->
+<i18n>
+{
+  "en": {
+    "keynote1": {
+      "name": "Hiromu Nishiuchi",
+      "title": "",
+      "desc": "TBD."
+    },
+    "keynote2": {
+      "name": "Comming soon...",
+      "title": "Comming soon...",
+      "desc": "Comming soon..."
+    }
+  },
+  "ja": {
+    "keynote1": {
+      "name": "西内 啓 / Hiromu Nishiuchi",
+      "title": "",
+      "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。"
+    },
+    "keynote2": {
+      "name": "Comming soon...",
+      "title": "Comming soon...",
+      "desc": "Comming soon..."
+    }
+  }
+}
+</i18n>
