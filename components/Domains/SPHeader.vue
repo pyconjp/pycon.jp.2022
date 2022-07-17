@@ -1,5 +1,10 @@
 <template>
-  <nav class="sp-header" :class="{ 'sp-header-full': isSPHeaderOpen }">
+  <nav
+    class="sp-header"
+    :class="{
+      'sp-header-full': isSPHeaderOpen,
+    }"
+  >
     <div
       class="relative flex flex-row items-center w-full h-full"
       :class="isSPHeaderOpen ? 'justify-center' : 'justify-start'"
@@ -129,12 +134,26 @@
 </template>
 
 <script>
+function stopScroll(event) {
+  event.preventDefault()
+}
 export default {
   name: 'DefaultHeader',
   data() {
     return {
       isSPHeaderOpen: false,
     }
+  },
+  watch: {
+    isSPHeaderOpen(newValue, oldValue) {
+      if (newValue) {
+        document.addEventListener('touchmove', stopScroll, { passive: false })
+        document.addEventListener('mousewheel', stopScroll, { passive: false })
+      } else {
+        document.removeEventListener('touchmove', stopScroll)
+        document.removeEventListener('mousewheel', stopScroll)
+      }
+    },
   },
 }
 </script>
@@ -150,7 +169,10 @@ export default {
   width: 65px;
 }
 .sp-header-full {
-  position: relative;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
