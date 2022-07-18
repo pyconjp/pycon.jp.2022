@@ -1,7 +1,7 @@
 <template>
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
-    <div class="w-7/12 flex gap-4 mx-auto flex-col mb-9">
+    <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
       <div v-for="card in ['volunteer', 'sponsor']" :key="card" class="w-full">
         <a :href="$t(`news_card.${card}.url`)">
           <div
@@ -28,13 +28,13 @@
         </a>
       </div>
     </div>
-    <div class="bg-tertiary-50 w-7/12 mx-auto text-left blogs">
-      <div class="pt-16 px-14 pb-5 text-lg">
+    <div class="bg-tertiary-50 w-10/12 lg:w-7/12 mx-auto text-left blogs">
+      <div class="pt-16 px-14 pb-10 lg:pb-5 text-lg">
         <ul class="space-y-6">
           <li
             v-for="post in posts"
             :key="post.id"
-            class="align-middle inline-flex w-full"
+            class="align-middle lg:inline-flex w-full"
           >
             <span class="text-tertiary-600 mr-4 published">{{
               post.published
@@ -46,7 +46,7 @@
         </ul>
       </div>
       <div
-        class="text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
+        class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
       >
         <outer-link
           class="more-news"
@@ -54,6 +54,10 @@
           to="https://pyconjp.blogspot.com/"
         />
       </div>
+    </div>
+
+    <div class="snake-face-base">
+      <div class="snake-face hidden lg:block" />
     </div>
   </div>
 </template>
@@ -138,6 +142,23 @@ li:before {
   display: inline-block;
   height: 1.125rem;
   margin-right: 0.375rem;
+}
+
+.snake-face-base {
+  width: 100%;
+  height: 36px;
+  @media (min-width: 1024px) {
+    height: 90px;
+  }
+}
+
+.snake-face {
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  right: 85px;
+
+  background-image: url('@/assets/images/section_bg_img_left_orange.svg');
 }
 </style>
 

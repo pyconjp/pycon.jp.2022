@@ -11,7 +11,7 @@
     >
       {{ main }}
     </h1>
-    <div class="text-xl text-tertiary-900 font-noto font-bold">
+    <div class="text-xl text-tertiary-900 font-noto font-bold -mt-7 lg:mt-0">
       {{ sub }}
     </div>
   </div>

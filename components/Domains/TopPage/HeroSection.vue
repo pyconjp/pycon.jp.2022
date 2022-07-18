@@ -8,7 +8,9 @@
       />
     </div>
     <div class="hero-wrapper mx-auto w-5/6">
-      <div class="flex justify-between items-center">
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-x-24"
+      >
         <div>
           <img src="@/assets/images/hero-logo.svg" alt="hero logo" />
           <div class="mt-10">
@@ -27,14 +29,15 @@
           </div>
           <div class="mt-4">
             <div class="inline-flex">
-              <CalendarIcon class="text-primary-700 mx-4 my-auto w-8 h-8" />
+              <CalendarIcon class="text-primary-700 mx-4 lg:my-auto w-8 h-8" />
               <div class="text-2xl">
-                <div>
-                  Conference:
-                  <span class="font-bold">2022.10.14(Fri)-15(Sat)</span>
+                <div class="lg:inline-flex">
+                  <div>Conference:</div>
+                  <div class="font-bold">2022.10.14(Fri)-15(Sat)</div>
                 </div>
-                <div>
-                  Sprint: <span class="font-bold">2022.10.16(Sun)</span>
+                <div class="lg:inline-flex">
+                  <div>Sprint:</div>
+                  <div class="font-bold">2022.10.16(Sun)</div>
                 </div>
               </div>
             </div>
