@@ -19,30 +19,60 @@
           </p>
           <div class="arrow-bottom"></div>
           <div
-            class="absolute left-0 invisible w-32 p-2 bg-white rounded-md shadow-md top-6 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
-            <a>Menu1</a><br />
-            <a>Menu2</a>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">COC(行動規範)</p>
+              </div>
+            </div>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">感染対策ガイドライン</p>
+              </div>
+            </div>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">サポート</p>
+              </div>
+            </div>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">会場案内</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="relative flex flex-row group">
           <p>{{ $t('common.menu.event.event') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="absolute left-0 invisible w-32 p-2 bg-white rounded-md shadow-md top-6 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
-            <a>Menu1</a><br />
-            <a>Menu2</a>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <p class="ml-6">タイムテーブル</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="relative flex flex-row group">
           <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="absolute left-0 invisible w-32 p-2 bg-white rounded-md shadow-md top-6 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
-            <a>Menu1</a><br />
-            <a>Menu2</a>
+            <div class="child-menu-record">
+              <div class="flex w-full pt-2 pb-2 ml-6">
+                <div class="arrow-right"></div>
+                <a class="ml-6">スポンサー募集要項</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex flex-row">
@@ -132,5 +162,32 @@ export default {
   border-bottom: 3px solid #b32f0f;
   border-right: 3px solid #b32f0f;
   transform: rotate(45deg);
+}
+
+.arrow-right {
+  right: 0px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+  margin-top: 8px;
+  border-bottom: 3px solid #f77c5e;
+  border-right: 3px solid #f77c5e;
+  transform: rotate(315deg);
+}
+
+.child-menu {
+  background: #1a1623;
+  position: absolute;
+  border-radius: 2px;
+  width: 260px;
+  color: white;
+  font-size: 15px;
+  font-family: 'Noto Sans JP';
+}
+
+.child-menu-record:hover {
+  background: #f3d34f;
+  color: black;
 }
 </style>
