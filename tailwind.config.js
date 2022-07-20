@@ -56,6 +56,7 @@ module.exports = {
     fontFamily: {
       noto: ["'Noto Sans JP'", ...defaultTheme.fontFamily.sans],
       fira: 'Fira Sans',
+      bayon: ["'Bayon'", 'sans-serif'],
     },
   },
   plugins: [require('@tailwindcss/typography')],
