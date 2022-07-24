@@ -16,7 +16,7 @@
         <div class="mt-1 conference-description font-noto">基調講演</div>
 
         <div class="flex flex-col mt-10">
-          <div class="flex flex-row mt-10">
+          <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
             <div class="conference-image-frame">
               <img
@@ -45,7 +45,7 @@
         <div class="mt-10 conference-keynote-separator" />
 
         <div class="flex flex-col mt-10 conference-frame">
-          <div class="flex flex-row mt-10">
+          <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
             <div class="conference-image-frame">
               <img
