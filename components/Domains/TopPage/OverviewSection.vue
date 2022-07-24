@@ -58,8 +58,6 @@ export default {
 .overview-text {
   padding: 0px 20px;
   gap: 20px;
-  /*width: 590px;
-  height: 360px;*/
 }
 
 .overview-text-icon {
@@ -68,12 +66,6 @@ export default {
   background-image: url("@/assets/images/card_title_icon.svg");
 }
 .overview-text-title {
-  /* text */
-  /*width: 268px;
-  height: 36px;*/
-
-  /* text / en / .text-4xl.text-bold */
-
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
@@ -84,15 +76,11 @@ export default {
 }
 
 .overview-text-description {
-  width: 550px;
-  height: 192px;
 
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
-  /* or 178% */
-
   letter-spacing: 0.03em;
 }
 
