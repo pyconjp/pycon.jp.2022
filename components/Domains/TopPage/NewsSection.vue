@@ -1,42 +1,42 @@
 <template>
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
-    <div class="flex flex-col w-10/12 gap-4 mx-auto lg:w-7/12 mb-9">
+    <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
       <div v-for="card in ['volunteer', 'sponsor']" :key="card" class="w-full">
         <a :href="$t(`news_card.${card}.url`)">
           <div
-            class="flex flex-row items-center justify-between w-full gap-8 px-8 py-4 bg-tertiary-900"
+            class="w-full flex flex-row justify-between gap-8 items-center bg-tertiary-900 px-8 py-4"
           >
             <div class="inline-flex items-center">
               <component
                 :is="getNewsCardIcon(card)"
-                class="mr-4 text-secondary-400 h-9 w-9"
+                class="text-secondary-400 h-9 w-9 mr-4"
               />
-              <div class="text-lg text-left text-tertiary-50 news-card-title">
+              <div class="text-tertiary-50 text-left text-lg news-card-title">
                 {{ $t(`news_card.${card}.title`) }}
               </div>
             </div>
             <div
-              class="flex-1 hidden text-sm text-left text-tertiary-50 lg:block"
+              class="text-tertiary-50 flex-1 text-left text-sm hidden lg:block"
             >
               {{ $t(`news_card.${card}.description`) }}
             </div>
-            <div class="flex items-center w-8 h-8 align-middle">
-              <ChevronRightIcon class="mx-auto text-secondary-400" />
+            <div class="h-8 w-8 flex items-center align-middle">
+              <ChevronRightIcon class="text-secondary-400 mx-auto" />
             </div>
           </div>
         </a>
       </div>
     </div>
-    <div class="w-10/12 mx-auto text-left bg-tertiary-50 lg:w-7/12 blogs">
-      <div class="pt-16 pb-10 text-lg px-14 lg:pb-5">
+    <div class="bg-tertiary-50 w-10/12 lg:w-7/12 mx-auto text-left blogs">
+      <div class="pt-16 px-14 pb-10 lg:pb-5 text-lg">
         <ul class="space-y-6">
           <li
             v-for="post in posts"
             :key="post.id"
-            class="w-full align-middle lg:inline-flex"
+            class="align-middle lg:inline-flex w-full"
           >
-            <span class="mr-4 text-tertiary-600 published">{{
+            <span class="text-tertiary-600 mr-4 published">{{
               post.published
             }}</span>
             <div class="text-tertiary-900">
@@ -48,7 +48,7 @@
         </ul>
       </div>
       <div
-        class="pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700 pb-14"
+        class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
       >
         <outer-link class="more-news" to="https://pyconjp.blogspot.com/">
           {{ $t('more_blogs').toString() }}
@@ -57,7 +57,7 @@
     </div>
 
     <div class="snake-face-base">
-      <div class="hidden snake-face lg:block" />
+      <div class="snake-face hidden lg:block" />
     </div>
   </div>
 </template>
