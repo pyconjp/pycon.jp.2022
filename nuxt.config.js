@@ -7,7 +7,7 @@ export default {
     return {
       title: 'pycon.jp.2022',
       htmlAttrs: {
-        lang: this.$i18n.locale === 'en' ? 'en' : 'ja',
+        lang: 'en',
       },
       meta: [
         { charset: 'utf-8' },
