@@ -15,10 +15,13 @@
           <img :src="diamond_sponser.logo" class="object-none object-center w-full h-full" />
         </div>
         <!--会社名-->
-        <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="diamond_sponser.url">
+        <outer-link :to="diamond_sponser.url">
+            {{ diamond_sponser.name }}
+          </outer-link>
+        <!--<a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="diamond_sponser.url">
           {{ diamond_sponser.name }}
           <ExternalLinkIcon class="w-5 h-5" />
-        </a>
+        </a>-->
       </div>
 
       <div class="mt-10 mb-10 separator" />
@@ -31,7 +34,7 @@
         </div>
         <div class="flex flex-row">
           <!-- プラチナスポンサー1 -->
-          <div class="m-5" v-for="platinum_sponser in platinum_sponsers" :key="platinum_sponser.id">
+          <div v-for="platinum_sponser in platinum_sponsers" :key="platinum_sponser.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame platinum_card bg-tertiary-50">
               <img :src="platinum_sponser.logo" class="object-none object-center w-full h-full" />
@@ -55,7 +58,7 @@
         </div>
         <div class="grid grid-cols-4">
           <!-- ゴールドスポンサー -->
-          <div class="m-5" v-for="gold_sponser in gold_sponsers" :key="gold_sponser.id">
+          <div v-for="gold_sponser in gold_sponsers" :key="gold_sponser.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame gold_card bg-tertiary-50">
               <img :src="gold_sponser.logo" class="object-none object-center w-full h-full" />
@@ -80,7 +83,7 @@
         </div>
         <div class="grid grid-cols-3">
           <!-- シルバースポンサー -->
-          <div class="m-5" v-for="silver_sponser in silver_sponsers" :key="silver_sponser.id">
+          <div v-for="silver_sponser in silver_sponsers" :key="silver_sponser.id" class="m-5">
             <!--会社名-->
             <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="silver_sponser.url">
               {{ silver_sponser.name }}
@@ -101,7 +104,7 @@
         </div>
         <div class="grid grid-cols-4">
           <!-- 特別スポンサー -->
-          <div class="m-5" v-for="special_sponser in special_sponsers" :key="special_sponser.id">
+          <div v-for="special_sponser in special_sponsers" :key="special_sponser.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame gold_card bg-tertiary-50">
               <img :src="special_sponser.logo" class="object-none object-center w-full h-full" />
@@ -127,7 +130,7 @@
         </div>
         <div class="grid grid-cols-4">
           <!-- パトロン -->
-          <div class="m-5" v-for="patron in patrons" :key="patron.id">
+          <div v-for="patron in patrons" :key="patron.id" class="m-5">
             <!--パトロン名-->
             <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="patron.url">
             <img :src="patron.logo" class="object-none object-center w-full h-full" />
