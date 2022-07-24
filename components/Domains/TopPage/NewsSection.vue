@@ -40,7 +40,9 @@
               post.published
             }}</span>
             <div class="text-tertiary-900">
-              <outer-link :label="post.title" :to="post.url" />
+              <outer-link :to="post.url">
+                {{ post.title }}
+              </outer-link>
             </div>
           </li>
         </ul>
@@ -48,11 +50,9 @@
       <div
         class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
       >
-        <outer-link
-          class="more-news"
-          :label="$t('more_blogs').toString()"
-          to="https://pyconjp.blogspot.com/"
-        />
+        <outer-link class="more-news" to="https://pyconjp.blogspot.com/">
+          {{ $t('more_blogs').toString() }}
+        </outer-link>
       </div>
     </div>
 

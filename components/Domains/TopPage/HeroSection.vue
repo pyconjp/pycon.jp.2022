@@ -21,12 +21,13 @@
               <span class="text-2xl font-bold mr-4">
                 {{ $t('pages.hero.venue') }}
               </span>
-              <div
+              <outer-link
+                to="https://www.toc.co.jp/saiji/ariake/access/"
                 class="text-primary-700 font-bold hidden lg:inline-flex items-center"
               >
                 {{ $t('pages.hero.venue-info') }}
                 <ExternalLinkIcon class="w-5 h-5" />
-              </div>
+              </outer-link>
             </div>
           </div>
           <div class="mt-4">
@@ -48,11 +49,13 @@
               </div>
             </div>
           </div>
-          <div
-            class="font-noto font-bold mt-9 mb-3 bg-secondary-400 text-tertiary-900 text-2xl w-full text-center py-2 shadow-md rounded lg:hidden"
-          >
-            {{ $t('pages.hero.venue-info') }}
-          </div>
+          <outer-link to="https://www.toc.co.jp/saiji/ariake/access/">
+            <div
+              class="font-noto font-bold mt-9 mb-3 bg-secondary-400 text-tertiary-900 text-2xl w-full text-center py-2 shadow-md rounded lg:hidden"
+            >
+              {{ $t('pages.hero.venue-info') }}
+            </div>
+          </outer-link>
           <div
             class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
           >
@@ -80,10 +83,12 @@ import {
   ExternalLinkIcon,
   CalendarIcon,
 } from '@vue-hero-icons/outline'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'HeroSection',
   components: {
+    OuterLink,
     Timeline,
     LocationMarkerIcon,
     ExternalLinkIcon,
