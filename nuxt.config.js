@@ -15,7 +15,19 @@ export default {
         { hid: 'description', name: 'description', content: '' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: true,
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Bayon&display=swap',
+        },
+      ],
     }
   },
   title: 'pycon.jp.2022',
@@ -62,10 +74,13 @@ export default {
     baseURL: '/',
   },
 
+  content: {},
+
   googleFonts: {
     families: {
       Roboto: true,
       Oswald: true,
+      Bayon: [400],
       'Noto Sans JP': [400, 500, 600, 700, 900],
       'Source Sans Pro': [400, 500, 600, 700, 900],
       'Fira Sans': [400, 500, 600, 700, 900],

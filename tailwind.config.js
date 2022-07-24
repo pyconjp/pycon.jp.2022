@@ -1,14 +1,14 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [
+  content: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -56,10 +56,11 @@ module.exports = {
     fontFamily: {
       noto: ["'Noto Sans JP'", ...defaultTheme.fontFamily.sans],
       fira: 'Fira Sans',
+      bayon: ["'Bayon'", 'sans-serif'],
     },
   },
+  plugins: [require('@tailwindcss/typography')],
   variants: {
     extend: {},
   },
-  plugins: [],
 }
