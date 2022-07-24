@@ -8,7 +8,7 @@
       <!-- Keynote1 start -->
       <div class="flex flex-col mt-10 conference-inner-frame">
         <img
-          src="@/assets/images/conference_vector1.svg"
+          src="@/assets/images/conference_vector.svg"
           alt="Keynote vector"
           class="conference-mid-vector"
         />
@@ -69,15 +69,18 @@
             </div>
           </div>
         </div>
+        <!--
         <div class="conference-frame-timetable">
           <div class="conference-timetable font-noto">タイムテーブル詳細</div>
           <img src="@/assets/images/right_allow.svg" />
         </div>
+        -->
       </div>
 
+      <!--
       <div class="flex flex-col items-center mt-10">
         <img
-          src="@/assets/images/conference_vector2.svg"
+          src="@/assets/images/conference_vector.svg"
           alt="Keynote vector"
           class="conference-small-vector"
         />
@@ -89,6 +92,7 @@
       <div class="flex flex-col items-center mt-10">
         <img src="@/assets/images/documents.svg" />
       </div>
+      -->
     </div>
     <div class="mt-10 snake-face-base">
       <!--snake face-->
