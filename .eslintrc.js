@@ -17,6 +17,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'vue/no-v-html': 'off',
     'vue/multi-word-component-names': [
       'error',
       {

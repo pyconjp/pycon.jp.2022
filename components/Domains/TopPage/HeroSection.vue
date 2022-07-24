@@ -7,8 +7,10 @@
         alt="hero background image"
       />
     </div>
-    <div class="hero-wrapper mx-auto w-5/6">
-      <div class="flex justify-between items-center">
+    <div class="py-28 mx-auto lg:w-5/6 w-11/12">
+      <div
+        class="flex flex-col lg:flex-row justify-center items-center gap-x-24"
+      >
         <div>
           <img src="@/assets/images/hero-logo.svg" alt="hero logo" />
           <div class="mt-10">
@@ -19,38 +21,54 @@
               <span class="text-2xl font-bold mr-4">
                 {{ $t('pages.hero.venue') }}
               </span>
-              <div class="text-primary-700 font-bold inline-flex items-center">
+              <outer-link
+                to="https://www.toc.co.jp/saiji/ariake/access/"
+                class="text-primary-700 font-bold hidden lg:inline-flex items-center"
+              >
                 {{ $t('pages.hero.venue-info') }}
                 <ExternalLinkIcon class="w-5 h-5" />
-              </div>
+              </outer-link>
             </div>
           </div>
           <div class="mt-4">
-            <div class="inline-flex">
-              <CalendarIcon class="text-primary-700 mx-4 my-auto w-8 h-8" />
+            <div class="flex flex-row align-top">
+              <CalendarIcon class="text-primary-700 mx-4 w-8 h-8" />
               <div class="text-2xl">
                 <div>
-                  Conference:
-                  <span class="font-bold">2022.10.14(Fri)-15(Sat)</span>
+                  <div class="lg:inline-flex">
+                    <div class="text-tertiary-600">Conference:</div>
+                    <div class="font-bold">2022.10.14(Fri)-15(Sat)</div>
+                  </div>
                 </div>
                 <div>
-                  Sprint: <span class="font-bold">2022.10.16(Sun)</span>
+                  <div class="lg:inline-flex">
+                    <div class="text-tertiary-600">Sprint:</div>
+                    <div class="font-bold">2022.10.16(Sun)</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <outer-link to="https://www.toc.co.jp/saiji/ariake/access/">
+            <div
+              class="font-noto font-bold mt-9 mb-3 bg-secondary-400 text-tertiary-900 text-2xl w-full text-center py-2 shadow-md rounded lg:hidden"
+            >
+              {{ $t('pages.hero.venue-info') }}
+            </div>
+          </outer-link>
           <div
-            class="mt-1 bg-primary-700 text-white text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
+            class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
           >
             {{ $t('pages.hero.ticket') }}
           </div>
         </div>
-        <div>
+        <div class="lg:w-96 w-full mt-10 lg:mt-0">
           <Timeline
             id="pyconjapan"
             ref="tweet"
             source-type="profile"
-            :options="{ width: '408', height: '411', theme: 'dark' }"
+            :lang="$i18n.locale"
+            :options="{ width: '100%', height: '410', theme: 'dark' }"
           />
         </div>
       </div>
@@ -65,10 +83,12 @@ import {
   ExternalLinkIcon,
   CalendarIcon,
 } from '@vue-hero-icons/outline'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'HeroSection',
   components: {
+    OuterLink,
     Timeline,
     LocationMarkerIcon,
     ExternalLinkIcon,
@@ -77,8 +97,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.hero-wrapper {
-  padding: 70px 0 67px;
-}
-</style>
+<style scoped></style>

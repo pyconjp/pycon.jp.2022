@@ -89,7 +89,7 @@
       </div>
 
       <div
-        class="flex flex-row pr-6 my-3 leading-10 bg-secondary-400 whitespace-nowrap"
+        class="flex flex-row pr-6 my-3 font-bold leading-10 bg-secondary-400 whitespace-nowrap font-noto"
       >
         <img
           class="w-4 mx-4"
