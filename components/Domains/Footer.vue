@@ -69,10 +69,9 @@
         </div>
         <!-- TODO デザインと配置が異なる -->
         <div class="flex-1 previous-pages lg:text-right text-secondary-400">
-          <outer-link
-            :label="$t('common.pastPyConJPSites')"
-            to="https://www.pycon.jp/organizer/index.html"
-          />
+          <outer-link to="https://www.pycon.jp/organizer/index.html">
+            {{ $t('common.pastPyConJPSites') }}
+          </outer-link>
         </div>
       </div>
     </div>
