@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [
+  content: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
@@ -59,8 +59,8 @@ module.exports = {
       bayon: ["'Bayon'", 'sans-serif'],
     },
   },
+  plugins: [require('@tailwindcss/typography')],
   variants: {
     extend: {},
   },
-  plugins: [],
 }

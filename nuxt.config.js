@@ -7,7 +7,7 @@ export default {
     return {
       title: 'pycon.jp.2022',
       htmlAttrs: {
-        lang: this.$i18n.locale === 'en' ? 'en' : 'ja',
+        lang: 'en',
       },
       meta: [
         { charset: 'utf-8' },
@@ -73,6 +73,8 @@ export default {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
+
+  content: {},
 
   googleFonts: {
     families: {

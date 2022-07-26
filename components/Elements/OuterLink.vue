@@ -4,18 +4,15 @@
     target="_blank"
     class="hover:opacity-70"
     rel="noopener noreferrer"
-    >{{ label }}</a
   >
+    <slot />
+  </a>
 </template>
 
 <script>
 export default {
   name: 'OuterLink',
   props: {
-    label: {
-      type: String,
-      default: '',
-    },
     to: {
       type: String,
       default: '#',
