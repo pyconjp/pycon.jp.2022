@@ -11,6 +11,10 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('@/assets/images/hero_bg_img.svg')",
+        footer: "url('@/assets/images/footer_bg_img.svg')",
+      },
       colors: {
         primary: {
           DEFAULT: '#E84118',
@@ -55,6 +59,7 @@ module.exports = {
     },
     fontFamily: {
       noto: ["'Noto Sans JP'", ...defaultTheme.fontFamily.sans],
+      source: 'Source Sans Pro',
       fira: 'Fira Sans',
       bayon: ["'Bayon'", 'sans-serif'],
     },
