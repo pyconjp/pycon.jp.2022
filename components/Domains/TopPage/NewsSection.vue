@@ -32,7 +32,7 @@
       <div class="pt-16 px-14 pb-10 lg:pb-5 text-lg">
         <ul class="space-y-6">
           <li
-            v-for="post in posts"
+            v-for="post in posts[$i18n.locale]"
             :key="post.id"
             class="align-middle lg:inline-flex w-full"
           >
@@ -88,22 +88,27 @@ export default {
   },
   data() {
     return {
-      posts: [],
+      posts: { ja: [], en: [] },
     }
   },
   async fetch() {
-    this.posts = await fetch(
-      `https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts?key=${process.env.BLOGGER_API_KEY}`
-    )
-      .then((res) => res.json())
-      .then((data) =>
-        data.items.slice(0, 5).map(({ id, title, url, published }) => ({
-          id,
-          title,
-          url,
-          published: moment(published).format('YYYY.MM.DD'),
-        }))
+    for (const lang of ['ja', 'en']) {
+      const url = new URL(
+        'https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts'
       )
+      url.searchParams.append('key', process.env.BLOGGER_API_KEY)
+      url.searchParams.append('labels', lang)
+      this.posts[lang] = await fetch(url.toString())
+        .then((res) => res.json())
+        .then((data) =>
+          data.items.slice(0, 5).map(({ id, title, url, published }) => ({
+            id,
+            title,
+            url,
+            published: moment(published).format('YYYY.MM.DD'),
+          }))
+        )
+    }
   },
   methods: {
     getNewsCardIcon(card) {
