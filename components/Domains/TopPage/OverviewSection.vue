@@ -2,21 +2,23 @@
   <div class="text-center component-border-top bg-tertiary-100">
     <section-title main="OVERVIEW" sub="概要"  :primary="false"/>
       <div class="flex flex-col items-center w-10/12 mx-auto mt-10 mb-8 lg:flex-row">
-        <!-- left pane -->
-        <div class="relative overview-frame"> <!-- overview-frame -->
-          <div class="absolute mt-5 -ml-5 bg-primary-700 overview-clip" />
-          <div class="absolute overview-image border-secondary-50" /> <!-- image -->
-        </div>
+          <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
+            <!-- left pane -->
+            <div class="relative flex w-12/12 lg:flex-1 overview-frame"> <!-- overview-frame -->
+              <div class="absolute mt-5 -ml-5 bg-primary-700 overview-clip" />
+              <div class="absolute border-l border-solid overview-image border-secondary-50" />
+            </div>
         
-        <!-- right pane -->
-        <div class="flex flex-col w-full h-auto mt-4 overview-text lg:w-1/2">
-              <div class="flex flex-row">
-                <div class="mr-2 overview-text-icon" />
-                <div class="overview-text-title text-tertiary-900 font-fira">What is <span class="text-primary-700">PyCon</span> ?</div>
-              </div>
-              <div class="text-left overview-text-description text-tertiary-800 font-fira">
-                {{ $t('pages.index.overviewDescription') }}
-              </div>
+            <!-- right pane -->
+            <div class="flex flex-col w-8/12 mt-10 lg:ml-10 lg:flex-1 lg:mt-0">
+                  <div class="flex flex-row">
+                    <div class="mr-2 overview-text-icon" />
+                    <div class="overview-text-title text-tertiary-900 font-fira">What is <span class="text-primary-700">PyCon</span> ?</div>
+                  </div>
+                  <div class="pl-5 text-left overview-text-description text-tertiary-800 font-fira">
+                    {{ $t('pages.index.overviewDescription') }}
+                  </div>
+            </div>
         </div>
     </div>
     <div class="snake-face-base">
@@ -49,15 +51,9 @@ export default {
 }
 .overview-image {
   width: 590px;
-  height: 370px;
+  height: 370px;  
   background-image: url("@/assets/images/overview.svg");
-  border: 1px solid;
   clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
-}
-
-.overview-text {
-  padding: 0px 20px;
-  gap: 20px;
 }
 
 .overview-text-icon {
