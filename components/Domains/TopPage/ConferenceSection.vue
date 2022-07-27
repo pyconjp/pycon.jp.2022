@@ -1,14 +1,12 @@
 <template>
-  <div class="relative items-center mt-20 conference">
-    <div class="text-center component-border-top bg-secondary-400">
-      <section-title main="CONFERENCE" sub="カンファレンス" />
-    </div>
+  <div class="component-border-top bg-secondary-400">
+    <section-title main="CONFERENCE" sub="カンファレンス" />
 
     <div class="flex flex-col items-center">
       <!-- Keynote1 start -->
-      <div class="flex flex-col mt-10 conference-inner-frame">
+      <div class="flex flex-col w-10/12 mt-10 lg:w-7/12">
         <img
-          src="@/assets/images/conference_vector1.svg"
+          src="@/assets/images/conference_vector.svg"
           alt="Keynote vector"
           class="conference-mid-vector"
         />
@@ -16,9 +14,9 @@
         <div class="mt-1 conference-description font-noto">基調講演</div>
 
         <div class="flex flex-col mt-10">
-          <div class="flex flex-row mt-10">
+          <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
-            <div class="conference-image-frame">
+            <div class="flex w-12/12 lg:flex-1">
               <img
                 :src="require(`@/assets/images/${keynote1.image}`)"
                 class="self-center"
@@ -26,7 +24,7 @@
             </div>
 
             <!-- right text -->
-            <div class="flex flex-col ml-10 conference-description-frame">
+            <div class="flex flex-col ml-10 w-12/12 lg:flex-[2_2_0]">
               <div class="text-tartiary-700 font-fira">
                 {{ keynote1.date }}
               </div>
@@ -42,19 +40,19 @@
           </div>
         </div>
 
-        <div class="mt-10 conference-keynote-separator" />
+        <div class="hidden mt-10 lg:block conference-keynote-separator" />
 
         <div class="flex flex-col mt-10 conference-frame">
-          <div class="flex flex-row mt-10">
+          <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
-            <div class="conference-image-frame">
+            <div class="flex w-12/12 lg:flex-1">
               <img
                 :src="require(`@/assets/images/${keynote2.image}`)"
                 class="self-center"
               />
             </div>
             <!-- right text -->
-            <div class="flex flex-col ml-10 conference-description-frame">
+            <div class="flex flex-col ml-10 w-12/12 lg:flex-[2_2_0]">
               <div class="text-tartiary-700 font-fira">
                 {{ keynote2.date }}
               </div>
@@ -69,30 +67,35 @@
             </div>
           </div>
         </div>
-        <div class="conference-frame-timetable">
-          <div class="conference-timetable font-noto">タイムテーブル詳細</div>
-          <img src="@/assets/images/right_allow.svg" />
+
+        <!--
+                <div class="conference-frame-timetable">
+                  <div class="conference-timetable font-noto">タイムテーブル詳細</div>
+                  <img src="@/assets/images/right_allow.svg" />
+                </div>
+              </div>
+        -->
+        <!--
+        <div class="flex flex-col items-center mt-10">
+          <img
+            src="@/assets/images/conference_vector.svg"
+            alt="Keynote vector"
+            class="conference-small-vector"
+          />
+          <div class="mt-10"></div>
+          <div class="conference-label font-noto">Documents</div>
+          <div class="mt-1 conference-description font-noto">当日配布物</div>
         </div>
-      </div>
 
-      <div class="flex flex-col items-center mt-10">
-        <img
-          src="@/assets/images/conference_vector2.svg"
-          alt="Keynote vector"
-          class="conference-small-vector"
-        />
-        <div class="mt-10"></div>
-        <div class="conference-label font-noto">Documents</div>
-        <div class="mt-1 conference-description font-noto">当日配布物</div>
+        <div class="flex flex-col items-center mt-10">
+          <img src="@/assets/images/documents.svg" />
+        </div>
+        -->
       </div>
-
-      <div class="flex flex-col items-center mt-10">
-        <img src="@/assets/images/documents.svg" />
+      <div class="mt-10 snake-face-base">
+        <!--snake face-->
+        <div class="hidden snake-face lg:block" />
       </div>
-    </div>
-    <div class="mt-10 snake-face-base">
-      <!--snake face-->
-      <div class="snake-face" />
     </div>
   </div>
 </template>
@@ -131,22 +134,20 @@ export default {
   flex: none;
   flex-grow: 0;
 }
+
 .conference-mid-vector {
   /* width: 72.28px; */
   height: 23.01px;
   text-align: center;
 }
+
 .conference-small-vector {
   /* width: 59px; */
   height: 23px;
 }
-.conference-inner-frame {
-  width: 960.83px;
-  /* height: 1158.51px; */
-}
 
 .conference-keynote-separator {
-  width: 942.2px;
+  /* width: 942.2px; */
   height: 0px;
   left: calc(50% - 942.2px / 2 - 9.32px);
   top: 718.52px;
@@ -164,6 +165,7 @@ export default {
   text-align: center;
   color: #1a1623;
 }
+
 .conference-description {
   height: 16px;
   left: calc(50% - 75.95px / 2 + 0.18px);
@@ -173,20 +175,6 @@ export default {
   line-height: 100%;
   text-align: center;
   color: #776103;
-}
-
-.conference-image-frame {
-  width: 304.33px;
-  height: 466.15px;
-  left: -90.96px;
-  top: 199.96px;
-}
-
-.conference-description-frame {
-  width: 519.43px;
-  height: 298px;
-  left: 341.4px;
-  top: 211.01px;
 }
 
 .conference-frame-timetable {
@@ -225,6 +213,7 @@ export default {
   order: 0;
   flex-grow: 0;
 }
+
 .snake-face-base {
   width: 100%;
   height: 90px;
