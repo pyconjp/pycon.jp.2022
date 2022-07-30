@@ -1,74 +1,93 @@
 <template>
   <div class="relative component-border-top font-noto text-white">
-    <div class="bg-tertiary-900 footer-upper">
-      <img src="~/assets/images/footer-2022-logo.svg" alt="2022-logo" />
-      <div class="flex flex-col footer-menu lg:flex-row">
-        <div class="flex-1">
-          <p>{{ $t('common.menu.about.about') }}</p>
-          <!--TODO-->
-          <p>Child(TODO)</p>
+    <div
+      class="pt-7 pb-7 relative bg-tertiary-900 bg-footer bg-no-repeat lg:bg-right-bottom bg-center"
+    >
+      <div class="mx-auto w-11/12 lg:w-10/12">
+        <img
+          src="~/assets/images/footer-2022-logo.svg"
+          alt="2022-logo"
+          class="mx-auto lg:ml-0 w-10/12 lg:w-auto"
+        />
+        <div
+          class="flex flex-col footer-menu lg:flex-row w-1/2 lg:w-full mx-auto lg:ml-0"
+        >
+          <div class="flex-1">
+            <p>{{ $t('common.menu.about.about') }}</p>
+            <!--TODO-->
+            <p>Child(TODO)</p>
+          </div>
+          <div class="flex-1">
+            <p>
+              {{ $t('common.menu.event.event') }}
+            </p>
+            <!--TODO-->
+            <p>Child(TODO)</p>
+          </div>
+          <div class="flex-1">
+            <p>
+              {{ $t('common.menu.sponsor.sponsor') }}
+            </p>
+            <!--TODO-->
+            <p>Child(TODO)</p>
+          </div>
+          <div class="flex-1">
+            <p>
+              {{ $t('common.menu.contents.contents') }}
+            </p>
+            <!--TODO-->
+            <p>Child(TODO)</p>
+          </div>
+          <div class="flex-1">
+            <p>
+              {{ $t('common.menu.volunteer.volunteer') }}
+            </p>
+            <!--TODO-->
+            <p>Child(TODO)</p>
+          </div>
         </div>
-        <div class="flex-1">
-          <p>
-            {{ $t('common.menu.event.event') }}
-          </p>
-          <!--TODO-->
-          <p>Child(TODO)</p>
+        <div
+          class="border-t-2 border-t-tertiary-400 lg:pt-9 pt-6 font-source mb-3 flex flex-row gap-2"
+        >
+          <div class="mr-2">
+            {{ $t('common.sns') }}
+          </div>
+          <div class="flex flex-col gap-2">
+            <div v-for="sns in getSns" :key="sns.name">
+              <div class="inline-flex">
+                <div class="w-28">
+                  <outer-link class="text-secondary-300" :to="sns.url">
+                    {{ sns.account }}
+                  </outer-link>
+                </div>
+                <img
+                  class="inline h-6 w-6"
+                  :src="require(`@/assets/images/sns/${sns.logo}`)"
+                  :alt="sns.name"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex-1">
-          <p>
-            {{ $t('common.menu.sponsor.sponsor') }}
-          </p>
-          <!--TODO-->
-          <p>Child(TODO)</p>
+        <div class="flex flex-col lg:items-end lg:flex-row">
+          <div class="flex-1 mb-8 lg:mb-1.5">
+            <div class="mb-3 inline-flex">
+              <div class="mr-2">{{ $t('common.contact.contact') }}：</div>
+              <div>
+                <outer-link
+                  to="mailto:pyconjp@pycon.jp"
+                  class="text-secondary-300"
+                >
+                  pyconjp@pycon.jp
+                </outer-link>
+              </div>
+            </div>
+            <p class="whitespace-pre">{{ $t('common.contact.description') }}</p>
+          </div>
         </div>
-        <div class="flex-1">
-          <p>
-            {{ $t('common.menu.contents.contents') }}
-          </p>
-          <!--TODO-->
-          <p>Child(TODO)</p>
-        </div>
-        <div class="flex-1">
-          <p>
-            {{ $t('common.menu.volunteer.volunteer') }}
-          </p>
-          <!--TODO-->
-          <p>Child(TODO)</p>
-        </div>
-      </div>
-      <div class="font-source mb-3">
-        <span class="mr-2">
-          {{ $t('common.sns') }}
-        </span>
-        <span>
-          <!-- TODO facebook追加 -->
-          <a
-            class="hover:opacity-70"
-            href="https://twitter.com/pyconjapan"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@pyconjapan
-            <img
-              class="inline h-4"
-              src="@/assets/images/twitter.svg"
-              alt="twitter"
-            />
-          </a>
-        </span>
-      </div>
-      <div class="flex flex-col lg:items-end lg:flex-row">
-        <div class="flex-1 mb-8 lg:mb-1.5">
-          <p class="mb-3">
-            {{ $t('common.contact.contact') }}：
-            <a class="hover:opacity-70" href="mailto:pyconjp@pycon.jp">
-              pyconjp@pycon.jp
-            </a>
-          </p>
-          <p class="whitespace-pre">{{ $t('common.contact.description') }}</p>
-        </div>
-        <!-- TODO デザインと配置が異なる -->
-        <div class="flex-1 previous-pages lg:text-right text-secondary-400">
+        <div
+          class="lg:mt-7 mt-9 mb-6 previous-pages underline lg:text-right text-center text-secondary-300"
+        >
           <outer-link to="https://www.pycon.jp/organizer/index.html">
             {{ $t('common.pastPyConJPSites') }}
           </outer-link>
@@ -108,24 +127,37 @@
 <script>
 import OuterLink from '@/components/Elements/OuterLink'
 
+const SNS = [
+  {
+    name: 'twitter',
+    account: '@pyconjapan',
+    url: 'https://twitter.com/pyconjapan',
+    logo: 'twitter.svg',
+  },
+  {
+    name: 'facebook',
+    account: '@PyConJP',
+    url: 'https://www.facebook.com/PyConJP/',
+    logo: 'facebook.svg',
+  },
+]
+
 export default {
   name: 'DefaultFooter',
   components: { OuterLink },
+  computed: {
+    getSns() {
+      return SNS
+    },
+  },
 }
 </script>
 
 <style scoped>
-.footer-upper {
-  padding: 0.875rem 7.625rem 1.875rem 7.375rem;
-}
-
 .footer-menu {
   padding-top: 49px;
   padding-bottom: 1.5rem;
   margin-bottom: 1.875rem;
-
-  border-bottom: solid;
-  border-bottom-color: white;
 
   & > div > p:not(:first-child) {
     margin-top: 0.75rem;
@@ -144,8 +176,6 @@ export default {
 }
 
 .previous-pages {
-  text-decoration: underline;
-
   &::after {
     content: '→';
   }

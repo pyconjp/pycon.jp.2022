@@ -1,13 +1,6 @@
 <template>
   <div>
-    <div class="relative">
-      <img
-        class="absolute top-12 left-0 right-0 mx-auto -z-50"
-        src="@/assets/images/hero-bgimg.svg"
-        alt="hero background image"
-      />
-    </div>
-    <div class="py-28 mx-auto lg:w-5/6 w-11/12">
+    <div class="py-28 mx-auto lg:w-5/6 w-11/12 bg-hero bg-no-repeat bg-center">
       <div
         class="flex flex-col lg:flex-row justify-center items-center gap-x-24"
       >
