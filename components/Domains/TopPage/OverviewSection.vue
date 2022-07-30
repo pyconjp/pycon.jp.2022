@@ -5,8 +5,10 @@
           <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
             <!-- left pane -->
             <div class="relative flex w-12/12 lg:flex-1 overview-frame"> <!-- overview-frame -->
-              <div class="absolute mt-5 -ml-5 bg-primary-700 overview-clip" />
-              <div class="absolute border-l border-solid overview-image border-secondary-50" />
+              <div class="h-6/6">
+                  <div class="absolute w-11/12 mt-5 -ml-5 border-solid border-1 overview-clip bg-primary-700 h-5/6 " />                  
+                <div class="absolute w-11/12 bg-cover border-solid overview-image border-secondary-50 border-1 h-5/6" />
+              </div>
             </div>
         
             <!-- right pane -->
@@ -45,13 +47,9 @@ export default {
 }
 
 .overview-clip {
-  width: 590px;
-  height: 370px;
   clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
 }
-.overview-image {
-  width: 590px;
-  height: 370px;  
+.overview-image { 
   background-image: url("@/assets/images/overview.svg");
   clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
 }
