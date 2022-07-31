@@ -2,13 +2,24 @@
   "common": {
     "menu": {
       "about": {
-        "about": "開催概要"
+        "about": "開催概要",
+        "coc": "COC(行動規範)",
+        "support": "サポート",
+        "venue": "会場案内",
+        "COVID-19Guidelines": "感染症対策ガイドライン",
+        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート"
       },
       "event": {
-        "event": "イベント概要"
+        "event": "イベント概要",
+        "timetable": "タイムテーブル",
+        "tutorial": "チュートリアル",
+        "sprint": "スプリント"
       },
       "sponsor": {
-        "sponsor": "スポンサー一覧"
+        "sponsor": "スポンサー",
+        "sponsorList": "スポンサー一覧",
+        "sponsorApplicationInformation": "スポンサー募集情報",
+        "sponsorApplicationRequirements": "スポンサー募集要項"
       },
       "contents": {
         "contents": "コンテンツ"
