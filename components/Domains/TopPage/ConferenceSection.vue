@@ -112,11 +112,11 @@ export default {
     return {
       keynote1: {
         image: 'keynote1.svg',
-        date: '2021.10.15 13:30 -',
+        date: '2021.10.14 10:30 -',
       },
       keynote2: {
         image: 'keynote2.svg',
-        date: 'Comming Soon...',
+        date: '2021.10.15 10:30 -',
       },
     }
   },
@@ -236,7 +236,7 @@ export default {
     "keynote1": {
       "name": "Hiromu Nishiuchi",
       "title": "",
-      "desc": "TBD."
+      "desc": "After working as an Assistant Professor in the Department of Medical Communication at the University of Tokyo Graduate School of Medicine, Deputy Director of the University Hospital Medical Information Network Research Center, and a visiting researcher at Dana-Farber/Harvard Cancer Research Center, he founded Data Vehicle, Inc. in November 2014. He is engaged in the development and sales of extended analytics tools such as \"dataDiver,\" utilizing his own expertise, as well as supporting public and private sector data utilization projects. His publications include the \"Statistics is the Strongest Study\" series, which has sold over 500,000 copies, and \"Statistics Will Save Japan\" (Chuokoron Shinsha). He is also a member of the Advisory Board of EBPM (Evidence Based Policy Making) of the Cabinet Office since 2020."
     },
     "keynote2": {
       "name": "Comming soon...",
