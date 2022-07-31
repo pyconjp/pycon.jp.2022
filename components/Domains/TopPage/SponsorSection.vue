@@ -1,9 +1,8 @@
 <template>
-  <div class="text-center component-border-top bg-tertiary-100">
+  <div class="text-center component-border-top bg-tertiary-100" >
     <section-title main="SPONSOR" sub="スポンサー" :primary="false"/>
     <div class="flex flex-col items-center">
       <div class="mt-10 mb-10 separator" />
-
       <!-- ダイヤモンドスポンサー -->
       <div>
         <div class="mb-10">
@@ -11,17 +10,17 @@
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">ダイヤモンドスポンサー</h4>
         </div>
         <!--ロゴ-->
-        <div class="card_frame diamond_card bg-tertiary-50">
-          <img :src="diamond_sponser.logo" class="object-none object-center w-full h-full" />
+        <div class="card_frame diamond_card bg-tertiary-50" >
+          <outer-link :to="sponsors.body[0].link">
+            <img 
+            :src="require(`@/assets/images/sponsors/${sponsors.body[0].logo_file}`)"
+            class="object-none object-center w-full h-full" />
+          </outer-link>
         </div>
         <!--会社名-->
-        <outer-link :to="diamond_sponser.url">
-            {{ diamond_sponser.name }}
-          </outer-link>
-        <!--<a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="diamond_sponser.url">
-          {{ diamond_sponser.name }}
-          <ExternalLinkIcon class="w-5 h-5" />
-        </a>-->
+        <outer-link :to="sponsors.body[0].link" class="mt-2 text-2xl font-bold font-noto text-primary-700">
+            {{ sponsors.body[0].name_ja }}
+        </outer-link>
       </div>
 
       <div class="mt-10 mb-10 separator" />
@@ -33,17 +32,19 @@
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">プラチナスポンサー</h4>
         </div>
         <div class="flex flex-row">
-          <!-- プラチナスポンサー1 -->
-          <div v-for="platinum_sponser in platinum_sponsers" :key="platinum_sponser.id" class="m-5">
+          <div v-for="platinum in platinums" :key="platinum.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame platinum_card bg-tertiary-50">
-              <img :src="platinum_sponser.logo" class="object-none object-center w-full h-full" />
+              <outer-link :to="platinum.link">
+              <img 
+              :src="require(`@/assets/images/sponsors/${platinum.logo_file}`)"
+               class="object-none object-center w-full h-full" />
+               </outer-link>
             </div>
             <!--会社名-->
-            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="platinum_sponser.url">
-              {{ platinum_sponser.name }}
-              <ExternalLinkIcon class="w-5 h-5" />
-            </a>
+            <outer-link :to="platinum.link" class="mt-2 text-2xl font-bold font-noto text-primary-700">
+            {{ platinum.name_ja }}
+            </outer-link>
           </div>      
         </div>
       </div>
@@ -58,16 +59,17 @@
         </div>
         <div class="grid grid-cols-4">
           <!-- ゴールドスポンサー -->
-          <div v-for="gold_sponser in gold_sponsers" :key="gold_sponser.id" class="m-5">
+          <div v-for="gold in golds" :key="gold.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame gold_card bg-tertiary-50">
-              <img :src="gold_sponser.logo" class="object-none object-center w-full h-full" />
+              <img 
+              :src="require(`@/assets/images/sponsors/${gold.logo_file}`)"
+               class="object-none object-center w-full h-full" />
             </div>
             
             <!--会社名-->
-            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="gold_sponser.url">
-              {{ gold_sponser.name }}
-              <ExternalLinkIcon class="w-5 h-5" />
+            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="gold.link">
+              {{ gold.name_ja }}
             </a>
           </div>
         </div>
@@ -83,11 +85,10 @@
         </div>
         <div class="grid grid-cols-3">
           <!-- シルバースポンサー -->
-          <div v-for="silver_sponser in silver_sponsers" :key="silver_sponser.id" class="m-5">
+          <div v-for="silver_sponser in silvers" :key="silver_sponser.id" class="m-5">
             <!--会社名-->
-            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="silver_sponser.url">
-              {{ silver_sponser.name }}
-              <ExternalLinkIcon class="w-5 h-5" />
+            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="silver_sponser.link">
+              {{ silver_sponser.name_ja }}
             </a>
           </div>
         </div>
@@ -104,16 +105,17 @@
         </div>
         <div class="grid grid-cols-4">
           <!-- 特別スポンサー -->
-          <div v-for="special_sponser in special_sponsers" :key="special_sponser.id" class="m-5">
+          <div v-for="special_sponser in specials" :key="special_sponser.id" class="m-5">
             <!--ロゴ-->
             <div class="card_frame gold_card bg-tertiary-50">
-              <img :src="special_sponser.logo" class="object-none object-center w-full h-full" />
+              <img 
+              :src="require(`@/assets/images/sponsors/${special_sponser.logo_file}`)"
+              class="object-none object-center w-full h-full" />
             </div>
             
             <!--会社名-->
-            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="special_sponser.url">
-              {{ special_sponser.name }}
-              <ExternalLinkIcon class="w-5 h-5" />
+            <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="special_sponser.link">
+              {{ special_sponser.name_ja }}
             </a>
           </div>
         </div>
@@ -133,13 +135,15 @@
           <div v-for="patron in patrons" :key="patron.id" class="m-5">
             <!--パトロン名-->
             <a class="inline-flex items-center font-bold font-noto text-primary-700"   target="_blank" :href="patron.url">
-            <img :src="patron.logo" class="object-none object-center w-full h-full" />
-              {{ patron.name }}
+            <img
+            :src="require(`@/assets/images/sponsors/${patron.logo_file}`)"
+            class="object-none object-center w-4" />
+              {{ patron.name_ja }}
             </a>
           </div>
         </div>
       </div>
-      
+
       <!--snake face-->
       <div class="flex content-end w-11/12 h-32 bg-right-bottom bg-no-repeat snake-base" />
     </div>
@@ -147,63 +151,59 @@
 </template>
 
 <script>
-import { ExternalLinkIcon } from '@vue-hero-icons/outline'
 import SectionTitle from '@/components/Elements/SectionTitle'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'SponsorSection',
   components: {
-    SectionTitle,
-    ExternalLinkIcon,
+    OuterLink,
+    SectionTitle
   },
   data() {
     return {
-      diamond_sponser:
-        {id:1, name: "ダイヤモンドスポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-      platinum_sponsers:[
-        {id:1, name: "プラチナスポンサー1", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:2, name: "プラチナスポンサー2", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:3, name: "プラチナスポンサー3", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-      ],
-      gold_sponsers:[
-        {id:1, name: "ゴールドスポンサー1", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:2, name: "ゴールドスポンサー2", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:3, name: "ゴールドスポンサー3", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:4, name: "ゴールドスポンサー4", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:5, name: "ゴールドスポンサー5", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:6, name: "ゴールドスポンサー6", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:7, name: "ゴールドスポンサー7", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:8, name: "ゴールドスポンサー8", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-      ],
-      silver_sponsers:[
-        {id:1, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:2, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:3, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:4, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:5, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:6, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:7, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:8, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:9, name: "シルバースポンサー", url: "https://pycon.jp"},
-        {id:10, name: "シルバースポンサー", url: "https://pycon.jp"},
-      ],
-      special_sponsers:[
-        {id:1, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:2, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:3, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:4, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:5, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-        {id:6, name: "特別スポンサー", url: "https://pycon.jp", logo: require("@/assets/images/association-logo.svg")},
-      ],
-      patrons: [
-        {id:1, name: "パトロン", url: "https://pycon.jp", logo: require("@/assets/images/separator.svg")},
-        {id:2, name: "パトロン", url: "https://pycon.jp", logo: require("@/assets/images/separator.svg")},
-        {id:3, name: "パトロン", url: "https://pycon.jp", logo: require("@/assets/images/separator.svg")},
-        {id:4, name: "パトロン", url: "https://pycon.jp", logo: require("@/assets/images/separator.svg")},
-        {id:5, name: "パトロン", url: "https://pycon.jp", logo: require("@/assets/images/separator.svg")},
-      ],
+      sponsors: [],
+      platinums: [],
+      golds: [],
+      silvers: [],
+      specials: [],
+      patrons: []
     }
-  }
+  },
+  async fetch() {
+    this.sponsors = await this.$content("sponsors")
+    .only(['body'])
+    .fetch()
+    this.filter_sponsors();
+  },
+  methods: {
+    filter_sponsors() {
+      // const vm = this;
+      let pl = 0;
+      let g = 0;
+      let sl = 0;
+      let sp = 0;
+      let p = 0;
+      for(let i=0;i < this.sponsors.body.length;i++){
+        if(this.sponsors.body[i].sponsor_type === "platinum"){
+          // プラチナスポンサー
+          this.platinums[pl++] = this.sponsors.body[i];
+        }else if(this.sponsors.body[i].sponsor_type === "gold"){
+          // ゴールドスポンサー
+          this.golds[g++] = this.sponsors.body[i];
+        }else if(this.sponsors.body[i].sponsor_type === "silver"){
+          // シルバースポンサー
+          this.silvers[sl++] = this.sponsors.body[i];
+        }else if(this.sponsors.body[i].sponsor_type === "special"){
+          // 特別スポンサー
+          this.specials[sp++] = this.sponsors.body[i];
+        }else if(this.sponsors.body[i].sponsor_type === "patron"){
+          this.patrons[p++] = this.sponsors.body[i];
+        }
+      }
+    }
+  },
+
 }
 </script>
 
