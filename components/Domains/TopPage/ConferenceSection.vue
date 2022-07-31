@@ -68,14 +68,12 @@
           </div>
         </div>
 
-        <!--
-                <div class="conference-frame-timetable">
-                  <div class="conference-timetable font-noto">タイムテーブル詳細</div>
-                  <img src="@/assets/images/right_allow.svg" />
-                </div>
-              </div>
-        -->
-        <!--
+        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">
+          <div class="conference-timetable font-noto">タイムテーブル詳細</div>
+          <img src="@/assets/images/right_allow.svg" />
+          </div>
+        </div>
+
         <div class="flex flex-col items-center mt-10">
           <img
             src="@/assets/images/conference_vector.svg"
@@ -90,7 +88,7 @@
         <div class="flex flex-col items-center mt-10">
           <img src="@/assets/images/documents.svg" />
         </div>
-        -->
+
       </div>
       <div class="mt-10 snake-face-base">
         <!--snake face-->
@@ -183,7 +181,6 @@ export default {
   flex-direction: row;
   padding: 10px 36px;
   text-align: right;
-  margin-right: 0;
   margin-left: auto;
   background: #fcfcfd;
 
