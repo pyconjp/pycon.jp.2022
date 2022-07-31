@@ -31,6 +31,8 @@ export default {
   background-image: url("@/assets/images/separator.svg");
 }
 .snake-base {
-  background-image: url("@/assets/images/section_bg_img_left_black.svg");
+  @media (min-width: 1024px) {
+    background-image: url('@/assets/images/section_bg_img_left_black.svg');
+  }
 }
 </style>
