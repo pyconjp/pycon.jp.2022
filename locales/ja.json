@@ -44,6 +44,10 @@
       "venue": "TOC有明コンベンションホール",
       "venue-info": "会場案内",
       "ticket": "チケット案内 (Coming Soon)"
+    },
+    "index": {
+      "overviewSubTitle": "概要",
+      "overviewDescription": "PyCon は、Python ユーザが集まり、Python や Python を使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JP の開催を通じて、Python の使い手が一堂に集まり、Python にまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。"
     }
   }
 }
