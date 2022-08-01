@@ -28,7 +28,9 @@
         </a>
       </div>
     </div>
-    <div class="bg-tertiary-50 w-10/12 lg:w-7/12 mx-auto text-left blogs">
+    <div
+      class="bg-tertiary-50 w-10/12 lg:w-7/12 mx-auto text-left chipped-card"
+    >
       <div class="pt-16 px-14 pb-10 lg:pb-5 text-lg">
         <ul class="space-y-6">
           <li
@@ -125,17 +127,6 @@ export default {
 
 .published {
   flex: 0 0 6rem;
-}
-
-.blogs {
-  clip-path: polygon(
-    0 0,
-    calc(100% - 40px) 0,
-    100% 40px,
-    100% 100%,
-    40px 100%,
-    0% calc(100% - 40px)
-  );
 }
 
 .more-news::after {
