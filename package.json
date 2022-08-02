@@ -43,7 +43,6 @@
     "eslint-plugin-vue": "^8.2.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.5.1",
-    "sass-loader": "^10.2.1",
-    "vue-tweet-embed": "^2.4.0"
+    "sass-loader": "^10.2.1"
   }
 }
