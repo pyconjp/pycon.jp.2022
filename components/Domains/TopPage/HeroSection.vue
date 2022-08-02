@@ -63,8 +63,7 @@
             data-height="400"
             data-theme="dark"
             href="https://twitter.com/pyconjapan?ref_src=twsrc%5Etfw"
-            >Tweets by pyconjapan</a
-          >
+          ></a>
           <script
             async
             src="https://platform.twitter.com/widgets.js"
