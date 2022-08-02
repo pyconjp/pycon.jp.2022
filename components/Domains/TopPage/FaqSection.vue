@@ -4,13 +4,17 @@
     <div
       class="bg-tertiary-50 w-11/12 lg:w-8/12 mx-auto text-left chipped-card lg:mb-4"
     >
-      <div class="py-16 px-24 text-lg">
+      <div class="lg:py-16 py-8 lg:px-24 px-6 text-lg">
         <div class="flex flex-col gap-5">
           <div v-for="(faq, index) in $t('faq')" :key="index" class="flex-1">
             <div
               class="question py-5 border-dashed border-b-[1px] border-tertiary-400"
             >
-              <i18n :path="`faq.${index}.question.text`" tag="span">
+              <i18n
+                :path="`faq.${index}.question.text`"
+                tag="span"
+                class="block lg:inline"
+              >
                 <template #link>
                   <outer-link
                     :to="$t(`faq.${index}.question.url`).toString()"
@@ -28,7 +32,11 @@
             <div
               class="answer py-5 border-solid border-b-[1px] border-tertiary-400"
             >
-              <i18n :path="`faq.${index}.answer.text`" tag="span">
+              <i18n
+                :path="`faq.${index}.answer.text`"
+                tag="span"
+                class="block lg:inline"
+              >
                 <template #link>
                   <outer-link
                     :to="$t(`faq.${index}.answer.url`).toString()"
