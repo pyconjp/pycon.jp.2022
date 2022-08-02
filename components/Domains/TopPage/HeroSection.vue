@@ -58,15 +58,18 @@
           </div>
         </div>
         <div class="lg:w-96 w-full mt-10 lg:mt-0">
-          <div v-if="!isReady"></div>
-          <Timeline
-            v-else
-            id="pyconjapan"
-            ref="tweet"
-            source-type="profile"
-            :lang="$i18n.locale"
-            :options="{ width: '100%', height: '410', theme: 'dark' }"
-          />
+          <a
+            class="twitter-timeline"
+            data-height="400"
+            data-theme="dark"
+            href="https://twitter.com/pyconjapan?ref_src=twsrc%5Etfw"
+            >Tweets by pyconjapan</a
+          >
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
         </div>
       </div>
     </div>
@@ -74,7 +77,6 @@
 </template>
 
 <script>
-import { Timeline } from 'vue-tweet-embed'
 import {
   LocationMarkerIcon,
   ExternalLinkIcon,
@@ -86,21 +88,9 @@ export default {
   name: 'HeroSection',
   components: {
     OuterLink,
-    Timeline,
     LocationMarkerIcon,
     ExternalLinkIcon,
     CalendarIcon,
-  },
-  data() {
-    return {
-      isReady: {
-        type: Boolean,
-        default: false,
-      },
-    }
-  },
-  mounted() {
-    this.isReady = true
   },
 }
 </script>
