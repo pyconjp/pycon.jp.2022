@@ -58,7 +58,9 @@
           </div>
         </div>
         <div class="lg:w-96 w-full mt-10 lg:mt-0">
+          <div v-if="!isReady"></div>
           <Timeline
+            v-else
             id="pyconjapan"
             ref="tweet"
             source-type="profile"
@@ -88,6 +90,17 @@ export default {
     LocationMarkerIcon,
     ExternalLinkIcon,
     CalendarIcon,
+  },
+  data() {
+    return {
+      isReady: {
+        type: Boolean,
+        default: false,
+      },
+    }
+  },
+  mounted() {
+    this.isReady = true
   },
 }
 </script>
