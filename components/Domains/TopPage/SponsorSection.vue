@@ -11,21 +11,83 @@
           <h2 class="text-3xl font-bold text-tertiary-900 font-noto">DIAMOND</h2>
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">ダイヤモンドスポンサー</h4>
         </div>
-        <!--ロゴ-->
-        <div class="card_frame diamond_card bg-tertiary-50" >
-          <outer-link :to="sponsors.body[0].link">
-            <img 
-            :src="require(`@/assets/images/sponsors/${sponsors.body[0].logo_file}`)"
-            class="object-none object-center w-full h-full" />
-          </outer-link>
+        {{ diamond.length }}
+        {{ diamond }}
+        {{ platinums }}
+        
+        <div v-if="diamond && diamond.length > 0">
+        {{ diamond[0][$i18n.locale] }}
+        
+          <outer-link :to="diamond[0][$i18n.locale].name" class="text-2xl font-bold font-noto text-primary-700">
+                {{ diamond[0][$i18n.locale].name }}
+                <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
+            </outer-link>
         </div>
-        <!--会社名-->
-        <outer-link :to="sponsors.body[0].link" class="mt-2 text-2xl font-bold font-noto text-primary-700">
-            {{ sponsors.body[0].name_ja }}
-        </outer-link>
-      </div><!-- ダイヤモンドスポンサー -->
+        
+      </div>
 
       <div class="mt-10 mb-10 separator" /><!-- Separator -->
+
+      <!-- プラチナスポンサー -->
+      <div>
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">PLATINUM</h2>
+          <h4 class="text-lg font-bold text-tertiary-800 font-noto">プラチナスポンサー</h4>
+        </div>
+
+      </div>
+      <div class="mt-10 mb-10 separator" /><!-- Separator -->
+
+      <!-- ゴールドスポンサー -->
+      <div>
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">GOLD</h2>
+          <h4 class="text-lg font-bold text-tertiary-800 font-noto">ゴールドスポンサー</h4>
+        </div>
+        <div class="grid grid-cols-4">
+          <!-- ゴールドスポンサー -->
+
+        </div>
+      </div>
+      
+      <div class="mt-10 mb-10 separator" /><!-- Separator -->
+
+      <!-- シルバースポンサー -->
+      <div>
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">SILVER</h2>
+          <h4 class="text-lg font-bold text-tertiary-800 font-noto">シルバースポンサー</h4>
+        </div>
+        <div class="grid grid-cols-3">
+          <!-- シルバースポンサー -->
+        </div>
+      </div>
+      
+      <div class="mt-10 mb-10 separator" /><!-- Separator -->
+
+      <!-- 特別スポンサー -->
+      <div>
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">SPECIAL</h2>
+          <h4 class="text-lg font-bold text-tertiary-800 font-noto">特別スポンサー</h4>
+        </div>
+        <div class="grid grid-cols-4">
+          <!-- 特別スポンサー -->
+        </div>
+      </div>
+      
+      <div class="mt-10 mb-10 separator" /><!-- Separator -->
+      
+      <!-- パトロン -->
+      <div>
+        <div class="mb-10">
+          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">PATRON</h2>
+          <h4 class="text-lg font-bold text-tertiary-800 font-noto">パトロン</h4>
+        </div>
+        <div class="grid grid-cols-4">
+          <!-- パトロン -->
+        </div>
+      </div>
       
       <!--snake face-->
       <div class="flex content-end w-11/12 h-32 bg-right-bottom bg-no-repeat snake-base" />
@@ -34,6 +96,7 @@
 </template>
 
 <script>
+import { ExternalLinkIcon } from '@vue-hero-icons/outline'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
 
@@ -42,33 +105,38 @@ export default {
   components: {
     OuterLink,
     SectionTitle,
+    ExternalLinkIcon,
   },
   data() {
     return {
       sponsors: [],
+      diamond: [],
       platinums: [],
       golds: [],
       silvers: [],
       specials: [],
-      patrons: []
+      // patrons: []
     }
   },
   async fetch() {
     this.sponsors = await this.$content("sponsors")
     .only(['body'])
     .fetch()
-    this.filter_sponsors();
+    
+    this.filter_sponsors()
   },
   methods: {
     filter_sponsors() {
-      // const vm = this;
+      let dm = 0;
       let pl = 0;
       let g = 0;
       let sl = 0;
       let sp = 0;
-      let p = 0;
       for(let i=0;i < this.sponsors.body.length;i++){
-        if(this.sponsors.body[i].sponsor_type === "platinum"){
+        if(this.sponsors.body[i].sponsor_type === "diamond"){
+          // ダイアモンドスポンサー
+          this.diamond[dm++] = this.devide_i18n(this.sponsors.body[i]);
+        }else if(this.sponsors.body[i].sponsor_type === "platinum"){
           // プラチナスポンサー
           this.platinums[pl++] = this.sponsors.body[i];
         }else if(this.sponsors.body[i].sponsor_type === "gold"){
@@ -80,10 +148,36 @@ export default {
         }else if(this.sponsors.body[i].sponsor_type === "special"){
           // 特別スポンサー
           this.specials[sp++] = this.sponsors.body[i];
-        }else if(this.sponsors.body[i].sponsor_type === "patron"){
-          this.patrons[p++] = this.sponsors.body[i];
         }
       }
+    },
+    devide_i18n(sponsorRow){
+      const hashJa = {};
+      const hashEn = {};
+      const result = {};
+      // id
+      hashJa.id = sponsorRow[0];
+      hashEn.id = sponsorRow[0];
+      // name
+      hashJa.name = sponsorRow[4];
+      hashEn.name = sponsorRow[5];
+      // introduction
+      hashJa.introduction = sponsorRow[9];
+      hashEn.introduction = sponsorRow[10];
+      // url
+      hashJa.url = sponsorRow[11];
+      hashEn.url = sponsorRow[11];
+      // logo_file
+      hashJa.logo_file = sponsorRow[13];
+      hashEn.logo_file = sponsorRow[13];
+      // sponsor_type
+      hashJa.sponsor_type = sponsorRow[14];
+      hashEn.sponsor_type = sponsorRow[14];
+      
+      result.ja = hashJa;
+      result.en = hashEn;
+      
+      return result;
     }
   },
 }
@@ -94,6 +188,24 @@ export default {
   width: 59px;
   height: 23px;
   background-image: url("@/assets/images/separator.svg");
+}
+
+.card_frame {
+  clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
+}
+.diamond_card{
+  width: 590px;
+  height: 370px;
+}
+
+.platinum_card{
+  width: 383px;
+  height: 201px;
+}
+
+.gold_card{
+  width: 284px;
+  height: 147px;
 }
 .snake-base {
   @media (min-width: 1024px) {
