@@ -143,7 +143,6 @@
           </div>
         </div>
       </div>
-
       <!--snake face-->
       <div class="flex content-end w-11/12 h-32 bg-right-bottom bg-no-repeat snake-base" />
     </div>
@@ -153,6 +152,7 @@
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
+
 
 export default {
   name: 'SponsorSection',
@@ -203,7 +203,6 @@ export default {
       }
     }
   },
-
 }
 </script>
 
@@ -233,6 +232,8 @@ export default {
 }
 
 .snake-base {
-  background-image: url("@/assets/images/section_bg_img_left_black.svg");
+  @media (min-width: 1024px) {
+    background-image: url('@/assets/images/section_bg_img_left_black.svg');
+  }
 }
 </style>

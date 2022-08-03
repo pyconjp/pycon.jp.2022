@@ -1,53 +1,64 @@
 <template>
-  <div class="relative component-border-top font-noto text-white">
+  <div class="relative text-white component-border-top font-noto">
     <div
-      class="pt-7 pb-7 relative bg-tertiary-900 bg-footer bg-no-repeat lg:bg-right-bottom bg-center"
+      class="relative bg-center bg-no-repeat pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
     >
-      <div class="mx-auto w-11/12 lg:w-10/12">
+      <div class="w-11/12 mx-auto lg:w-10/12">
         <img
           src="~/assets/images/footer-2022-logo.svg"
           alt="2022-logo"
-          class="mx-auto lg:ml-0 w-10/12 lg:w-auto"
+          class="w-10/12 mx-auto lg:ml-0 lg:w-auto"
         />
         <div
-          class="flex flex-col footer-menu lg:flex-row w-1/2 lg:w-full mx-auto lg:ml-0"
+          class="flex flex-col w-1/2 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 gap-4 lg:gap-0"
         >
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
+            <p>
+              <outer-link
+                to="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
+              >
+                {{ $t('common.menu.about.coc') }}
+              </outer-link>
+            </p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.event.event') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
           <div class="flex-1">
             <p>
               {{ $t('common.menu.sponsor.sponsor') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
+            <p>
+              <outer-link
+                to="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
+              </outer-link>
+            </p>
+            <p>
+              <outer-link
+                to="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
+              </outer-link>
+            </p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.contents.contents') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.volunteer.volunteer') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
         </div>
         <div
-          class="border-t-2 border-t-tertiary-400 lg:pt-9 pt-6 font-source mb-3 flex flex-row gap-2"
+          class="flex flex-row gap-2 pt-6 mb-3 border-t-2 border-t-tertiary-400 lg:pt-9 font-source"
         >
           <div class="mr-2">
             {{ $t('common.sns') }}
@@ -61,7 +72,7 @@
                   </outer-link>
                 </div>
                 <img
-                  class="inline h-6 w-6"
+                  class="inline w-6 h-6"
                   :src="require(`@/assets/images/sns/${sns.logo}`)"
                   :alt="sns.name"
                 />
@@ -71,7 +82,7 @@
         </div>
         <div class="flex flex-col lg:items-end lg:flex-row">
           <div class="flex-1 mb-8 lg:mb-1.5">
-            <div class="mb-3 inline-flex">
+            <div class="inline-flex mb-3">
               <div class="mr-2">{{ $t('common.contact.contact') }}：</div>
               <div>
                 <outer-link
@@ -82,11 +93,11 @@
                 </outer-link>
               </div>
             </div>
-            <p class="whitespace-pre">{{ $t('common.contact.description') }}</p>
+            <p class="">{{ $t('common.contact.description') }}</p>
           </div>
         </div>
         <div
-          class="lg:mt-7 mt-9 mb-6 previous-pages underline lg:text-right text-center text-secondary-300"
+          class="mb-6 text-center underline lg:mt-7 mt-9 previous-pages lg:text-right text-secondary-300"
         >
           <outer-link to="https://www.pycon.jp/organizer/index.html">
             {{ $t('common.pastPyConJPSites') }}
@@ -94,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-white text-black">
+    <div class="text-black bg-white">
       <div class="flex justify-center">
         <div
           class="flex flex-col pt-8 pb-3 lg:py-10 lg:flex-row lg:items-start"
@@ -153,7 +164,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer-menu {
   padding-top: 49px;
   padding-bottom: 1.5rem;
