@@ -1,7 +1,7 @@
 <template>
   <div>
-    <SPHeader v-if="isSPHeader" />
-    <default-header v-else />
+    <default-header v-if="$device.isDesktop" />
+    <SPHeader v-else />
     <Nuxt />
     <default-footer />
   </div>
@@ -14,17 +14,6 @@ import DefaultFooter from '@/components/Domains/Footer'
 
 export default {
   components: { DefaultFooter, DefaultHeader, SPHeader },
-  data() {
-    return {
-      isSPHeader: false,
-    }
-  },
-  mounted() {
-    const mediaQuery = window.matchMedia('(max-width: 1024px)')
-    if (mediaQuery.matches) {
-      this.isSPHeader = true
-    }
-  },
 }
 </script>
 

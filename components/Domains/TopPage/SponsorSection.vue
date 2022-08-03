@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="text-center component-border-top bg-tertiary-100" >
     <section-title main="SPONSOR" sub="スポンサー" :primary="false"/>
     <div class="flex flex-col items-center">
@@ -144,6 +145,16 @@
         </div>
       </div>
 
+=======
+  <div class="text-center component-border-top bg-tertiary-100">
+    <section-title main="SPONSOR" sub="スポンサー" :primary="false"/>
+    <div class="flex flex-col items-center">
+      <div class="mt-10 mb-10 separator" /><!-- Separator -->
+
+      <div class="m-20 text-4xl font-bold font-fira text-primary-900">
+        Coming Soon !!
+      </div>
+>>>>>>> develop
       <!--snake face-->
       <div class="flex content-end w-11/12 h-32 bg-right-bottom bg-no-repeat snake-base" />
     </div>
@@ -152,11 +163,15 @@
 
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
+<<<<<<< HEAD
 import OuterLink from '@/components/Elements/OuterLink'
+=======
+>>>>>>> develop
 
 export default {
   name: 'SponsorSection',
   components: {
+<<<<<<< HEAD
     OuterLink,
     SectionTitle
   },
@@ -204,6 +219,10 @@ export default {
     }
   },
 
+=======
+    SectionTitle,
+  },
+>>>>>>> develop
 }
 </script>
 
@@ -213,6 +232,7 @@ export default {
   height: 23px;
   background-image: url("@/assets/images/separator.svg");
 }
+<<<<<<< HEAD
 
 .card_frame {
   clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
@@ -234,5 +254,11 @@ export default {
 
 .snake-base {
   background-image: url("@/assets/images/section_bg_img_left_black.svg");
+=======
+.snake-base {
+  @media (min-width: 1024px) {
+    background-image: url('@/assets/images/section_bg_img_left_black.svg');
+  }
+>>>>>>> develop
 }
 </style>

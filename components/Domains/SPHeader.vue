@@ -26,79 +26,124 @@
           <span></span><span></span><span></span>
         </div>
       </div>
-      <div
-        v-if="isSPHeaderOpen"
-        class="flex flex-col items-center w-1/2 text-white"
-      >
-        <div class="w-2/3">
+      <div v-if="isSPHeaderOpen" class="flex flex-col items-center text-white">
+        <div class="">
+          <!--###############-->
+          <!-- 概要セクション -->
+          <!--###############-->
           <div class="sp-header-section">
             <div>
               <div class="arrow-right"></div>
-              <p>開催概要</p>
+              <p>{{ $t('common.menu.about.about') }}</p>
+            </div>
+
+            <div>
+              <div class="sp-header-line"></div>
+              <a
+                href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ $t('common.menu.about.coc') }}</a
+              >
+            </div>
+            <!-- <div>
+              <div class="sp-header-line"></div>
+              <p>{{ $t('common.menu.about.venue') }}</p>
             </div>
             <div>
               <div class="sp-header-line"></div>
-              <p>行動規範</p>
+              <p>{{ $t('common.menu.about.support') }}</p>
             </div>
             <div>
               <div class="sp-header-line"></div>
-              <p>感染対策ガイドライン</p>
+              <p>{{ $t('common.menu.about.COVID-19Guidelines') }}</p>
             </div>
             <div>
               <div class="sp-header-line"></div>
-              <p>会場案内</p>
+              <p>
+                {{
+                  $t('common.menu.about.infectionExpansionPreventionCheckSheet')
+                }}
+              </p>
+            </div> -->
+          </div>
+          <!--###############-->
+          <!-- イベントセクション -->
+          <!--###############-->
+          <div class="sp-header-section disable-color">
+            <div>
+              <div class="arrow-right"></div>
+              <p>{{ $t('common.menu.event.event') }}</p>
+            </div>
+            <!-- <div>
+              <div class="sp-header-line"></div>
+              <p>{{ $t('common.menu.event.timetable') }}</p>
             </div>
             <div>
               <div class="sp-header-line"></div>
-              <p>サポート</p>
+              <p>{{ $t('common.menu.event.tutorial') }}</p>
+            </div>
+            <div>
+              <div class="sp-header-line"></div>
+              <p>{{ $t('common.menu.event.sprint') }}</p>
+            </div> -->
+          </div>
+          <!--###############-->
+          <!-- スポンサーセクション -->
+          <!--###############-->
+          <div class="sp-header-section">
+            <div>
+              <div class="arrow-right"></div>
+              <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
+            </div>
+            <!-- <div>
+              <div class="sp-header-line"></div>
+              <p>{{ $t('common.menu.sponsor.sponsorList') }}</p>
+            </div> -->
+            <div>
+              <div class="sp-header-line"></div>
+              <a
+                href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
+              </a>
+            </div>
+            <div>
+              <div class="sp-header-line"></div>
+              <a
+                href="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
+              </a>
             </div>
           </div>
-          <div class="sp-header-section">
+          <!--###############-->
+          <!-- コンテンツセクション -->
+          <!--###############-->
+          <div class="sp-header-section disable-color">
             <div>
               <div class="arrow-right"></div>
-              <p>イベント詳細</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>タイムテーブル</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>チュートリアル</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>スプリント</p>
+              <p>{{ $t('common.menu.contents.contents') }}</p>
             </div>
           </div>
-          <div class="sp-header-section">
+          <!--###############-->
+          <!-- スタッフセクション -->
+          <!--###############-->
+          <div class="sp-header-section disable-color">
             <div>
               <div class="arrow-right"></div>
-              <p>スポンサー</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>スポンサー募集要項</p>
-            </div>
-          </div>
-          <div class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>コンテンツ</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>初学者向けコンテンツ</p>
-            </div>
-          </div>
-          <div class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>スタッフ一覧</p>
+              <p>{{ $t('common.menu.volunteer.volunteer') }}</p>
             </div>
           </div>
         </div>
 
+        <!--###############-->
+        <!-- 言語切り替えエリア -->
+        <!--###############-->
         <div
           class="flex flex-row pr-6 my-3 font-bold leading-10 text-black bg-secondary-400 whitespace-nowrap font-noto"
         >
@@ -240,7 +285,8 @@ export default {
   display: flex;
   align-items: center;
 }
-.sp-header-section div p {
+.sp-header-section div p,
+a {
   margin-left: 16px;
 }
 
@@ -266,5 +312,8 @@ export default {
   border-bottom: 1px solid #f77c5e;
   width: 20px;
   height: 1px;
+}
+.disable-color {
+  opacity: 0.5;
 }
 </style>

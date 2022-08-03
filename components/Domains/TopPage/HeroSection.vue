@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="py-28 mx-auto lg:w-5/6 w-11/12 bg-hero bg-no-repeat bg-center">
+    <div
+      class="py-28 mx-auto lg:w-5/6 w-11/12 bg-hero bg-no-repeat bg-center bg-contain"
+    >
       <div
         class="flex flex-col lg:flex-row justify-center items-center gap-x-24"
       >
@@ -56,13 +58,17 @@
           </div>
         </div>
         <div class="lg:w-96 w-full mt-10 lg:mt-0">
-          <Timeline
-            id="pyconjapan"
-            ref="tweet"
-            source-type="profile"
-            :lang="$i18n.locale"
-            :options="{ width: '100%', height: '410', theme: 'dark' }"
-          />
+          <a
+            class="twitter-timeline"
+            data-height="400"
+            data-theme="dark"
+            href="https://twitter.com/pyconjapan?ref_src=twsrc%5Etfw"
+          ></a>
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
         </div>
       </div>
     </div>
@@ -70,7 +76,6 @@
 </template>
 
 <script>
-import { Timeline } from 'vue-tweet-embed'
 import {
   LocationMarkerIcon,
   ExternalLinkIcon,
@@ -82,7 +87,6 @@ export default {
   name: 'HeroSection',
   components: {
     OuterLink,
-    Timeline,
     LocationMarkerIcon,
     ExternalLinkIcon,
     CalendarIcon,

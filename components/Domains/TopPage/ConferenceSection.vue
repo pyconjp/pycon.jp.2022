@@ -42,7 +42,7 @@
 
         <div class="hidden mt-10 lg:block conference-keynote-separator" />
 
-        <div class="flex flex-col mt-10 conference-frame">
+        <div class="flex flex-col my-10 conference-frame">
           <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
             <div class="flex w-12/12 lg:flex-1">
@@ -68,29 +68,26 @@
           </div>
         </div>
 
-        <!--
-                <div class="conference-frame-timetable">
-                  <div class="conference-timetable font-noto">タイムテーブル詳細</div>
-                  <img src="@/assets/images/right_allow.svg" />
-                </div>
-              </div>
-        -->
-        <!--
-        <div class="flex flex-col items-center mt-10">
-          <img
-            src="@/assets/images/conference_vector.svg"
-            alt="Keynote vector"
-            class="conference-small-vector"
-          />
-          <div class="mt-10"></div>
-          <div class="conference-label font-noto">Documents</div>
-          <div class="mt-1 conference-description font-noto">当日配布物</div>
-        </div>
+        <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
+        <!--          <div class="conference-timetable font-noto">タイムテーブル詳細</div>-->
+        <!--          <img src="@/assets/images/right_allow.svg" />-->
+        <!--          </div>-->
+        <!--        </div>-->
 
-        <div class="flex flex-col items-center mt-10">
-          <img src="@/assets/images/documents.svg" />
-        </div>
-        -->
+        <!--        <div class="flex flex-col items-center mt-10">-->
+        <!--          <img-->
+        <!--            src="@/assets/images/conference_vector.svg"-->
+        <!--            alt="Keynote vector"-->
+        <!--            class="conference-small-vector"-->
+        <!--          />-->
+        <!--          <div class="mt-10"></div>-->
+        <!--          <div class="conference-label font-noto">Documents</div>-->
+        <!--          <div class="mt-1 conference-description font-noto">当日配布物</div>-->
+        <!--        </div>-->
+
+        <!--        <div class="flex flex-col items-center mt-10">-->
+        <!--          <img src="@/assets/images/documents.svg" />-->
+        <!--        </div>-->
       </div>
       <div class="mt-10 snake-face-base">
         <!--snake face-->
@@ -112,11 +109,11 @@ export default {
     return {
       keynote1: {
         image: 'keynote1.svg',
-        date: '2021.10.15 13:30 -',
+        date: '2021.10.14 10:30 -',
       },
       keynote2: {
         image: 'keynote2.svg',
-        date: 'Comming Soon...',
+        date: '2021.10.15 10:30 -',
       },
     }
   },
@@ -183,7 +180,6 @@ export default {
   flex-direction: row;
   padding: 10px 36px;
   text-align: right;
-  margin-right: 0;
   margin-left: auto;
   background: #fcfcfd;
 
@@ -236,7 +232,7 @@ export default {
     "keynote1": {
       "name": "Hiromu Nishiuchi",
       "title": "",
-      "desc": "TBD."
+      "desc": "After working as an Assistant Professor in the Department of Medical Communication at the University of Tokyo Graduate School of Medicine, Deputy Director of the University Hospital Medical Information Network Research Center, and a visiting researcher at Dana-Farber/Harvard Cancer Research Center, he founded Data Vehicle, Inc. in November 2014. He is engaged in the development and sales of extended analytics tools such as \"dataDiver,\" utilizing his own expertise, as well as supporting public and private sector data utilization projects. His publications include the \"Statistics is the Strongest Study\" series, which has sold over 500,000 copies, and \"Statistics Will Save Japan\" (Chuokoron Shinsha). He is also a member of the Advisory Board of EBPM (Evidence Based Policy Making) of the Cabinet Office since 2020."
     },
     "keynote2": {
       "name": "Comming soon...",
