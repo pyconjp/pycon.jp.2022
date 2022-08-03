@@ -10,40 +10,51 @@
           class="w-10/12 mx-auto lg:ml-0 lg:w-auto"
         />
         <div
-          class="flex flex-col w-1/2 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0"
+          class="flex flex-col w-1/2 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 gap-4 lg:gap-0"
         >
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
+            <p>
+              <outer-link
+                to="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
+              >
+                {{ $t('common.menu.about.coc') }}
+              </outer-link>
+            </p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.event.event') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
           <div class="flex-1">
             <p>
               {{ $t('common.menu.sponsor.sponsor') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
+            <p>
+              <outer-link
+                to="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
+              </outer-link>
+            </p>
+            <p>
+              <outer-link
+                to="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
+              >
+                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
+              </outer-link>
+            </p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.contents.contents') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
           <div class="flex-1">
-            <p>
+            <p class="opacity-50">
               {{ $t('common.menu.volunteer.volunteer') }}
             </p>
-            <!--TODO-->
-            <p>Child(TODO)</p>
           </div>
         </div>
         <div

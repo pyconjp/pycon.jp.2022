@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="py-28 mx-auto lg:w-5/6 w-11/12 bg-hero bg-no-repeat bg-center bg-contain"
+      class="py-9 lg:py-28 mx-auto lg:w-5/6 w-11/12 bg-hero bg-no-repeat bg-center bg-contain"
     >
       <div
         class="flex flex-col lg:flex-row justify-center items-center gap-x-24"
