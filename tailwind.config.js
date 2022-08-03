@@ -59,8 +59,8 @@ module.exports = {
     },
     fontFamily: {
       noto: ["'Noto Sans JP'", ...defaultTheme.fontFamily.sans],
-      source: 'Source Sans Pro',
-      fira: 'Fira Sans',
+      source: ["'Source Sans Pro'", 'sans-serif'],
+      fira: ["'Fira Sans'", 'sans-serif'],
       bayon: ["'Bayon'", 'sans-serif'],
     },
   },
