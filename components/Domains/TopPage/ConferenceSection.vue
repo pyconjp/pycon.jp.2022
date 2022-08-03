@@ -42,7 +42,7 @@
 
         <div class="hidden mt-10 lg:block conference-keynote-separator" />
 
-        <div class="flex flex-col mt-10 conference-frame">
+        <div class="flex flex-col my-10 conference-frame">
           <div class="flex flex-col items-center mt-10 lg:flex-row">
             <!-- left image -->
             <div class="flex w-12/12 lg:flex-1">
@@ -68,27 +68,26 @@
           </div>
         </div>
 
-        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">
-          <div class="conference-timetable font-noto">タイムテーブル詳細</div>
-          <img src="@/assets/images/right_allow.svg" />
-          </div>
-        </div>
+        <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
+        <!--          <div class="conference-timetable font-noto">タイムテーブル詳細</div>-->
+        <!--          <img src="@/assets/images/right_allow.svg" />-->
+        <!--          </div>-->
+        <!--        </div>-->
 
-        <div class="flex flex-col items-center mt-10">
-          <img
-            src="@/assets/images/conference_vector.svg"
-            alt="Keynote vector"
-            class="conference-small-vector"
-          />
-          <div class="mt-10"></div>
-          <div class="conference-label font-noto">Documents</div>
-          <div class="mt-1 conference-description font-noto">当日配布物</div>
-        </div>
+        <!--        <div class="flex flex-col items-center mt-10">-->
+        <!--          <img-->
+        <!--            src="@/assets/images/conference_vector.svg"-->
+        <!--            alt="Keynote vector"-->
+        <!--            class="conference-small-vector"-->
+        <!--          />-->
+        <!--          <div class="mt-10"></div>-->
+        <!--          <div class="conference-label font-noto">Documents</div>-->
+        <!--          <div class="mt-1 conference-description font-noto">当日配布物</div>-->
+        <!--        </div>-->
 
-        <div class="flex flex-col items-center mt-10">
-          <img src="@/assets/images/documents.svg" />
-        </div>
-
+        <!--        <div class="flex flex-col items-center mt-10">-->
+        <!--          <img src="@/assets/images/documents.svg" />-->
+        <!--        </div>-->
       </div>
       <div class="mt-10 snake-face-base">
         <!--snake face-->
