@@ -11,17 +11,23 @@
           <h2 class="text-3xl font-bold text-tertiary-900 font-noto">DIAMOND</h2>
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">ダイヤモンドスポンサー</h4>
         </div>
-        {{ diamond.length }}
-        {{ diamond }}
-        {{ platinums }}
         
-        <div v-if="diamond && diamond.length > 0">
-        {{ diamond[0][$i18n.locale] }}
-        
-          <outer-link :to="diamond[0][$i18n.locale].name" class="text-2xl font-bold font-noto text-primary-700">
+        <div v-if="sponsors && diamond && diamond.length > 0 && diamond[0][$i18n.locale]">
+          <!--ロゴ-->
+          <div class="card_frame diamond_card bg-tertiary-50" >
+            <outer-link :to="diamond[0][$i18n.locale].url">
+              <img 
+              :src="require(`@/assets/images/sponsors/${diamond[0][$i18n.locale].logo_file}`)"
+              class="object-none object-center w-full h-full" />
+            </outer-link>
+          </div>
+          <!--会社名-->
+          <div class="mt-2 underline">
+            <outer-link :to="diamond[0][$i18n.locale].url" class="text-2xl font-bold font-noto text-primary-700">
                 {{ diamond[0][$i18n.locale].name }}
                 <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
             </outer-link>
+          </div>
         </div>
         
       </div>
@@ -35,6 +41,28 @@
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">プラチナスポンサー</h4>
         </div>
 
+        <div v-if="sponsors && platinums && platinums.length > 0">
+          <div class="flex flex-row">
+            <div v-for="platinum in platinums" :key="platinum.id" class="m-5">
+              <!--ロゴ-->
+              <div class="card_frame bg-tertiary-50 platinum_card" >
+                <outer-link :to="platinum[$i18n.locale].url">
+                  <img 
+                  :src="require(`@/assets/images/sponsors/${platinum[$i18n.locale].logo_file}`)"
+                  class="object-none object-center w-full h-full" />
+                </outer-link>
+              </div>
+              <!--会社名-->
+              <div class="mt-2 underline">
+                <outer-link :to="platinum[$i18n.locale].url" class="text-2xl font-bold font-noto text-primary-700">
+                    {{ platinum[$i18n.locale].name }}
+                    <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
+                </outer-link>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="mt-10 mb-10 separator" /><!-- Separator -->
 
@@ -44,9 +72,28 @@
           <h2 class="text-3xl font-bold text-tertiary-900 font-noto">GOLD</h2>
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">ゴールドスポンサー</h4>
         </div>
-        <div class="grid grid-cols-4">
-          <!-- ゴールドスポンサー -->
-
+        
+        <!-- ゴールドスポンサー -->
+        <div v-if="sponsors && golds && golds.length > 0">
+          <div class="grid grid-cols-4">
+            <div v-for="gold in golds" :key="gold.id" class="m-5">
+              <!--ロゴ-->
+              <div class="card_frame bg-tertiary-50 gold_card" >
+                <outer-link :to="gold[$i18n.locale].url">
+                  <img 
+                  :src="require(`@/assets/images/sponsors/${gold[$i18n.locale].logo_file}`)"
+                  class="object-none object-center w-full h-full" />
+                </outer-link>
+              </div>
+              <!--会社名-->
+              <div class="mt-2 underline">
+                <outer-link :to="gold[$i18n.locale].url" class="text-2xl font-bold font-noto text-primary-700">
+                    {{ gold[$i18n.locale].name }}
+                    <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
+                </outer-link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -58,9 +105,20 @@
           <h2 class="text-3xl font-bold text-tertiary-900 font-noto">SILVER</h2>
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">シルバースポンサー</h4>
         </div>
-        <div class="grid grid-cols-3">
           <!-- シルバースポンサー -->
-        </div>
+          <div v-if="sponsors && silvers && silvers.length > 0">
+            <div class="grid grid-cols-3">
+              <div v-for="silver in silvers" :key="silver.id" class="m-5">
+                <!--会社名-->
+                <div class="mt-2 underline">
+                  <outer-link :to="silver[$i18n.locale].url" class="text-2xl font-bold font-noto text-primary-700">
+                      {{ silver[$i18n.locale].name }}
+                      <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
+                  </outer-link>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
       
       <div class="mt-10 mb-10 separator" /><!-- Separator -->
@@ -133,52 +191,59 @@ export default {
       let sl = 0;
       let sp = 0;
       for(let i=0;i < this.sponsors.body.length;i++){
-        if(this.sponsors.body[i].sponsor_type === "diamond"){
+        // 言語別データ作成
+        const hashJa = {};
+        const hashEn = {};
+        const hashi18n = {};
+        const sponsorRow = this.sponsors.body[i];
+        console.log(sponsorRow); // eslint-disable-line no-console
+
+        // id,実装,実装可能,セクション,name_ja,name_en,担当,掲載情報確定,ロゴ,introduction_ja,introduction_en,link,other,logo_file,sponsor_type
+        // id
+        hashJa.id = sponsorRow.id;
+        hashEn.id = sponsorRow.id;
+        // name
+        hashJa.name = sponsorRow.name_ja;
+        hashEn.name = sponsorRow.name_en;
+        // introduction
+        hashJa.introduction = sponsorRow.introduction_ja;
+        hashEn.introduction = sponsorRow.introduction_en;
+        // url
+        hashJa.url = sponsorRow.url;
+        hashEn.url = sponsorRow.url;
+        // logo_file
+        if(sponsorRow.logo_file.length > 0){
+          hashJa.logo_file = sponsorRow.logo_file;
+          hashEn.logo_file = sponsorRow.logo_file;
+        }else{
+          hashJa.logo_file = "association-logo.svg";
+          hashEn.logo_file = "association-logo.svg";
+        }
+        // sponsor_type
+        hashJa.sponsor_type = sponsorRow.sponsor_type;
+        hashEn.sponsor_type = sponsorRow.sponsor_type;
+        // create hash
+        hashi18n.ja = hashJa;
+        hashi18n.en = hashEn;
+      
+        if(sponsorRow.sponsor_type === "diamond"){
           // ダイアモンドスポンサー
-          this.diamond[dm++] = this.devide_i18n(this.sponsors.body[i]);
-        }else if(this.sponsors.body[i].sponsor_type === "platinum"){
+          this.diamond[dm++] = hashi18n;
+        }else if(sponsorRow.sponsor_type === "platinum"){
           // プラチナスポンサー
-          this.platinums[pl++] = this.sponsors.body[i];
-        }else if(this.sponsors.body[i].sponsor_type === "gold"){
+          this.platinums[pl++] = hashi18n;
+        }else if(sponsorRow.sponsor_type === "gold"){
           // ゴールドスポンサー
-          this.golds[g++] = this.sponsors.body[i];
-        }else if(this.sponsors.body[i].sponsor_type === "silver"){
+          this.golds[g++] = hashi18n;
+        }else if(sponsorRow.sponsor_type === "silver"){
           // シルバースポンサー
-          this.silvers[sl++] = this.sponsors.body[i];
-        }else if(this.sponsors.body[i].sponsor_type === "special"){
+          this.silvers[sl++] = hashi18n;
+        }else if(sponsorRow.sponsor_type === "special"){
           // 特別スポンサー
-          this.specials[sp++] = this.sponsors.body[i];
+          this.specials[sp++] = hashi18n;
         }
       }
     },
-    devide_i18n(sponsorRow){
-      const hashJa = {};
-      const hashEn = {};
-      const result = {};
-      // id
-      hashJa.id = sponsorRow[0];
-      hashEn.id = sponsorRow[0];
-      // name
-      hashJa.name = sponsorRow[4];
-      hashEn.name = sponsorRow[5];
-      // introduction
-      hashJa.introduction = sponsorRow[9];
-      hashEn.introduction = sponsorRow[10];
-      // url
-      hashJa.url = sponsorRow[11];
-      hashEn.url = sponsorRow[11];
-      // logo_file
-      hashJa.logo_file = sponsorRow[13];
-      hashEn.logo_file = sponsorRow[13];
-      // sponsor_type
-      hashJa.sponsor_type = sponsorRow[14];
-      hashEn.sponsor_type = sponsorRow[14];
-      
-      result.ja = hashJa;
-      result.en = hashEn;
-      
-      return result;
-    }
   },
 }
 </script>
