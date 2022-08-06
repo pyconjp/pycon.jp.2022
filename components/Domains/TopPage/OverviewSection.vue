@@ -1,32 +1,45 @@
 <template>
   <div class="text-center component-border-top bg-tertiary-100">
-    <section-title main="OVERVIEW" sub="概要"  :primary="false"/>
-      <div class="flex flex-col items-center w-11/12 mx-auto mt-10 mb-8 lg:flex-row lg:w-10/12">
-          <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
-            <!-- left pane -->
-            <div class="relative flex w-10/12 h-6/6 lg:flex-1 overview-frame"> <!-- overview-frame -->
-              <div class="min-h-full">
-                  <div class="absolute w-11/12 mt-5 -ml-5 border-solid border-1 overview-clip bg-primary-700 h-5/6 " />                  
-                <div class="absolute w-11/12 bg-cover border-solid overview-image border-secondary-50 border-1 h-5/6" />
-              </div>
-            </div>
-        
-            <!-- right pane -->
-            <div class="flex flex-col w-12/12 mt-10 lg:ml-10 lg:flex-[2_2_0] lg:mt-0">
-                  <div class="flex flex-row">
-                    <div class="mr-2 overview-text-icon" />
-                    <div class="overview-text-title text-tertiary-900 font-fira">What is <span class="text-primary-700">PyCon</span> ?</div>
-                  </div>
-                  <div class="pl-5 text-left overview-text-description text-tertiary-800 font-fira">
-                    {{ $t('pages.index.overviewDescription') }}
-                  </div>
-            </div>
+    <section-title main="OVERVIEW" sub="概要" :primary="false" />
+    <div
+      class="flex flex-col items-center w-11/12 mt-10 mb-8 lg:flex-row lg:w-10/12"
+    >
+      <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
+        <!-- left pane -->
+        <div class="relative flex w-10/12 h-6/6 lg:flex-1 overview-frame">
+          <!-- overview-frame -->
+          <div class="min-h-full">
+            <div
+              class="absolute w-11/12 mt-5 -ml-5 border-solid border-1 overview-clip bg-primary-700 h-5/6"
+            />
+            <div
+              class="absolute w-11/12 bg-cover border-solid overview-image border-secondary-50 border-1 h-5/6"
+            />
+          </div>
         </div>
+
+        <!-- right pane -->
+        <div
+          class="flex flex-col w-12/12 mt-10 lg:ml-10 lg:flex-[2_2_0] lg:mt-0"
+        >
+          <div class="flex flex-row">
+            <div class="mr-2 overview-text-icon" />
+            <div class="overview-text-title text-tertiary-900 font-fira">
+              What is <span class="text-primary-700">PyCon</span> ?
+            </div>
+          </div>
+          <div
+            class="pl-5 text-left overview-text-description text-tertiary-800 font-fira"
+          >
+            {{ $t('pages.index.overviewDescription') }}
+          </div>
+        </div>
+      </div>
     </div>
     <div class="snake-face-base">
       <div class="self-end hidden snake-face lg:block" />
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -47,17 +60,33 @@ export default {
 }
 
 .overview-clip {
-  clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
+  clip-path: polygon(
+    0% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    100% 100%,
+    10% 100%,
+    0% 90%
+  );
 }
-.overview-image { 
-  background-image: url("@/assets/images/overview.jpg");
-  clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
+.overview-image {
+  background-image: url('@/assets/images/overview.jpg');
+  clip-path: polygon(
+    0% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    100% 100%,
+    10% 100%,
+    0% 90%
+  );
 }
 
 .overview-text-icon {
   width: 31px;
   height: 31px;
-  background-image: url("@/assets/images/card_title_icon.svg");
+  background-image: url('@/assets/images/card_title_icon.svg');
 }
 .overview-text-title {
   font-style: normal;
@@ -65,12 +94,9 @@ export default {
   font-size: 36px;
   line-height: 100%;
   letter-spacing: 0.02em;
-
-  white-space:nowrap;
 }
 
 .overview-text-description {
-
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -95,5 +121,3 @@ export default {
   background-image: url('@/assets/images/section_bg_img_right_yellow.svg');
 }
 </style>
-
-
