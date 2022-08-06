@@ -14,7 +14,7 @@
         
         <div v-if="sponsors && diamond && diamond.length > 0 && diamond[0][$i18n.locale]">
           <!--ロゴ-->
-          <div class="card_frame diamond_card bg-tertiary-50" >
+          <div class="lg:w-[590px] lg:h-[370px] card_frame bg-tertiary-50 w-[383px] h-[201px]" >
             <outer-link :to="diamond[0][$i18n.locale].url">
               <img 
               :src="require(`@/assets/images/sponsors/${diamond[0][$i18n.locale].logo_file}`)"
@@ -42,10 +42,10 @@
         </div>
 
         <div v-if="sponsors && platinums && platinums.length > 0">
-          <div class="flex flex-row">
+          <div class="flex flex-col lg:flex-row">
             <div v-for="platinum in platinums" :key="platinum.id" class="m-5">
               <!--ロゴ-->
-              <div class="card_frame bg-tertiary-50 platinum_card" >
+              <div class="card_frame bg-tertiary-50 w-[383px] h-[201px]" >
                 <outer-link :to="platinum[$i18n.locale].url">
                   <img 
                   :src="require(`@/assets/images/sponsors/${platinum[$i18n.locale].logo_file}`)"
@@ -75,10 +75,10 @@
         
         <!-- ゴールドスポンサー -->
         <div v-if="sponsors && golds && golds.length > 0">
-          <div class="grid grid-cols-4">
+          <div class="grid grid-cols-1 lg:grid-cols-4">
             <div v-for="gold in golds" :key="gold.id" class="m-5">
               <!--ロゴ-->
-              <div class="card_frame bg-tertiary-50 gold_card" >
+              <div class="card_frame bg-tertiary-50 w-[284px] h-[147px]" >
                 <outer-link :to="gold[$i18n.locale].url">
                   <img 
                   :src="require(`@/assets/images/sponsors/${gold[$i18n.locale].logo_file}`)"
@@ -107,7 +107,7 @@
         </div>
           <!-- シルバースポンサー -->
           <div v-if="sponsors && silvers && silvers.length > 0">
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 lg:grid-cols-3">
               <div v-for="silver in silvers" :key="silver.id" class="m-5">
                 <!--会社名-->
                 <div class="mt-2 underline">
@@ -131,10 +131,10 @@
         </div>
         <!-- 特別スポンサー -->
         <div v-if="sponsors && specials && specials.length > 0">
-          <div class="grid grid-cols-4">
+          <div class="grid grid-cols-1 lg:grid-cols-4">
             <div v-for="special in specials" :key="special.id" class="m-5">
               <!--ロゴ-->
-              <div class="card_frame bg-tertiary-50 gold_card" >
+              <div class="card_frame bg-tertiary-50 w-[284px] h-[147px]" >
                 <outer-link :to="special[$i18n.locale].url">
                   <img 
                   :src="require(`@/assets/images/sponsors/${special[$i18n.locale].logo_file}`)"
@@ -163,7 +163,7 @@
         </div>
         <!-- パトロン -->
         <div v-if="sponsors && patrons && patrons.length > 0">
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 lg:grid-cols-3">
               <div v-for="patron in patrons" :key="patron.id" class="m-5">
                 <div class="mt-2 underline">
                   <img 
@@ -294,23 +294,8 @@ export default {
   height: 23px;
   background-image: url("@/assets/images/separator.svg");
 }
-
 .card_frame {
   clip-path: polygon(0% 0%, 90% 0%, 100% 10%, 100% 90%, 100% 100%, 10% 100%, 0% 90%);
-}
-.diamond_card{
-  width: 590px;
-  height: 370px;
-}
-
-.platinum_card{
-  width: 383px;
-  height: 201px;
-}
-
-.gold_card{
-  width: 284px;
-  height: 147px;
 }
 .snake-base {
   @media (min-width: 1024px) {
