@@ -1,105 +1,110 @@
 <template>
-  <div class="component-border-top bg-secondary-400">
-    <div class="flex flex-col items-center">
-      <img
-        src="@/assets/images/conference_vector.svg"
-        alt="Keynote vector"
-        class="mid-vector"
-      />
-      <div class="mt-16 coc-section-title font-noto">行動規範</div>
+  <div>
+    <subpage-hero-section :title="['CODE OF', 'CONDUCT']" subtitle="行動規範" />
+    <div class="component-border-top bg-secondary-400">
+      <div class="flex flex-col items-center">
+        <div class="mt-10">
+          <img
+            src="@/assets/images/conference_vector.svg"
+            alt="Keynote vector"
+            class="mid-vector"
+          />
+        </div>
+        <div class="mt-16 coc-section-title font-noto">行動規範</div>
 
-      <div
-        class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-      >
-        <div class="items-center my-24 coc-content">
-          <div class="font-medium font-noto">
-            <p>{{ $t('coc.p1') }}</p>
-            <p class="mt-8">{{ $t('coc.p2') }}</p>
-            <p class="mt-8 text-xl font-bold">{{ $t('coc.p3') }}</p>
-            <p class="mt-8">{{ $t('coc.p4') }}</p>
-            <ul class="mt-8">
-              <li
-                v-for="message in $t('coc.p5-list')"
-                :key="message"
-                class="mt-3"
-              >
-                {{ message }}
-              </li>
-            </ul>
-            <p class="mt-8">{{ $t('coc.p6') }}</p>
-            <p class="mt-8">{{ $t('coc.p7') }}</p>
-            <p v-if="$i18n.locale === 'en'" class="mt-8">
-              {{ $t('coc.p7-2') }}
-            </p>
+        <div
+          class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
+        >
+          <div class="items-center my-24 coc-content">
+            <div class="font-medium font-noto">
+              <p>{{ $t('coc.p1') }}</p>
+              <p class="mt-8">{{ $t('coc.p2') }}</p>
+              <p class="mt-8 text-xl font-bold">{{ $t('coc.p3') }}</p>
+              <p class="mt-8">{{ $t('coc.p4') }}</p>
+              <ul class="mt-8">
+                <li
+                  v-for="message in $t('coc.p5-list')"
+                  :key="message"
+                  class="mt-3"
+                >
+                  {{ message }}
+                </li>
+              </ul>
+              <p class="mt-8">{{ $t('coc.p6') }}</p>
+              <p class="mt-8">{{ $t('coc.p7') }}</p>
+              <p v-if="$i18n.locale === 'en'" class="mt-8">
+                {{ $t('coc.p7-2') }}
+              </p>
 
-            <p class="mt-8">{{ $t('coc.p8') }}</p>
-            <p class="mt-8">{{ $t('coc.p9') }}</p>
-            <p class="mt-8 text-xl font-bold">{{ $t('coc.p10') }}</p>
-            <ul class="mt-8">
-              <li
-                v-for="message in $t('coc.p11-list')"
-                :key="message"
-                class="mt-3"
-              >
-                {{ message }}
-              </li>
-            </ul>
-            <p class="mt-8 text-xl font-bold">{{ $t('coc.p12') }}</p>
-            <p class="">{{ $t('coc.p13') }}</p>
-            <ul class="mt-8">
-              <li
-                v-for="message in $t('coc.p14-list')"
-                :key="message"
-                class="mt-3"
-              >
-                {{ message }}
-              </li>
-            </ul>
-            <p class="mt-8">{{ $t('coc.p15') }}</p>
-            <p class="mt-8">{{ $t('coc.p16') }}</p>
-            <p class="mt-8">{{ $t('coc.p17') }}</p>
-            <p class="mt-8">{{ $t('coc.p18') }}</p>
+              <p class="mt-8">{{ $t('coc.p8') }}</p>
+              <p class="mt-8">{{ $t('coc.p9') }}</p>
+              <p class="mt-8 text-xl font-bold">{{ $t('coc.p10') }}</p>
+              <ul class="mt-8">
+                <li
+                  v-for="message in $t('coc.p11-list')"
+                  :key="message"
+                  class="mt-3"
+                >
+                  {{ message }}
+                </li>
+              </ul>
+              <p class="mt-8 text-xl font-bold">{{ $t('coc.p12') }}</p>
+              <p class="">{{ $t('coc.p13') }}</p>
+              <ul class="mt-8">
+                <li
+                  v-for="message in $t('coc.p14-list')"
+                  :key="message"
+                  class="mt-3"
+                >
+                  {{ message }}
+                </li>
+              </ul>
+              <p class="mt-8">{{ $t('coc.p15') }}</p>
+              <p class="mt-8">{{ $t('coc.p16') }}</p>
+              <p class="mt-8">{{ $t('coc.p17') }}</p>
+              <p class="mt-8">{{ $t('coc.p18') }}</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="mt-10 coc-section-title font-noto">問い合わせ先</div>
+        <div class="mt-10 coc-section-title font-noto">問い合わせ先</div>
 
-      <div
-        class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-      >
-        <div class="my-5 coc-content">
-          <div class="text-custom-black">
-            <div class="font-medium font-noto">
-              <div>
-                <p class="font-bold">{{ $t('contact.onsite.header') }}</p>
-                <p>{{ $t('contact.onsite.body') }}</p>
-              </div>
-              <div class="mt-8">
-                <p class="font-bold">{{ $t('contact.online.header') }}</p>
-                <p>{{ $t('contact.online.body') }}</p>
+        <div
+          class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
+        >
+          <div class="my-5 coc-content">
+            <div class="text-custom-black">
+              <div class="font-medium font-noto">
+                <div>
+                  <p class="font-bold">{{ $t('contact.onsite.header') }}</p>
+                  <p>{{ $t('contact.onsite.body') }}</p>
+                </div>
+                <div class="mt-8">
+                  <p class="font-bold">{{ $t('contact.online.header') }}</p>
+                  <p>{{ $t('contact.online.body') }}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="mt-10 snake-face-base">
-        <!--snake face-->
-        <div class="hidden snake-face lg:block" />
+        <div class="mt-10 snake-face-base">
+          <!--snake face-->
+          <div class="hidden snake-face lg:block" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import SectionTitle from '@/components/Elements/SectionTitle'
+import SubpageHeroSection from '../Elements/SubpageHeroSection'
 
 export default {
   name: 'CoC',
-  // components: {
-  //   SectionTitle,
-  // },
+  components: {
+    SubpageHeroSection,
+  },
   data() {
     return {}
   },
