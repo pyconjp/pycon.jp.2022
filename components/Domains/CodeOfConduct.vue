@@ -6,12 +6,12 @@
         alt="Keynote vector"
         class="mid-vector"
       />
-      <div class="mt-10 coc-section-title font-noto">行動規範</div>
+      <div class="mt-16 coc-section-title font-noto">行動規範</div>
 
       <div
-        class="items-center w-11/12 mx-auto mt-10 bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
+        class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
       >
-        <div class="items-center mt-10 coc-content">
+        <div class="items-center my-24 coc-content">
           <div class="font-medium font-noto">
             <p>{{ $t('coc.p1') }}</p>
             <p class="mt-8">{{ $t('coc.p2') }}</p>
@@ -59,6 +59,27 @@
             <p class="mt-8">{{ $t('coc.p16') }}</p>
             <p class="mt-8">{{ $t('coc.p17') }}</p>
             <p class="mt-8">{{ $t('coc.p18') }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 coc-section-title font-noto">問い合わせ先</div>
+
+      <div
+        class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
+      >
+        <div class="my-5 coc-content">
+          <div class="text-custom-black">
+            <div class="font-medium font-noto">
+              <div>
+                <p class="font-bold">{{ $t('contact.onsite.header') }}</p>
+                <p>{{ $t('contact.onsite.body') }}</p>
+              </div>
+              <div class="mt-8">
+                <p class="font-bold">{{ $t('contact.online.header') }}</p>
+                <p>{{ $t('contact.online.body') }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +136,6 @@ export default {
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 64px;
   }
   .sp-width {
     width: 100%;
@@ -127,7 +147,6 @@ export default {
     width: 100%;
     padding-left: 6rem;
     padding-right: 6rem;
-    padding-bottom: 64px;
   }
 }
 
