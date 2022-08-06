@@ -6,7 +6,8 @@ export default {
           platinums: [],
           golds: [],
           silvers: [],
-          specials: [],
+          medias: [],
+          foods: [],
           patrons: [],
         }
       },
@@ -23,7 +24,8 @@ export default {
         let pl = 0;
         let g = 0;
         let sl = 0;
-        let sp = 0;
+        let sm = 0;
+        let sf = 0;
         let pt = 0;
         for(let i=0;i < this.sponsors.body.length;i++){
           const sponsorRow = this.sponsors.body[i];
@@ -41,9 +43,12 @@ export default {
           }else if(sponsorRow.sponsor_type === "silver"){
             // シルバースポンサー
             this.silvers[sl++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "special"){
-            // 特別スポンサー
-            this.specials[sp++] = hashi18n;
+          }else if(sponsorRow.sponsor_type === "media"){
+            // 特別スポンサー: メディア
+            this.medias[sm++] = hashi18n;
+          }else if(sponsorRow.sponsor_type === "food"){
+            // 特別スポンサー: フード
+            this.foods[sf++] = hashi18n;
           }else if(sponsorRow.sponsor_type === "patron"){
             // パトロンスポンサー
             this.patrons[pt++] = hashi18n;
