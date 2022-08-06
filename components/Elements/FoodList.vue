@@ -1,8 +1,9 @@
 <template>
     <!-- 特別スポンサー フード -->
     <div v-if="sponsors && foods && foods.length > 0">
-        <div class="grid grid-cols-1 lg:grid-cols-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4">
         <div v-for="food in foods" :key="food.id" class="m-5">
+          <div class="flex flex-col items-center justify-center">
             <!--ロゴ-->
             <div class="sponsor-chipped-card bg-tertiary-50 w-[284px] h-[147px]" >
             <outer-link :to="food[$i18n.locale].url">
@@ -18,8 +19,13 @@
                 <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
             </outer-link>
             </div>
+            <!-- 紹介文 -->
+            <div v-if="needsIntroduction" class="mt-8 text-center lg:w-10/12">
+            {{ food[$i18n.locale].introduction }}
+            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
 </template>
 
