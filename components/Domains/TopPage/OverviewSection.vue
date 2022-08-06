@@ -15,7 +15,7 @@
               class="absolute w-11/12 mt-5 border-solid border-1 overview-clip bg-primary-700 h-5/6"
             />
             <img
-              class="absolute w-11/12 h-5/6 left-2 overview-clip"
+              class="absolute object-cover w-11/12 h-5/6 left-4 overview-clip"
               src="~/assets/images/overview.jpg"
               alt="overview_img"
             />
