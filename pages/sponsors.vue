@@ -96,8 +96,10 @@
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
 import sponsorsMixin from '@/utils/sponsors_mixin'
+import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
+import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
 import DiamondItem from '@/components/Elements/DiamondItem'
-// import PlatinumList from '@/components/Elements/PlatinumList'
+import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
 import MediaList from '@/components/Elements/MediaList'
@@ -108,8 +110,10 @@ export default {
   name: 'SponsorsPage',
   components: {
     SectionTitle,
+    SponsorNewsCard,
+    SubpageHeroSection,
     DiamondItem,
-    // PlatinumList,
+    PlatinumList,
     GoldList,
     SilverList,
     MediaList,
