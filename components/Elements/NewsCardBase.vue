@@ -10,7 +10,7 @@
         <slot name="icon" />
         <div
           :class="
-            'text-left text-lg lg:w-[200px] w-[150px] ' +
+            'text-left text-lg w-[200px] ' +
             (primary ? 'text-primary-700' : 'text-tertiary-50')
           "
         >
