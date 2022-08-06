@@ -1,18 +1,18 @@
 <template>
   <div class="text-center component-border-top bg-tertiary-100">
     <section-title main="OVERVIEW" sub="概要"  :primary="false"/>
-      <div class="flex flex-col items-center w-10/12 mx-auto mt-10 mb-8 lg:flex-row">
+      <div class="flex flex-col items-center w-11/12 mx-auto mt-10 mb-8 lg:flex-row lg:w-10/12">
           <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
             <!-- left pane -->
             <div class="relative flex w-10/12 h-6/6 lg:flex-1 overview-frame"> <!-- overview-frame -->
-              <div class="h-6/6">
+              <div class="min-h-full">
                   <div class="absolute w-11/12 mt-5 -ml-5 border-solid border-1 overview-clip bg-primary-700 h-5/6 " />                  
                 <div class="absolute w-11/12 bg-cover border-solid overview-image border-secondary-50 border-1 h-5/6" />
               </div>
             </div>
         
             <!-- right pane -->
-            <div class="flex flex-col w-8/12 mt-10 lg:ml-10 lg:flex-[2_2_0] lg:mt-0">
+            <div class="flex flex-col w-12/12 mt-10 lg:ml-10 lg:flex-[2_2_0] lg:mt-0">
                   <div class="flex flex-row">
                     <div class="mr-2 overview-text-icon" />
                     <div class="overview-text-title text-tertiary-900 font-fira">What is <span class="text-primary-700">PyCon</span> ?</div>
