@@ -135,9 +135,9 @@
             >
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
-                <a class="ml-6">{{
+                <p class="ml-6">{{
                   $t('common.menu.sponsor.sponsorApplicationInformation')
-                }}</a>
+                }}</p>
               </div>
             </a>
             <a
@@ -148,9 +148,9 @@
             >
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
-                <a class="ml-6">{{
+                <p class="ml-6">{{
                   $t('common.menu.sponsor.sponsorApplicationRequirements')
-                }}</a>
+                }}</p>
               </div>
             </a>
           </div>
