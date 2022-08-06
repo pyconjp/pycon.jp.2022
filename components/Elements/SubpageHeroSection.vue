@@ -3,7 +3,7 @@
     <div
       :class="
         'flex flex-row lg:justify-center lg:gap-4 pb-12 pt-[72px] px-4 lg:px-auto' +
-        (!slotExists ? ' lg:pt-12' : '')
+        (slotExists ? ' lg:pt-12' : '')
       "
     >
       <img
