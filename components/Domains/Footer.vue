@@ -5,12 +5,12 @@
     >
       <div class="w-11/12 mx-auto lg:w-10/12">
         <img
-          src="~/assets/images/footer-2022-logo.svg"
+          src="~/assets/images/footer-2022-logo.png"
           alt="2022-logo"
-          class="w-10/12 mx-auto lg:ml-0 lg:w-auto"
+          class="mx-auto lg:ml-0 w-72"
         />
         <div
-          class="flex flex-col w-1/2 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 gap-4 lg:gap-0"
+          class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
