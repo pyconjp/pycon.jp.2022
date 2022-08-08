@@ -67,6 +67,14 @@
           </div>
         </div>
 
+        <div class="mt-10">
+          <img
+            src="@/assets/images/conference_vector.svg"
+            alt="Keynote vector"
+            class="mid-vector"
+          />
+        </div>
+
         <div class="mt-10 coc-section-title font-noto">問い合わせ先</div>
 
         <div
