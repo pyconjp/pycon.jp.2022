@@ -30,7 +30,7 @@
         class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
       >
         <outer-link class="more-news" to="https://pyconjp.blogspot.com/">
-          {{ $t('more_blogs').toString() }}
+          {{ $t('more_blogs') }}
         </outer-link>
       </div>
     </div>
@@ -116,3 +116,14 @@ li:before {
   background-image: url('@/assets/images/section_bg_img_left_orange.svg');
 }
 </style>
+
+<i18n>
+{
+  "ja": {
+    "more_blogs": "Newsをもっと見る（blog）"
+  },
+  "en": {
+    "more_blogs": "More News (blog)"
+  }
+}
+</i18n>
