@@ -67,16 +67,6 @@
             </div>
           </div>
         </div>
-        <div class="mt-10 mb-10 separator" /><!-- Separator -->
-        <div>
-          <div class="mb-10">
-            <h2 class="text-3xl font-bold text-tertiary-900 font-noto">Food</h2>
-            <h4 class="text-lg font-bold text-tertiary-800 font-noto">食事提供</h4>
-            <div class="flex flex-col items-center">
-              <food-list :needs-introduction="true" />
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- snake -->
@@ -96,11 +86,46 @@
         <div class="hidden snake-face-right-yello lg:block" />
       </div>
     </div>
+    <!-- スポンサー募集 9/13（1か月前）までシルバースポンサーだけ募集予定 -->
+    <div class="text-center component-border-top bg-primary-500">
+      <div
+        class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"
+      >
+      <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
+        <div class="flex flex-col">
+          <div class="flex flex-row pb-8 pl-8 text-left">
+            <div class="mr-1 sponsor-text-icon" />
+            <div class="font-bold sponsor-text-title text-tertiary-900 font-fira ">
+              {{ $t('title') }}
+            </div>
+          </div>
+          <div class="pb-8 pl-8 text-left">
+            {{ $t('description') }}
+          </div>
+
+          <div
+            class="pb-8 pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700"
+          >
+            <outer-link :to="$t('url').toString()">
+              {{ $t('link') }}
+              <ArrowNarrowRightIcon class="inline w-4 h-4 mb-2" />
+            </outer-link>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <!-- snake -->
+      <div class="snake-face-base">
+        <div class="hidden snake-face-left-black lg:block" />
+      </div>
+    </div>
   </div>
 </div>
 </template>
 
 <script>
+import { ArrowNarrowRightIcon } from '@vue-hero-icons/outline'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import sponsorsMixin from '@/utils/sponsors_mixin'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
@@ -110,7 +135,6 @@ import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
 import MediaList from '@/components/Elements/MediaList'
-import FoodList from '@/components/Elements/FoodList'
 import PatronList from '@/components/Elements/PatronList'
 
 export default {
@@ -124,8 +148,8 @@ export default {
     GoldList,
     SilverList,
     MediaList,
-    FoodList,
     PatronList,
+    ArrowNarrowRightIcon,
   },
   mixins: [sponsorsMixin],
 }
@@ -164,4 +188,47 @@ export default {
 
   background-image: url('@/assets/images/section_bg_img_right_yellow.svg');
 }
+
+.snake-face-left-black {
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  right: 85px;
+
+  background-image: url('@/assets/images/section_bg_img_left_black.svg');
+}
+
+.sponsor-text-icon {
+  width: 31px;
+  height: 31px;
+  background-image: url('@/assets/images/card_title_icon.svg');
+}
+
+.sponsor-text-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  @media screen(lg) {
+    font-size: 36px;
+  }
+}
 </style>
+
+<i18n>
+{
+  "ja": {
+    "title": "スポンサー募集中！",
+    "description": "PyCon JP 2022のスポンサーシップを募集中です。2次募集期間は 2022/06/14 (火) - 開催1ヶ月前 です。Pythonをキーワードに集まる多くの参加者に、Pythonを扱う企業であることや、エンジニアコミュニティを理解し支援する風土のある企業であること、または自社のサービスをアピールすることが可能です。",
+    "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
+    "link": "スポンサー募集概要・応募フォーム"
+  },
+  "en": {
+    "title": "Sponsors wanted!",
+    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, 06/14/2022 - one month prior to the event. We look forward to receiving applications from companies that want to appeal to the Python community!",
+    "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
+    "link": "Sponsorship Application Form"
+  }
+}
+</i18n>
