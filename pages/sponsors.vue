@@ -58,15 +58,15 @@
       <section-title main="SPECIAL" sub="特別スポンサー"/>
       <div class="flex flex-col items-center">
         <div class="mt-10 mb-10 separator" /><!-- Separator -->
-        <div>
+        <!-- <div>
           <div class="mb-10">
             <h2 class="text-3xl font-bold text-tertiary-900 font-noto">Media</h2>
             <h4 class="text-lg font-bold text-tertiary-800 font-noto">メディアスポンサー</h4>
             <div class="flex flex-col items-center">
-              <media-list :needs-introduction="true" />
+              <special-list :needs-introduction="true" />
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
       <!-- snake -->
@@ -134,7 +134,7 @@ import DiamondItem from '@/components/Elements/DiamondItem'
 import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
-import MediaList from '@/components/Elements/MediaList'
+// import SpecialList from '@/components/Elements/SpecialList'
 import PatronList from '@/components/Elements/PatronList'
 
 export default {
@@ -147,7 +147,7 @@ export default {
     PlatinumList,
     GoldList,
     SilverList,
-    MediaList,
+    // SpecialList,
     PatronList,
     ArrowNarrowRightIcon,
   },

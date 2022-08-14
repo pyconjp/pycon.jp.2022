@@ -59,7 +59,7 @@
           <h2 class="text-3xl font-bold text-tertiary-900 font-noto">SPECIAL</h2>
           <h4 class="text-lg font-bold text-tertiary-800 font-noto">特別スポンサー</h4>
         </div>
-        <media-list />
+        <special-list />
       </div>
       
       <div class="mt-10 mb-10 separator" /><!-- Separator -->
@@ -88,7 +88,7 @@ import DiamondItem from '@/components/Elements/DiamondItem'
 import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
-import MediaList from '@/components/Elements/MediaList'
+import SpecialList from '@/components/Elements/SpecialList'
 import PatronList from '@/components/Elements/PatronList'
 
 export default {
@@ -99,7 +99,7 @@ export default {
     PlatinumList,
     GoldList,
     SilverList,
-    MediaList,
+    SpecialList,
     PatronList,
   },
   mixins: [sponsorsMixin],

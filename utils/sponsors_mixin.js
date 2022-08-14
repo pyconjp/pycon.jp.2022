@@ -6,7 +6,7 @@ export default {
           platinums: [],
           golds: [],
           silvers: [],
-          medias: [],
+          specials: [],
           foods: [],
           patrons: [],
         }
@@ -43,9 +43,9 @@ export default {
           }else if(sponsorRow.sponsor_type === "silver"){
             // シルバースポンサー
             this.silvers[sl++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "media"){
+          }else if(sponsorRow.sponsor_type === "special"){
             // 特別スポンサー: メディア
-            this.medias[sm++] = hashi18n;
+            this.specials[sm++] = hashi18n;
           }else if(sponsorRow.sponsor_type === "food"){
             // 特別スポンサー: フード
             this.foods[sf++] = hashi18n;
