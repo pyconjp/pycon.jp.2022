@@ -8,8 +8,9 @@
               <div class="sponsor-chipped-card bg-tertiary-50 w-[284px] h-[147px]" >
                 <outer-link :to="gold[$i18n.locale].url">
                     <img 
-                    :src="require(`@/assets/images/sponsors/${gold[$i18n.locale].logo_file}`)"
-                    class="object-none object-center w-full h-full" />
+                    v-if="gold[$i18n.locale].logo_file"
+                    :src="require(`@/assets/images/sponsors/gold/${gold[$i18n.locale].logo_file}`)"
+                    class="object-contain w-full h-full p-5" />
                 </outer-link>
               </div>
               <!--会社名-->

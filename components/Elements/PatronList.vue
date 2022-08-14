@@ -4,7 +4,8 @@
             <div v-for="patron in patrons" :key="patron.id" class="m-5">
             <div class="mt-2 underline">
                 <img 
-                :src="require(`@/assets/images/sponsors/${patron[$i18n.locale].logo_file}`)"
+                v-if="patron[$i18n.locale].logo_file"
+                :src="require(`@/assets/images/sponsors/patron/${patron[$i18n.locale].logo_file}`)"
                 class="inline object-none object-center mr-2" />
                 <outer-link :to="patron[$i18n.locale].url" class="inline text-2xl font-bold font-noto text-primary-700">
                     {{ patron[$i18n.locale].name }}

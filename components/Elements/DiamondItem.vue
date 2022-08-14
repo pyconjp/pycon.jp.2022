@@ -3,11 +3,12 @@
         <div class="flex flex-col items-center justify-center">
             <!--ロゴ-->
             <div class="lg:w-[590px] lg:h-[370px] chipped-card bg-tertiary-50 w-[383px] h-[201px]" >
-            <outer-link :to="diamond[0][$i18n.locale].url">
-                <img 
-                :src="require(`@/assets/images/sponsors/${diamond[0][$i18n.locale].logo_file}`)"
-                class="object-none object-center w-full h-full" />
-            </outer-link>
+                <outer-link :to="diamond[0][$i18n.locale].url">
+                    <img 
+                    v-if="diamond[0][$i18n.locale].logo_file"
+                    :src="require(`@/assets/images/sponsors/diamond/${diamond[0][$i18n.locale].logo_file}`)"
+                    class="object-contain w-full h-full p-5" />
+                </outer-link>
             </div>
             <!--会社名-->
             <div class="mt-2 underline">

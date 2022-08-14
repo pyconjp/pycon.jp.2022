@@ -7,8 +7,9 @@
                     <div class="sponsor-chipped-card bg-tertiary-50 w-[383px] h-[201px]" >
                     <outer-link :to="platinum[$i18n.locale].url">
                         <img 
-                        :src="require(`@/assets/images/sponsors/${platinum[$i18n.locale].logo_file}`)"
-                        class="object-none object-center w-full h-full" />
+                        v-if="platinum[$i18n.locale].logo_file"
+                        :src="require(`@/assets/images/sponsors/platinum/${platinum[$i18n.locale].logo_file}`)"
+                        class="object-contain w-full h-full p-5" />
                     </outer-link>
                     </div>
                     <!--会社名-->
