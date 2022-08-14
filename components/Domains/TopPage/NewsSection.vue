@@ -2,7 +2,6 @@
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
     <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
-      <volunteer-news-card :primary="false" />
       <sponsor-news-card :primary="false" />
     </div>
     <div
@@ -45,13 +44,11 @@
 import moment from 'moment'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
-import VolunteerNewsCard from '@/components/Elements/VolunteerNewsCard'
 import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
 
 export default {
   name: 'NewsSection',
   components: {
-    VolunteerNewsCard,
     OuterLink,
     SectionTitle,
     SponsorNewsCard,
