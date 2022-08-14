@@ -2,7 +2,7 @@
     <!-- ゴールドスポンサー -->
     <div v-if="sponsors && golds && golds.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-4">
-          <div v-for="gold in golds" :key="gold.id" class="m-5">
+          <div v-for="gold in golds" :key="gold.id" class="flex-1 m-5">
             <div class="flex flex-col items-center justify-center">
               <!--ロゴ-->
               <div class="sponsor-chipped-card bg-tertiary-50 w-[284px] h-[147px]" >

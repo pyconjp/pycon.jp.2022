@@ -2,7 +2,7 @@
     <!-- シルバースポンサー -->
     <div v-if="sponsors && silvers && silvers.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-3">
-            <div v-for="silver in silvers" :key="silver.id" class="m-5">
+            <div v-for="silver in silvers" :key="silver.id" class="flex-1 m-5">
             <!--会社名-->
             <div class="mt-2 underline">
                 <outer-link :to="silver[$i18n.locale].url" class="text-2xl font-bold font-noto text-primary-700">

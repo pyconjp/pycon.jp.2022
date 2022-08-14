@@ -1,7 +1,7 @@
 <template>
     <div v-if="sponsors && platinums && platinums.length > 0">
         <div class="flex flex-col lg:flex-row">
-            <div v-for="platinum in platinums" :key="platinum.id" class="m-5">
+            <div v-for="platinum in platinums" :key="platinum.id" class="flex-1 m-5">
                 <div class="flex flex-col items-center justify-center">
                     <!--ロゴ-->
                     <div class="sponsor-chipped-card bg-tertiary-50 w-[383px] h-[201px]" >
