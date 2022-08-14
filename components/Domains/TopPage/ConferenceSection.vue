@@ -13,45 +13,47 @@
         <div class="mt-10 conference-label font-noto">Keynote</div>
         <div class="mt-1 conference-description font-noto">基調講演</div>
 
-        <template v-for="(keynote, index) in ['keynote1', 'keynote2']">
-          <div
-            :key="'separator_' + index"
-            v-if="index !== 0"
-            class="hidden mt-10 lg:block conference-keynote-separator"
-          />
+        <div class="mt-10">
+          <template v-for="(keynote, index) in ['keynote1', 'keynote2']">
+            <div
+              :key="'separator_' + index"
+              v-if="index !== 0"
+              class="hidden mt-12 lg:block conference-keynote-separator"
+            />
 
-          <div :key="'talk_' + index" class="flex flex-col mt-10">
-            <div class="flex flex-col items-center mt-10 lg:flex-row">
-              <!-- left image -->
-              <div class="relative w-full lg:flex-1">
-                <div class="keynote-bg">
-                  <img
-                    class="relative object-cover w-11/12 h-5/6 keynote-clip relative w-full lg:flex-1"
-                    :src="keynote_info[keynote].image"
-                    :alt="`${keynote}_img`"
-                  />
+            <div :key="'talk_' + index" class="flex flex-col mt-10">
+              <div class="flex flex-col items-center lg:flex-row">
+                <!-- left image -->
+                <div class="relative w-full lg:flex-1">
+                  <div class="keynote-bg">
+                    <img
+                      class="relative object-cover w-11/12 h-5/6 keynote-clip relative w-full lg:flex-1"
+                      :src="keynote_info[keynote].image"
+                      :alt="`${keynote}_img`"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <!-- right text -->
-              <div
-                class="flex flex-col mt-6 lg:mt-0 lg:ml-10 w-12/12 lg:flex-[2_2_0]"
-              >
-                <div class="text-tartiary-700 font-fira">
-                  {{ keynote_info[keynote].date }}
-                </div>
+                <!-- right text -->
                 <div
-                  class="mt-1 font-bold font-fira text-primary-900"
-                  v-html="$t(`${keynote}.name`)"
-                ></div>
-                <p
-                  class="font-bold text-tartiary-900 font-noto-sans-jp"
-                  v-html="$t(`${keynote}.desc`)"
-                ></p>
+                  class="flex flex-col mt-6 lg:mt-0 lg:ml-10 w-12/12 lg:flex-[2_2_0]"
+                >
+                  <div class="text-tartiary-700 font-fira">
+                    {{ keynote_info[keynote].date }}
+                  </div>
+                  <div
+                    class="mt-1 font-bold font-fira text-primary-900"
+                    v-html="$t(`${keynote}.name`)"
+                  ></div>
+                  <p
+                    class="font-bold text-tartiary-900 font-noto-sans-jp"
+                    v-html="$t(`${keynote}.desc`)"
+                  ></p>
+                </div>
               </div>
             </div>
-          </div>
-        </template>
+          </template>
+        </div>
 
         <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
         <!--          <div class="conference-timetable font-noto">タイムテーブル詳細</div>-->
