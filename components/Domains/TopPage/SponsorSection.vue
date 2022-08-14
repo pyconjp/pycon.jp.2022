@@ -72,10 +72,11 @@
         </div>
         <!-- パトロン -->
         <patron-list />
-      
-      <!--snake face-->
-      <div class="flex content-end w-11/12 h-32 bg-right-bottom bg-no-repeat snake-base" />
     </div>
+    </div>
+    <!-- snake -->
+    <div class="snake-face-base">
+      <div class="hidden snake-face-left-black lg:block" />
     </div>
   </div>
 </template>
@@ -112,9 +113,19 @@ export default {
   background-image: url("@/assets/images/separator.svg");
 }
 
-.snake-base {
+.snake-face-base {
+  width: 100%;
+  height: 36px;
   @media (min-width: 1024px) {
-    background-image: url('@/assets/images/section_bg_img_left_black.svg');
+    height: 90px;
   }
+}
+.snake-face-left-black {
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  right: 85px;
+
+  background-image: url('@/assets/images/section_bg_img_left_black.svg');
 }
 </style>
