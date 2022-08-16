@@ -28,7 +28,7 @@ export default {
     NewsSection,
     HeroSection,
   },
-  asyncData() {
+  async asyncData() {
     const posts = {}
     if (process.env.BLOGGER_API_KEY) {
       for (const lang of ['ja', 'en']) {
@@ -37,7 +37,7 @@ export default {
         )
         url.searchParams.append('key', process.env.BLOGGER_API_KEY)
         url.searchParams.append('labels', lang)
-        posts[lang] = fetch(url.toString())
+        posts[lang] = await fetch(url.toString())
           .then((res) => res.json())
           .then((data) =>
             data.items.slice(0, 5).map(({ id, title, url, published }) => ({
