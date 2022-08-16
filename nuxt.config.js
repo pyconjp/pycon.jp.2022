@@ -32,6 +32,21 @@ export default {
           property: 'og:image',
           content: 'https://2022.pycon.jp/pyconjp2022_ogp.png',
         },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:image:src',
+          name: 'twitter:image:src',
+          content: 'https://2022.pycon.jp/pyconjp2022_ogp.png',
+        },
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: '@pyconjapan',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
