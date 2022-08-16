@@ -28,9 +28,6 @@ export default {
     NewsSection,
     HeroSection,
   },
-  data() {
-    return { posts: { ja: [], en: [] } }
-  },
   asyncData() {
     const posts = {}
     if (process.env.BLOGGER_API_KEY) {
