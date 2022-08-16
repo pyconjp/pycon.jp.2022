@@ -55,7 +55,17 @@ export default {
   },
   data() {
     return {
-      posts: { ja: [], en: [] },
+      posts: {
+        ja: [
+          {
+            id: '7077747071296328989',
+            title: 'test',
+            url: 'https://example.com',
+            published: '2022.08.16',
+          },
+        ],
+        en: [],
+      },
     }
   },
   async fetch() {
