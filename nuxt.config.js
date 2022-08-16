@@ -14,6 +14,24 @@ export default {
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: '' },
         { name: 'format-detection', content: 'telephone=no' },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://2022.pycon.jp/',
+        },
+        { hid: 'og:title', property: 'og:title', content: 'PyCon JP 2022' },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'PyCon JPは、Pythonユーザが集まり、PythonやPythonを使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://2022.pycon.jp/pyconjp2022_ogp.png',
+        },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
