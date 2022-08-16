@@ -13,59 +13,46 @@
         <div class="mt-10 conference-label font-noto">Keynote</div>
         <div class="mt-1 conference-description font-noto">基調講演</div>
 
-        <div class="flex flex-col mt-10">
-          <div class="flex flex-col items-center mt-10 lg:flex-row">
-            <!-- left image -->
-            <div class="flex w-12/12 lg:flex-1">
-              <img
-                :src="require(`@/assets/images/${keynote1.image}`)"
-                class="self-center"
-              />
-            </div>
+        <div class="mt-10">
+          <template v-for="(keynote, index) in ['keynote1', 'keynote2']">
+            <div
+              :key="'separator_' + index"
+              v-if="index !== 0"
+              class="hidden mt-12 lg:block conference-keynote-separator"
+            />
 
-            <!-- right text -->
-            <div class="flex flex-col ml-10 w-12/12 lg:flex-[2_2_0]">
-              <div class="text-tartiary-700 font-fira">
-                {{ keynote1.date }}
+            <div :key="'talk_' + index" class="flex flex-col mt-10">
+              <div class="flex flex-col items-center lg:flex-row">
+                <!-- left image -->
+                <div class="relative w-full lg:flex-1">
+                  <div class="keynote-bg">
+                    <img
+                      class="relative object-cover w-11/12 h-5/6 keynote-clip relative w-full lg:flex-1"
+                      :src="keynote_info[keynote].image"
+                      :alt="`${keynote}_img`"
+                    />
+                  </div>
+                </div>
+
+                <!-- right text -->
+                <div
+                  class="flex flex-col mt-6 lg:mt-0 lg:ml-10 w-12/12 lg:flex-[2_2_0]"
+                >
+                  <div class="text-tartiary-700 font-fira">
+                    {{ keynote_info[keynote].date }}
+                  </div>
+                  <div
+                    class="mt-1 font-bold font-fira text-primary-900"
+                    v-html="$t(`${keynote}.name`)"
+                  ></div>
+                  <p
+                    class="font-bold text-tartiary-900 font-noto-sans-jp"
+                    v-html="$t(`${keynote}.desc`)"
+                  ></p>
+                </div>
               </div>
-              <div
-                class="mt-1 font-bold font-fira text-primary-900"
-                v-html="$t('keynote1.name')"
-              ></div>
-              <p
-                class="font-bold text-tartiary-900 font-noto-sans-jp"
-                v-html="$t('keynote1.desc')"
-              ></p>
             </div>
-          </div>
-        </div>
-
-        <div class="hidden mt-10 lg:block conference-keynote-separator" />
-
-        <div class="flex flex-col my-10 conference-frame">
-          <div class="flex flex-col items-center mt-10 lg:flex-row">
-            <!-- left image -->
-            <div class="flex w-12/12 lg:flex-1">
-              <img
-                :src="require(`@/assets/images/${keynote2.image}`)"
-                class="self-center"
-              />
-            </div>
-            <!-- right text -->
-            <div class="flex flex-col ml-10 w-12/12 lg:flex-[2_2_0]">
-              <div class="text-tartiary-700 font-fira">
-                {{ keynote2.date }}
-              </div>
-              <div
-                class="mt-1 font-bold font-fira text-primary-900"
-                v-html="$t('keynote2.name')"
-              ></div>
-              <p
-                class="font-bold text-tartiary-900 font-noto-sans-jp"
-                v-html="$t('keynote2.desc')"
-              ></p>
-            </div>
-          </div>
+          </template>
         </div>
 
         <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
@@ -100,27 +87,27 @@
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
 
+const KEYNOTE_INFO = {
+  keynote1: {
+    date: '2021.10.14 10:30 -',
+    image: require('@/assets/images/keynote1.jpg'),
+  },
+  keynote2: {
+    date: '2021.10.15 10:30 -',
+    image: require('assets/images/keynote2.jpg'),
+  },
+}
+
 export default {
   name: 'ConferenceSection',
   components: {
     SectionTitle,
   },
-  data() {
-    return {
-      keynote1: {
-        image: 'keynote1.svg',
-        date: '2021.10.14 10:30 -',
-      },
-      keynote2: {
-        image: 'keynote2.svg',
-        date: '2021.10.15 10:30 -',
-      },
-    }
-  },
+  data: () => ({ keynote_info: KEYNOTE_INFO }),
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .conference {
   box-sizing: border-box;
   width: 100%;
@@ -136,11 +123,6 @@ export default {
   /* width: 72.28px; */
   height: 23.01px;
   text-align: center;
-}
-
-.conference-small-vector {
-  /* width: 59px; */
-  height: 23px;
 }
 
 .conference-keynote-separator {
@@ -174,40 +156,19 @@ export default {
   color: #776103;
 }
 
-.conference-frame-timetable {
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  padding: 10px 36px;
-  text-align: right;
-  margin-left: auto;
-  background: #fcfcfd;
-
-  /* shadow / base */
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+.keynote-clip {
+  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
 }
 
-.conference-timetable {
-  /* width: 179px; */
-  height: 20px;
-
-  /* text / ja / .text-xl.text-bold */
-  font-family: 'Noto Sans JP';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
-
-  /* identical to box height, or 20px */
-
-  /* primary/primary-700 */
-  color: #b32f0f;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+.keynote-bg::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -1rem;
+  width: calc(100% + 0.5rem);
+  height: calc(100% - 0.5rem);
+  background-color: #b32f0f;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
 }
 
 .snake-face-base {
@@ -235,9 +196,9 @@ export default {
       "desc": "After working as an Assistant Professor in the Department of Medical Communication at the University of Tokyo Graduate School of Medicine, Deputy Director of the University Hospital Medical Information Network Research Center, and a visiting researcher at Dana-Farber/Harvard Cancer Research Center, he founded Data Vehicle, Inc. in November 2014. He is engaged in the development and sales of extended analytics tools such as \"dataDiver,\" utilizing his own expertise, as well as supporting public and private sector data utilization projects. His publications include the \"Statistics is the Strongest Study\" series, which has sold over 500,000 copies, and \"Statistics Will Save Japan\" (Chuokoron Shinsha). He is also a member of the Advisory Board of EBPM (Evidence Based Policy Making) of the Cabinet Office since 2020."
     },
     "keynote2": {
-      "name": "Comming soon...",
-      "title": "Comming soon...",
-      "desc": "Comming soon..."
+      "name": "Mark Shannon",
+      "title": "",
+      "desc": "I've been using Python since 2005, and have been contributing to CPython since 2010.<br/>After a long interlude working on static analysis tools, I have returned to working on speeding up Python over the last couple of years.<br/>My academic and commercial work is focused on compilers, virtual machines and static analysis for Python.My PhD was on building virtual machines for dynamic languages.I am the author of various PEPs including 412, 590, 626 and 659.<br/>I am currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
     }
   },
   "ja": {
@@ -247,9 +208,9 @@ export default {
       "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。"
     },
     "keynote2": {
-      "name": "Comming soon...",
-      "title": "Comming soon...",
-      "desc": "Comming soon..."
+      "name": "Mark Shannon",
+      "title": "",
+      "desc": "2005年からPythonを使い始め、2010年からCPythonにコントリビュートしています。<br/>静的解析ツールの開発に長い間携わっていた後、ここ数年はPythonの高速化に取り組んでいます。<br/>私の学術的および商業的な研究は、Pythonのコンパイラ、仮想マシン、静的解析に重点を置いています。私の博士号は、動的言語用の仮想マシンの構築に関するものでした。412, 590, 626, 659 など、さまざまな PEP の著者でもあります。<br/>現在は、Microsoftの資金提供による \"Faster CPython\"チームの技術リーダーとして働いています。"
     }
   }
 }
