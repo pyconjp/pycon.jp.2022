@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import moment from 'moment'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
 import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
@@ -53,41 +52,11 @@ export default {
     SectionTitle,
     SponsorNewsCard,
   },
-  data() {
-    return {
-      posts: {
-        ja: [
-          {
-            id: '7077747071296328989',
-            title: 'test',
-            url: 'https://example.com',
-            published: '2022.08.16',
-          },
-        ],
-        en: [],
-      },
-    }
-  },
-  async fetch() {
-    if (process.env.BLOGGER_API_KEY) {
-      for (const lang of ['ja', 'en']) {
-        const url = new URL(
-          'https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts'
-        )
-        url.searchParams.append('key', process.env.BLOGGER_API_KEY)
-        url.searchParams.append('labels', lang)
-        this.posts[lang] = await fetch(url.toString())
-          .then((res) => res.json())
-          .then((data) =>
-            data.items.slice(0, 5).map(({ id, title, url, published }) => ({
-              id,
-              title,
-              url,
-              published: moment(published).format('YYYY.MM.DD'),
-            }))
-          )
-      }
-    }
+  props: {
+    posts: {
+      type: Object,
+      default: () => ({ ja: [], en: [] }),
+    },
   },
 }
 </script>
