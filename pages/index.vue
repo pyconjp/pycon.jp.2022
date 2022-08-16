@@ -28,16 +28,19 @@ export default {
     NewsSection,
     HeroSection,
   },
-  async asyncData() {
+  data() {
+    return { posts: { ja: [], en: [] } }
+  },
+  asyncData() {
+    const posts = {}
     if (process.env.BLOGGER_API_KEY) {
-      const posts = {}
       for (const lang of ['ja', 'en']) {
         const url = new URL(
           'https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts'
         )
         url.searchParams.append('key', process.env.BLOGGER_API_KEY)
         url.searchParams.append('labels', lang)
-        posts[lang] = await fetch(url.toString())
+        posts[lang] = fetch(url.toString())
           .then((res) => res.json())
           .then((data) =>
             data.items.slice(0, 5).map(({ id, title, url, published }) => ({
@@ -48,8 +51,8 @@ export default {
             }))
           )
       }
-      return { posts }
     }
+    return { posts }
   },
 }
 </script>
