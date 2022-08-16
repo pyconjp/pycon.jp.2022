@@ -16,8 +16,8 @@
         <div class="mt-10">
           <template v-for="(keynote, index) in ['keynote1', 'keynote2']">
             <div
-              :key="'separator_' + index"
               v-if="index !== 0"
+              :key="'separator_' + index"
               class="hidden mt-12 lg:block conference-keynote-separator"
             />
 
