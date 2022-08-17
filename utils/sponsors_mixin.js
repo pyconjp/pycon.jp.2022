@@ -27,6 +27,7 @@ export default {
         let sm = 0;
         let sf = 0;
         let pt = 0;
+        this.sponsors.body.sort((a, b) => a.order - b.order);
         for(let i=0;i < this.sponsors.body.length;i++){
           const sponsorRow = this.sponsors.body[i];
           const hashi18n = this.split_i18n(sponsorRow);
