@@ -29,7 +29,7 @@
           <div class="flex flex-row">
             <div class="mr-1 overview-text-icon" />
             <div class="overview-text-title text-tertiary-900 font-fira">
-              What is <span class="text-primary-700">PyCon</span> ?
+              What is <span class="text-primary-700">PyCon JP</span> ?
             </div>
           </div>
           <div
