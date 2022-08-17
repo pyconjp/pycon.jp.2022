@@ -44,7 +44,9 @@ export default {
               id,
               title,
               url,
-              published: moment(published).format('YYYY.MM.DD'),
+              published: moment(published).format(
+                lang === 'ja' ? 'YYYY.MM.DD' : 'MMM DD, YYYY'
+              ),
             }))
           )
       }

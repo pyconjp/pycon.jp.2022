@@ -14,9 +14,9 @@
             :key="post.id"
             class="align-middle lg:inline-flex w-full"
           >
-            <span class="text-tertiary-600 mr-4 published">{{
-              post.published
-            }}</span>
+            <span class="text-tertiary-600 mr-4 published flex-[0_0_8rem]">
+              {{ post.published }}
+            </span>
             <div class="text-tertiary-900">
               <outer-link :to="post.url">
                 {{ post.title }}
@@ -62,10 +62,6 @@ export default {
 </script>
 
 <style scoped>
-.published {
-  flex: 0 0 6rem;
-}
-
 .more-news::after {
   content: '→';
 }
