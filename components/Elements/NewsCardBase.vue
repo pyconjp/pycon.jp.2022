@@ -1,5 +1,5 @@
 <template>
-  <a :href="url">
+  <outer-link :to="url">
     <div
       :class="
         'w-full flex flex-row justify-between gap-8 items-center px-8 py-4 ' +
@@ -33,15 +33,17 @@
         />
       </div>
     </div>
-  </a>
+  </outer-link>
 </template>
 
 <script>
 import { ChevronRightIcon } from '@vue-hero-icons/solid'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'NewsCardBase',
   components: {
+    OuterLink,
     ChevronRightIcon,
   },
   props: {
