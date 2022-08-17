@@ -30,15 +30,15 @@
               <CalendarIcon class="text-primary-700 mx-4 w-8 h-8" />
               <div class="text-2xl">
                 <div>
-                  <div class="lg:inline-flex">
+                  <div class="lg:inline-flex lg:gap-2">
                     <div class="text-tertiary-600">Conference:</div>
-                    <div class="font-bold">2022.10.14(Fri)-15(Sat)</div>
+                    <div class="font-bold">{{ $t('conference_date') }}</div>
                   </div>
                 </div>
                 <div>
-                  <div class="lg:inline-flex">
+                  <div class="lg:inline-flex lg:gap-2">
                     <div class="text-tertiary-600">Sprint:</div>
-                    <div class="font-bold">2022.10.16(Sun)</div>
+                    <div class="font-bold">{{ $t('sprint_date') }}</div>
                   </div>
                 </div>
               </div>
@@ -95,3 +95,17 @@ export default {
 </script>
 
 <style scoped></style>
+
+<i18n>
+{
+  "ja": {
+    "conference_date": "2022.10.14(Fri)-15(Sat)",
+    "sprint_date": "2022.10.16(Sun)"
+  },
+  "en": {
+    "conference_date": "OCTOBER 14 - 15, 2022",
+    "sprint_date": "OCTOBER 16, 2022"
+  }
+}
+
+</i18n>
