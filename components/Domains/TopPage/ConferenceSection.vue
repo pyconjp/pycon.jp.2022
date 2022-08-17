@@ -39,7 +39,7 @@
                   class="flex flex-col mt-6 lg:mt-0 lg:ml-10 w-12/12 lg:flex-[2_2_0]"
                 >
                   <div class="text-tartiary-700 font-fira">
-                    {{ keynote_info[keynote].date }}
+                    {{ $t(`${keynote}.date`) }}
                   </div>
                   <div
                     class="mt-1 font-bold font-fira text-primary-900"
@@ -89,11 +89,9 @@ import SectionTitle from '@/components/Elements/SectionTitle'
 
 const KEYNOTE_INFO = {
   keynote1: {
-    date: '2021.10.14 10:30 -',
     image: require('@/assets/images/keynote1.jpg'),
   },
   keynote2: {
-    date: '2021.10.15 10:30 -',
     image: require('assets/images/keynote2.jpg'),
   },
 }
@@ -191,11 +189,13 @@ export default {
 {
   "en": {
     "keynote1": {
+      "date": "OCTOBER 14 2022 10:30AM -",
       "name": "Hiromu Nishiuchi",
       "title": "",
       "desc": "After working as an Assistant Professor in the Department of Medical Communication at the University of Tokyo Graduate School of Medicine, Deputy Director of the University Hospital Medical Information Network Research Center, and a visiting researcher at Dana-Farber/Harvard Cancer Research Center, he founded Data Vehicle, Inc. in November 2014. He is engaged in the development and sales of extended analytics tools such as \"dataDiver,\" utilizing his own expertise, as well as supporting public and private sector data utilization projects. His publications include the \"Statistics is the Strongest Study\" series, which has sold over 500,000 copies, and \"Statistics Will Save Japan\" (Chuokoron Shinsha). He is also a member of the Advisory Board of EBPM (Evidence Based Policy Making) of the Cabinet Office since 2020."
     },
     "keynote2": {
+      "date": "OCTOBER 15 2022 10:30AM -",
       "name": "Mark Shannon",
       "title": "",
       "desc": "I've been using Python since 2005, and have been contributing to CPython since 2010.<br/>After a long interlude working on static analysis tools, I have returned to working on speeding up Python over the last couple of years.<br/>My academic and commercial work is focused on compilers, virtual machines and static analysis for Python.My PhD was on building virtual machines for dynamic languages.I am the author of various PEPs including 412, 590, 626 and 659.<br/>I am currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
@@ -203,11 +203,13 @@ export default {
   },
   "ja": {
     "keynote1": {
+      "date": "2022.10.14 10:30 -",
       "name": "西内 啓 / Hiromu Nishiuchi",
       "title": "",
       "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。"
     },
     "keynote2": {
+      "date": "2022.10.15 10:30 -",
       "name": "Mark Shannon",
       "title": "",
       "desc": "2005年からPythonを使い始め、2010年からCPythonにコントリビュートしています。<br/>静的解析ツールの開発に長い間携わっていた後、ここ数年はPythonの高速化に取り組んでいます。<br/>私の学術的および商業的な研究は、Pythonのコンパイラ、仮想マシン、静的解析に重点を置いています。私の博士号は、動的言語用の仮想マシンの構築に関するものでした。412, 590, 626, 659 など、さまざまな PEP の著者でもあります。<br/>現在は、Microsoftの資金提供による \"Faster CPython\"チームの技術リーダーとして働いています。"
