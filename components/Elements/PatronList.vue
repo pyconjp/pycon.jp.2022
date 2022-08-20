@@ -1,4 +1,5 @@
 <template>
+<div>
     <div v-if="sponsors && patrons && patrons.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-4">
             <div v-for="patron in patrons" :key="patron.id" class="flex-1 m-5">
@@ -15,6 +16,10 @@
             </div>
         </div>
     </div>
+    <div v-else class="m-20 text-2xl font-bold font-fira text-primary-900">
+        Coming Soon !!
+    </div>
+</div>
 </template>
 
 <script>

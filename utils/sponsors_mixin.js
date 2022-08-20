@@ -7,7 +7,6 @@ export default {
           golds: [],
           silvers: [],
           specials: [],
-          foods: [],
           patrons: [],
         }
       },
@@ -25,32 +24,31 @@ export default {
         let g = 0;
         let sl = 0;
         let sm = 0;
-        let sf = 0;
         let pt = 0;
         this.sponsors.body.sort((a, b) => a.order - b.order);
         for(let i=0;i < this.sponsors.body.length;i++){
           const sponsorRow = this.sponsors.body[i];
           const hashi18n = this.split_i18n(sponsorRow);
         
-          if(sponsorRow.sponsor_type === "diamond"){
+          if(sponsorRow.sponsor_type === "Diamond"){
             // ダイアモンドスポンサー
             this.diamond[dm++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "platinum"){
+          }else if(sponsorRow.sponsor_type === "Platinum"){
             // プラチナスポンサー
             this.platinums[pl++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "gold"){
+          }else if(sponsorRow.sponsor_type === "Gold"){
             // ゴールドスポンサー
             this.golds[g++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "silver"){
+          }else if(sponsorRow.sponsor_type === "Silver"){
             // シルバースポンサー
             this.silvers[sl++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "special"){
+          }else if(sponsorRow.sponsor_type === "未確定"){
+            // シルバースポンサー
+            this.silvers[sl++] = hashi18n;
+          }else if(sponsorRow.sponsor_type === "Special"){
             // 特別スポンサー: メディア
             this.specials[sm++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "food"){
-            // 特別スポンサー: フード
-            this.foods[sf++] = hashi18n;
-          }else if(sponsorRow.sponsor_type === "patron"){
+          }else if(sponsorRow.sponsor_type === "Patron"){
             // パトロンスポンサー
             this.patrons[pt++] = hashi18n;
           }
