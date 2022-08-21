@@ -11,7 +11,7 @@
         </nuxt-link>
       </div>
       <div
-        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold  font-fira whitespace-nowrap menu"
+        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold font-fira whitespace-nowrap menu"
       >
         <!--###############-->
         <!-- 概要セクション -->
@@ -22,10 +22,10 @@
           </p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <div class="child-menu-record">
-              <nuxt-link to="/coc">
+              <nuxt-link :to="localePath('/coc')">
                 <div class="flex w-full pt-2 pb-2 ml-6">
                   <div class="arrow-right"></div>
                   <p class="ml-6 text-sm font-bold font-noto">
@@ -87,7 +87,7 @@
           <p>{{ $t('common.menu.event.event') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <!-- <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
@@ -116,7 +116,7 @@
           <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <!-- <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
@@ -176,7 +176,7 @@
       <!-- 言語切り替えエリア -->
       <!--###############-->
       <div
-        class="flex flex-row pr-6 my-3 font-bold leading-10  bg-secondary-400 whitespace-nowrap font-noto"
+        class="flex flex-row pr-6 my-3 font-bold leading-10 bg-secondary-400 whitespace-nowrap font-noto"
       >
         <img
           class="w-4 mx-4"

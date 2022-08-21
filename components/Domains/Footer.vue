@@ -1,7 +1,7 @@
 <template>
   <div class="relative text-white component-border-top font-noto">
     <div
-      class="relative bg-center bg-no-repeat  pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
+      class="relative bg-center bg-no-repeat pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
     >
       <div class="w-11/12 mx-auto lg:w-10/12">
         <img
@@ -10,12 +10,12 @@
           class="mx-auto lg:ml-0 w-72"
         />
         <div
-          class="flex flex-col w-1/2 gap-4 mx-auto  footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
+          class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
             <p>
-              <nuxt-link to="/coc">
+              <nuxt-link :to="localePath('/coc')">
                 {{ $t('common.menu.about.coc') }}
               </nuxt-link>
             </p>
@@ -56,7 +56,7 @@
           </div>
         </div>
         <div
-          class="flex flex-row gap-2 pt-6 mb-3 border-t-2  border-t-tertiary-400 lg:pt-9 font-source"
+          class="flex flex-row gap-2 pt-6 mb-3 border-t-2 border-t-tertiary-400 lg:pt-9 font-source"
         >
           <div class="mr-2">
             {{ $t('common.sns') }}
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div
-          class="mb-6 text-center underline  lg:mt-7 mt-9 previous-pages lg:text-right text-secondary-300"
+          class="mb-6 text-center underline lg:mt-7 mt-9 previous-pages lg:text-right text-secondary-300"
         >
           <outer-link to="https://www.pycon.jp/organizer/index.html">
             {{ $t('common.pastPyConJPSites') }}
