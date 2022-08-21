@@ -39,7 +39,10 @@
 
             <div>
               <div class="sp-header-line"></div>
-              <nuxt-link to="/coc">
+              <nuxt-link
+                :to="localePath('/coc')"
+                @click.native="isSPHeaderOpen = false"
+              >
                 <p class="ml-6 text-sm font-bold font-noto">
                   {{ $t('common.menu.about.coc') }}
                 </p>

@@ -15,7 +15,7 @@
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
             <p>
-              <nuxt-link to="/coc">
+              <nuxt-link :to="localePath('/coc')">
                 {{ $t('common.menu.about.coc') }}
               </nuxt-link>
             </p>
