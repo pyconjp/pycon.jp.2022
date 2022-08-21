@@ -2,7 +2,6 @@
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
     <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
-      <volunteer-news-card :primary="false" />
       <sponsor-news-card :primary="false" />
     </div>
     <div
@@ -15,9 +14,9 @@
             :key="post.id"
             class="align-middle lg:inline-flex w-full"
           >
-            <span class="text-tertiary-600 mr-4 published">{{
-              post.published
-            }}</span>
+            <span class="text-tertiary-600 mr-4 published flex-[0_0_8rem]">
+              {{ post.published }}
+            </span>
             <div class="text-tertiary-900">
               <outer-link :to="post.url">
                 {{ post.title }}
@@ -30,7 +29,7 @@
         class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
       >
         <outer-link class="more-news" to="https://pyconjp.blogspot.com/">
-          {{ $t('more_blogs').toString() }}
+          {{ $t('more_blogs') }}
         </outer-link>
       </div>
     </div>
@@ -42,52 +41,27 @@
 </template>
 
 <script>
-import moment from 'moment'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
-import VolunteerNewsCard from '@/components/Elements/VolunteerNewsCard'
 import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
 
 export default {
   name: 'NewsSection',
   components: {
-    VolunteerNewsCard,
     OuterLink,
     SectionTitle,
     SponsorNewsCard,
   },
-  data() {
-    return {
-      posts: { ja: [], en: [] },
-    }
-  },
-  async fetch() {
-    for (const lang of ['ja', 'en']) {
-      const url = new URL(
-        'https://www.googleapis.com/blogger/v3/blogs/1711203921350230994/posts'
-      )
-      url.searchParams.append('key', process.env.BLOGGER_API_KEY)
-      url.searchParams.append('labels', lang)
-      this.posts[lang] = await fetch(url.toString())
-        .then((res) => res.json())
-        .then((data) =>
-          data.items.slice(0, 5).map(({ id, title, url, published }) => ({
-            id,
-            title,
-            url,
-            published: moment(published).format('YYYY.MM.DD'),
-          }))
-        )
-    }
+  props: {
+    posts: {
+      type: Object,
+      default: () => ({ ja: [], en: [] }),
+    },
   },
 }
 </script>
 
 <style scoped>
-.published {
-  flex: 0 0 6rem;
-}
-
 .more-news::after {
   content: '→';
 }
@@ -116,3 +90,14 @@ li:before {
   background-image: url('@/assets/images/section_bg_img_left_orange.svg');
 }
 </style>
+
+<i18n>
+{
+  "ja": {
+    "more_blogs": "Newsをもっと見る（blog）"
+  },
+  "en": {
+    "more_blogs": "More News (blog)"
+  }
+}
+</i18n>

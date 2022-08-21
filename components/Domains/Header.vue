@@ -133,9 +133,9 @@
             >
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
-                <p class="ml-6">{{
-                  $t('common.menu.sponsor.sponsorApplicationInformation')
-                }}</p>
+                <p class="ml-6 text-sm">
+                  {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
+                </p>
               </div>
             </a>
             <a
@@ -146,9 +146,9 @@
             >
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
-                <p class="ml-6">{{
-                  $t('common.menu.sponsor.sponsorApplicationRequirements')
-                }}</p>
+                <p class="ml-6 text-sm">
+                  {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
+                </p>
               </div>
             </a>
           </div>
@@ -278,6 +278,7 @@ export default {
 .child-menu-record {
   display: block;
 }
+
 .child-menu-record:hover {
   background: #f3d34f;
   color: black;
