@@ -32,6 +32,11 @@
               {{ $t('common.menu.sponsor.sponsor') }}
             </p>
             <p>
+              <a href="sponsors" class="hover:opacity-70" rel="noopener noreferrer">
+                {{ $t('common.menu.sponsor.sponsorList') }}
+              </a>
+            </p>
+            <p>
               <outer-link
                 to="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
               >

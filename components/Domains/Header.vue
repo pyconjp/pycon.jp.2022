@@ -120,7 +120,7 @@
             class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
           >
             <div class="child-menu-record">
-              <nuxt-link to="/sponsors">
+              <nuxt-link to="sponsors">
                 <div class="flex w-full pt-2 pb-2 ml-6">
                   <div class="arrow-right"></div>
                   <a class="ml-6">{{ $t('common.menu.sponsor.sponsorList') }}</a>
