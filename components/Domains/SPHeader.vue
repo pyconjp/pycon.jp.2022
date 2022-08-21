@@ -103,6 +103,15 @@
             <div>
               <div class="sp-header-line"></div>
               <a
+                href="sponsors"
+                rel="noopener noreferrer"
+              >
+                {{ $t('common.menu.sponsor.sponsorList') }}
+              </a>
+            </div>
+            <div>
+              <div class="sp-header-line"></div>
+              <a
                 href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
                 target="_blank"
                 rel="noopener noreferrer"
