@@ -28,7 +28,10 @@
             </outer-link>
           </div>
           <!-- 紹介文 -->
-          <div v-if="needsIntroduction" class="mt-8 text-center lg:w-10/12">
+          <div
+            v-if="needsIntroduction"
+            class="px-5 mt-8 text-center lg:w-10/12"
+          >
             {{ platinum[$i18n.locale].introduction }}
           </div>
         </div>
