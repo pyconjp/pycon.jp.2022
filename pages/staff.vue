@@ -3,6 +3,7 @@
     <chair-person-section />
     <staff-section />
     <day-staff-section />
+    <review-staff-section />
     <contact-section />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import ChairPersonSection from '@/components/Domains/StaffPage/ChairPersonSection'
 import StaffSection from '@/components/Domains/StaffPage/StaffSection'
 import DayStaffSection from '@/components/Domains/StaffPage/DayStaffSection'
+import ReviewStaffSection from '@/components/Domains/StaffPage/ReviewStaffSection'
 import ContactSection from '@/components/Domains/StaffPage/ContactSection'
 
 export default {
@@ -19,6 +21,7 @@ export default {
     ChairPersonSection,
     StaffSection,
     DayStaffSection,
+    ReviewStaffSection,
     ContactSection,
   },
 }
