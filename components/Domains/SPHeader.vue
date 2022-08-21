@@ -10,11 +10,15 @@
       :class="isSPHeaderOpen ? 'justify-center' : 'justify-start'"
     >
       <div v-if="!isSPHeaderOpen" class="flex flex-row items-center">
-        <img
-          src="~/assets/images/sp-header-logo.svg"
-          class="ml-6 sp-logo-img"
-          alt="sp header log"
-        />
+        <nuxt-link
+          :to="localePath('/')"
+        >
+          <img
+            src="~/assets/images/sp-header-logo.svg"
+            class="ml-6 sp-logo-img"
+            alt="sp header log"
+          />
+        </nuxt-link>
         <p class="ml-4 text-xl font-bold font-fira">PyCon JP 2022</p>
       </div>
       <div class="absolute right-8 top-6">
@@ -27,29 +31,36 @@
         </div>
       </div>
       <div v-if="isSPHeaderOpen" class="flex flex-col items-center text-white">
-        <div v-for="(menu, i) in menus" :key="i">
-          <div v-if="menu.children.length > 0" class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t(menu.title) }}</p>
+        <div class="">
+          <div v-for="(menu, i) in menus" :key="i">
+            <div v-if="menu.children.length > 0" class="sp-header-section">
+              <div>
+                <div class="arrow-right"></div>
+                  <p>{{ $t(menu.title) }}</p>
+              </div>
+              <div v-for="(child, j) in menu.children" :key="j">
+                <div class="sp-header-line"></div>
+                <nuxt-link
+                  v-if="child.innerlink"
+                  :to="localePath(child.link)"
+                  @click.native="isSPHeaderOpen = false"
+                >
+                  {{ $t(child.title) }}
+                </nuxt-link>
+                <outer-link v-else :to="child.link">
+                  {{ $t(child.title) }}
+                </outer-link>
+              </div>
             </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <nuxt-link v-if="child.innerlink" :to="child.link" @click.native="isSPHeaderOpen = false">
-                {{ $t(child.title) }}
-              </nuxt-link>
-              <outer-link v-else :to="child.link">
-                {{ $t(child.title) }}
-              </outer-link>
-            </div>
-          </div>
-          <div v-else class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t(menu.title) }}</p>
+            <div v-else class="sp-header-section disable-color">
+              <div>
+                <div class="arrow-right"></div>
+                <p>{{ $t(menu.title) }}</p>
+              </div>
             </div>
           </div>
         </div>
+
 
         <!--###############-->
         <!-- 言語切り替えエリア -->

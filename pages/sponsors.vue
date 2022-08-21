@@ -1,119 +1,119 @@
 <template>
-<div>
-  <subpage-hero-section title="SPONSOR" subtitle="スポンサー">
-    <div class="w-10/12 mx-auto lg:w-7/12">
-      <sponsor-news-card :primary="true" />
-    </div>
-  </subpage-hero-section>
-  <div class="component-border-top">
-    <!-- ダイヤモンドスポンサー -->
-    <div class="text-center component-border-top bg-secondary-400">
-      <section-title main="DIAMOND" sub="ダイヤモンドスポンサー"/>
-      <div class="flex flex-col items-center mt-20">
-        <diamond-item :needs-introduction="true" />
+  <div>
+    <subpage-hero-section title="SPONSOR" subtitle="スポンサー">
+      <div class="w-10/12 mx-auto lg:w-7/12">
+        <sponsor-news-card :primary="true" />
       </div>
+    </subpage-hero-section>
+    <div class="component-border-top">
+      <!-- ダイヤモンドスポンサー -->
+      <div class="text-center component-border-top bg-secondary-400">
+        <section-title main="DIAMOND" sub="ダイヤモンドスポンサー"/>
+        <div class="flex flex-col items-center mt-20">
+          <diamond-item :needs-introduction="true" />
+        </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-left-orange lg:block" />
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-left-orange lg:block" />
+        </div>
       </div>
-    </div>
-    <!-- プラチナスポンサー -->
-    <div class="text-center component-border-top bg-tertiary-100">
-      <section-title main="PLATINUM" sub="プラチナスポンサー" :primary="false"/>
-      <div class="flex flex-col items-center">
-        <platinum-list :needs-introduction="true" />
+      <!-- プラチナスポンサー -->
+      <div class="text-center component-border-top bg-tertiary-100">
+        <section-title main="PLATINUM" sub="プラチナスポンサー" :primary="false"/>
+        <div class="flex flex-col items-center">
+          <platinum-list :needs-introduction="true" />
+        </div>
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-right-yello lg:block" />
+        </div>
       </div>
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-right-yello lg:block" />
-      </div>
-    </div>
-    <!-- ゴールドスポンサー -->
-    <div class="text-center component-border-top bg-secondary-400">
-      <section-title main="GOLD" sub="ゴールドスポンサー"/>
-      <div class="flex flex-col items-center">
-        <gold-list :needs-introduction="true" />
-      </div>
+      <!-- ゴールドスポンサー -->
+      <div class="text-center component-border-top bg-secondary-400">
+        <section-title main="GOLD" sub="ゴールドスポンサー"/>
+        <div class="flex flex-col items-center">
+          <gold-list :needs-introduction="true" />
+        </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-left-orange lg:block" />
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-left-orange lg:block" />
+        </div>
       </div>
-    </div>
-    <!-- シルバースポンサー -->
-    <div class="text-center component-border-top bg-tertiary-100">
-      <section-title main="SILVER" sub="シルバースポンサー" :primary="false"/>
-      <div class="flex flex-col items-center">
-        <silver-list />
-      </div>
+      <!-- シルバースポンサー -->
+      <div class="text-center component-border-top bg-tertiary-100">
+        <section-title main="SILVER" sub="シルバースポンサー" :primary="false"/>
+        <div class="flex flex-col items-center">
+          <silver-list />
+        </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-right-yello lg:block" />
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-right-yello lg:block" />
+        </div>
       </div>
-    </div>
-    <!-- スペシャルスポンサー -->
-    <div class="text-center component-border-top bg-secondary-400">
-      <section-title main="SPECIAL" sub="特別スポンサー"/>
-      <div class="flex flex-col items-center">
-        <div class="mt-10 mb-10 separator" /><!-- Separator -->
-        <special-list />
-      </div>
+      <!-- スペシャルスポンサー -->
+      <div class="text-center component-border-top bg-secondary-400">
+        <section-title main="SPECIAL" sub="特別スポンサー"/>
+        <div class="flex flex-col items-center">
+          <div class="mt-10 mb-10 separator" /><!-- Separator -->
+          <special-list />
+        </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-left-orange lg:block" />
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-left-orange lg:block" />
+        </div>
       </div>
-    </div>
-    <!-- パトロン -->
-    <div class="text-center component-border-top bg-tertiary-100">
-      <section-title main="PATRON" sub="パトロン" :primary="false"/>
-      <div class="flex flex-col items-center">
-        <patron-list />
-      </div>
+      <!-- パトロン -->
+      <div class="text-center component-border-top bg-tertiary-100">
+        <section-title main="PATRON" sub="パトロン" :primary="false"/>
+        <div class="flex flex-col items-center">
+          <patron-list />
+        </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-right-yello lg:block" />
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-right-yello lg:block" />
+        </div>
       </div>
-    </div>
-    <!-- スポンサー募集 9/13（1か月前）までシルバースポンサーだけ募集予定 -->
-    <div class="text-center component-border-top bg-primary-500">
-      <div
-        class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"
-      >
-      <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
-        <div class="flex flex-col">
-          <div class="flex flex-row pb-8 pl-8 text-left">
-            <div class="mr-1 sponsor-text-icon" />
-            <div class="font-bold sponsor-text-title text-tertiary-900 font-fira ">
-              {{ $t('title') }}
+      <!-- スポンサー募集 9/13（1か月前）までシルバースポンサーだけ募集予定 -->
+      <div class="text-center component-border-top bg-primary-500">
+        <div
+          class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"
+        >
+        <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
+          <div class="flex flex-col">
+            <div class="flex flex-row pb-8 pl-8 text-left">
+              <div class="mr-1 sponsor-text-icon" />
+              <div class="font-bold sponsor-text-title text-tertiary-900 font-fira ">
+                {{ $t('title') }}
+              </div>
             </div>
-          </div>
-          <div class="pb-8 pl-8 text-left">
-            {{ $t('description') }}
-          </div>
+            <div class="pb-8 pl-8 text-left">
+              {{ $t('description') }}
+            </div>
 
-          <div
-            class="pb-8 pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700"
-          >
-            <outer-link :to="$t('url').toString()">
-              {{ $t('link') }}
-              <ArrowNarrowRightIcon class="inline w-4 h-4 mb-2" />
-            </outer-link>
+            <div
+              class="pb-8 pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700"
+            >
+              <outer-link :to="$t('url').toString()">
+                {{ $t('link') }}
+                <ArrowNarrowRightIcon class="inline w-4 h-4 mb-2" />
+              </outer-link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-left-black lg:block" />
+
+        <!-- snake -->
+        <div class="snake-face-base">
+          <div class="hidden snake-face-left-black lg:block" />
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -128,6 +128,7 @@ import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
 import SpecialList from '@/components/Elements/SpecialList'
 import PatronList from '@/components/Elements/PatronList'
+import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'SponsorsPage',
@@ -142,6 +143,7 @@ export default {
     SpecialList,
     PatronList,
     ArrowNarrowRightIcon,
+    OuterLink,
   },
   mixins: [sponsorsMixin],
 }

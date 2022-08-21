@@ -15,7 +15,7 @@
           <div v-for="(menu, i) in menus" :key="i" class="flex-1">
             <p>{{ $t(menu.title) }}</p>
             <p v-for="(child, j) in menu.children" :key="j">
-              <nuxt-link v-if="child.innerlink" :to="child.link" class="hover:opacity-70">
+              <nuxt-link v-if="child.innerlink" :to="localePath(child.link)" class="hover:opacity-70">
                 {{ $t(child.title) }}
               </nuxt-link>
               <outer-link v-else :to="child.link">

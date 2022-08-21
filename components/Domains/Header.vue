@@ -23,7 +23,7 @@
               class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
             >
               <div v-for="(child, j) in menu.children" :key="j" class="child-menu-record">
-                <nuxt-link v-if="child.innerlink" :to="child.link">
+                <nuxt-link v-if="child.innerlink" :to="localePath(child.link)">
                   <div class="flex w-full pt-2 pb-2 ml-6">
                     <div class="arrow-right"></div>
                     <a class="ml-6">{{ $t(child.title) }}</a>
