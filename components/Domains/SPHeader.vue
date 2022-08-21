@@ -27,125 +27,26 @@
         </div>
       </div>
       <div v-if="isSPHeaderOpen" class="flex flex-col items-center text-white">
-        <div class="">
-          <!--###############-->
-          <!-- 概要セクション -->
-          <!--###############-->
-          <div class="sp-header-section">
+        <div v-for="(menu, i) in menus" :key="i">
+          <div v-if="menu.children.length > 0" class="sp-header-section">
             <div>
               <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.about.about') }}</p>
-            </div>
-
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ $t('common.menu.about.coc') }}</a
-              >
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.venue') }}</p>
+              <p>{{ $t(menu.title) }}</p>
             </div>
             <div>
               <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.support') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.COVID-19Guidelines') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>
-                {{
-                  $t('common.menu.about.infectionExpansionPreventionCheckSheet')
-                }}
-              </p>
-            </div> -->
-          </div>
-          <!--###############-->
-          <!-- イベントセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.event.event') }}</p>
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.timetable') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.tutorial') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.sprint') }}</p>
-            </div> -->
-          </div>
-          <!--###############-->
-          <!-- スポンサーセクション -->
-          <!--###############-->
-          <div class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.sponsor.sponsorList') }}</p>
-            </div> -->
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="sponsors"
-                rel="noopener noreferrer"
-              >
-                {{ $t('common.menu.sponsor.sponsorList') }}
-              </a>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
-              </a>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
-              </a>
+              <nuxt-link v-if="child.innerlink" :to="child.link" @click.native="isSPHeaderOpen = false">
+                {{ $t(child.title) }}
+              </nuxt-link>
+              <outer-link v-else :to="child.link">
+                {{ $t(child.title) }}
+              </outer-link>
             </div>
           </div>
-          <!--###############-->
-          <!-- コンテンツセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
+          <div v-else class="sp-header-section disable-color">
             <div>
               <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.contents.contents') }}</p>
-            </div>
-          </div>
-          <!--###############-->
-          <!-- スタッフセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.volunteer.volunteer') }}</p>
+              <p>{{ $t(menu.title) }}</p>
             </div>
           </div>
         </div>
@@ -188,14 +89,19 @@
 </template>
 
 <script>
+import OuterLink from '../Elements/OuterLink.vue'
+import menus from '@/content/menu.json'
+
 function stopScroll(event) {
   event.preventDefault()
 }
 export default {
   name: 'DefaultHeader',
+  components: { OuterLink },
   data() {
     return {
       isSPHeaderOpen: false,
+      menus
     }
   },
   watch: {

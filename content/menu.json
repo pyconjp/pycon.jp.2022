@@ -2,12 +2,12 @@
     {
         "category": "about",
         "title": "common.menu.about.about",
-        "children": 
+        "children":
         [
             {
                 "title": "common.menu.about.coc",
-                "link": "https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view",
-                "innerlink": false
+                "link": "/coc",
+                "innerlink": true
             }
 
         ]
@@ -23,7 +23,7 @@
         "children": [
             {
                 "title": "common.menu.sponsor.sponsorList",
-                "link": "sponsors",
+                "link": "/sponsors",
                 "innerlink": true
             },
             {
