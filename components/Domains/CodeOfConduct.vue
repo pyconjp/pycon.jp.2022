@@ -89,7 +89,12 @@
                 </div>
                 <div class="mt-8">
                   <p class="font-bold">{{ $t('contact.online.header') }}</p>
-                  <p>{{ $t('contact.online.body') }}</p>
+                  <outer-link
+                    to="mailto:coc@pycon.jp"
+                    class="text-secondary-300"
+                  >
+                    coc@pycon.jp
+                  </outer-link>
                 </div>
               </div>
             </div>

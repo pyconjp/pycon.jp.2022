@@ -11,7 +11,7 @@
         </nuxt-link>
       </div>
       <div
-        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold font-fira whitespace-nowrap menu"
+        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold  font-fira whitespace-nowrap menu"
       >
         <!--###############-->
         <!-- 概要セクション -->
@@ -22,19 +22,18 @@
           </p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
           >
-            <a
-              class="child-menu-record"
-              href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.about.coc') }}</p>
+                <p class="ml-6">
+                  <nuxt-link to="/coc">
+                    {{ $t('common.menu.about.coc') }}
+                  </nuxt-link>
+                </p>
               </div>
-            </a>
+            </div>
             <!-- <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
                 <div class="arrow-right"></div>
@@ -88,7 +87,7 @@
           <p>{{ $t('common.menu.event.event') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
           >
             <!-- <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
@@ -117,7 +116,7 @@
           <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
           <div class="arrow-bottom"></div>
           <div
-            class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
+            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
           >
             <!-- <div class="child-menu-record">
               <div class="flex w-full pt-2 pb-2 ml-6">
@@ -177,7 +176,7 @@
       <!-- 言語切り替えエリア -->
       <!--###############-->
       <div
-        class="flex flex-row pr-6 my-3 font-bold leading-10 bg-secondary-400 whitespace-nowrap font-noto"
+        class="flex flex-row pr-6 my-3 font-bold leading-10  bg-secondary-400 whitespace-nowrap font-noto"
       >
         <img
           class="w-4 mx-4"
