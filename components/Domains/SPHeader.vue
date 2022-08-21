@@ -147,7 +147,7 @@
         <!-- 言語切り替えエリア -->
         <!--###############-->
         <div
-          class="flex flex-row pr-6 my-3 font-bold leading-10 text-black bg-secondary-400 whitespace-nowrap font-noto"
+          class="flex flex-row pr-6 my-3 font-bold leading-10 text-black  bg-secondary-400 whitespace-nowrap font-noto"
         >
           <img
             class="w-4 mx-4"
@@ -184,7 +184,6 @@
 function stopScroll(event) {
   event.preventDefault()
 }
-
 export default {
   name: 'DefaultHeader',
   data() {
@@ -213,11 +212,9 @@ export default {
   background: #fcfcfd;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .sp-logo-img {
   width: 65px;
 }
-
 .sp-header-full {
   position: absolute;
   z-index: 20;
@@ -239,11 +236,9 @@ export default {
   height: 36px;
   border-radius: 5px;
 }
-
 .open-btn.active {
   background: transparent;
 }
-
 .open-btn span {
   display: inline-block;
   transition: all 0.4s;
@@ -257,26 +252,21 @@ export default {
 .open-btn span:nth-of-type(1) {
   top: 11px;
 }
-
 .open-btn span:nth-of-type(2) {
   top: 17px;
 }
-
 .open-btn span:nth-of-type(3) {
   top: 23px;
 }
-
 .open-btn.active span:nth-of-type(1) {
   width: 25px;
   top: 11px;
   left: 11px;
   transform: translateY(6px) rotate(-45deg);
 }
-
 .open-btn.active span:nth-of-type(2) {
   opacity: 0;
 }
-
 .open-btn.active span:nth-of-type(3) {
   width: 25px;
   top: 23px;
@@ -297,7 +287,6 @@ export default {
   display: flex;
   align-items: center;
 }
-
 .sp-header-section div p,
 a {
   margin-left: 16px;
@@ -310,7 +299,6 @@ a {
   margin-top: 0px;
   margin-left: 0px;
 }
-
 .arrow-right {
   right: 0px;
   top: 5px;
@@ -322,13 +310,11 @@ a {
   border-right: 3px solid #f77c5e;
   transform: rotate(315deg);
 }
-
 .sp-header-line {
   border-bottom: 1px solid #f77c5e;
   width: 20px;
   height: 1px;
 }
-
 .disable-color {
   opacity: 0.5;
 }
