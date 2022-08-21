@@ -10,9 +10,7 @@
       :class="isSPHeaderOpen ? 'justify-center' : 'justify-start'"
     >
       <div v-if="!isSPHeaderOpen" class="flex flex-row items-center">
-        <nuxt-link
-          :to="localePath('/')"
-        >
+        <nuxt-link :to="localePath('/')">
           <img
             src="~/assets/images/sp-header-logo.svg"
             class="ml-6 sp-logo-img"
@@ -36,7 +34,7 @@
             <div v-if="menu.children.length > 0" class="sp-header-section">
               <div>
                 <div class="arrow-right"></div>
-                  <p>{{ $t(menu.title) }}</p>
+                <p>{{ $t(menu.title) }}</p>
               </div>
               <div v-for="(child, j) in menu.children" :key="j">
                 <div class="sp-header-line"></div>
@@ -60,7 +58,6 @@
             </div>
           </div>
         </div>
-
 
         <!--###############-->
         <!-- 言語切り替えエリア -->
@@ -106,13 +103,14 @@ import menus from '@/content/menu.json'
 function stopScroll(event) {
   event.preventDefault()
 }
+
 export default {
   name: 'DefaultHeader',
   components: { OuterLink },
   data() {
     return {
       isSPHeaderOpen: false,
-      menus
+      menus,
     }
   },
   watch: {
@@ -136,9 +134,11 @@ export default {
   background: #fcfcfd;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .sp-logo-img {
   width: 65px;
 }
+
 .sp-header-full {
   position: absolute;
   z-index: 20;
@@ -160,9 +160,11 @@ export default {
   height: 36px;
   border-radius: 5px;
 }
+
 .open-btn.active {
   background: transparent;
 }
+
 .open-btn span {
   display: inline-block;
   transition: all 0.4s;
@@ -176,21 +178,26 @@ export default {
 .open-btn span:nth-of-type(1) {
   top: 11px;
 }
+
 .open-btn span:nth-of-type(2) {
   top: 17px;
 }
+
 .open-btn span:nth-of-type(3) {
   top: 23px;
 }
+
 .open-btn.active span:nth-of-type(1) {
   width: 25px;
   top: 11px;
   left: 11px;
   transform: translateY(6px) rotate(-45deg);
 }
+
 .open-btn.active span:nth-of-type(2) {
   opacity: 0;
 }
+
 .open-btn.active span:nth-of-type(3) {
   width: 25px;
   top: 23px;
@@ -211,6 +218,7 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .sp-header-section div p,
 a {
   margin-left: 16px;
@@ -223,6 +231,7 @@ a {
   margin-top: 0px;
   margin-left: 0px;
 }
+
 .arrow-right {
   right: 0px;
   top: 5px;
@@ -234,11 +243,13 @@ a {
   border-right: 3px solid #f77c5e;
   transform: rotate(315deg);
 }
+
 .sp-header-line {
   border-bottom: 1px solid #f77c5e;
   width: 20px;
   height: 1px;
 }
+
 .disable-color {
   opacity: 0.5;
 }

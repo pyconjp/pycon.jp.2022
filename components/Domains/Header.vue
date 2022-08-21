@@ -14,7 +14,10 @@
         class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold font-fira whitespace-nowrap menu"
       >
         <div v-for="(menu, i) in menus" :key="i">
-          <div v-if="menu.children.length > 0" class="relative flex flex-row group">
+          <div
+            v-if="menu.children.length > 0"
+            class="relative flex flex-row group"
+          >
             <p class="relative">
               {{ $t(menu.title) }}
             </p>
@@ -22,7 +25,11 @@
             <div
               class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
             >
-              <div v-for="(child, j) in menu.children" :key="j" class="child-menu-record">
+              <div
+                v-for="(child, j) in menu.children"
+                :key="j"
+                class="child-menu-record"
+              >
                 <nuxt-link v-if="child.innerlink" :to="localePath(child.link)">
                   <div class="flex w-full pt-2 pb-2 ml-6">
                     <div class="arrow-right"></div>
@@ -93,7 +100,7 @@ export default {
   data() {
     return {
       isAboutMenuOpen: false,
-      menus
+      menus,
     }
   },
 }
