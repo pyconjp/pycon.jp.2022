@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center justify-center">
       <!--ロゴ-->
       <div
-        class="lg:w-[590px] lg:h-[370px] chipped-card bg-tertiary-50 w-[383px] h-[201px]"
+        class="lg:w-[590px] lg:h-[370px] chipped-card bg-tertiary-50 w-[375px] h-[201px]"
       >
         <outer-link :to="diamond[0][$i18n.locale].url">
           <img
