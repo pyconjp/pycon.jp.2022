@@ -44,13 +44,6 @@
                   {{ $t('common.menu.about.coc') }}
                 </p>
               </nuxt-link>
-
-              <a
-                href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ $t('common.menu.about.coc') }}</a
-              >
             </div>
             <!-- <div>
               <div class="sp-header-line"></div>

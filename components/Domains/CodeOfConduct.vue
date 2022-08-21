@@ -112,11 +112,13 @@
 
 <script>
 import SubpageHeroSection from '../Elements/SubpageHeroSection'
+import OuterLink from '~/components/Elements/OuterLink'
 
 export default {
   name: 'CoC',
   components: {
     SubpageHeroSection,
+    OuterLink,
   },
   data() {
     return {}
