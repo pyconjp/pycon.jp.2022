@@ -28,7 +28,7 @@
               <nuxt-link to="/coc">
                 <div class="flex w-full pt-2 pb-2 ml-6">
                   <div class="arrow-right"></div>
-                  <p class="ml-6">
+                  <p class="ml-6 text-sm font-bold font-noto">
                     {{ $t('common.menu.about.coc') }}
                   </p>
                 </div>
