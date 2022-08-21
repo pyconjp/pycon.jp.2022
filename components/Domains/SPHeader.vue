@@ -39,12 +39,14 @@
 
             <div>
               <div class="sp-header-line"></div>
-              <a
-                href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ $t('common.menu.about.coc') }}</a
+              <nuxt-link
+                :to="localePath('/coc')"
+                @click.native="isSPHeaderOpen = false"
               >
+                <p class="ml-6 text-sm font-bold font-noto">
+                  {{ $t('common.menu.about.coc') }}
+                </p>
+              </nuxt-link>
             </div>
             <!-- <div>
               <div class="sp-header-line"></div>
@@ -103,6 +105,15 @@
             <div>
               <div class="sp-header-line"></div>
               <a
+                href="sponsors"
+                rel="noopener noreferrer"
+              >
+                {{ $t('common.menu.sponsor.sponsorList') }}
+              </a>
+            </div>
+            <div>
+              <div class="sp-header-line"></div>
+              <a
                 href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -145,7 +156,7 @@
         <!-- 言語切り替えエリア -->
         <!--###############-->
         <div
-          class="flex flex-row pr-6 my-3 font-bold leading-10 text-black bg-secondary-400 whitespace-nowrap font-noto"
+          class="flex flex-row pr-6 my-3 font-bold leading-10 text-black  bg-secondary-400 whitespace-nowrap font-noto"
         >
           <img
             class="w-4 mx-4"
