@@ -10,7 +10,7 @@
           class="w-10/12 mx-auto lg:ml-0 lg:w-auto"
         />
         <div
-          class="flex flex-col w-1/2 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 gap-4 lg:gap-0"
+          class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
           <div class="flex-1">
             <p>{{ $t('common.menu.about.about') }}</p>
@@ -30,6 +30,11 @@
           <div class="flex-1">
             <p>
               {{ $t('common.menu.sponsor.sponsor') }}
+            </p>
+            <p>
+              <a href="sponsors" class="hover:opacity-70" rel="noopener noreferrer">
+                {{ $t('common.menu.sponsor.sponsorList') }}
+              </a>
             </p>
             <p>
               <outer-link
