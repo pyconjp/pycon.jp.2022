@@ -12,53 +12,12 @@
         <div
           class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
-          <div class="flex-1">
-            <p>{{ $t('common.menu.about.about') }}</p>
-            <p>
-              <outer-link
-                to="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-              >
-                {{ $t('common.menu.about.coc') }}
-              </outer-link>
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.event.event') }}
-            </p>
-          </div>
-          <div class="flex-1">
-            <p>
-              {{ $t('common.menu.sponsor.sponsor') }}
-            </p>
-            <p>
-              <a href="sponsors" class="hover:opacity-70" rel="noopener noreferrer">
-                {{ $t('common.menu.sponsor.sponsorList') }}
+          <div v-for="menu in menus" :key="menu.id" class="flex-1">
+            <p>{{ $t(menu.title) }}</p>
+            <p v-for="child in menu.children" :key="child.id">
+              <a :target="child.target" :href="child.link" class="hover:opacity-70" rel="noopener noreferrer">
+                {{ $t(child.title) }}
               </a>
-            </p>
-            <p>
-              <outer-link
-                to="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
-              </outer-link>
-            </p>
-            <p>
-              <outer-link
-                to="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
-              </outer-link>
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.contents.contents') }}
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.volunteer.volunteer') }}
             </p>
           </div>
         </div>
@@ -142,6 +101,7 @@
 
 <script>
 import OuterLink from '@/components/Elements/OuterLink'
+import menus from '@/content/menu.json'
 
 const SNS = [
   {
@@ -161,6 +121,11 @@ const SNS = [
 export default {
   name: 'DefaultFooter',
   components: { OuterLink },
+  data() {
+    return  {
+      menus
+    }
+  },
   computed: {
     getSns() {
       return SNS
