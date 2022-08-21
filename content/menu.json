@@ -1,58 +1,49 @@
 [
     {
-        "id": 1,
         "category": "about",
         "title": "common.menu.about.about",
         "children": 
         [
             {
-                "id": 11,
                 "title": "common.menu.about.coc",
                 "link": "https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view",
-                "target": "_blank"
+                "innerlink": false
             }
 
         ]
     },
     {
-        "id": 2,
         "category": "event",
         "title": "common.menu.event.event",
         "children": []
     },
     {
-        "id": 3,
         "category": "sponsor",
         "title": "common.menu.sponsor.sponsor",
         "children": [
             {
-                "id": 31,
                 "title": "common.menu.sponsor.sponsorList",
                 "link": "sponsors",
-                "target": "_self"
+                "innerlink": true
             },
             {
-                "id": 32,
                 "title": "common.menu.sponsor.sponsorApplicationInformation",
                 "link": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
-                "target": "_blank"
+                "innerlink": false
             },
             {
-                "id": 33,
                 "title": "common.menu.sponsor.sponsorApplicationInformation",
                 "link": "https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view",
-                "target": "_blank"
+                "innerlink": false
             }
         ]
     },
     {
-        "id": 4,
         "category": "contents",
         "title": "common.menu.contents.contents",
         "children": []
     },
     {
-        "id": 5,
         "category": "volunteer",
         "title": "common.menu.volunteer.volunteer",
         "children": []

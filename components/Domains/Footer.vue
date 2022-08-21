@@ -12,12 +12,15 @@
         <div
           class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
-          <div v-for="menu in menus" :key="menu.id" class="flex-1">
+          <div v-for="(menu, i) in menus" :key="i" class="flex-1">
             <p>{{ $t(menu.title) }}</p>
-            <p v-for="child in menu.children" :key="child.id">
-              <a :target="child.target" :href="child.link" class="hover:opacity-70" rel="noopener noreferrer">
+            <p v-for="(child, j) in menu.children" :key="j">
+              <nuxt-link v-if="child.innerlink" :to="child.link" class="hover:opacity-70">
                 {{ $t(child.title) }}
-              </a>
+              </nuxt-link>
+              <outer-link v-else :to="child.link">
+                {{ $t(child.title) }}
+              </outer-link>
             </p>
           </div>
         </div>
