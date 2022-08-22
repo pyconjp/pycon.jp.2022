@@ -267,7 +267,7 @@ li:before {
       },
       "online": {
         "header": "Online:",
-        "body": "* The contact email address for CoC has been closed."
+        "body": "Please contact us at the following e-mail address."
       }
     }
   },
