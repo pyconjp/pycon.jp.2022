@@ -1,5 +1,5 @@
 id,name_ja,name_en,introduction_ja,introduction_en,url,logo_file,sponsor_type,order
-1,株式会社サイカ,株式会社サイカ,,,https://xica.net/,,Silver,35
+1,株式会社サイカ,"XICA CO.,LTD.",,,https://xica.net/,,Silver,35
 2,FLEXY,FLEXY,"FLEXYとはエンジニア・デザイナー・CTO・技術顧問などを中心に、週2〜3日からの新しい働き方を提供する、ハイスキルなプロ人材シェアリングサービスです。
 ご紹介するのは自社プロダクト案件のみ。ハイスキルな人材を求めている企業様が多く、技術顧問・テックリード・メインデザイナー・プロジェクトマネージャーなど、プロジェクトのコア部分を担う重要な案件が多くあります。
 現在フリーランスの方で更に案件を獲得されたい方や正社員として働きつつ副業を検討している方など、あなたのご希望に合わせてコーディネーターが最適な提案を致します。","""FLEXY"" is a highly-skilled professional sharing service that offers a new way of working from 2 or 3 days a week, targeting engineers, designers, CTOs, and technical advisors.
@@ -7,11 +7,11 @@ We only introduce our client's own product projects.
 Many companies are seeking highly-skilled professionals for core roles as technical advisors, tech leads, main designers, project managers, etc in high profile projects.
 If you are currently a freelancer and would like to acquire more projects, or if you are considering a side job while working as a full-time employee, our coordinators will work with your needs and make the most suitable proposal for you.",https://flxy.jp/,FLEXY.png,Diamond,31
 3,Elastic,Elastic,,,https://www.linkedin.com/company/elastic-co,,Silver,30
-4,株式会社はてな,株式会社はてな,,,https://hatena.co.jp/,,Silver,2
-5,DATUM STUDIO株式会社,DATUM STUDIO株式会社,DATUM STUDIOは、データと先端テクノロジーで経営課題を解決するデータ分析コンサルティング・ソフトウェア開発企業です。クライアントのパートナーとしてビジネスに持続的成長と新しい可能性を提供します。,"DATUM STUDIO is a data analytics consulting and software development company, that uses data and technology to solve corporate management  issues.
+4,株式会社はてな,"Hatena Co., Ltd.",,,https://hatena.co.jp/,,Silver,2
+5,DATUM STUDIO株式会社,DATUM STUDIO Co. Ltd.,DATUM STUDIOは、データと先端テクノロジーで経営課題を解決するデータ分析コンサルティング・ソフトウェア開発企業です。クライアントのパートナーとしてビジネスに持続的成長と新しい可能性を提供します。,"DATUM STUDIO is a data analytics consulting and software development company, that uses data and technology to solve corporate management  issues.
 As a partner to our clients, we provide sustainable growth and new possibilities for business. ",https://datumstudio.jp/,datumstudio_logo.png,Gold,34
 6,Indeed Japan株式会社,Indeed Japan株式会社,,,https://jp.indeed.jobs/,,Silver,24
-7,Findy,Findy,"Findy（ファインディ）は、GitHub等の解析を行い、エンジニアのスキルやエンジニア組織の生産性を「見える化」することがサービスの特徴です。
+7,Findy,Findy Inc.,"Findy（ファインディ）は、GitHub等の解析を行い、エンジニアのスキルやエンジニア組織の生産性を「見える化」することがサービスの特徴です。
 ハイスキルなエンジニアと企業をマッチングするサービス「Findy」、「Findy Freelance」、「Findy Global」、エンジニア組織のパフォーマンスを最大化するために組織内の開発生産性を可視化するサービス「Findy Teams」の4つの事業を展開しています。登録ユーザーは100,000人を突破、導入企業数が750社を超え、スタートアップからDXを推進したい大手企業まで幅広い企業に導入していただいております。","Findy helps engineering organizations and individuals improve their development experiences. Founded in 2016 and based in Tokyo, the Engineering Intelligence products, Findy, Findy Freelance, and Findy Teams, are trusted by over 100,000 software engineers users and over 750 companies from start-ups to enterprises.",https://findy.co.jp/,Findy.png,Platinum,19
 8,株式会社マイクロアド,株式会社マイクロアド,"マイクロアドは国内最大規模のデータプラットフォームを展開する会社です。
 
@@ -24,7 +24,7 @@ As a partner to our clients, we provide sustainable growth and new possibilities
 また、これらサービスによって蓄積される膨大なオンラインユーザーデータを生かし、オフラインも含めた企業のマーケティング課題、ビジネス課題の解決にも取り組んでいます。
 
 弊社は、自社サービスを支える Python エンジニアを募集しております。ご興味がある方、ぜひお問い合わせください！",https://www.microad.co.jp/,microad_logo.png,Gold,20
-9,株式会社ビープラウド,株式会社ビープラウド,ビープラウドは、システム開発のプロフェッショナルチームとして、Pythonを中核にインターネットプラットフォームを活用したシステムの自社開発・受託開発を行う。優秀なPythonistaがより力を発揮できる環境作りに努め、Python特化のオンライン学習サービス「PyQ（パイキュー）」・システム開発者向けクラウドドキュメントサービス「TRACERY（トレーサリー）」・研修事業・技術書の執筆などを通してそのノウハウを発信。IT勉強会支援プラットフォーム「connpass（コンパス）」の開発・運営や勉強会「BPStudy」の主催など、技術コミュニティ活動にも積極的に取り組む。,"BeProud is a Japanese software development company known for welcoming many excellent Pythonistas. We constantly improve our technical prowess through our work building new services and web applications for clients. In addition to our client work, we also run a few web services including connpass, an event platform for building connections, PyQ the best way to learn Python online, and TRACERY, an online platform to maintain the traceability of documents. We are doing our best to help improve Python and Python's community and publish books regularly about Python programming.",https://www.beproud.jp/,BP_logo_color.svg,Gold,18
+9,株式会社ビープラウド,BeProud Inc.,ビープラウドは、システム開発のプロフェッショナルチームとして、Pythonを中核にインターネットプラットフォームを活用したシステムの自社開発・受託開発を行う。優秀なPythonistaがより力を発揮できる環境作りに努め、Python特化のオンライン学習サービス「PyQ（パイキュー）」・システム開発者向けクラウドドキュメントサービス「TRACERY（トレーサリー）」・研修事業・技術書の執筆などを通してそのノウハウを発信。IT勉強会支援プラットフォーム「connpass（コンパス）」の開発・運営や勉強会「BPStudy」の主催など、技術コミュニティ活動にも積極的に取り組む。,"BeProud is a Japanese software development company known for welcoming many excellent Pythonistas. We constantly improve our technical prowess through our work building new services and web applications for clients. In addition to our client work, we also run a few web services including connpass, an event platform for building connections, PyQ the best way to learn Python online, and TRACERY, an online platform to maintain the traceability of documents. We are doing our best to help improve Python and Python's community and publish books regularly about Python programming.",https://www.beproud.jp/,BP_logo_color.svg,Gold,18
 10,日本経済新聞社,日本経済新聞社,,,https://hack.nikkei.com/,,Silver,33
 11,株式会社日本システム技研,株式会社日本システム技研,,,https://jsl.co.jp/,,Silver,27
 12,Amazon Web Services,Amazon Web Services,アマゾン ウェブ サービス (AWS) は、世界で最も包括的で広く採用されているクラウドプラットフォームです。AWS 提供するウェブマガジン「builders.flash」は、開発者の皆様へ楽しみながら実践的に学べるトピックを毎月お届けします。連動したメールメンバー (無料) の募集も行なっており、メールメンバーだけに用意された特典をご案内します。,"Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform. ""builders.flash"", a web magazine provided by AWS, provides developers with fun and practical topics to learn about every month. We also offer a free e-mail membership, which provides exclusive benefits for e-mail members (only in Japanese).",https://aws.amazon.com/jp/builders-flash/?sc_icampaign=el_pycon2022_jp&sc_ichannel=el&sc_icontent=el_pycon2022_jp&trkCampaign=builders_flash&trk=el_builders_flash_el_pycon2022_jp,AWS_logo_RGB.png,Platinum,9
@@ -43,7 +43,7 @@ We provide detailed counseling to job seekers, and offer pinpoint jobs that resp
 We can help you with your future job search or just career consultation.
 We believe that we are the most understanding HR consulting agency about AI and DX industries. 
 Please feel free to take this opportunity to contact us!",https://www.royal-agent.com/,ROYALAGENT.png,Gold,5
-14, 株式会社スカラコミュニケーションズ, 株式会社スカラコミュニケーションズ,スカラコミュニケーションズは、 見えるサイト内検索エンジン「i-search」、見つかるFAQシステム「i-ask」やデジタルギフトサービス「i-gift」をはじめとした様々なサービスで企業と個人のコミュニケーションをサポートする幅広いSaaS/ASPを提供しています。 クライアントの顕在化しているニーズの先にある真の課題を探し、 解決に必要最適なソリューションまでをご提案します。,"Scala Communications,Inc. provides a wide range of SaaS/ASP services that support communication between companies and individuals. We look beyond the client's apparent needs to find the true issues and propose the optimal solutions necessary to resolve them.",https://scala-com.jp/,scala.svg,Gold,14
+14, 株式会社スカラコミュニケーションズ,"Scala Communications, Inc.",スカラコミュニケーションズは、 見えるサイト内検索エンジン「i-search」、見つかるFAQシステム「i-ask」やデジタルギフトサービス「i-gift」をはじめとした様々なサービスで企業と個人のコミュニケーションをサポートする幅広いSaaS/ASPを提供しています。 クライアントの顕在化しているニーズの先にある真の課題を探し、 解決に必要最適なソリューションまでをご提案します。,"Scala Communications,Inc. provides a wide range of SaaS/ASP services that support communication between companies and individuals. We look beyond the client's apparent needs to find the true issues and propose the optimal solutions necessary to resolve them.",https://scala-com.jp/,scala.svg,Gold,14
 15,note株式会社,note株式会社,noteは、文章や画像、音声、動画などをクリエイターが投稿し、その作品をユーザーが楽しんで応援することができるメディアプラットフォームです。ミッションとして、「だれもが創作をはじめ、続けられるようにする。」を掲げ、すべてのクリエイターが発信するためのインフラを目指しています。現在、noteの会員数は500万人を突破し、クリエイターの作品は2400万件以上が存在しています。1日に約2〜3万件の作品が投稿されており、その中から数多くの書籍や映像が誕生しました。これからもクリエイターのみなさまが創作を楽しんで続けられるよう、安心できる雰囲気や多様性を大切にして、プロダクトを成長させていきます。,"note is a media platform where creators can freely post and sell various contents such as texts, images, audio and video, and readers can enjoy the contents ,support creators and make purchases.
 Our mission is “Start, and Keep on Creating.” and we aim to be an infrastructure that creators can express and continue with their creative activities. 
 Currently, the number of user accounts of note has more than 5 million, and there are more than 24 million contents by creators.
@@ -57,7 +57,7 @@ In addition, you can stock and access companies that show interest in you as pot
 When you are looking for growth opportunities or a place to excel, LAPRAS will provide it.
 ",https://lapras.com/,lapras.png,Gold,8
 17,株式会社LIGHTz,株式会社LIGHTz,,,https://lightz-inc.com/,,Silver,15
-18,ちゅらデータ株式会社,ちゅらデータ株式会社,"ちゅらデータは『最高に面白い仕事』を沖縄に創りたい！という想いのもと、2017年8月に創業しました。
+18,ちゅらデータ株式会社,Chura DATA Inc.,"ちゅらデータは『最高に面白い仕事』を沖縄に創りたい！という想いのもと、2017年8月に創業しました。
 創業5周年を迎えたこの夏、メンバーも50人を超えました。時間や場所の融通が利く働きやすさが自慢で、全社員の20％はフルリモート、「日本全国にちゅらデータ社員がいるぜ！」という状況です。
 多くのシーンで Python を使っているちゅらデータは、業務コンサルティングからデータ整備・基盤構築〜データ分析〜アプリケーション開発まで、一気通貫でビジネスを展開しています。沖縄県内・県外に、多種多様なスキルをもったメンバーが在籍していることが強みです。
 沖縄で働いてみたい Python エンジニアの方、ぜひ一度HPをご覧ください（フルリモートもあります）！","Churadata was founded in August 2017 with one mission: create ""the most interesting job"" in Okinawa.
@@ -92,9 +92,17 @@ We are looking for machine learning, image processing researchers, web engineers
 運用モデルと技術のユニークな組み合わせにより、チームを古いシステムから解放し、顧客に合わせ柔軟かつ最適に作動します。最新のクラウドベースを基礎に、継続的なデプロイで、高速な変革とリアルタイムでのデータへのアクセスを実現します。
 サービス提供から間もないですが、既に世界9カ国、2,500万人を超えるお客様にご利用いただいています。詳しくはぜひ私たちのブースへお越しください","Kraken, part of the Octopus Energy Group, is the world's leading customer and culture platform for energy, water and broadband. A unique blend of operating model and technology that frees teams from legacy systems and empowers them to act with autonomy on behalf of customers. A modern cloud-based architecture with continuous deployments that delivers high speed innovation and access to real-time data. With 25 million customers already migrated in 9 countries, we've only just begun. Come visit us and find out more.",https://kraken.tech/,kraken-logo-w-group-primary-2022-RGB-transparent.png,Gold,28
 28,Pythonエンジニア育成推進協会,Pythonエンジニア育成推進協会,Python 3 エンジニア認定基礎試験とデータ分析試験を全国300か所で通年実施しています。またPythonZen & PEP 8 検定試験をWebで無償実施しています。学習のチェックにご利用ください。,"We originated to authorize tests and learning materials, which serve as guidelines for study, in addition to schools in order to support the training of sound Python programmers who understand Pythonic as the market for the language grows.",https://www.pythonic-exam.com/,pythonLogo_corp.png,Gold,11
-29,株式会社アイリッジ,株式会社アイリッジ," 株式会社アイリッジは、「Tech Tomorrow」をミッションに掲げ、自社プロダクトであるインターネットサービスの開発やスマートフォンアプリの受託開発を行なっている会社です。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」や音声アシスタント対応アプリ制作ツール「NOID」、スマートフォンアプリのバックエンドサーバーから業務を改善するちょっとしたスクリプトまでPythonで開発しています。
+29,株式会社アイリッジ,"iRidge, Inc."," 株式会社アイリッジは、「Tech Tomorrow」をミッションに掲げ、自社プロダクトであるインターネットサービスの開発やスマートフォンアプリの受託開発を行なっている会社です。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」や音声アシスタント対応アプリ制作ツール「NOID」、スマートフォンアプリのバックエンドサーバーから業務を改善するちょっとしたスクリプトまでPythonで開発しています。
  アイリッジでは技術カンファレンスへの協賛や、社内勉強会の開催をしており、技術力向上に積極的です。主な開発環境 - ES6, TypeScript, Vue.js, Nuxt.js, Storybook, GraphQL - Python, Django, Docker,Go - AWS, Terraform, Datadog, Pagerduty, GitLab/CI"," iRidge, Inc. provides solutions of web services and smartphone applications with ""Tech Tomorrow"" as our mission. We use Python/Django for our products such as O2O/OMO solution 'FANSHIP', development tool for voice assistant 'NOID', and the script improvement tool to support backend operation.
  We actively sponsors technical conferences and holds in-house study sessions. Development Environment - ES6, TypeScript, Vue.js, Nuxt.js, Storybook, GraphQL - Python, Django, Docker,Go - AWS(ECS, etc..),Terraform, Datadog, Pagerduty, GitLab/CI.",https://iridge.jp/,iRidge_logo_2000_600.png,Gold,16
 30,株式会社 mediba,株式会社 mediba,,,https://www.mediba.jp/,,Silver,36
 31,一般社団法人日本ネットワーク技術者協会,一般社団法人日本ネットワーク技術者協会,Pythonとネットワークの自動化基礎検定を2022年秋より実施予定の日本ネットワーク技術者協会です。試験は全国300か所で通年実施する予定です。,We will start Python & Network certified examination from this automn in nationwide.,https://network-engineer.jp/,,Silver,12
 32,Nexedi,Nexedi,,,https://www.nexedi.com/,,Silver,6
+33,Classi株式会社,Classi株式会社,,,https://corp.classi.jp,,Silver,38
+34,Axross Recipe,Axross Recipe,,,https://axross-recipe.com,,Silver,17
+35,,,,,,,#N/A,#N/A
+36,,,,,,,#N/A,#N/A
+37,,,,,,,#N/A,#N/A
+38,,,,,,,#N/A,#N/A
+39,,,,,,,#N/A,#N/A
+40,,,,,,,#N/A,#N/A
