@@ -4,7 +4,9 @@
       <div v-for="platinum in platinums" :key="platinum.id" class="flex-1 my-5">
         <div class="flex flex-col items-center justify-center">
           <!--ロゴ-->
-          <div class="sponsor-chipped-card bg-tertiary-50 w-[375px] h-[201px]">
+          <div
+            class="sponsor-chipped-card bg-tertiary-50 w-[375px] h-[201px] lg:ml-5 lg:mr-5"
+          >
             <outer-link :to="platinum[$i18n.locale].url">
               <img
                 v-if="platinum[$i18n.locale].logo_file"
