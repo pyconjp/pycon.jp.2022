@@ -1,0 +1,51 @@
+[
+    {
+        "category": "about",
+        "title": "common.menu.about.about",
+        "children":
+        [
+            {
+                "title": "common.menu.about.coc",
+                "link": "/coc",
+                "innerlink": true
+            }
+
+        ]
+    },
+    {
+        "category": "event",
+        "title": "common.menu.event.event",
+        "children": []
+    },
+    {
+        "category": "sponsor",
+        "title": "common.menu.sponsor.sponsor",
+        "children": [
+            {
+                "title": "common.menu.sponsor.sponsorList",
+                "link": "/sponsors",
+                "innerlink": true
+            },
+            {
+                "title": "common.menu.sponsor.sponsorApplicationInformation",
+                "link": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
+                "innerlink": false
+            },
+            {
+                "title": "common.menu.sponsor.sponsorApplicationInformation",
+                "link": "https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view",
+                "innerlink": false
+            }
+        ]
+    },
+    {
+        "category": "contents",
+        "title": "common.menu.contents.contents",
+        "children": []
+    },
+    {
+        "category": "volunteer",
+        "title": "common.menu.volunteer.volunteer",
+        "children": []
+    }
+]

@@ -10,11 +10,13 @@
       :class="isSPHeaderOpen ? 'justify-center' : 'justify-start'"
     >
       <div v-if="!isSPHeaderOpen" class="flex flex-row items-center">
-        <img
-          src="~/assets/images/sp-header-logo.svg"
-          class="ml-6 sp-logo-img"
-          alt="sp header log"
-        />
+        <nuxt-link :to="localePath('/')">
+          <img
+            src="~/assets/images/sp-header-logo.svg"
+            class="ml-6 sp-logo-img"
+            alt="sp header log"
+          />
+        </nuxt-link>
         <p class="ml-4 text-xl font-bold font-fira">PyCon JP 2022</p>
       </div>
       <div class="absolute right-8 top-6">
@@ -28,115 +30,31 @@
       </div>
       <div v-if="isSPHeaderOpen" class="flex flex-col items-center text-white">
         <div class="">
-          <!--###############-->
-          <!-- 概要セクション -->
-          <!--###############-->
-          <div class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.about.about') }}</p>
+          <div v-for="(menu, i) in menus" :key="i">
+            <div v-if="menu.children.length > 0" class="sp-header-section">
+              <div>
+                <div class="arrow-right"></div>
+                <p>{{ $t(menu.title) }}</p>
+              </div>
+              <div v-for="(child, j) in menu.children" :key="j">
+                <div class="sp-header-line"></div>
+                <nuxt-link
+                  v-if="child.innerlink"
+                  :to="localePath(child.link)"
+                  @click.native="isSPHeaderOpen = false"
+                >
+                  {{ $t(child.title) }}
+                </nuxt-link>
+                <outer-link v-else :to="child.link">
+                  {{ $t(child.title) }}
+                </outer-link>
+              </div>
             </div>
-
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://drive.google.com/file/d/1iNF7VvDCd_gWDsSn2i5U8FB1IQWkWOM9/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ $t('common.menu.about.coc') }}</a
-              >
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.venue') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.support') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.about.COVID-19Guidelines') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>
-                {{
-                  $t('common.menu.about.infectionExpansionPreventionCheckSheet')
-                }}
-              </p>
-            </div> -->
-          </div>
-          <!--###############-->
-          <!-- イベントセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.event.event') }}</p>
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.timetable') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.tutorial') }}</p>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.event.sprint') }}</p>
-            </div> -->
-          </div>
-          <!--###############-->
-          <!-- スポンサーセクション -->
-          <!--###############-->
-          <div class="sp-header-section">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
-            </div>
-            <!-- <div>
-              <div class="sp-header-line"></div>
-              <p>{{ $t('common.menu.sponsor.sponsorList') }}</p>
-            </div> -->
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
-              </a>
-            </div>
-            <div>
-              <div class="sp-header-line"></div>
-              <a
-                href="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
-              </a>
-            </div>
-          </div>
-          <!--###############-->
-          <!-- コンテンツセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.contents.contents') }}</p>
-            </div>
-          </div>
-          <!--###############-->
-          <!-- スタッフセクション -->
-          <!--###############-->
-          <div class="sp-header-section disable-color">
-            <div>
-              <div class="arrow-right"></div>
-              <p>{{ $t('common.menu.volunteer.volunteer') }}</p>
+            <div v-else class="sp-header-section disable-color">
+              <div>
+                <div class="arrow-right"></div>
+                <p>{{ $t(menu.title) }}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -179,14 +97,20 @@
 </template>
 
 <script>
+import OuterLink from '../Elements/OuterLink.vue'
+import menus from '@/content/menu.json'
+
 function stopScroll(event) {
   event.preventDefault()
 }
+
 export default {
   name: 'DefaultHeader',
+  components: { OuterLink },
   data() {
     return {
       isSPHeaderOpen: false,
+      menus,
     }
   },
   watch: {
@@ -210,9 +134,11 @@ export default {
   background: #fcfcfd;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .sp-logo-img {
   width: 65px;
 }
+
 .sp-header-full {
   position: absolute;
   z-index: 20;
@@ -234,9 +160,11 @@ export default {
   height: 36px;
   border-radius: 5px;
 }
+
 .open-btn.active {
   background: transparent;
 }
+
 .open-btn span {
   display: inline-block;
   transition: all 0.4s;
@@ -250,21 +178,26 @@ export default {
 .open-btn span:nth-of-type(1) {
   top: 11px;
 }
+
 .open-btn span:nth-of-type(2) {
   top: 17px;
 }
+
 .open-btn span:nth-of-type(3) {
   top: 23px;
 }
+
 .open-btn.active span:nth-of-type(1) {
   width: 25px;
   top: 11px;
   left: 11px;
   transform: translateY(6px) rotate(-45deg);
 }
+
 .open-btn.active span:nth-of-type(2) {
   opacity: 0;
 }
+
 .open-btn.active span:nth-of-type(3) {
   width: 25px;
   top: 23px;
@@ -285,6 +218,7 @@ export default {
   display: flex;
   align-items: center;
 }
+
 .sp-header-section div p,
 a {
   margin-left: 16px;
@@ -297,6 +231,7 @@ a {
   margin-top: 0px;
   margin-left: 0px;
 }
+
 .arrow-right {
   right: 0px;
   top: 5px;
@@ -308,11 +243,13 @@ a {
   border-right: 3px solid #f77c5e;
   transform: rotate(315deg);
 }
+
 .sp-header-line {
   border-bottom: 1px solid #f77c5e;
   width: 20px;
   height: 1px;
 }
+
 .disable-color {
   opacity: 0.5;
 }
