@@ -51,11 +51,13 @@
               {{ $t('pages.hero.venue-info') }}
             </div>
           </outer-link>
-          <div
-            class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
-          >
-            {{ $t('pages.hero.ticket') }}
-          </div>
+          <outer-link to="https://connpass.com/event/255827">
+            <div
+              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 text-2xl w-full text-center py-2 shadow-md rounded"
+            >
+              {{ $t('pages.hero.ticket') }}
+            </div>
+          </outer-link>
         </div>
         <div class="lg:w-96 w-full mt-10 lg:mt-0">
           <a
