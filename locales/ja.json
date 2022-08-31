@@ -19,7 +19,9 @@
         "sponsor": "スポンサー",
         "sponsorList": "スポンサー一覧",
         "sponsorApplicationInformation": "スポンサー募集情報",
-        "sponsorApplicationRequirements": "スポンサー募集要項"
+        "sponsorApplicationInformationLink": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
+        "sponsorApplicationRequirements": "スポンサー募集要項",
+        "sponsorApplicationRequirementsLink": "https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
       },
       "contents": {
         "contents": "コンテンツ"
