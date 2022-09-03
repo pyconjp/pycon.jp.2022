@@ -1,15 +1,34 @@
 <template>
   <div>
-    <time-table />
+    <div>
+      <subpage-hero-section
+        :title="['Time', 'Table']"
+        subtitle="タイムテーブル"
+      />
+      <div class="component-border-top bg-tertiary-100">
+        <div class="flex justify-center w-full mt-12">
+          <time-table class="w-10/12" :talk-list="talkList"></time-table>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="mt-10 snake-face-base">
+            <!--snake face-->
+            <div class="hidden snake-face lg:block" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import TimeTable from '@/components/Domains/TimeTable'
+import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
+import TimeTable from '@/components/Domains/TimeTable/TimeTable'
 
 export default {
   name: 'TimeTablePage',
   components: {
+    SubpageHeroSection,
     TimeTable,
   },
   data() {
@@ -19,18 +38,17 @@ export default {
     }
   },
   async fetch() {
-    const allTalkList = await this.getAllTalkList()
+    const allTalkList = await this.getAllTalkList(this.$config.pretalxAuthKey)
     this.talkList = this.filterTalkList(allTalkList)
   },
   methods: {
     /**
      * すべてのトーク情報を取得する
      */
-    async getAllTalkList() {
+    async getAllTalkList(token) {
       const params = {
         state: 'confirmed',
       }
-      const token = process.env.PRETALX_AUTH_KEY
       let talkList = []
       let tmpResult = await this.$axios.$get(
         'https://pretalx.com/api/events/pyconjp2022/submissions/',
@@ -70,29 +88,30 @@ export default {
         })
         const answersInfo = {}
         talk.answers.forEach((answer) => {
-          if (answer.id === 119773) {
-            // if: Audience experiment
+          if (answer.question.id === 1713) {
+            // if: オーディエンスのPythonのレベル
             answersInfo.audienceExperiment =
               answer.options.length >= 1 ? answer.options[0].answer.en : ''
-          } else if (answer.id === 119770) {
-            // if: Why did you choose this topic?
+          } else if (answer.question.id === 1714) {
+            // if: この題材を選んだ理由やきっかけ
             answersInfo.choiceReason = answer.answer
-          } else if (answer.id === 119774) {
-            // if: Language of presentation material
+          } else if (answer.question.id === 1715) {
+            // if: 発表資料の言語
             answersInfo.languageOfPresentationMaterial =
               answer.options.length >= 1 ? answer.options[0].answer.en : ''
-          } else if (answer.id === 119771) {
-            // if: Knowledges and know-how the audience can get from your talk
+          } else if (answer.question.id === 1716) {
+            // if: オーディエンスが持って帰れる具体的な知識やノウハウ
             answersInfo.knowledge = answer.answer
-          } else if (answer.id === 119772) {
-            // if: Prior knowledges speakers assume the audience to have
+          } else if (answer.question.id === 1717) {
+            // if: オーディエンスに求める前提知識
             answersInfo.requiredKnowledge = answer.answer
           }
         })
         return {
+          code: talk.code,
           title: talk.title,
           speakers,
-          track: talk.track.en,
+          track: talk.track ? talk.track.en : '',
           abstract: talk.abstract,
           description: talk.description,
           durationMinutes: talk.duration,
@@ -107,3 +126,19 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.snake-face-base {
+  width: 100%;
+  height: 90px;
+}
+
+.snake-face {
+  position: absolute;
+  width: 150px;
+  height: 90px;
+  right: 85px;
+
+  background-image: url('@/assets/images/section_bg_img_left_black.svg');
+}
+</style>
