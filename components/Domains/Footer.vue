@@ -1,7 +1,7 @@
 <template>
   <div class="relative text-white component-border-top font-noto">
     <div
-      class="relative bg-center bg-no-repeat  pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
+      class="relative bg-center bg-no-repeat pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
     >
       <div class="w-11/12 mx-auto lg:w-10/12">
         <img
@@ -10,58 +10,26 @@
           class="mx-auto lg:ml-0 w-72"
         />
         <div
-          class="flex flex-col w-1/2 gap-4 mx-auto  footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
+          class="flex flex-col w-1/2 gap-4 mx-auto footer-menu lg:flex-row lg:w-full lg:ml-0 lg:gap-0"
         >
-          <div class="flex-1">
-            <p>{{ $t('common.menu.about.about') }}</p>
-            <p>
-              <nuxt-link :to="localePath('/coc')">
-                {{ $t('common.menu.about.coc') }}
+          <div v-for="(menu, i) in menus" :key="i" class="flex-1">
+            <p>{{ $t(menu.title) }}</p>
+            <p v-for="(child, j) in menu.children" :key="j">
+              <nuxt-link
+                v-if="child.innerlink"
+                :to="localePath(child.link)"
+                class="hover:opacity-70"
+              >
+                {{ $t(child.title) }}
               </nuxt-link>
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.event.event') }}
-            </p>
-          </div>
-          <div class="flex-1">
-            <p>
-              {{ $t('common.menu.sponsor.sponsor') }}
-            </p>
-            <p>
-              <a href="sponsors" class="hover:opacity-70" rel="noopener noreferrer">
-                {{ $t('common.menu.sponsor.sponsorList') }}
-              </a>
-            </p>
-            <p>
-              <outer-link
-                to="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
+              <outer-link v-else :to="child.link">
+                {{ $t(child.title) }}
               </outer-link>
-            </p>
-            <p>
-              <outer-link
-                to="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
-              >
-                {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
-              </outer-link>
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.contents.contents') }}
-            </p>
-          </div>
-          <div class="flex-1">
-            <p class="opacity-50">
-              {{ $t('common.menu.volunteer.volunteer') }}
             </p>
           </div>
         </div>
         <div
-          class="flex flex-row gap-2 pt-6 mb-3 border-t-2  border-t-tertiary-400 lg:pt-9 font-source"
+          class="flex flex-row gap-2 pt-6 mb-3 border-t-2 border-t-tertiary-400 lg:pt-9 font-source"
         >
           <div class="mr-2">
             {{ $t('common.sns') }}
@@ -100,7 +68,7 @@
           </div>
         </div>
         <div
-          class="mb-6 text-center underline  lg:mt-7 mt-9 previous-pages lg:text-right text-secondary-300"
+          class="mb-6 text-center underline lg:mt-7 mt-9 previous-pages lg:text-right text-secondary-300"
         >
           <outer-link to="https://www.pycon.jp/organizer/index.html">
             {{ $t('common.pastPyConJPSites') }}
@@ -140,6 +108,7 @@
 
 <script>
 import OuterLink from '@/components/Elements/OuterLink'
+import menus from '@/content/menu.json'
 
 const SNS = [
   {
@@ -159,6 +128,11 @@ const SNS = [
 export default {
   name: 'DefaultFooter',
   components: { OuterLink },
+  data() {
+    return {
+      menus,
+    }
+  },
   computed: {
     getSns() {
       return SNS
