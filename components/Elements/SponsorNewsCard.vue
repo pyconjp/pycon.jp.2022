@@ -43,7 +43,7 @@ export default {
   },
   "en": {
     "title": "Sponsors wanted!",
-    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, 06/14/2022 - one month prior to the event.",
+    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, June 14 2022 - one month prior to the event.",
     "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html"
   }
 }
