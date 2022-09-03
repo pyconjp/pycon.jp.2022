@@ -39,7 +39,7 @@
       :text-color="primaryColor"
       :title="openingInfo.title"
       :time="openingInfo.startTime"
-      class="mt-12 lg:mt-2"
+      class="mt-24 lg:mt-2"
     ></FullWidthRow>
 
     <!-- 基調講演 -->
@@ -85,7 +85,7 @@
       text-color="white"
       :title="coffeeBreakInfo.title"
       :time="coffeeBreakInfo.startTime"
-      class="mt-2"
+      class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
     <!-- 一般セッション4行目 -->
@@ -107,7 +107,7 @@
       :text-color="primaryColor"
       :title="lightningTalkInfo.title"
       :time="lightningTalkInfo.startTime"
-      class="mt-2"
+      class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
     <!-- クロージング -->
@@ -116,7 +116,7 @@
       :text-color="primaryColor"
       :title="closingInfo.title"
       :time="closingInfo.startTime"
-      class="mt-2"
+      class="mt-12 lg:mt-2"
     ></FullWidthRow>
   </div>
 </template>
@@ -227,7 +227,7 @@ export default {
           return talkInfo.start === startTime
         })
         .sort((a, b) => {
-          return a.room.en < b.room.en ? -1 : 1
+          return a.room < b.room ? -1 : 1
         })
     },
     getStartTime(rowNumber) {

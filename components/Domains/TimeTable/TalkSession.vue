@@ -1,17 +1,30 @@
 <template>
-  <div class="flex p-4 bg-white rounded lg:min-h-[180px]">
-    <div v-if="!$device.isDesktop"></div>
-    <div class="w-full lg:grid lg:grid-cols-1">
+  <div class="flex lg:p-4 bg-white rounded lg:min-h-[180px]">
+    <div
+      v-if="!$device.isDesktop"
+      class="flex items-center justify-center w-1/3 bg-tertiary-200"
+    >
+      <div class="">
+        <p class="text-sm font-bold font-noto text-tertiary-800">
+          {{ $dayjs(talk.start).format('HH:mm') }}
+        </p>
+        <p class="text-sm font-bold font-noto text-tertiary-800">30min</p>
+      </div>
+    </div>
+    <div class="w-full p-4 lg:p-0 lg:grid lg:grid-cols-1">
       <p class="text-sm font-bold lg:row-span-5 font-noto text-primary-800">
         {{ talk.title }}
       </p>
 
       <div>
-        <p class="text-sm font-noto text-tertiary-700">
+        <p class="text-sm font-medium font-noto text-tertiary-700">
           {{ talk.speakers[0].name }}
         </p>
         <div class="flex items-center">
-          <TagIcon size="10" class="fill-current text-[#3F3F46]"></TagIcon>
+          <TagIcon
+            size="10"
+            class="fill-current text-[#3F3F46] mt-[2px]"
+          ></TagIcon>
           <p class="text-[12px] font-normal font-noto text-tertiary-70 ml-1">
             {{ talk.track }}
           </p>
@@ -35,12 +48,28 @@
           >
             <p>EN</p>
           </div>
-          <div class="flex items-center ml-2">
+          <div
+            v-else-if="
+              talk.languageOfPresentationMaterial === 'Both' ||
+              talk.languageOfPresentationMaterial === '両方'
+            "
+            class="px-2 rounded-lg bg-tertiary-200 w-12 text-[12px] flex justify-center items-center h-4"
+          >
+            <p>JA&amp;EN</p>
+          </div>
+          <div v-if="$device.isDesktop" class="flex items-center ml-2">
             <ClockIcon
               size="10"
-              class="fill-current text-tertiary-500"
+              class="fill-current text-tertiary-500 mt-[2px]"
             ></ClockIcon>
             <p class="text-sm text-tertiary-400 text-[12px]">30min</p>
+          </div>
+          <div v-else class="flex items-center ml-2">
+            <LocationMarkerIcon
+              size="12"
+              class="mt-1 fill-current text-tertiary-500"
+            ></LocationMarkerIcon>
+            <p class="text-sm text-tertiary-400 text-[12px]">{{ talk.room }}</p>
           </div>
         </div>
       </div>
@@ -49,15 +78,21 @@
 </template>
 
 <script>
-import { TagIcon, ClockIcon } from '@vue-hero-icons/solid'
+import { TagIcon, ClockIcon, LocationMarkerIcon } from '@vue-hero-icons/solid'
 
 export default {
-  components: { TagIcon, ClockIcon },
+  components: { TagIcon, ClockIcon, LocationMarkerIcon },
   props: {
     talk: {
       type: Object,
       default() {
-        return { title: '', speaker: '', track: '' }
+        return {
+          title: '',
+          speaker: '',
+          track: '',
+          start: '',
+          room: '',
+        }
       },
     },
   },

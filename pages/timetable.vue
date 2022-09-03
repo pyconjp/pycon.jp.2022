@@ -1,20 +1,18 @@
 <template>
   <div>
-    <div>
-      <subpage-hero-section
-        :title="['Time', 'Table']"
-        subtitle="タイムテーブル"
-      />
-      <div class="component-border-top bg-tertiary-100">
-        <div class="flex justify-center w-full mt-12">
-          <time-table class="w-10/12" :talk-list="talkList"></time-table>
-        </div>
+    <subpage-hero-section
+      :title="['Time', 'Table']"
+      subtitle="タイムテーブル"
+    />
+    <div class="pt-12 bg-tertiary-100">
+      <div class="flex justify-center w-full">
+        <time-table class="w-10/12" :talk-list="talkList"></time-table>
+      </div>
 
-        <div class="flex flex-col items-center">
-          <div class="mt-10 snake-face-base">
-            <!--snake face-->
-            <div class="hidden snake-face lg:block" />
-          </div>
+      <div class="flex flex-col items-center">
+        <div class="mt-10 snake-face-base">
+          <!--snake face-->
+          <div class="hidden snake-face lg:block" />
         </div>
       </div>
     </div>
@@ -115,7 +113,7 @@ export default {
           abstract: talk.abstract,
           description: talk.description,
           durationMinutes: talk.duration,
-          room: talk.slot.room,
+          room: talk.slot.room ? talk.slot.room.en : '',
           start: talk.slot.start,
           end: talk.slot.end,
           notes: talk.notes,
@@ -129,12 +127,14 @@ export default {
 
 <style scoped>
 .snake-face-base {
+  position: relative;
   width: 100%;
   height: 90px;
 }
 
 .snake-face {
   position: absolute;
+  bottom: -1px;
   width: 150px;
   height: 90px;
   right: 85px;

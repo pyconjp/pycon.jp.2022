@@ -5,7 +5,7 @@
     <TalkSession
       v-for="talk in talkList"
       :key="talk.code"
-      class="w-full lg:w-[calc((100%_-_16px)/5)]"
+      class="w-full mt-2 lg:mt-0 lg:w-[calc((100%_-_16px)/5)]"
       :talk="talk"
     ></TalkSession>
     <p
