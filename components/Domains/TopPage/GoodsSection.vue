@@ -36,7 +36,7 @@
             {{ $t('pages.index.goodsDescription') }}
           </div>
           <div class="mt-28">
-            <outer-link to="#">
+            <outer-link to="https://suzuri.jp/goods_pyconjp">
               <div
                 class="w-full py-2 mt-1 text-2xl font-bold text-center rounded shadow-md font-noto bg-primary-700 text-tertiary-100"
               >
