@@ -188,7 +188,7 @@ export default {
       },
       {
         "question": {
-          "text": "Can I get financial support with travel expenses?",
+          "text": "Can I get financial support for travel expenses?",
           "link": "",
           "url": "",
           "icon": ""
