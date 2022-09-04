@@ -53,9 +53,14 @@
               talk.languageOfPresentationMaterial === 'Both' ||
               talk.languageOfPresentationMaterial === '両方'
             "
-            class="px-2 rounded-lg bg-tertiary-200 w-12 text-[12px] flex justify-center items-center h-4"
+            class="px-2 rounded-lg language-chips w-24 text-[12px] flex flex-row justify-center items-center h-4"
           >
-            <p>JA&amp;EN</p>
+            <div class="flex justify-center w-3/5 text-white">
+              <p>日本語</p>
+            </div>
+            <div class="flex justify-center w-2/5">
+              <p>EN</p>
+            </div>
           </div>
           <div v-if="$device.isDesktop" class="flex items-center ml-2">
             <ClockIcon
@@ -99,4 +104,14 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.language-chips {
+  background: linear-gradient(
+    135deg,
+    theme(colors.primary.700) 0%,
+    theme(colors.primary.700) 60%,
+    theme(colors.secondary.400) 60%,
+    theme(colors.secondary.400) 100%
+  );
+}
+</style>
