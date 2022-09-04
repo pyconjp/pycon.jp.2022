@@ -7,7 +7,9 @@
         "support": "サポート",
         "venue": "会場案内",
         "COVID-19Guidelines": "感染症対策ガイドライン",
-        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート"
+        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート",
+        "guideline": "オンサイト参加ガイドライン",
+        "guidelineLink": "https://drive.google.com/file/d/1Cj4Ss6SIdG3ouTZ_VXYW7A41BGfS6N_i/view"
       },
       "event": {
         "event": "イベント概要",

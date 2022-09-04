@@ -4,11 +4,16 @@
         "title": "common.menu.about.about",
         "children":
         [
-            {
-                "title": "common.menu.about.coc",
-                "link": "/coc",
-                "innerlink": true
-            }
+          {
+              "title": "common.menu.about.coc",
+              "link": "/coc",
+              "innerlink": true
+          },
+          {
+            "title": "common.menu.about.guideline",
+            "link": "common.menu.about.guidelineLink",
+            "innerlink": false
+          }
 
         ]
     },
