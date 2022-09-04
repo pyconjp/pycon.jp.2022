@@ -7,7 +7,9 @@
         "support": "サポート",
         "venue": "会場案内",
         "COVID-19Guidelines": "感染症対策ガイドライン",
-        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート"
+        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート",
+        "guideline": "オンサイト参加ガイドライン",
+        "guidelineLink": "https://drive.google.com/file/d/1Cj4Ss6SIdG3ouTZ_VXYW7A41BGfS6N_i/view?usp=sharing"
       },
       "event": {
         "event": "イベント概要",
@@ -19,7 +21,9 @@
         "sponsor": "スポンサー",
         "sponsorList": "スポンサー一覧",
         "sponsorApplicationInformation": "スポンサー募集情報",
-        "sponsorApplicationRequirements": "スポンサー募集要項"
+        "sponsorApplicationInformationLink": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
+        "sponsorApplicationRequirements": "スポンサー募集要項",
+        "sponsorApplicationRequirementsLink": "https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
       },
       "contents": {
         "contents": "コンテンツ"

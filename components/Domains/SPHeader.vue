@@ -45,7 +45,7 @@
                 >
                   {{ $t(child.title) }}
                 </nuxt-link>
-                <outer-link v-else :to="child.link">
+                <outer-link v-else :to="$t(child.link)">
                   {{ $t(child.title) }}
                 </outer-link>
               </div>
