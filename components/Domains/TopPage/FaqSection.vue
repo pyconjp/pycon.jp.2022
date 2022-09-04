@@ -148,7 +148,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "「{link}」をご参照ください。",
+          "text": "{link}をご参照ください。",
           "link": "PyCon JP 2022 遠方参加者の支援制度について",
           "url": "https://pyconjp.blogspot.com/2022/08/financial-aid-ja.html",
           "icon": "ExternalLinkIcon"
