@@ -188,7 +188,7 @@ export default {
       },
       {
         "question": {
-          "text": "Is there Travel Grants for PyCon JP 2022?",
+          "text": "Can I get financial support with travel expenses?",
           "link": "",
           "url": "",
           "icon": ""
