@@ -31,36 +31,16 @@
         </div>
         <div class="flex items-center">
           <div
-            v-if="
-              talk.languageOfPresentationMaterial === 'Japanese only' ||
-              talk.languageOfPresentationMaterial === '日本語のみ'
-            "
+            v-if="talk.language === 'ja-JP'"
             class="px-2 rounded-lg bg-primary-700 w-14 text-white text-[12px] flex justify-center items-center h-4"
           >
             <p>日本語</p>
           </div>
           <div
-            v-else-if="
-              talk.languageOfPresentationMaterial === 'English only' ||
-              talk.languageOfPresentationMaterial === '英語のみ'
-            "
+            v-else-if="talk.language === 'en'"
             class="px-2 rounded-lg bg-secondary-400 w-8 text-tertiary-900 text-[12px] flex justify-center items-center h-4"
           >
             <p>EN</p>
-          </div>
-          <div
-            v-else-if="
-              talk.languageOfPresentationMaterial === 'Both' ||
-              talk.languageOfPresentationMaterial === '両方'
-            "
-            class="px-2 rounded-lg language-chips w-24 text-[12px] flex flex-row justify-center items-center h-4"
-          >
-            <div class="flex justify-center w-3/5 text-white">
-              <p>日本語</p>
-            </div>
-            <div class="flex justify-center w-2/5">
-              <p>EN</p>
-            </div>
           </div>
           <div v-if="$device.isDesktop" class="flex items-center ml-2">
             <ClockIcon

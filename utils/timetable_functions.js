@@ -39,6 +39,7 @@ export function filterTalkList(talkList) {
       code: talk.code,
       title: talk.title,
       speakers,
+      language: talk.content_locale ? talk.content_locale : '',
       track: talk.track ? talk.track.en : '',
       abstract: talk.abstract,
       description: talk.description,
