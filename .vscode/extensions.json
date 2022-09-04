@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "octref.vetur",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "csstools.postcss"
   ]
 }
