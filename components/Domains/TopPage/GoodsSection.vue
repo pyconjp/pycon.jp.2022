@@ -27,7 +27,7 @@
           <div class="flex flex-row">
             <div class="mr-1 goods-text-icon" />
             <div class="goods-text-title text-tertiary-900 font-fira">
-              Get <span class="text-primary-700">GOODS</span>!
+              Official <span class="text-primary-700">GOODS</span>
             </div>
           </div>
           <div
