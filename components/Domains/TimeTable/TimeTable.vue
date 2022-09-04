@@ -1,15 +1,25 @@
 <template>
   <div class="">
-    <div class="flex justify-center">
-      <div class="flex">
+    <div class="flex justify-center w-full">
+      <div class="flex justify-center w-full">
         <button
-          class="px-5 py-2 mr-4 text-2xl font-bold text-white border rounded shadow-sm bg-primary-700 font-noto lg:mr-12"
+          class="px-5 py-2 w-[45%] mr-4 text-2xl font-bold border rounded shadow-md font-noto lg:mr-12"
+          :class="[
+            targetDay === 1
+              ? 'bg-primary-700 text-white'
+              : 'bg-tertiary-50 text-primary-700',
+          ]"
           @click="targetDay = 1"
         >
           DAY1 10/14
         </button>
         <button
-          class="px-5 py-2 text-2xl font-bold text-black border rounded shadow-sm bg-secondary-400 font-noto"
+          class="px-5 py-2 w-[45%] text-2xl font-bold border rounded shadow-md font-noto"
+          :class="[
+            targetDay === 2
+              ? 'bg-primary-700 text-white'
+              : 'bg-tertiary-50 text-primary-700',
+          ]"
           @click="targetDay = 2"
         >
           DAY2 10/15
