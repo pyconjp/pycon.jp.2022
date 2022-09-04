@@ -3,6 +3,7 @@ name: Scheduled Deployment
 on:
   schedule:
     - cron: '0 21 * * *' # 6am JST
+  workflow_dispatch:
 
 jobs:
   deploy:
