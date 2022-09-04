@@ -2,9 +2,9 @@
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="FAQ" sub="よくある質問" class="mb-14" />
     <div
-      class="bg-tertiary-50 w-11/12 lg:w-8/12 mx-auto text-left chipped-card lg:mb-4"
+      class="w-11/12 mx-auto text-left bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
     >
-      <div class="lg:py-16 py-8 lg:px-24 px-6 text-lg">
+      <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
         <div class="flex flex-col gap-5">
           <div v-for="(faq, index) in $t('faq')" :key="index" class="flex-1">
             <div
@@ -18,12 +18,12 @@
                 <template #link>
                   <outer-link
                     :to="$t(`faq.${index}.question.url`).toString()"
-                    class="text-primary-800 underline inline"
+                    class="inline underline text-primary-800"
                   >
                     {{ $t(`faq.${index}.question.link`) }}
                     <component
                       :is="$t(`faq.${index}.question.icon`).toString()"
-                      class="w-4 h-4 inline mb-2"
+                      class="inline w-4 h-4 mb-2"
                     />
                   </outer-link>
                 </template>
@@ -40,12 +40,12 @@
                 <template #link>
                   <outer-link
                     :to="$t(`faq.${index}.answer.url`).toString()"
-                    class="text-primary-800 underline inline"
+                    class="inline underline text-primary-800"
                   >
                     {{ $t(`faq.${index}.answer.link`) }}
                     <component
                       :is="$t(`faq.${index}.answer.icon`).toString()"
-                      class="w-4 h-4 inline mb-2"
+                      class="inline w-4 h-4 mb-2"
                     />
                   </outer-link>
                 </template>
@@ -56,7 +56,7 @@
       </div>
     </div>
     <div class="snake-face-base">
-      <div class="snake-face hidden lg:block" />
+      <div class="hidden snake-face lg:block" />
     </div>
   </div>
 </template>
@@ -139,6 +139,20 @@ export default {
           "url": "mailto:pyconjp@pycon.jp",
           "icon": "MailIcon"
         }
+      },
+      {
+        "question": {
+          "text": "遠方参加者への支援制度について教えてください。",
+          "link": "",
+          "url": "",
+          "icon": ""
+        },
+        "answer": {
+          "text": "「{link}」をご参照ください。",
+          "link": "PyCon JP 2022 遠方参加者の支援制度について",
+          "url": "https://pyconjp.blogspot.com/2022/08/financial-aid-ja.html",
+          "icon": "ExternalLinkIcon"
+        }
       }
     ]
   },
@@ -170,6 +184,20 @@ export default {
           "link": "pyconjp@pycon.jp",
           "url": "mailto:pyconjp@pycon.jp",
           "icon": "MailIcon"
+        }
+      },
+      {
+        "question": {
+          "text": "Is there Travel Grants for PyCon JP 2022?",
+          "link": "",
+          "url": "",
+          "icon": ""
+        },
+        "answer": {
+          "text": "Please refer to {link}",
+          "link": "PyCon JP 2022 Financial Aid for travel expenses",
+          "url": "https://pyconjp.blogspot.com/2022/08/financial-aid-en.html",
+          "icon": "ExternalLinkIcon"
         }
       }
     ]
