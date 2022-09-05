@@ -62,20 +62,19 @@
         </div>
       </div>
       <!-- スペシャルスポンサー -->
-      <!-- <div class="text-center component-border-top bg-secondary-400">
-        <section-title main="SPECIAL" sub="特別スポンサー" />
+      <div class="text-center component-border-top bg-secondary-400">
+        <section-title main="MEDIA" sub="メディアスポンサー" />
         <div class="flex flex-col items-center">
-          <div class="mt-10 mb-10 separator" />
           <special-list />
-        </div> -->
+        </div>
 
       <!-- snake -->
-      <!-- <div class="snake-face-base">
+      <div class="snake-face-base">
           <div class="hidden snake-face-left-orange lg:block" />
         </div>
-      </div> -->
+      </div>
       <!-- パトロン -->
-      <div class="text-center component-border-top bg-secondary-400">
+      <div class="text-center component-border-top bg-tertiary-100">
         <section-title main="PATRON" sub="パトロン" :primary="false" />
         <div class="flex flex-col items-center">
           <patron-list />
@@ -83,7 +82,7 @@
 
         <!-- snake -->
         <div class="snake-face-base">
-          <div class="hidden snake-face-left-orange lg:block" />
+          <div class="hidden snake-face-right-yello lg:block" />
         </div>
       </div>
       <!-- スポンサー募集 9/13（1か月前）までシルバースポンサーだけ募集予定 -->
@@ -137,7 +136,7 @@ import DiamondItem from '@/components/Elements/DiamondItem'
 import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
-// import SpecialList from '@/components/Elements/SpecialList'
+import SpecialList from '@/components/Elements/SpecialList'
 import PatronList from '@/components/Elements/PatronList'
 import OuterLink from '@/components/Elements/OuterLink'
 
@@ -151,7 +150,7 @@ export default {
     PlatinumList,
     GoldList,
     SilverList,
-    // SpecialList,
+    SpecialList,
     PatronList,
     ArrowNarrowRightIcon,
     OuterLink,

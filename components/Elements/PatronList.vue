@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="sponsors && patrons && patrons.length > 0">
-      <div class="grid grid-cols-1 lg:grid-cols-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3">
         <div v-for="patron in patrons" :key="patron.id" class="flex-1 m-5">
           <div class="flex">
             <div
