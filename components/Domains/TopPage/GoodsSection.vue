@@ -38,6 +38,7 @@
             <div class="font-bold text-primary-700">
               <outer-link :to="$t('pages.index.goodsBlogLink').toString()">
                 {{ $t('pages.index.goodsBlog') }}
+                <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
               </outer-link>
             </div>
           </div>
@@ -60,12 +61,14 @@
 </template>
 
 <script>
+import { ExternalLinkIcon } from '@vue-hero-icons/outline'
 import OuterLink from '@/components/Elements/OuterLink'
 import SectionTitle from '@/components/Elements/SectionTitle'
 
 export default {
   name: 'GoodsSection',
   components: {
+    ExternalLinkIcon,
     OuterLink,
     SectionTitle,
   },
