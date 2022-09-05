@@ -34,6 +34,12 @@
             class="pl-5 text-left goods-text-description text-tertiary-800 font-fira"
           >
             {{ $t('pages.index.goodsDescription') }}
+            <br />
+            <div class="font-bold text-primary-700">
+              <outer-link :to="$t('pages.index.goodsBlogLink').toString()">
+                {{ $t('pages.index.goodsBlog') }}
+              </outer-link>
+            </div>
           </div>
           <div class="mt-28">
             <outer-link to="https://suzuri.jp/goods_pyconjp">
