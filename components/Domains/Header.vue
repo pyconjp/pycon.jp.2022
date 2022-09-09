@@ -11,166 +11,50 @@
         </nuxt-link>
       </div>
       <div
-        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold  font-fira whitespace-nowrap menu"
+        class="flex flex-row items-center justify-around w-full mx-10 text-xl font-bold font-fira whitespace-nowrap menu"
       >
-        <!--###############-->
-        <!-- 概要セクション -->
-        <!--###############-->
-        <div class="relative flex flex-row group">
-          <p class="relative">
-            {{ $t('common.menu.about.about') }}
-          </p>
-          <div class="arrow-bottom"></div>
+        <div v-for="(menu, i) in menus" :key="i">
           <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
+            v-if="menu.children.length > 0"
+            class="relative flex flex-row group"
           >
-            <div class="child-menu-record">
-              <nuxt-link to="/coc">
-                <div class="flex w-full pt-2 pb-2 ml-6">
-                  <div class="arrow-right"></div>
-                  <p class="ml-6 text-sm font-bold font-noto">
-                    {{ $t('common.menu.about.coc') }}
-                  </p>
-                </div>
-              </nuxt-link>
-            </div>
-            <!-- <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.about.venue') }}</p>
-              </div>
-            </div>
-            <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.about.support') }}</p>
-              </div>
-            </div> -->
-            <!-- TODO: リンクは仮置きのため、修正すること
-            <a
-              class="child-menu-record"
-              href="https://pyconjp.blogspot.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <p class="relative">
+              {{ $t(menu.title) }}
+            </p>
+            <div class="arrow-bottom"></div>
+            <div
+              class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
             >
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">
-                  {{ $t('common.menu.about.COVID-19Guidelines') }}
-                </p>
+              <div
+                v-for="(child, j) in menu.children"
+                :key="j"
+                class="child-menu-record"
+              >
+                <nuxt-link v-if="child.innerlink" :to="localePath(child.link)">
+                  <div class="flex w-full pt-2 pb-2 ml-6">
+                    <div class="arrow-right"></div>
+                    <span class="ml-6">{{ $t(child.title) }}</span>
+                  </div>
+                </nuxt-link>
+                <outer-link
+                  v-else
+                  :to="$t(child.link)"
+                  class="child-menu-record"
+                >
+                  <div class="flex w-full pt-2 pb-2 ml-6">
+                    <div class="arrow-right"></div>
+                    <span class="ml-6">{{ $t(child.title) }}</span>
+                  </div>
+                </outer-link>
               </div>
-            </a> -->
-            <!-- TODO: リンクは仮置きのため、修正すること
-            <a
-              class="child-menu-record"
-              href="https://pyconjp.blogspot.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">
-                  {{
-                    $t(
-                      'common.menu.about.infectionExpansionPreventionCheckSheet'
-                    )
-                  }}
-                </p>
-              </div>
-            </a> -->
+            </div>
           </div>
-        </div>
-        <!--###############-->
-        <!-- イベントセクション -->
-        <!--###############-->
-        <div class="relative flex flex-row group disable-color">
-          <p>{{ $t('common.menu.event.event') }}</p>
-          <div class="arrow-bottom"></div>
-          <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
-          >
-            <!-- <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.event.timetable') }}</p>
-              </div>
-            </div>
-            <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.event.tutorial') }}</p>
-              </div>
-            </div>
-            <div class="child-menu-record">
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6">{{ $t('common.menu.event.sprint') }}</p>
-              </div>
-            </div> -->
+          <div v-else class="relative flex flex-row group disable-color">
+            <p class="relative">
+              {{ $t(menu.title) }}
+            </p>
+            <div class="arrow-bottom"></div>
           </div>
-        </div>
-        <!--###############-->
-        <!-- スポンサーセクション -->
-        <!--###############-->
-        <div class="relative flex flex-row group">
-          <p>{{ $t('common.menu.sponsor.sponsor') }}</p>
-          <div class="arrow-bottom"></div>
-          <div
-            class="invisible rounded-md shadow-md  child-menu top-7 group-hover:visible"
-          >
-            <div class="child-menu-record">
-              <nuxt-link to="sponsors">
-                <div class="flex w-full pt-2 pb-2 ml-6">
-                  <div class="arrow-right"></div>
-                  <a class="ml-6">{{ $t('common.menu.sponsor.sponsorList') }}</a>
-              </div>
-              </nuxt-link>
-            </div>
-            <a
-              class="child-menu-record"
-              href="https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6 text-sm">
-                  {{ $t('common.menu.sponsor.sponsorApplicationInformation') }}
-                </p>
-              </div>
-            </a>
-            <a
-              class="child-menu-record"
-              href="https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="flex w-full pt-2 pb-2 ml-6">
-                <div class="arrow-right"></div>
-                <p class="ml-6 text-sm">
-                  {{ $t('common.menu.sponsor.sponsorApplicationRequirements') }}
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <!--###############-->
-        <!-- コンテンツセクション -->
-        <!--###############-->
-        <div class="flex flex-row disable-color">
-          <p>{{ $t('common.menu.contents.contents') }}</p>
-          <!-- 外部へリンクする場合は以下の画像を有効化する -->
-          <!-- <img
-            class="inline h-4 mt-1 ml-2"
-            src="@/assets/images/link-icon.svg"
-            alt="content"
-          /> -->
-        </div>
-        <!--###############-->
-        <!-- スタッフセクション -->
-        <!--###############-->
-        <div class="disable-color">
-          <p>{{ $t('common.menu.volunteer.volunteer') }}</p>
         </div>
       </div>
 
@@ -178,7 +62,7 @@
       <!-- 言語切り替えエリア -->
       <!--###############-->
       <div
-        class="flex flex-row pr-6 my-3 font-bold leading-10  bg-secondary-400 whitespace-nowrap font-noto"
+        class="flex flex-row pr-6 my-3 font-bold leading-10 bg-secondary-400 whitespace-nowrap font-noto"
       >
         <img
           class="w-4 mx-4"
@@ -211,11 +95,16 @@
 </template>
 
 <script>
+import OuterLink from '../Elements/OuterLink.vue'
+import menus from '@/content/menu.json'
+
 export default {
   name: 'DefaultHeader',
+  components: { OuterLink },
   data() {
     return {
       isAboutMenuOpen: false,
+      menus,
     }
   },
 }

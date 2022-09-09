@@ -1,0 +1,60 @@
+[
+  {
+    "category": "about",
+    "title": "common.menu.about.about",
+    "children": [
+      {
+        "title": "common.menu.about.coc",
+        "link": "/coc",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.about.guideline",
+        "link": "common.menu.about.guidelineLink",
+        "innerlink": false
+      }
+    ]
+  },
+  {
+    "category": "event",
+    "title": "common.menu.event.event",
+    "children": [
+      {
+        "title": "common.menu.event.timetable",
+        "link": "/timetable",
+        "innerlink": true
+      }
+    ]
+  },
+  {
+    "category": "sponsor",
+    "title": "common.menu.sponsor.sponsor",
+    "children": [
+      {
+        "title": "common.menu.sponsor.sponsorList",
+        "link": "/sponsors",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.sponsor.sponsorApplicationInformation",
+        "link": "common.menu.sponsor.sponsorApplicationInformationLink",
+        "innerlink": false
+      },
+      {
+        "title": "common.menu.sponsor.sponsorApplicationRequirements",
+        "link": "common.menu.sponsor.sponsorApplicationRequirementsLink",
+        "innerlink": false
+      }
+    ]
+  },
+  {
+    "category": "contents",
+    "title": "common.menu.contents.contents",
+    "children": []
+  },
+  {
+    "category": "volunteer",
+    "title": "common.menu.volunteer.volunteer",
+    "children": []
+  }
+]

@@ -100,6 +100,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content',
     'nuxt-i18n',
+    '@nuxtjs/dayjs',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -147,4 +148,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  privateRuntimeConfig: {
+    pretalxAuthKey: process.env.PRETALX_AUTH_KEY,
+  },
 }

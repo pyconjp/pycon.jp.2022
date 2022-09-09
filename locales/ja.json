@@ -7,7 +7,9 @@
         "support": "サポート",
         "venue": "会場案内",
         "COVID-19Guidelines": "感染症対策ガイドライン",
-        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート"
+        "infectionExpansionPreventionCheckSheet": "感染防止対策チェックシート",
+        "guideline": "オンサイト参加ガイドライン",
+        "guidelineLink": "https://drive.google.com/file/d/1Cj4Ss6SIdG3ouTZ_VXYW7A41BGfS6N_i/view?usp=sharing"
       },
       "event": {
         "event": "イベント概要",
@@ -19,7 +21,9 @@
         "sponsor": "スポンサー",
         "sponsorList": "スポンサー一覧",
         "sponsorApplicationInformation": "スポンサー募集情報",
-        "sponsorApplicationRequirements": "スポンサー募集要項"
+        "sponsorApplicationInformationLink": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
+        "sponsorApplicationRequirements": "スポンサー募集要項",
+        "sponsorApplicationRequirementsLink": "https://drive.google.com/file/d/1EANBgiaURLUOuZ8HpWtXN8bgvUwMl-Wl/view"
       },
       "contents": {
         "contents": "コンテンツ"
@@ -43,11 +47,14 @@
     "hero": {
       "venue": "TOC有明コンベンションホール",
       "venue-info": "会場案内",
-      "ticket": "チケット案内 (Coming Soon)"
+      "ticket": "チケット案内"
     },
     "index": {
-      "overviewSubTitle": "概要",
-      "overviewDescription": "PyCon JP は、Python ユーザが集まり、Python や Python を使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JP の開催を通じて、Python の使い手が一堂に集まり、Python にまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。"
+      "overviewDescription": "PyCon JP は、Python ユーザが集まり、Python や Python を使ったソフトウェアについて情報交換、交流をするためのカンファレンスです。 PyCon JP の開催を通じて、Python の使い手が一堂に集まり、Python にまつわる様々な分野の知識や情報を交換し、新たな友達やコミュニティとのつながり、仕事やビジネスチャンスを増やせる場所とすることが目標です。",
+      "goodsDescription": "PyCon JP 2022の公式Tシャツなどのグッズを販売中です。",
+      "goodsBlog": "詳細はこちら",
+      "goodsBlogLink": "https://pyconjp.blogspot.com/2022/09/PyConJP2022TshirtJ.html",
+      "goodsSuzuri": "Goods Shop (SUZURI)"
     }
   }
 }

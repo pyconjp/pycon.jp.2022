@@ -4,6 +4,7 @@
     <news-section :posts="posts" />
     <overview-section />
     <conference-section />
+    <goods-section />
     <faq-section />
     <sponsor-section />
   </div>
@@ -15,6 +16,7 @@ import HeroSection from '@/components/Domains/TopPage/HeroSection'
 import NewsSection from '@/components/Domains/TopPage/NewsSection'
 import OverviewSection from '@/components/Domains/TopPage/OverviewSection'
 import ConferenceSection from '@/components/Domains/TopPage/ConferenceSection'
+import GoodsSection from '@/components/Domains/TopPage/GoodsSection'
 import FaqSection from '@/components/Domains/TopPage/FaqSection'
 import SponsorSection from '@/components/Domains/TopPage/SponsorSection'
 
@@ -22,6 +24,7 @@ export default {
   name: 'IndexPage',
   components: {
     SponsorSection,
+    GoodsSection,
     FaqSection,
     ConferenceSection,
     OverviewSection,
