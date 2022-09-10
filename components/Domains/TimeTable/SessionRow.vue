@@ -7,6 +7,7 @@
       :key="talk.code"
       class="w-full mt-2 lg:mt-0 lg:w-[calc((100%_-_16px)/5)]"
       :talk="talk"
+      :handle-modal="openModal"
     ></TalkSession>
     <p
       class="absolute -top-8 left-0 lg:top-0 lg:-left-[42px] font-noto font-medium"
@@ -31,10 +32,16 @@ export default {
       type: String,
       default: '00:00',
     },
+    handleOpenmodal: {
+      type: Function,
+      required: true,
+    },
   },
   methods: {
-    openSessionModal(sessionData) {
-      this.$emit('openSessionModal', sessionData)
+    openModal(talk) {
+      // alert(talk.code)
+      // this.$emit('openSessionModal', talk)
+      this.handleOpenmodal(talk)
     },
   },
 }

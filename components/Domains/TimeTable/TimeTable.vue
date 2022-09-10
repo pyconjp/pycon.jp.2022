@@ -74,12 +74,14 @@
     <SessionRow
       :talk-list="firstLowDataList"
       :start-time="getStartTime(1)"
+      :handle-openmodal="openSessionModal"
     ></SessionRow>
 
     <!-- 一般セッション2行目 -->
     <SessionRow
       :talk-list="secondLowDataList"
       :start-time="getStartTime(2)"
+      :handle-openmodal="openSessionModal"
     ></SessionRow>
 
     <!-- 一般セッション3行目(1日目のみ) -->
@@ -87,6 +89,7 @@
       v-if="targetDay === 1"
       :talk-list="thirdLowDataList"
       :start-time="getStartTime(3)"
+      :handle-openmodal="openSessionModal"
     ></SessionRow>
 
     <!-- コーヒー休憩 -->
@@ -102,12 +105,14 @@
     <SessionRow
       :talk-list="fourthLowDataList"
       :start-time="getStartTime(4)"
+      :handle-openmodal="openSessionModal"
     ></SessionRow>
 
     <!-- 一般セッション5行目 -->
     <SessionRow
       :talk-list="fifthLowDataList"
       :start-time="getStartTime(5)"
+      :handle-openmodal="openSessionModal"
     ></SessionRow>
 
     <!-- LT(1日目のみ) -->
@@ -128,6 +133,13 @@
       :time="closingInfo.startTime"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
+
+    <!-- モーダル用ウィンドウ -->
+    <SessionDetailModal
+      v-if="isModal"
+      :session-data="modalDisplaySessionData"
+      @close="closeSessionModal"
+    ></SessionDetailModal>
   </div>
 </template>
 
@@ -136,6 +148,7 @@ import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../../tailwind.config.js'
 import FullWidthRow from '@/components/Domains/TimeTable/FullWidthRow'
 import SessionRow from '@/components/Domains/TimeTable/SessionRow'
+import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModal'
 
 const fullConfig = resolveConfig(tailwindConfig)
 const specialSessionCode = {
@@ -157,7 +170,7 @@ const talkSessionStartTime = {
 
 export default {
   name: 'TimeTable',
-  components: { FullWidthRow, SessionRow },
+  components: { FullWidthRow, SessionRow, SessionDetailModal },
   props: {
     talkList: {
       type: Array,
@@ -200,6 +213,8 @@ export default {
       thirdLowDataList: [],
       fourthLowDataList: [],
       fifthLowDataList: [],
+      isModal: false,
+      modalDisplaySessionData: {},
     }
   },
   watch: {
@@ -336,9 +351,41 @@ export default {
         talkSessionStartTime.fifthRow[this.targetDay - 1]
       )
     },
-    openSessionModal(sessionData) {
-      this.$emit('openSessionModal', sessionData)
+    // openSessionModal(sessionData) {
+    //   this.$emit('openSessionModal', sessionData)
+    // },
+    openSessionModal(talk) {
+      if (talk !== undefined) {
+        this.isModal = true
+        this.$router.push({ path: `/timetable/?id=${talk.code}` })
+        // const talkInfo = this.getTargetSessionDataById(code)
+        this.modalDisplaySessionData = talk
+      }
     },
+    closeSessionModal() {
+      if (this.$route.query.id) {
+        this.$router.replace({ query: null })
+      }
+      this.isModal = false
+    },
+    // getTargetSessionDataById(code) {
+    //   const targetSessionData = this.talkList.filter(function (talk) {
+    //     return talk.code === code
+    //   })
+    //   const dummyData = {
+    //     title: '',
+    //     talk_format: '',
+    //     name: '',
+    //     lang_of_talk: '',
+    //     description: '',
+    //     audience_python_level: '',
+    //   }
+    //   if (targetSessionData.length <= 0) {
+    //     return dummyData
+    //   } else {
+    //     return targetSessionData[0]
+    //   }
+    // },
   },
 }
 </script>

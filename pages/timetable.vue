@@ -21,7 +21,12 @@
       </div>
 
       <div class="flex justify-center w-full">
-        <time-table class="w-10/12" :talk-list="talkList"></time-table>
+        <time-table
+          ref="child"
+          class="w-10/12"
+          refs="chlid"
+          :talk-list="talkList"
+        ></time-table>
       </div>
 
       <div class="flex flex-col items-center">
@@ -32,11 +37,11 @@
       </div>
     </div>
     <!-- モーダル用ウィンドウ -->
-    <SessionDetailModal
+    <!-- <SessionDetailModal
       v-if="isModal"
       :session-data="modalDisplaySessionData"
       @close="closeSessionModal"
-    ></SessionDetailModal>
+    ></SessionDetailModal> -->
   </div>
 </template>
 
@@ -46,7 +51,7 @@ import { filterTalkList, getAllTalkList } from '../utils/timetable_functions'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
 import NewsCardBase from '@/components/Elements/NewsCardBase'
-import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModal'
+// import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModal'
 
 export default {
   name: 'TimeTablePage',
@@ -55,7 +60,7 @@ export default {
     TimeTable,
     NewsCardBase,
     SpeakerphoneIcon,
-    SessionDetailModal,
+    // SessionDetailModal,
   },
   async asyncData({ $config }) {
     const allTalkList = await getAllTalkList($config.pretalxAuthKey)
@@ -70,32 +75,34 @@ export default {
   mounted() {
     if (this.$route.query.id !== undefined) {
       const targetSession = this.getTargetSessionDataById(this.$route.query.id)
-      this.isModal = true
-      this.modalDisplaySessionData = targetSession
-      this.openSessionModal(targetSession)
+      // this.isModal = true
+      // this.modalDisplaySessionData = targetSession
+      // this.openSessionModal(targetSession)
+      this.$refs.child.openSessionModal(targetSession)
     }
     document.onkeydown = (evt) => {
       // キーボードを使っているユーザーは、Escapeキーでモーダルを閉じる
       evt = evt || window.event
       if (evt.key === 'Escape') {
-        this.closeSessionModal()
+        // this.closeSessionModal()
+        this.$refs.child.closeSessionModal()
       }
     }
   },
   methods: {
-    openSessionModal(sessionData) {
-      if (sessionData !== undefined) {
-        this.isModal = true
-        this.$router.push({ path: `/timetable/?id=${sessionData.code}` })
-        this.modalDisplaySessionData = sessionData
-      }
-    },
-    closeSessionModal() {
-      if (this.$route.query.id) {
-        this.$router.replace({ query: null })
-      }
-      this.isModal = false
-    },
+    //   openSessionModal(sessionData) {
+    //     if (sessionData !== undefined) {
+    //       this.isModal = true
+    //       // this.$router.push({ path: `/timetable/?id=${sessionData.code}` })
+    //       this.modalDisplaySessionData = sessionData
+    //     }
+    //   },
+    //   closeSessionModal() {
+    //     if (this.$route.query.id) {
+    //       this.$router.replace({ query: null })
+    //     }
+    //     this.isModal = false
+    //   },
     getTargetSessionDataById(id) {
       const targetSessionData = this.talkList.filter(function (talk) {
         return talk.code === id
