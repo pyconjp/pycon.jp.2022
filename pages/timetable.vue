@@ -31,6 +31,12 @@
         </div>
       </div>
     </div>
+    <!-- モーダル用ウィンドウ -->
+    <SessionDetailModal
+      v-if="isModal"
+      :session-data="modalDisplaySessionData"
+      @close="closeSessionModal"
+    ></SessionDetailModal>
   </div>
 </template>
 
@@ -40,6 +46,7 @@ import { filterTalkList, getAllTalkList } from '../utils/timetable_functions'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
 import NewsCardBase from '@/components/Elements/NewsCardBase'
+import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModal'
 
 export default {
   name: 'TimeTablePage',
@@ -48,10 +55,65 @@ export default {
     TimeTable,
     NewsCardBase,
     SpeakerphoneIcon,
+    SessionDetailModal,
   },
   async asyncData({ $config }) {
     const allTalkList = await getAllTalkList($config.pretalxAuthKey)
     return { talkList: filterTalkList(allTalkList) }
+  },
+  data() {
+    return {
+      isModal: false,
+      modalDisplaySessionData: {},
+    }
+  },
+  mounted() {
+    if (this.$route.query.id !== undefined) {
+      const targetSession = this.getTargetSessionDataById(this.$route.query.id)
+      this.isModal = true
+      this.modalDisplaySessionData = targetSession
+      this.openSessionModal(targetSession)
+    }
+    document.onkeydown = (evt) => {
+      // キーボードを使っているユーザーは、Escapeキーでモーダルを閉じる
+      evt = evt || window.event
+      if (evt.key === 'Escape') {
+        this.closeSessionModal()
+      }
+    }
+  },
+  methods: {
+    openSessionModal(sessionData) {
+      if (sessionData !== undefined) {
+        this.isModal = true
+        this.$router.push({ path: `/timetable/?id=${sessionData.code}` })
+        this.modalDisplaySessionData = sessionData
+      }
+    },
+    closeSessionModal() {
+      if (this.$route.query.id) {
+        this.$router.replace({ query: null })
+      }
+      this.isModal = false
+    },
+    getTargetSessionDataById(id) {
+      const targetSessionData = this.talkList.filter(function (talk) {
+        return talk.code === id
+      })
+      const dummyData = {
+        title: '',
+        talk_format: '',
+        name: '',
+        lang_of_talk: '',
+        description: '',
+        audience_python_level: '',
+      }
+      if (targetSessionData.length <= 0) {
+        return dummyData
+      } else {
+        return targetSessionData[0]
+      }
+    },
   },
 }
 </script>

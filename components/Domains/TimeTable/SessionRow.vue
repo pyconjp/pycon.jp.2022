@@ -32,6 +32,11 @@ export default {
       default: '00:00',
     },
   },
+  methods: {
+    openSessionModal(sessionData) {
+      this.$emit('openSessionModal', sessionData)
+    },
+  },
 }
 </script>
 

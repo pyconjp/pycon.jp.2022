@@ -1,5 +1,8 @@
 <template>
-  <div class="flex lg:p-4 bg-white rounded lg:min-h-[180px]">
+  <div
+    class="flex lg:p-4 bg-white rounded lg:min-h-[180px]"
+    @click="clickSessionModal(talk)"
+  >
     <div
       v-if="!$device.isDesktop"
       class="flex items-center justify-center w-1/3 bg-tertiary-200"
@@ -79,6 +82,20 @@ export default {
           room: '',
         }
       },
+    },
+  },
+  watch: {
+    $route() {
+      location.reload()
+    },
+  },
+  methods: {
+    clickSessionModal(talk) {
+      if (talk !== undefined) {
+        // Todo画面遷移
+        this.$router.push({ path: `/timetable/?id=${talk.code}` })
+        this.$emit('openSessionModal', talk)
+      }
     },
   },
 }

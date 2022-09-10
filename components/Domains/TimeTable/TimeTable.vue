@@ -336,6 +336,9 @@ export default {
         talkSessionStartTime.fifthRow[this.targetDay - 1]
       )
     },
+    openSessionModal(sessionData) {
+      this.$emit('openSessionModal', sessionData)
+    },
   },
 }
 </script>
