@@ -7,14 +7,14 @@
     >
       <div class="flex flex-col items-center lg:mt-10 lg:flex-row">
         <!-- left pane -->
-        <div class="flex justify-center w-10/12 lg:flex-1 overview-frame">
-          <!-- overview-frame -->
+        <div class="flex justify-center w-10/12 lg:flex-1 event-frame">
+          <!-- event-frame -->
           <div class="relative w-full">
             <div
-              class="absolute w-11/12 mt-5 border-solid border-1 overview-clip bg-primary-700 h-5/6"
+              class="absolute w-11/12 mt-5 border-solid border-1 event-clip bg-primary-700 h-5/6"
             />
             <img
-              class="absolute object-cover w-11/12 h-5/6 left-4 overview-clip"
+              class="absolute object-cover w-11/12 h-5/6 left-4 event-clip"
               :src="require(`@/assets/images/event/${eventimg.file}`)"
               :alt="eventimg.alt"
             />
@@ -26,14 +26,14 @@
           class="flex flex-col w-11/12 mt-10 lg:ml-10 lg:flex-[2_2_0] lg:mt-0"
         >
           <div class="flex flex-row">
-            <div class="mr-1 overview-text-icon" />
-            <div class="overview-text-title text-tertiary-900 font-fira">
+            <div class="mr-1 event-text-icon" />
+            <div class="event-text-title text-tertiary-900 font-fira">
               {{ $t('title.t900') }}
               <span class="text-primary-700"> {{ $t('title.t700') }} </span> ?
             </div>
           </div>
           <div
-            class="pl-5 text-left overview-text-description text-tertiary-800 font-fira"
+            class="pl-5 text-left event-text-description text-tertiary-800 font-fira"
           >
             {{ $t('description') }}
           </div>
@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       eventimg: {
-        file: 'overview.jpg',
+        file: 'event.jpg',
         alt: 'event_img',
       },
     }
@@ -104,12 +104,12 @@ export default {
 </i18n>
 
 <style scoped>
-.overview-frame {
+.event-frame {
   min-width: 375px;
   min-height: 600px;
 }
 
-.overview-clip {
+.event-clip {
   clip-path: polygon(
     0% 0%,
     90% 0%,
@@ -121,12 +121,12 @@ export default {
   );
 }
 
-.overview-text-icon {
+.event-text-icon {
   width: 31px;
   height: 31px;
   background-image: url('@/assets/images/card_title_icon.svg');
 }
-.overview-text-title {
+.event-text-title {
   font-style: normal;
   font-weight: 700;
   font-size: 34px;
@@ -137,7 +137,7 @@ export default {
   }
 }
 
-.overview-text-description {
+.event-text-description {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
