@@ -69,14 +69,6 @@
 
       <!-- 特別スポンサー -->
       <div>
-        <!-- <div class="mb-10">
-          <h2 class="text-3xl font-bold text-tertiary-900 font-noto">
-            SPECIAL
-          </h2>
-          <h4 class="text-lg font-bold text-tertiary-800 font-noto">
-            特別スポンサー
-          </h4>
-        </div> -->
         <special-list />
       </div>
 
