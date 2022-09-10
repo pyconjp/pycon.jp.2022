@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-tertiary-50 chipped-card">
+    <div v-if="community" class="bg-tertiary-50 chipped-card">
       <div class="py-12 px-12">
         <h4 class="my-10 text-2xl">
           {{ community.name }}

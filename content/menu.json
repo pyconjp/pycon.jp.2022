@@ -46,7 +46,13 @@
     {
         "category": "contents",
         "title": "common.menu.contents.contents",
-        "children": []
+        "children": [
+          {
+            "title": "common.menu.contents.communities",
+            "link": "/contents/communities",
+            "innerlink": true
+          }
+        ]
     },
     {
         "category": "volunteer",

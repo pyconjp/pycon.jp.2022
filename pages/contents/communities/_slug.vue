@@ -13,13 +13,13 @@
         />
       </div>
 
-      <div class="my-8 flex items-center">
+      <div v-if="current" class="my-8 flex items-center">
         <div class="font-noto mx-auto text-[30px] font-bold">
           {{ current.name }}
         </div>
       </div>
 
-      <div class="w-10/12 flex mx-auto gap-6 mb-4">
+      <div v-if="current" class="w-10/12 flex mx-auto gap-6 mb-4">
         <community-menu :communities="communities" class="lg:w-[280px]" />
         <community-body :community="current" class="flex-1" />
       </div>
@@ -46,12 +46,22 @@ export default {
       .catch(() => {
         error({ statusCode: 404, message: 'Not Found' })
       })
-    const current =
-      communities.find((community) => community.slug === slug) || {}
+    const current = communities.find((community) => community.slug === slug)
 
     return {
       communities,
       current,
+    }
+  },
+  mounted() {
+    if (!this.current) {
+      const randomCommunity =
+        this.communities[Math.floor(Math.random() * this.communities.length)]
+      this.$router.push(
+        (this.$i18n.locale === 'en' ? '/en/' : '') +
+          '/contents/communities/' +
+          randomCommunity.slug
+      )
     }
   },
 }
