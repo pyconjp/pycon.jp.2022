@@ -1,0 +1,14 @@
+name,owner,content,image,url,slug
+はんなりPython,"hide ogawa,HW_a_pythonista,ksnt,Masa,TyaoiB",はんなりPythonの会は、京都発のプログラミングコミュニティです。現在はオンラインイベントを主体に活動しています。会の目的は交流を重視しており、初心者からエキスパートまで幅広い層が集まっています。ハンズオンやLT、メタバースでの雑談会など、イベントを毎月1回以上開催しています。多くの方に積極的に参加していただくことにより、はんなり交流しながら、面白イベントの乱発を目指します。,hannari-python.jpg,https://hannari-python.connpass.com/,hannari-python
+UDONPy,kobatomo,"うどん県 × Python =「UDONPy」は、2017年8月に、Python Boot Camp開催後の参加者を巻き込んで爆誕。
+現在は、ことはじめシリーズを開催中です。興味あるテーマをちょっとずつ実践していく会です。初めてのことを楽しく学んでいます。これまでの開催テーマは、こちら。（Django Girls/Sphinx/TDD/データビジュアライゼーション)
+やりたいなと思うテーマはありましたか？テーマ決めも、座談会を開催して決めているんですよ。
+UDONPyどうぞよろしく。現場からは以上です。
+https://pyconjp.blogspot.com/2020/12/after-pycamp-udonpy.html",udonpy.png,https://udonpy.connpass.com,udonpy
+"Python mini Hack-a-thon
+","鈴木たかのり(takanory),清水川貴之(shimizukawa),寺田 学(terapyon)","Python mini hack-a-thonでは、毎月オンラインまたはハイブリッドで勉強会を行っています。
+勉強会では各自が持ち寄ったテーマを個人個人で自由に開発などをしています。自由気ままに参加いただき、質問を受け付けたりオススメのツールや勉強法などをディスカションしています。また、年に2回長野県で合宿を行っています。",pyhack.png,https://pyhack.connpass.com/,pyhack
+PyLadies Tokyo,"まーや,nobolis,sugita,selina,kame-chan,tae124,なつこ","PyLadiesは、Pythonが好きな女性を結ぶ国際的なコミュニティです。Pythonが好きであれば初心者／熟練者問わずどなたでも参加できます。PyLadies Tokyoは,PyLadiesの東京支部として女性Pythonistaを繋ぐために活動しています。基本的には月一のMeetupを主な活動としていますが、PyCon JPのカンファレンスに参加したり、Django Girls Tokyoと協力してWorkshopを開催するなど、様々な活動を行っています。各種イベントについては、connpassページをご参照下さい。",pyladies-tokyo.png,,pyladies-tokyo
+Raspberry pi もくもく会,"杉田 雅子,南郷 ゆず子,久保秋 真,中村 草介,kunou","Raspberry Piやっている人＆やりたい人(初心者/熟練者を問わず)で集まって楽しく勉強しましょう！という会です。
+各自好きなものを作って発表したり、わからないことがあれば皆で調べたり、知っていることをお互い教えあったり、と緩やかな情報共有の場となっています。コロナ前は月1でオフラインで集まって活動していましたが、コロナになってからは不定期でオンライン開催をしています。",raspberry-pi-moku.png,https://raspberry-pi-moku.connpass.com/,raspberry-pi-moku
+OSC,オープンソースカンファレンス実行委員会,オープンソースカンファレンス(OSC)は2004年から全国で開催しているコミュニティイベントです。コロナ禍の現在はオンラインで開催していますので、自宅から手軽に参加していただけます。セミナーは、毎回さまざまなコミュニテイ、勉強会、個人、企業、団体が発表しています。ぜひ過去の動画アーカイブもご覧ください。発表者も募集していますので、話したいネタがある方は気軽にエントリーしてください。,osc.jpg,,osc
