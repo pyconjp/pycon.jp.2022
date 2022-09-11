@@ -189,7 +189,7 @@ export default {
 {
   "en": {
     "keynote1": {
-      "date": "OCTOBER 11 2022 10:30AM -",
+      "date": "OCTOBER 14 2022 10:30AM -",
       "name": "Mark Shannon",
       "title": "",
       "desc": "I've been using Python since 2005, and have been contributing to CPython since 2010.<br/>After a long interlude working on static analysis tools, I have returned to working on speeding up Python over the last couple of years.<br/>My academic and commercial work is focused on compilers, virtual machines and static analysis for Python.My PhD was on building virtual machines for dynamic languages.I am the author of various PEPs including 412, 590, 626 and 659.<br/>I am currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
