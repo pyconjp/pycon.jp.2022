@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-white component-border-top font-noto">
+  <div class="relative text-white font-noto">
     <div
       class="relative bg-center bg-no-repeat pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
     >

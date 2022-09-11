@@ -23,7 +23,7 @@
             </p>
             <div class="arrow-bottom"></div>
             <div
-              class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
+              class="invisible rounded-md shadow-md child-menu font-noto top-7 group-hover:visible"
             >
               <div
                 v-for="(child, j) in menu.children"
@@ -161,7 +161,6 @@ export default {
   width: 270px;
   color: white;
   font-size: 15px;
-  font-family: 'Noto Sans JP';
   white-space: normal;
 }
 
