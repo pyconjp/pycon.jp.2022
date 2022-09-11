@@ -24,7 +24,7 @@
         <time-table class="w-10/12" :talk-list="talkList"></time-table>
       </div>
 
-      <div class="w-10/12 text-xs mx-auto mt-4 text-tertiary-600">
+      <div class="w-10/12 lg:text-base text-xs mx-auto mt-4 text-tertiary-600">
         {{ $t('annotation') }}
       </div>
 
