@@ -63,8 +63,9 @@
       </div>
       <!-- スペシャルスポンサー -->
       <div class="text-center component-border-top bg-secondary-400">
-        <section-title main="MEDIA" sub="メディアスポンサー" />
+        <section-title main="SPECIAL" sub="特別スポンサー" />
         <div class="flex flex-col items-center">
+          <div class="mt-10 mb-10 separator" />
           <special-list />
         </div>
 
