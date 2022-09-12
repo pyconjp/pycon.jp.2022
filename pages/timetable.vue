@@ -24,6 +24,10 @@
         <time-table class="w-10/12" :talk-list="talkList"></time-table>
       </div>
 
+      <div class="w-10/12 lg:text-base text-xs mx-auto mt-4 text-tertiary-600">
+        {{ $t('annotation') }}
+      </div>
+
       <div class="flex flex-col items-center">
         <div class="mt-10 snake-face-base">
           <!--snake face-->
@@ -78,11 +82,13 @@ export default {
 {
   "ja": {
     "title": "セッション詳細について",
-    "description":"セッションの詳細説明は別サイトのタイムテーブルから参照ください"
+    "description": "セッションの詳細説明は別サイトのタイムテーブルから参照ください",
+    "annotation": "※ このタイムテーブルは変更の可能性があります。"
   },
   "en": {
     "title": "About Session Detail",
-    "description": "Please refer to the timetable on another site for the detailed explanation of the session."
+    "description": "Please refer to the timetable on another site for the detailed explanation of the session.",
+    "annotation": "※ This time table is subject to change."
   }
 }
 </i18n>
