@@ -120,7 +120,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "{link}をご確認ください。",
+          "text": "スポンサーの募集は終了しました。",
           "link": "こちら",
           "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
           "icon": "ExternalLinkIcon"
@@ -166,10 +166,10 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "Please check {link}.",
-          "link": "here",
-          "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
-          "icon": "ExternalLinkIcon"
+          "text": "It was over.",
+          "link": "",
+          "url": "",
+          "icon": ""
         }
       },
       {
