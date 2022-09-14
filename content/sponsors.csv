@@ -3,7 +3,7 @@ id,name_ja,name_en,introduction_ja,introduction_en,url,logo_file,sponsor_type,or
 2,FLEXY,FLEXY,"FLEXYとはエンジニア・デザイナー・CTO・技術顧問などを中心に、週2〜3日からの新しい働き方を提供する、ハイスキルなプロ人材シェアリングサービスです。
 ご紹介するのは自社プロダクト案件のみ。ハイスキルな人材を求めている企業様が多く、技術顧問・テックリード・メインデザイナー・プロジェクトマネージャーなど、プロジェクトのコア部分を担う重要な案件が多くあります。
 現在フリーランスの方で更に案件を獲得されたい方や正社員として働きつつ副業を検討している方など、あなたのご希望に合わせてコーディネーターが最適な提案を致します。","""FLEXY"" is a highly-skilled professional sharing service that offers a new way of working from 2 or 3 days a week, targeting engineers, designers, CTOs, and technical advisors.
-We only introduce our client's own product projects.
+We only introduce our client's own product projects. 
 Many companies are seeking highly-skilled professionals for core roles as technical advisors, tech leads, main designers, project managers, etc in high profile projects.
 If you are currently a freelancer and would like to acquire more projects, or if you are considering a side job while working as a full-time employee, our coordinators will work with your needs and make the most suitable proposal for you.",https://flxy.jp/,FLEXY.png,Diamond,31
 3,Elastic,Elastic,,,https://www.linkedin.com/company/elastic-co,,Silver,30
@@ -41,12 +41,12 @@ We provide detailed counseling to job seekers, and offer pinpoint jobs that resp
 ・more research-oriented development.
 ・find a company with a good development environment. etc...
 We can help you with your future job search or just career consultation.
-We believe that we are the most understanding HR consulting agency about AI and DX industries.
+We believe that we are the most understanding HR consulting agency about AI and DX industries. 
 Please feel free to take this opportunity to contact us!",https://www.royal-agent.com/,ROYALAGENT.jpg,Gold,5
 14,note株式会社,note株式会社,noteは、文章や画像、音声、動画などをクリエイターが投稿し、その作品をユーザーが楽しんで応援することができるメディアプラットフォームです。ミッションとして、「だれもが創作をはじめ、続けられるようにする。」を掲げ、すべてのクリエイターが発信するためのインフラを目指しています。現在、noteの会員数は500万人を突破し、クリエイターの作品は2400万件以上が存在しています。1日に約2〜3万件の作品が投稿されており、その中から数多くの書籍や映像が誕生しました。これからもクリエイターのみなさまが創作を楽しんで続けられるよう、安心できる雰囲気や多様性を大切にして、プロダクトを成長させていきます。,"note is a media platform where creators can freely post and sell various contents such as texts, images, audio and video, and readers can enjoy the contents ,support creators and make purchases.
-Our mission is “Start, and Keep on Creating.” and we aim to be an infrastructure that creators can express and continue with their creative activities.
+Our mission is “Start, and Keep on Creating.” and we aim to be an infrastructure that creators can express and continue with their creative activities. 
 Currently, the number of user accounts of note has more than 5 million, and there are more than 24 million contents by creators.
-Approximately 20,000 to 30,000 contents are submitted per day, and many works born from note have been made into dramas, movies, and publications.
+Approximately 20,000 to 30,000 contents are submitted per day, and many works born from note have been made into dramas, movies, and publications. 
 We will continue to grow our products while valuing a safe atmosphere and diversity so that creators can continue to enjoy their creations.",https://note.jp/,note.png,Gold,13
 15,LAPRAS,LAPRAS,"LAPRASは、エンジニアのブログやSNSを分析して自動でポートフォリオを生成し、
 最適なキャリアの選択肢にマッチングするキャリアマッチングプラットフォームです。
@@ -110,7 +110,7 @@ In September 2021, we got listed on Tokyo Stock Exchange of Growth Market. We  c
 主力サービスである「HENNGE One」は、クラウドサービスがもたらす「働く環境の柔軟性」と、クラウドサービスをどこからでも活用するために必要な「安全性」を両立させるためのソリューションです。私たち自身も、日々変わる働き方の最前線で、よりよい働き方、働く環境を常に模索しています。
 HENNGEは現在Pythonエンジニアを積極採用中です！","Hello, Pythonistas! We are HENNGE and we are thrilled to be a part of PyCon JP once again!
 Our product, HENNGE One, is a leading cloud security service in Japan, enabling customers to adopt flexible work environments and safely harness the power of the cloud from any location. With cloud security taken care of, you can focus on achieving results by working smartly.
-We continuously bridge the gap between tomorrow's ideas and today's real-world needs through SaaS. Together with you, we are striving to inspire change in the world through the liberation of technology.
+We continuously bridge the gap between tomorrow's ideas and today's real-world needs through SaaS. Together with you, we are striving to inspire change in the world through the liberation of technology. 
 Python Engineers wanted!",https://hennge.com/jp/,hennge_logo_black_horizontal.jpg,Platinum,1
 35,エムスリー株式会社,"M3, Inc.",エムスリーは2000年以降創業で唯一日経225銘柄にも選ばれている日本を代表する企業です。事業を行う国は15ヵ国と日本のみならず世界に拡大し続け、日本の医師の90%以上、世界の医師の50%以上がエムスリーの抱えるサービスを利用しています。医療業界において、幅広い医療者に届けることができる圧倒的な力を用いて、日本及び世界の医療の変革にチャレンジしています。,"M3 operates a multitude of global services centered around its physician platform. Our mission is ""Making use of the Internet to increase, as much as possible, the number of people who can live longer and healthier lives, and to reduce, as much as possible, the amount of unnecessary medical costs.",https://jobs.m3.com/product/,M3_logo.svg,Gold,40
 36,株式会社スカラ,"Scala, Inc.","スカラグループは、あらゆるステークホルダーに対して新たな価値を創造する機会を提供する『価値共創プラットフォーム』です。
@@ -119,6 +119,8 @@ Python Engineers wanted!",https://hennge.com/jp/,hennge_logo_black_horizontal.jp
 37,日本マイクロソフト株式会社,"Microsoft Japan Co., Ltd",マイクロソフトクラウドは、Microsoft Azure、GitHubなど、エンジニアの皆様を支える堅牢なクラウド開発基盤をはじめ、クラウドネイティブ開発、データ分析、機械学習、AIを、エッジからクラウドまで包括して展開し、エンタープライズクラスのセキュリティ、ガバナンスを両立するハイブリッドクラウドプラットフォームです。エンジニアの皆さんがイノベーションにフォーカスし、目的を達成する為の数多くのサービスをご用意しております。,"Microsoft Cloud is a hybrid cloud platform that combines enterprise-class security and governance by comprehensively deploying cloud-native development, data analysis, machine learning, and AI from the edge to the cloud, including a robust cloud development platform that supports engineers such as Microsoft Azure and GitHub.
 We offer a number of services to help engineers focus on innovation and achieve their goals.",https://azure.microsoft.com/ja-jp/resources/cloud-native-infrastructure-with-microsoft-azure/,Microsoft.png,Gold,4
 38,OLTA株式会社,"OLTA, Inc.",,,https://corp.olta.co.jp/,,Silver,26
+39,,,,,,,#N/A,#N/A
+40,,,,,,,#N/A,#N/A
 41,gihyo.jp,gihyo.jp,,,https://gihyo.jp/,gihyo.png,Media,41
 42,株式会社オライリー・ジャパン,株式会社オライリー・ジャパン,,,https://www.oreilly.co.jp/index.shtml,oreilly.jpg,Media,42
 43,アイティメディア株式会社,アイティメディア株式会社,,,https://atmarkit.itmedia.co.jp/,atmarkit.png,Media,43
@@ -137,4 +139,5 @@ We offer a number of services to help engineers focus on innovation and achieve 
 56,tell-k,tell-k,,,https://connpass.com/user/tell-k/,tellk.png,Patron,56
 57,Angela,Angela,,,https://connpass.com/user/sayaka_angela/,sayaka_angela.png,Patron,57
 58,h_tsk,h_tsk,,,https://connpass.com/user/h_tsk/,h_tsk.png,Patron,58
-59,株式会社 mediba,mediba Inc.,,,https://www.mediba.jp/,mediba.gif,Venue,59
+59,株式会社 mediba,mediba Inc.,,,https://www.mediba.jp/,mediba.svg,Venue,59
+60,zenichiro_yasuda,zenichiro_yasuda,,,https://connpass.com/user/zenichiro_yasuda/,zenichiro_yasuda.png,Patron,60
