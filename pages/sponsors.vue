@@ -1,10 +1,6 @@
 <template>
   <div>
-    <subpage-hero-section title="SPONSOR" subtitle="スポンサー">
-      <div class="w-10/12 mx-auto lg:w-7/12">
-        <sponsor-news-card :primary="true" />
-      </div>
-    </subpage-hero-section>
+    <subpage-hero-section title="SPONSOR" subtitle="スポンサー" />
     <div class="component-border-top">
       <!-- ダイヤモンドスポンサー -->
       <div class="text-center component-border-top bg-secondary-400">
@@ -94,7 +90,6 @@
 import SectionTitle from '@/components/Elements/SectionTitle'
 import sponsorsMixin from '@/utils/sponsors_mixin'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
-import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
 import DiamondItem from '@/components/Elements/DiamondItem'
 import PlatinumList from '@/components/Elements/PlatinumList'
 import GoldList from '@/components/Elements/GoldList'
@@ -106,7 +101,6 @@ export default {
   name: 'SponsorsPage',
   components: {
     SectionTitle,
-    SponsorNewsCard,
     SubpageHeroSection,
     DiamondItem,
     PlatinumList,
