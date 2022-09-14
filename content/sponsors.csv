@@ -1,0 +1,140 @@
+id,name_ja,name_en,introduction_ja,introduction_en,url,logo_file,sponsor_type,order
+1,株式会社サイカ,"XICA CO.,LTD.",,,https://xica.net/,,Silver,35
+2,FLEXY,FLEXY,"FLEXYとはエンジニア・デザイナー・CTO・技術顧問などを中心に、週2〜3日からの新しい働き方を提供する、ハイスキルなプロ人材シェアリングサービスです。
+ご紹介するのは自社プロダクト案件のみ。ハイスキルな人材を求めている企業様が多く、技術顧問・テックリード・メインデザイナー・プロジェクトマネージャーなど、プロジェクトのコア部分を担う重要な案件が多くあります。
+現在フリーランスの方で更に案件を獲得されたい方や正社員として働きつつ副業を検討している方など、あなたのご希望に合わせてコーディネーターが最適な提案を致します。","""FLEXY"" is a highly-skilled professional sharing service that offers a new way of working from 2 or 3 days a week, targeting engineers, designers, CTOs, and technical advisors.
+We only introduce our client's own product projects. 
+Many companies are seeking highly-skilled professionals for core roles as technical advisors, tech leads, main designers, project managers, etc in high profile projects.
+If you are currently a freelancer and would like to acquire more projects, or if you are considering a side job while working as a full-time employee, our coordinators will work with your needs and make the most suitable proposal for you.",https://flxy.jp/,FLEXY.png,Diamond,31
+3,Elastic,Elastic,,,https://www.linkedin.com/company/elastic-co,,Silver,30
+4,株式会社はてな,"Hatena Co., Ltd.",,,https://hatena.co.jp/,,Silver,2
+5,DATUM STUDIO株式会社,DATUM STUDIO Co. Ltd.,"DATUM STUDIOは、データと先端テクノロジーで経営課題を解決するデータ分析コンサルティング・ソフトウェア開発企業です。クライアントのパートナーとしてビジネスに持続的成長と新しい可能性を提供します。
+
+メディア、小売、メーカーなど業種・業態を問わず、幅広い業種・業態のお客さまのビジネスパートナーとして、多岐にわたる経営課題の解決に取り組んでいます。
+お客さまが所有する業界固有データを用いた高精度な分析や業務効率の改善提案だけでなく、お客さまの課題解決を実現するにあたって最適なソリューション提案と実装まで、データやAI、最新システムを用いたコンサルティング及びソフトウェア開発を提供しています。
+
+DATUM STUDIOでは、多種多様なプロジェクトで様々なデータに触れながら最新のライブラリや分析手法を取り入れてることで、圧倒的な価値を生み出すスキルを開発する環境があります。また、クライアントに最適な技術選定ができるよう、各企業とパートナーシップを形成しており、それにともない資格取得制度も運用しています。
+
+是非我々と一緒に、カオスに一筋の光を見出す面白さを体感しましょう！DATUM STUDIOのブースでお待ちしています！","DATUM STUDIO is a data analytics consulting and software development company, that uses data and technology to solve corporate management  issues.
+As a partner to our clients, we provide sustainable growth and new possibilities for business. ",https://datumstudio.jp/,datumstudio_logo.png,Gold,34
+6,Indeed Japan株式会社,Indeed Japan KK,,,https://jp.indeed.jobs/,,Silver,24
+7,Findy,Findy Inc.,"Findy（ファインディ）は、GitHub等の解析を行い、エンジニアのスキルやエンジニア組織の生産性を「見える化」することがサービスの特徴です。
+ハイスキルなエンジニアと企業をマッチングするサービス「Findy」、「Findy Freelance」、「Findy Global」、エンジニア組織のパフォーマンスを最大化するために組織内の開発生産性を可視化するサービス「Findy Teams」の4つの事業を展開しています。登録ユーザーは100,000人を突破、導入企業数が750社を超え、スタートアップからDXを推進したい大手企業まで幅広い企業に導入していただいております。","Findy helps engineering organizations and individuals improve their development experiences. Founded in 2016 and based in Tokyo, the Engineering Intelligence products, Findy, Findy Freelance, and Findy Teams, are trusted by over 100,000 software engineers users and over 750 companies from start-ups to enterprises.",https://findy.co.jp/,Findy.png,Platinum,19
+8,株式会社マイクロアド,"MicroAd, Inc.","マイクロアドは国内最大規模のデータプラットフォームを展開する会社です。
+
+月間1600億件のリクエストを捌くDSP「UNIVERSE Ads」を始め、SSP「MicroAd COMPASS」やデータプラットフォーム「UNIVERSE」によって最適化されたインターネット広告を提供しています。
+また、これらサービスによって蓄積される膨大なオンラインユーザーデータを生かし、オフラインも含めた企業のマーケティング課題、ビジネス課題の解決にも取り組んでいます。
+
+弊社は、自社サービスを支える Python エンジニアを募集しております。ご興味がある方、ぜひお問い合わせください！","マイクロアドは国内最大規模のデータプラットフォームを展開する会社です。
+
+月間1600億件のリクエストを捌くDSP「UNIVERSE Ads」を始め、SSP「MicroAd COMPASS」やデータプラットフォーム「UNIVERSE」によって最適化されたインターネット広告を提供しています。
+また、これらサービスによって蓄積される膨大なオンラインユーザーデータを生かし、オフラインも含めた企業のマーケティング課題、ビジネス課題の解決にも取り組んでいます。
+
+弊社は、自社サービスを支える Python エンジニアを募集しております。ご興味がある方、ぜひお問い合わせください！",https://www.microad.co.jp/,microad_logo.png,Gold,20
+9,株式会社ビープラウド,BeProud Inc.,ビープラウドは、システム開発のプロフェッショナルチームとして、Pythonを中核にインターネットプラットフォームを活用したシステムの自社開発・受託開発を行う。優秀なPythonistaがより力を発揮できる環境作りに努め、Python特化のオンライン学習サービス「PyQ（パイキュー）」・システム開発者向けクラウドドキュメントサービス「TRACERY（トレーサリー）」・研修事業・技術書の執筆などを通してそのノウハウを発信。IT勉強会支援プラットフォーム「connpass（コンパス）」の開発・運営や勉強会「BPStudy」の主催など、技術コミュニティ活動にも積極的に取り組む。,"BeProud is a Japanese software development company known for welcoming many excellent Pythonistas. We constantly improve our technical prowess through our work building new services and web applications for clients. In addition to our client work, we also run a few web services including connpass, an event platform for building connections, PyQ the best way to learn Python online, and TRACERY, an online platform to maintain the traceability of documents. We are doing our best to help improve Python and Python's community and publish books regularly about Python programming.",https://www.beproud.jp/,BP_logo_color.svg,Gold,18
+10,日本経済新聞社,日本経済新聞社,,,https://hack.nikkei.com/,,Silver,33
+11,株式会社日本システム技研,株式会社日本システム技研,,,https://jsl.co.jp/,,Silver,27
+12,Amazon Web Services,Amazon Web Services,アマゾン ウェブ サービス (AWS) は、世界で最も包括的で広く採用されているクラウドプラットフォームです。AWS 提供するウェブマガジン「builders.flash」は、開発者の皆様へ楽しみながら実践的に学べるトピックを毎月お届けします。連動したメールメンバー (無料) の募集も行なっており、メールメンバーだけに用意された特典をご案内します。,"Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform. ""builders.flash"", a web magazine provided by AWS, provides developers with fun and practical topics to learn about every month. We also offer a free e-mail membership, which provides exclusive benefits for e-mail members (only in Japanese).",https://aws.amazon.com/jp/builders-flash/?sc_icampaign=el_pycon2022_jp&sc_ichannel=el&sc_icontent=el_pycon2022_jp&trkCampaign=builders_flash&trk=el_builders_flash_el_pycon2022_jp,AWS_logo_RGB.png,Platinum,9
+13,ROYAL AGENT & Co.,ROYAL AGENT & Co.,"ROYAL AGENT株式会社は、数少ないAI/DX,データサイエンス領域に特化した転職エージェントです！ 求職者様への丁寧なカウンセリングを心掛け、一人ひとりのご志向性を理解した上で求人をご提案します。 もちろん、非公開の求人情報も数多く保有しています。・今よりもスキルを磨ける環境で働きたい！・データサイエンティストになりたい・年収を上げたい！ etc... 転職市場の情報収集や今後のキャリア相談だけでもお声がけください。数少ないAI/DX、データサイエンス領域に特化したエージェントだからこそできる介在価値を提供したいと考えています。 この機会にぜひお気軽にご連絡ください！","ROYAL AGENT is one of the few agencies specializing in the AI/DX and data science fields!
+We provide detailed counseling to job seekers, and offer pinpoint jobs that respect each individual's aspirations, including jobs that are not open to the public.
+・increase my annual salary.
+・more research-oriented development.
+・find a company with a good development environment. etc...
+We can help you with your future job search or just career consultation.
+We believe that we are the most understanding HR consulting agency about AI and DX industries. 
+Please feel free to take this opportunity to contact us!",https://www.royal-agent.com/,ROYALAGENT.jpg,Gold,5
+14,note株式会社,note株式会社,noteは、文章や画像、音声、動画などをクリエイターが投稿し、その作品をユーザーが楽しんで応援することができるメディアプラットフォームです。ミッションとして、「だれもが創作をはじめ、続けられるようにする。」を掲げ、すべてのクリエイターが発信するためのインフラを目指しています。現在、noteの会員数は500万人を突破し、クリエイターの作品は2400万件以上が存在しています。1日に約2〜3万件の作品が投稿されており、その中から数多くの書籍や映像が誕生しました。これからもクリエイターのみなさまが創作を楽しんで続けられるよう、安心できる雰囲気や多様性を大切にして、プロダクトを成長させていきます。,"note is a media platform where creators can freely post and sell various contents such as texts, images, audio and video, and readers can enjoy the contents ,support creators and make purchases.
+Our mission is “Start, and Keep on Creating.” and we aim to be an infrastructure that creators can express and continue with their creative activities. 
+Currently, the number of user accounts of note has more than 5 million, and there are more than 24 million contents by creators.
+Approximately 20,000 to 30,000 contents are submitted per day, and many works born from note have been made into dramas, movies, and publications. 
+We will continue to grow our products while valuing a safe atmosphere and diversity so that creators can continue to enjoy their creations.",https://note.jp/,note.png,Gold,13
+15,LAPRAS,LAPRAS,"LAPRASは、エンジニアのブログやSNSを分析して自動でポートフォリオを生成し、
+最適なキャリアの選択肢にマッチングするキャリアマッチングプラットフォームです。
+LAPRASを通じて、エンジニアはSNSの活動などから算出された自分の技術力スコアを確認したり、スカウトや求人マッチングエンジンを通じて自分に興味を持っている企業とつながったりすることができます。
+LAPRASは、転職者であるエンジニアのCX（Candidate Experience）を重視した「マッチングの質」にこだわり、全てのユーザーの長期的な幸せに貢献します。","LAPRAS uses exceptional machine learning technology and crawling technology to gather the information you have openly published on the Internet and automatically generate your “profile.” This profile page visualizes your potential ability not only be viewed at will, but you can even update it.
+In addition, you can stock and access companies that show interest in you as potential future employers. We also inform you of places where your abilities can be utilized and support your skill upgrades.
+When you are looking for growth opportunities or a place to excel, LAPRAS will provide it.
+",https://lapras.com/,lapras.png,Gold,8
+16,株式会社LIGHTz,LIGHTz Inc.,,,https://lightz-inc.com/,,Silver,15
+17,ちゅらデータ株式会社,Chura DATA Inc.,"ちゅらデータは『最高に面白い仕事』を沖縄に創りたい！という想いのもと、2017年8月に創業しました。
+創業5周年を迎えたこの夏、メンバーも50人を超えました。時間や場所の融通が利く働きやすさが自慢で、全社員の20％はフルリモート、「日本全国にちゅらデータ社員がいるぜ！」という状況です。
+多くのシーンで Python を使っているちゅらデータは、業務コンサルティングからデータ整備・基盤構築〜データ分析〜アプリケーション開発まで、一気通貫でビジネスを展開しています。沖縄県内・県外に、多種多様なスキルをもったメンバーが在籍していることが強みです。
+沖縄で働いてみたい Python エンジニアの方、ぜひ一度HPをご覧ください（フルリモートもあります）！","Churadata was founded in August 2017 with one mission: create ""the most interesting job"" in Okinawa.
+
+This summer, reaching our 5th anniversary since founding, we have more than 50 members. We take pride in our core work ethics and values of flexible work hours and employees having the freedom to choose where they wish to work. Currently, 20% of our employees are working remotely, with employees living all throughout Japan.
+
+Our areas of expertise range from business consulting to data maintenance, data infrastructure construction, data analysis, and application development. We primarily use Python in many of these said undertakings. Our strength as a corporation is that we have members with a wide variety of skills both in and out of the Okinawa Prefecture.
+",https://churadata.okinawa/,churadata.png,Gold,29
+18,Recustomer株式会社,Recustomer Inc.,"Recustomer株式会社は、購入時点の決済領域や購入後の注文追跡・返品・キャンセル領域から横断的に買い物客の購入体験の向上を実現するサービス「Recustomer（リカスタマー）」を提供しています。
+ワンクリック決済「Recustomer Checkout」、商品追跡を実現する「Recustomer Tracking」、返品・交換・注文キャンセル業務を自動化するツール「Recustomer Return&Cancel」の3サービスからなり、これまでにない""購入後""の顧客接点で新たなビジネス機会を作り出します。","Recustomer, Inc. offers Recustomer, a service that improves the shopper's purchase experience, including payment at the time of purchase, post-purchase order tracking, returns and cancellations.
+We provide these three services:
+""Recustomer Checkout"" for one-click payment
+""Recustomer Tracking"" for product tracking
+""Recustomer Return & Cancel, a tool for automating returns, exchanges, and order cancellations
+Our services create new business opportunities through unprecedented ""post-purchase"" customer contact.",https://recustomer.co/,Recustomer.png,Gold,21
+19,株式会社 いい生活,株式会社 いい生活,,,https://www.e-seikatsu.info/,jetbrains_logo.png,Silver,3
+20,JetBrains,JetBrains,JetBrains は、PyCharm を含むインテリジェントな開発ツールを専門とする最先端のソフトウェアベンダーです。 PyCharm は、デベロッパーによってデベロッパー向けに設計された生産的な Python 開発用のオールインワンソリューションです。,"JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including PyCharm. PyCharm is designed by programmers, for programmers, and is an all-in-one solution for productive Python development.",https://jb.gg/pycharm-pycon-jp-2022,jetbrains_logo.png,Gold,25
+21,SQUEEZE Inc.,SQUEEZE Inc.,SQUEEZEは、「空間と時間の可能性を広げるプラットフォームになる」ことをビジョンに掲げ、現在は自社ホテル運営やクラウド運営ソリューションの提供を通して、ホテル業界のDXを推進しています。ホテルオペレーターとして施設運営を行いながら、同時に宿泊管理SaaSである「suitebook」の開発を進めることで両事業を磨き上げ、「テクノロジー」「オペレーション」の両面から持続可能なホテル運営を実現しています。自社でホテル運営しているからこそ得られる現場の声をプロダクト開発に取り入れ、社内へ先行リリースをして磨き上げたものを、クライアント様にお届けするというサイクルで日々機能をアップデートしています。,"At SQUEEZE, our vision is to ""become a platform that expands the possibilities of space and time"". While operating facilities as a hotel operator, we are also developing ""suitebook,"" a hotel management SaaS, to refine both businesses and promote hotel DX from both ""technology"" and ""operation"" perspectives.",https://squeeze-inc.co.jp/,squeeze-logo-horizontal.png,Gold,10
+22,株式会社Logbii,"Logbii, Inc.",,,https://logbii.co.jp/,,Silver,37
+23,株式会社アーバンエックステクノロジーズ,"UrbanX Technologies, Inc.","アーバンエックステクノロジーズは「都市インフラをアップデートし、すべての人の生活を豊かに」することをミッションに2020年に創業しました
+現在はAIによる道路損傷検知サービス「RoadManager」を中心に「しなやかな都市インフラ管理を支えるデジタル基盤を作る」ビジョンを実現すべく日々開発を進めています
+RoadManagerは道路点検をおこなう車両に取り付けたスマートフォンから集めた道路の画像データを元に損傷を検知し管理することで道路管理業務を効率的におこなえるサービスです
+現在機械学習や画像処理の研究をされている方、webエンジニアの方、UX・UIに強いデザイナーの方を重点的に募集しております","UrbanX Technologies was established in 2020 with our mission to ""Update city infrastructure to enrich everyone's lives"".
+We provide RoadManager to realize our vision, ""To implement flexible city infrastructure management"".
+RoadManager is a tool for infrastructure management agencies to empower efficient road management operations. By using smartphones attached to observation cars, we process road images to detect, then provide information about when and where roads have been damaged.
+We are looking for machine learning, image processing researchers, web engineers, designers who have strong knowledge with UX/UI. If you are interested, please visit our booth.",https://www.urbanx-tech.com/,urbanx.svg,Gold,22
+24,（株）セレマアシスト,（株）セレマアシスト,,,https://thelemaassist.com/?utm_source=pyconjp2022&utm_medium=link&utm_campaign=sponsored,,Silver,7
+25,セーフィー株式会社,Safie Inc.,"2014年創業。「映像から未来をつくる」をビジョンに、人々の意思決定に映像を役立てる未来を創造し、誰もが手軽に利用できる映像プラットフォームを目指すべく、映像プラットフォーム「Safie（セーフィー）」の開発運営と関連サービスを提供しています。
+カメラとインターネットをつなぐだけで、いつでもどこでも映像を確認できることからクラウド録画サービスシェアNo,1を獲得。
+行政、大手企業と連携した事業成長を評価頂き、昨年9月東京証券取引所（グロース）へ新規上場し、「映像データであらゆる産業の""現場""をDXする」をコンセプトに事業、組織を拡大しています。
+昨年同様、今年も積極的に採用活動中です！","Established in 2014. We are developing and providing our service, ""Safie"", with ""Create a better future with intelligent vision as our company.""
+
+""Safie"" is a cloud-based video management platform which brings our customers a new standard to manage their video assets anytime and anywhere. We have the top market share among all cloudcams company in Japan.
+
+The business growth potential in collaboration with the administration and major companies are highly appreciated.
+
+In September 2021, we got listed on Tokyo Stock Exchange of Growth Market. We  currently promote ""DXing the 'site' of various industries with video data"" as our new concept.",https://safie.co.jp/,safie-logo-basic-a.png,Gold,23
+26,Kraken,Kraken,"Octopus Energy Groupの一員であるKraken（クラーケン）は、電気をはじめとし、水やブロードバンドなど、生活に必須なパイプラインを司り、顧客と生活を繋ぐ世界トップレベルのプラットフォームです。
+運用モデルと技術のユニークな組み合わせにより、チームを古いシステムから解放し、顧客に合わせ柔軟かつ最適に作動します。最新のクラウドベースを基礎に、継続的なデプロイで、高速な変革とリアルタイムでのデータへのアクセスを実現します。
+サービス提供から間もないですが、既に世界9カ国、2,500万人を超えるお客様にご利用いただいています。詳しくはぜひ私たちのブースへお越しください","Kraken, part of the Octopus Energy Group, is the world's leading customer and culture platform for energy, water and broadband. A unique blend of operating model and technology that frees teams from legacy systems and empowers them to act with autonomy on behalf of customers. A modern cloud-based architecture with continuous deployments that delivers high speed innovation and access to real-time data. With 25 million customers already migrated in 9 countries, we've only just begun. Come visit us and find out more.",https://kraken.tech/,kraken-logo-w-group-primary-2022-RGB-transparent.png,Gold,28
+27,Pythonエンジニア育成推進協会,Pythonエンジニア育成推進協会,Python 3 エンジニア認定基礎試験とデータ分析試験を全国300か所で通年実施しています。またPythonZen & PEP 8 検定試験をWebで無償実施しています。学習のチェックにご利用ください。,"We originated to authorize tests and learning materials, which serve as guidelines for study, in addition to schools in order to support the training of sound Python programmers who understand Pythonic as the market for the language grows.",https://www.pythonic-exam.com/,pythonLogo_corp.png,Gold,11
+28,株式会社アイリッジ,"iRidge, Inc."," 株式会社アイリッジは、「Tech Tomorrow」をミッションに掲げ、自社プロダクトであるインターネットサービスの開発やスマートフォンアプリの受託開発を行なっている会社です。 Python/Djangoを使ったO2O/OMOソリューション「FANSHIP」や音声アシスタント対応アプリ制作ツール「NOID」、スマートフォンアプリのバックエンドサーバーから業務を改善するちょっとしたスクリプトまでPythonで開発しています。
+ アイリッジでは技術カンファレンスへの協賛や、社内勉強会の開催をしており、技術力向上に積極的です。主な開発環境 - ES6, TypeScript, Vue.js, Nuxt.js, Storybook, GraphQL - Python, Django, Docker,Go - AWS, Terraform, Datadog, Pagerduty, GitLab/CI"," iRidge, Inc. provides solutions of web services and smartphone applications with ""Tech Tomorrow"" as our mission. We use Python/Django for our products such as O2O/OMO solution 'FANSHIP', development tool for voice assistant 'NOID', and the script improvement tool to support backend operation.
+ We actively sponsors technical conferences and holds in-house study sessions. Development Environment - ES6, TypeScript, Vue.js, Nuxt.js, Storybook, GraphQL - Python, Django, Docker,Go - AWS(ECS, etc..),Terraform, Datadog, Pagerduty, GitLab/CI.",https://iridge.jp/,iRidge_logo_2000_600.png,Gold,16
+29,株式会社 mediba,mediba Inc.,,,https://www.mediba.jp/,,Silver,36
+30,一般社団法人日本ネットワーク技術者協会,一般社団法人日本ネットワーク技術者協会,Pythonとネットワークの自動化基礎検定を2022年秋より実施予定の日本ネットワーク技術者協会です。試験は全国300か所で通年実施する予定です。,We will start Python & Network certified examination from this automn in nationwide.,https://network-engineer.jp/,,Silver,12
+31,Nexedi,Nexedi,,,https://www.nexedi.com/,,Silver,6
+32,Classi株式会社,Classi株式会社,,,https://corp.classi.jp,,Silver,38
+33,Axross Recipe,Axross Recipe,,,https://axross-recipe.com,,Silver,17
+34,HENNGE株式会社,HENNGE K.K.,"Pythonistaのみなさま、こんにちは。今年もPyCon JPの支援ができることをとても嬉しく思います。HENNGEは「テクノロジーの解放」というヴィジョンのもと、多くの人々がテクノロジーの恩恵を享受できるようSaaSを通じて支援するB2B企業です。
+主力サービスである「HENNGE One」は、クラウドサービスがもたらす「働く環境の柔軟性」と、クラウドサービスをどこからでも活用するために必要な「安全性」を両立させるためのソリューションです。私たち自身も、日々変わる働き方の最前線で、よりよい働き方、働く環境を常に模索しています。
+HENNGEは現在Pythonエンジニアを積極採用中です！","Hello, Pythonistas! We are HENNGE and we are thrilled to be a part of PyCon JP once again!
+Our product, HENNGE One, is a leading cloud security service in Japan, enabling customers to adopt flexible work environments and safely harness the power of the cloud from any location. With cloud security taken care of, you can focus on achieving results by working smartly.
+We continuously bridge the gap between tomorrow's ideas and today's real-world needs through SaaS. Together with you, we are striving to inspire change in the world through the liberation of technology. 
+Python Engineers wanted!",https://hennge.com/jp/,hennge_logo_black_horizontal.jpg,Platinum,1
+35,エムスリー株式会社,"M3, Inc.",エムスリーは2000年以降創業で唯一日経225銘柄にも選ばれている日本を代表する企業です。事業を行う国は15ヵ国と日本のみならず世界に拡大し続け、日本の医師の90%以上、世界の医師の50%以上がエムスリーの抱えるサービスを利用しています。医療業界において、幅広い医療者に届けることができる圧倒的な力を用いて、日本及び世界の医療の変革にチャレンジしています。,"M3 operates a multitude of global services centered around its physician platform. Our mission is ""Making use of the Internet to increase, as much as possible, the number of people who can live longer and healthier lives, and to reduce, as much as possible, the amount of unnecessary medical costs.",https://jobs.m3.com/product/,M3_logo.svg,Gold,40
+36,株式会社スカラ,"Scala, Inc.","スカラグループは、あらゆるステークホルダーに対して新たな価値を創造する機会を提供する『価値共創プラットフォーム』です。
+私たちは、AI/IoTと価値創造理論を基盤に、「地球上の誰一人として取り残さない世界の実現」、「全ての人々の幸せと人類の進歩」、
+「全てのステークホルダーの心をつかむ価値創造力の向上」という３つのテーマに貢献していきます。","Scala Communications,Inc. provides a wide range of SaaS/ASP services that support communication between companies and individuals. We look beyond the client's apparent needs to find the true issues and propose the optimal solutions necessary to resolve them.",https://scalagrp.jp/,scala.svg,Gold,14
+37,日本マイクロソフト株式会社,"Microsoft Japan Co., Ltd",マイクロソフトクラウドは、Microsoft Azure、GitHubなど、エンジニアの皆様を支える堅牢なクラウド開発基盤をはじめ、クラウドネイティブ開発、データ分析、機械学習、AIを、エッジからクラウドまで包括して展開し、エンタープライズクラスのセキュリティ、ガバナンスを両立するハイブリッドクラウドプラットフォームです。エンジニアの皆さんがイノベーションにフォーカスし、目的を達成する為の数多くのサービスをご用意しております。,"Microsoft Cloud is a hybrid cloud platform that combines enterprise-class security and governance by comprehensively deploying cloud-native development, data analysis, machine learning, and AI from the edge to the cloud, including a robust cloud development platform that supports engineers such as Microsoft Azure and GitHub.
+We offer a number of services to help engineers focus on innovation and achieve their goals.",https://azure.microsoft.com/ja-jp/resources/cloud-native-infrastructure-with-microsoft-azure/,Microsoft.png,Gold,4
+38,OLTA株式会社,"OLTA, Inc.",,,https://corp.olta.co.jp/,,Silver,26
+41,gihyo.jp,gihyo.jp,,,https://gihyo.jp/,gihyo.png,Media,41
+42,株式会社オライリー・ジャパン,株式会社オライリー・ジャパン,,,https://www.oreilly.co.jp/index.shtml,oreilly.jpg,Media,42
+43,アイティメディア株式会社,アイティメディア株式会社,,,https://atmarkit.itmedia.co.jp/,atmarkit.png,Media,43
+44,ログミーTech,ログミーTech,,,https://logmi.jp/tech,logmi-tech.png,Media,44
+45,TECH PLAY,TECH PLAY,,,https://techplay.jp/,techplay_logo.png,Media,45
+46,株式会社PE-BANK,株式会社PE-BANK,,,https://pe-bank.jp/,PE-BANK.jpg,Media,46
+47,nobnov,nobnov,,,https://connpass.com/user/nobnov/,nobnov.png,Patron,47
+48,shimizukawa,shimizukawa,,,https://connpass.com/user/shimizukawa/,shimizukawa.png,Patron,48
+49,canzawa,canzawa,,,https://connpass.com/user/canzawa/,canzawa.png,Patron,49
+50,aodag,aodag,,,https://connpass.com/user/aodag/,aodag.png,Patron,50
+51,kioto,kioto,,,https://connpass.com/user/takaneh/,kioto.png,Patron,51
+52,rhoboro,rhoboro,,,https://connpass.com/user/rsuyama/,rhoboro.png,Patron,52
+53,佐藤 治夫,佐藤 治夫,,,https://connpass.com/user/haru860/,haru860.png,Patron,53
+54,rokujyouhitoma,rokujyouhitoma,,,https://connpass.com/user/rokujyouhitoma/,rokujyouhitoma.png,Patron,54
+55,jbking,jbking,,,https://connpass.com/user/jbking/,jbking.png,Patron,55
+56,tell-k,tell-k,,,https://connpass.com/user/tell-k/,tellk.png,Patron,56
+57,Angela,Angela,,,https://connpass.com/user/sayaka_angela/,sayaka_angela.png,Patron,57
+58,h_tsk,h_tsk,,,https://connpass.com/user/h_tsk/,h_tsk.png,Patron,58
+59,株式会社 mediba,mediba Inc.,,,https://www.mediba.jp/,mediba.svg,Venue,59
