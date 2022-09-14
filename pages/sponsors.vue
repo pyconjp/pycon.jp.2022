@@ -69,8 +69,8 @@
           <special-list />
         </div>
 
-      <!-- snake -->
-      <div class="snake-face-base">
+        <!-- snake -->
+        <div class="snake-face-base">
           <div class="hidden snake-face-left-orange lg:block" />
         </div>
       </div>
@@ -83,52 +83,14 @@
 
         <!-- snake -->
         <div class="snake-face-base">
-          <div class="hidden snake-face-right-yello lg:block" />
+          <div class="hidden snake-face-right-black lg:block" />
         </div>
-      </div>
-      <!-- スポンサー募集 9/13（1か月前）までシルバースポンサーだけ募集予定 -->
-      <div class="text-center component-border-top bg-primary-500">
-        <div
-          class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"
-        >
-          <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
-            <div class="flex flex-col">
-              <div class="flex flex-row pb-8 pl-8 text-left">
-                <div class="mr-1 sponsor-text-icon" />
-                <div
-                  class="font-bold sponsor-text-title text-tertiary-900 font-fira"
-                >
-                  {{ $t('title') }}
-                </div>
-              </div>
-              <div class="pb-8 pl-8 text-left">
-                {{ $t('description') }}
-              </div>
-
-              <div
-                class="pb-8 pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700"
-              >
-                <outer-link :to="$t('url').toString()">
-                  {{ $t('link') }}
-                  <ArrowNarrowRightIcon class="inline w-4 h-4 mb-2" />
-                </outer-link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- snake -->
-        <div class="snake-face-base">
-          <div class="hidden snake-face-left-black lg:block" />
-        </div>
-      </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ArrowNarrowRightIcon } from '@vue-hero-icons/outline'
 import SectionTitle from '@/components/Elements/SectionTitle'
 import sponsorsMixin from '@/utils/sponsors_mixin'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
@@ -139,7 +101,6 @@ import GoldList from '@/components/Elements/GoldList'
 import SilverList from '@/components/Elements/SilverList'
 import SpecialList from '@/components/Elements/SpecialList'
 import PatronList from '@/components/Elements/PatronList'
-import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
   name: 'SponsorsPage',
@@ -153,8 +114,6 @@ export default {
     SilverList,
     SpecialList,
     PatronList,
-    ArrowNarrowRightIcon,
-    OuterLink,
   },
   mixins: [sponsorsMixin],
 }
@@ -202,13 +161,13 @@ export default {
   background-image: url('@/assets/images/section_bg_img_right_yellow.svg');
 }
 
-.snake-face-left-black {
+.snake-face-right-black {
   position: absolute;
   width: 150px;
   height: 90px;
-  right: 85px;
+  left: 85px;
 
-  background-image: url('@/assets/images/section_bg_img_left_black.svg');
+  background-image: url('@/assets/images/section_bg_img_right_black.svg');
 }
 
 .sponsor-text-icon {
