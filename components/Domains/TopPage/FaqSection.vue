@@ -120,7 +120,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "{link}をご確認ください。",
+          "text": "{link}をご確認ください。申込みの締め切りは2022/09/16 (土) 23:59:59(JST)です。",
           "link": "こちら",
           "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
           "icon": "ExternalLinkIcon"
@@ -166,7 +166,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "Please check {link}.",
+          "text": "Please check {link}.The deadline for application is September 16 2022 11:59:59PM JST.",
           "link": "here",
           "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
           "icon": "ExternalLinkIcon"

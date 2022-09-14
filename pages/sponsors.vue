@@ -233,13 +233,13 @@ export default {
 {
   "ja": {
     "title": "スポンサー募集中！",
-    "description": "PyCon JP 2022のスポンサーシップを募集中です。2次募集期間は 2022/06/14 (火) - 開催1ヶ月前 です。Pythonをキーワードに集まる多くの参加者に、Pythonを扱う企業であることや、エンジニアコミュニティを理解し支援する風土のある企業であること、または自社のサービスをアピールすることが可能です。",
+    "description": "PyCon JP 2022のスポンサーシップを募集中です。2次募集期間は 2022/06/14 (火) - 2022/09/16 (土) 23:59:59(JST) です。Pythonをキーワードに集まる多くの参加者に、Pythonを扱う企業であることや、エンジニアコミュニティを理解し支援する風土のある企業であること、または自社のサービスをアピールすることが可能です。",
     "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
     "link": "スポンサー募集概要・応募フォーム"
   },
   "en": {
     "title": "Sponsors wanted!",
-    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, 06/14/2022 - one month prior to the event. We look forward to receiving applications from companies that want to appeal to the Python community!",
+    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, June 14 2022 - Saturday, September 16 2022 11:59:59PM JST. We look forward to receiving applications from companies that want to appeal to the Python community!",
     "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
     "link": "Sponsorship Application Form"
   }
