@@ -36,6 +36,16 @@
                     <span class="ml-6">{{ $t(child.title) }}</span>
                   </div>
                 </nuxt-link>
+                <nuxt-link
+                  v-else-if="child.disable"
+                  class="child-menu-record disable-color"
+                  to="#"
+                >
+                  <div class="flex w-full pt-2 pb-2 ml-6">
+                    <div class="arrow-right"></div>
+                    <span class="ml-6">{{ $t(child.title) }}</span>
+                  </div>
+                </nuxt-link>
                 <outer-link
                   v-else
                   :to="$t(child.link)"
