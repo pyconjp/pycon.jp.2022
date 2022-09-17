@@ -1,7 +1,7 @@
 <template>
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
-      <div class="w-11/12 modal-window font-noto lg:w-3/4">
+      <div class="w-11/12 modal-window font-noto lg:w-10/12 lg:max-w-[1600px]">
         <!-- ヘッダーエリア -->
         <div
           id="modal-content"
@@ -11,8 +11,108 @@
           <div class="flex bg-white">
             <div class="flex justify-center w-full mt-6 ml-1 lg:w-11/12">
               <div class="w-10/12">
+                <!-- セッションタイトル -->
+                <p class="py-2 text-xl font-bold lg:text-2xl">
+                  {{ sessionTitle }}
+                </p>
+                <p class="font-bold leading-7 lg:leading-8">
+                  {{ speakerName }}
+                </p>
+                <div>
+                  <img
+                    class="lg:h-full h-4/5 filter-tartiary-600"
+                    src="~/assets/images/icons/calendar.svg"
+                    alt="video-icon"
+                  />
+                  {{ sessionStart }} ～ {{ sessionEnd }} (Asia/Tokyo)
+                  <img
+                    class="lg:h-full h-4/5 filter-tartiary-600"
+                    src="~/assets/images/icons/location-marker.svg"
+                    alt="video-icon"
+                  />
+                  {{ sessionRoom }}
+                </div>
+                <div>
+                  <!-- 発表言語 -->
+                  <div
+                    v-if="langOfTalk === 'ja-JP'"
+                    class="px-2 rounded-lg bg-primary-700 w-14 text-white text-[12px] flex justify-center items-center h-4"
+                  >
+                    <p>日本語</p>
+                  </div>
+                  <div
+                    v-else-if="langOfTalk === 'en'"
+                    class="px-2 rounded-lg bg-secondary-400 w-8 text-tertiary-900 text-[12px] flex justify-center items-center h-4"
+                  >
+                    <p>EN</p>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <!--エレベーターピッチ-->
+                  <div
+                    class="leading-7 lg:leading-8 list_style"
+                    v-html="$md.render(elevatorPitch)"
+                  ></div>
+                </div>
+                <div>
+                  <!-- VideoとDocument -->
+                  <!-- Youtube -->
+                  <a
+                    :href="youtubeLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex mr-8 hover:opacity-70"
+                    :class="{ 'pointer-events-none': youtubeLink === '' }"
+                  >
+                    <img
+                      class="lg:h-full h-4/5"
+                      src="~/assets/images/icons/video.svg"
+                      alt="video-icon"
+                      :class="{
+                        'filter-blue-green': youtubeLink !== '',
+                        'filter-gray': youtubeLink === '',
+                      }"
+                    />
+                    <p
+                      class="ml-2 text-sm"
+                      :class="{
+                        'text-blue-green': youtubeLink !== '',
+                        'text-gray-500': youtubeLink === '',
+                      }"
+                    >
+                      Video
+                    </p>
+                  </a>
+                  <!--スライド-->
+                  <a
+                    :href="documentLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex hover:opacity-70"
+                    :class="{ 'pointer-events-none': documentLink === '' }"
+                    ><img
+                      class="lg:h-full h-4/5 filter-gray"
+                      src="~/assets/images/icons/documents.svg"
+                      alt="documents-icon"
+                      :class="{
+                        'filter-blue-green': documentLink !== '',
+                        'filter-gray': documentLink === '',
+                      }"
+                    />
+                    <p
+                      class="ml-2 text-sm"
+                      :class="{
+                        'text-blue-green': documentLink !== '',
+                        'text-gray-500': documentLink === '',
+                      }"
+                    >
+                      Document ({{ langOfSlide }})
+                    </p>
+                  </a>
+                </div>
+
                 <!-- Language and Level -->
-                <div class="flex w-2/3 my-2 lg:w-4/12">
+                <!-- <div class="flex w-2/3 my-2 lg:w-4/12">
                   <div
                     class="p-2 text-xs font-semibold text-center text-gray-700 bg-gray-200 rounded-sm"
                     :class="{ hidden: sessionLanguage === '' }"
@@ -25,13 +125,11 @@
                   >
                     {{ audiencePythonLevel }}
                   </div>
-                </div>
-                <p class="py-2 text-xl font-bold lg:text-2xl">
-                  {{ sessionTitle }}
-                </p>
-                <div class="flex mb-4">
-                  <!-- YouTube Link -->
-                  <!-- <a
+                </div> -->
+
+                <!-- <div class="flex mb-4"> -->
+                <!-- YouTube Link -->
+                <!-- <a
                     :href="youtubeLink"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -58,8 +156,8 @@
                     </p>
                   </a> -->
 
-                  <!-- Document Link -->
-                  <!-- <a
+                <!-- Document Link -->
+                <!-- <a
                     :href="documentLink"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -84,7 +182,7 @@
                       Document
                     </p>
                   </a> -->
-                </div>
+                <!-- </div> -->
               </div>
             </div>
             <div class="relative w-1/12" @click.stop="$emit('close')">
@@ -101,11 +199,23 @@
           </div>
           <!-- コンテンツエリア -->
           <div class="flex justify-center pb-8 bg-white">
+            <div class="mt-4">
+              <!-- トーク詳細 -->
+              <img
+                class="lg:h-full h-4/5 filter-gray"
+                src="~/assets/images/icons/title-point.svg"
+                alt="section-icon"
+              />
+              <p class="font-bold leading-7 lg:leading-8">
+                トーク詳細 / Descrip
+              </p>
+            </div>
+
             <div class="w-10/12 pt-4 border-t lg:mb-4">
-              <p class="text-xl font-bold">Speaker</p>
+              <!-- <p class="text-xl font-bold">Speaker</p>
               <p class="font-medium leading-7 lg:leading-8">
                 {{ speakerName }}
-              </p>
+              </p> -->
               <div
                 class="leading-7 lg:leading-8 list_style"
                 v-html="$md.render(speakerProfile)"
@@ -218,10 +328,13 @@ export default {
           track: '',
           audience_python_level: '',
           audience_expertise: '',
-          lang_of_talk: '',
-          lang_of_slide: '',
+          language: '',
+          languageOfPresentationMaterial: '',
           description: '',
           room: '',
+          start: '',
+          end: '',
+          abstract: '',
         }
       },
     },
@@ -240,10 +353,13 @@ export default {
       track: '',
       audiencePythonLevel: '',
       langOfTalk: '',
-      // langOfSlide: '',
+      langOfSlide: '',
       description: '',
       // Read more表示しているかどうか
       readMore: false,
+      sessionStart: '',
+      sessionEnd: '',
+      sessionRoom: '',
     }
   },
   computed: {
@@ -267,11 +383,14 @@ export default {
     this.track = this.sessionData.track
     this.audiencePythonLevel = this.sessionData.audienceExperiment
     this.langOfTalk = this.sessionData.language
-    // this.langOfSlide = this.sessionData.lang_of_slide //None
+    this.langOfSlide = this.sessionData.languageOfPresentationMaterial
     // this.description = this.sessionData.description
     this.description = this.sessionData.description.replace(/\n/g, '\n\n')
     // this.youtubeLink = this.sessionData.recording_url //None
     // this.documentLink = this.sessionData.slide_url //None
+    this.sessionStart = this.sessionData.start
+    this.sessionEnd = this.sessionData.end
+    this.sessionRoom = this.sessionData.room
   },
 }
 </script>

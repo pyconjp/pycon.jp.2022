@@ -67,7 +67,6 @@
 
 <script>
 import { TagIcon, ClockIcon, LocationMarkerIcon } from '@vue-hero-icons/solid'
-// import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModal'
 
 export default {
   components: { TagIcon, ClockIcon, LocationMarkerIcon },
