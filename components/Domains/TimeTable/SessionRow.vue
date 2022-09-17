@@ -39,8 +39,6 @@ export default {
   },
   methods: {
     openModal(talk) {
-      // alert(talk.code)
-      // this.$emit('openSessionModal', talk)
       this.handleOpenmodal(talk)
     },
   },

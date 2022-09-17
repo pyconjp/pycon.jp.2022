@@ -62,12 +62,6 @@
         </div>
       </div>
     </div>
-    <!-- モーダル用ウィンドウ -->
-    <!-- <SessionDetailModal
-      v-if="isModal"
-      :session-data="modalDisplaySessionData"
-      @close="closeSessionModal"
-    ></SessionDetailModal> -->
   </div>
 </template>
 
@@ -95,58 +89,10 @@ export default {
       required: true,
     },
   },
-  // watch: {
-  //   $route() {
-  //     location.reload()
-  //   },
-  // },
-  // data() {
-  //   return {
-  //     isModal: false,
-  //     modalDisplaySessionData: {},
-  //   }
-  // },
-  // mounted() {
-  //   // if (this.$route.query.id !== undefined) {
-  //   //   // const targetSession = this.getTargetSessionDataById(this.$route.query.id)
-  //   //   // this.isModal = true
-  //   //   // this.modalDisplaySessionData = targetSession
-  //   //   // this.openSessionModal(targetSession)
-  //   //   // this.$refs.child.openSessionModal(this.$route.query.id)
-  //   //   this.openSessionModal(talk)
-  //   // }
-  //   document.onkeydown = (evt) => {
-  //     // キーボードを使っているユーザーは、Escapeキーでモーダルを閉じる
-  //     evt = evt || window.event
-  //     if (evt.key === 'Escape') {
-  //       this.closeSessionModal()
-  //       // this.$refs.child.closeSessionModal()
-  //     }
-  //   }
-  // },
   methods: {
     clickSessionModal(talk) {
-      // if (talk !== undefined) {
-      //   // alert(talk.code)
-      //   this.$emit('openSessionModal', talk)
-      // }
       this.handleModal(talk)
     },
-    // openSessionModal(talk) {
-    //   if (talk !== undefined) {
-    //     // Todo画面遷移
-    //     this.$router.push({ path: `/timetable/?id=${talk.code}` })
-    //     // this.$emit('openSessionModal', talk.code)
-    //     this.isModal = true
-    //     this.modalDisplaySessionData = talk
-    //   }
-    // },
-    // closeSessionModal() {
-    //   if (this.$route.query.id) {
-    //     this.$router.replace({ query: null })
-    //   }
-    //   this.isModal = false
-    // },
   },
 }
 </script>

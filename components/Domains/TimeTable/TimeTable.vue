@@ -351,9 +351,6 @@ export default {
         talkSessionStartTime.fifthRow[this.targetDay - 1]
       )
     },
-    // openSessionModal(sessionData) {
-    //   this.$emit('openSessionModal', sessionData)
-    // },
     openSessionModal(talk) {
       if (talk !== undefined) {
         this.isModal = true
@@ -368,24 +365,6 @@ export default {
       }
       this.isModal = false
     },
-    // getTargetSessionDataById(code) {
-    //   const targetSessionData = this.talkList.filter(function (talk) {
-    //     return talk.code === code
-    //   })
-    //   const dummyData = {
-    //     title: '',
-    //     talk_format: '',
-    //     name: '',
-    //     lang_of_talk: '',
-    //     description: '',
-    //     audience_python_level: '',
-    //   }
-    //   if (targetSessionData.length <= 0) {
-    //     return dummyData
-    //   } else {
-    //     return targetSessionData[0]
-    //   }
-    // },
   },
 }
 </script>
