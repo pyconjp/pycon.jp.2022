@@ -211,14 +211,10 @@
           <!-- 発表者の情報 -->
           <div class="flex justify-center pb-8 bg-white">
             <div class="w-11/12 pt-4 border-t lg:mb-4">
-              <div class="mt-4">
-                <div v-if="sessionAvatar">
+              <div class="flex flex-row mt-4">
+                <div v-if="sessionAvatar" class="mr-8">
                   <!--avatar-->
-                  <img
-                    class="lg:h-full h-4/5"
-                    :src="sessionAvatar"
-                    alt="section-icon"
-                  />
+                  <img class="w-32" :src="sessionAvatar" alt="avatar" />
                 </div>
                 <div>
                   <p
@@ -316,6 +312,7 @@ export default {
     this.sessionTitle = this.sessionData.title
     this.speakerName = this.sessionData.speakers[0].name
     this.speakerProfile = this.sessionData.speakers[0].biography
+    this.sessionAvatar = this.sessionData.speakers[0].avatar
     this.sessionAbstract = this.sessionData.abstract
     this.prerequisiteKnowledge = this.sessionData.requiredKnowledge
     this.track = this.sessionData.track
@@ -330,7 +327,6 @@ export default {
     this.sessionChoiceReason = this.sessionData.choiceReason
     this.sessionRequiredKnowledge = this.sessionData.requiredKnowledge
     this.sessionAudienceExperiment = this.sessionData.audienceExperiment
-    this.sessionAvatar = this.sessionData.avatar
   },
 }
 </script>
