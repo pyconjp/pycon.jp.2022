@@ -148,7 +148,7 @@
                     <p class="text-xl font-bold">トーク詳細 / Description</p>
                   </div>
                   <div
-                    class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                    class="mt-4 text-base font-medium leading-7 lg:leading-8 list_style"
                     v-html="$md.render(sessionDescription)"
                   ></div>
 
@@ -164,7 +164,7 @@
                       </p>
                     </div>
                     <div
-                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      class="mt-4 text-base font-medium leading-7 lg:leading-8 list_style"
                       v-html="$md.render(sessionChoiceReason)"
                     ></div>
                   </div>
@@ -182,7 +182,7 @@
                       </p>
                     </div>
                     <div
-                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      class="mt-4 text-base font-medium leading-7 lg:leading-8 list_style"
                       v-html="$md.render(sessionRequiredKnowledge)"
                     ></div>
                   </div>
@@ -200,7 +200,7 @@
                     </div>
                     <outer-link
                       to="https://pyconjp.blogspot.com/2020/04/pyconjp-2020-proposal-audience-information.html"
-                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      class="mt-4 text-base font-medium"
                       >{{ sessionAudienceExperiment }}</outer-link
                     >
                   </div>
