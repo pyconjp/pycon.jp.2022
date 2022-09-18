@@ -10,63 +10,62 @@
         >
           <div class="flex bg-white">
             <div class="flex justify-center w-full mt-6 ml-1 lg:w-11/12">
-              <div class="w-10/12">
+              <div class="w-11/12">
                 <!-- セッションタイトル -->
-                <p class="py-2 text-xl font-bold lg:text-2xl">
+                <div class="py-2 text-xl font-bold lg:text-2xl">
                   {{ sessionTitle }}
-                </p>
-                <p class="font-bold leading-7 lg:leading-8">
-                  {{ speakerName }}
-                </p>
-                <div>
-                  <img
-                    class="lg:h-full h-4/5 filter-tartiary-600"
-                    src="~/assets/images/icons/calendar.svg"
-                    alt="video-icon"
-                  />
-                  {{ sessionStart }} ～ {{ sessionEnd }} (Asia/Tokyo)
-                  <img
-                    class="lg:h-full h-4/5 filter-tartiary-600"
-                    src="~/assets/images/icons/location-marker.svg"
-                    alt="video-icon"
-                  />
-                  {{ sessionRoom }}
                 </div>
-                <div>
+                <div class="font-bold leading-7 lg:leading-8">
+                  {{ speakerName }}
+                </div>
+                <div class="flex flex-row content-center mt-2">
+                  <img
+                    class="self-center mr-2 lg:h-full h-4/5 filter-tartiary-600"
+                    src="@/assets/images/icons/calendar.svg"
+                    alt="calendar-icon"
+                  />
+                  <div>{{ sessionStart }} - {{ sessionEnd }} (Asia/Tokyo)</div>
+                  <img
+                    class="self-center ml-2 mr-2 lg:h-full h-4/5 filter-tartiary-600"
+                    src="@/assets/images/icons/location-marker.svg"
+                    alt="location-icon"
+                  />
+                  <div>{{ sessionRoom }}</div>
+                </div>
+                <div class="mt-2">
                   <!-- 発表言語 -->
                   <div
                     v-if="langOfTalk === 'ja-JP'"
-                    class="px-2 rounded-lg bg-primary-700 w-14 text-white text-[12px] flex justify-center items-center h-4"
+                    class="px-2 rounded-lg bg-primary-700 w-20 text-white text-[16px] flex justify-center items-center h-6 font-medium"
                   >
                     <p>日本語</p>
                   </div>
                   <div
                     v-else-if="langOfTalk === 'en'"
-                    class="px-2 rounded-lg bg-secondary-400 w-8 text-tertiary-900 text-[12px] flex justify-center items-center h-4"
+                    class="px-2 rounded-lg bg-secondary-400 w-14 text-tertiary-900 text-[16px] flex justify-center items-center h-6 font-medium"
                   >
                     <p>EN</p>
                   </div>
                 </div>
-                <div class="mt-4">
-                  <!--エレベーターピッチ-->
+                <div class="mt-4 abstract_line">
+                  <!--概要-->
                   <div
-                    class="leading-7 lg:leading-8 list_style"
-                    v-html="$md.render(elevatorPitch)"
+                    class="ml-4 font-medium leading-7 lg:leading-8 list_styl"
+                    v-html="$md.render(sessionAbstract)"
                   ></div>
                 </div>
-                <div>
-                  <!-- VideoとDocument -->
+                <div class="flex flex-row content-center mt-4">
                   <!-- Youtube -->
-                  <a
-                    :href="youtubeLink"
+                  <outer-link
+                    :to="youtubeLink"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex mr-8 hover:opacity-70"
                     :class="{ 'pointer-events-none': youtubeLink === '' }"
                   >
                     <img
-                      class="lg:h-full h-4/5"
-                      src="~/assets/images/icons/video.svg"
+                      class="self-center lg:h-full h-4/5"
+                      src="@/assets/images/icons/video.svg"
                       alt="video-icon"
                       :class="{
                         'filter-blue-green': youtubeLink !== '',
@@ -74,7 +73,7 @@
                       }"
                     />
                     <p
-                      class="ml-2 text-sm"
+                      class="ml-2 text-xl font-normal"
                       :class="{
                         'text-blue-green': youtubeLink !== '',
                         'text-gray-500': youtubeLink === '',
@@ -82,116 +81,46 @@
                     >
                       Video
                     </p>
-                  </a>
+                  </outer-link>
                   <!--スライド-->
-                  <a
-                    :href="documentLink"
+                  <outer-link
+                    :to="documentLink"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex hover:opacity-70"
                     :class="{ 'pointer-events-none': documentLink === '' }"
                     ><img
-                      class="lg:h-full h-4/5 filter-gray"
-                      src="~/assets/images/icons/documents.svg"
+                      class="self-center lg:h-full h-4/5 filter-gray"
+                      src="@/assets/images/icons/documents.svg"
                       alt="documents-icon"
                       :class="{
                         'filter-blue-green': documentLink !== '',
                         'filter-gray': documentLink === '',
                       }"
                     />
-                    <p
-                      class="ml-2 text-sm"
+                    <div
+                      class="ml-2 text-xl font-normal whitespace-nowrap"
                       :class="{
                         'text-blue-green': documentLink !== '',
                         'text-gray-500': documentLink === '',
                       }"
                     >
-                      Document ({{ langOfSlide }})
-                    </p>
-                  </a>
+                      Document (<span v-if="langOfSlide === 'Japanese only'"
+                        >日本語</span
+                      ><span v-else>English</span>)
+                    </div>
+                  </outer-link>
                 </div>
-
-                <!-- Language and Level -->
-                <!-- <div class="flex w-2/3 my-2 lg:w-4/12">
-                  <div
-                    class="p-2 text-xs font-semibold text-center text-gray-700 bg-gray-200 rounded-sm"
-                    :class="{ hidden: sessionLanguage === '' }"
-                  >
-                    {{ sessionLanguage }}
-                  </div>
-                  <div
-                    class="p-2 ml-1 text-xs font-semibold text-center text-white rounded-sm bg-blue-green"
-                    :class="{ hidden: audiencePythonLevel === '' }"
-                  >
-                    {{ audiencePythonLevel }}
-                  </div>
-                </div> -->
-
-                <!-- <div class="flex mb-4"> -->
-                <!-- YouTube Link -->
-                <!-- <a
-                    :href="youtubeLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex mr-8 hover:opacity-70"
-                    :class="{ 'pointer-events-none': youtubeLink === '' }"
-                  >
-                    <img
-                      class="lg:h-full h-4/5"
-                      src="~/assets/images/icons/video.svg"
-                      alt="video-icon"
-                      :class="{
-                        'filter-blue-green': youtubeLink !== '',
-                        'filter-gray': youtubeLink === '',
-                      }"
-                    />
-                    <p
-                      class="ml-2 text-sm"
-                      :class="{
-                        'text-blue-green': youtubeLink !== '',
-                        'text-gray-500': youtubeLink === '',
-                      }"
-                    >
-                      Video
-                    </p>
-                  </a> -->
-
-                <!-- Document Link -->
-                <!-- <a
-                    :href="documentLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex hover:opacity-70"
-                    :class="{ 'pointer-events-none': documentLink === '' }"
-                    ><img
-                      class="lg:h-full h-4/5 filter-gray"
-                      src="~/assets/images/icons/documents.svg"
-                      alt="documents-icon"
-                      :class="{
-                        'filter-blue-green': documentLink !== '',
-                        'filter-gray': documentLink === '',
-                      }"
-                    />
-                    <p
-                      class="ml-2 text-sm"
-                      :class="{
-                        'text-blue-green': documentLink !== '',
-                        'text-gray-500': documentLink === '',
-                      }"
-                    >
-                      Document
-                    </p>
-                  </a> -->
-                <!-- </div> -->
               </div>
             </div>
+            <!--閉じるボタン-->
             <div class="relative w-1/12" @click.stop="$emit('close')">
               <div
                 class="cursor-pointer close hover:bg-gray-100 lg:top-6 -top-12 -left-5 lg:left-2"
               >
                 <img
                   class="h-3/5"
-                  src="~/assets/images/icons/close.svg"
+                  src="@/assets/images/icons/close.svg"
                   alt="close-icon"
                 />
               </div>
@@ -199,106 +128,109 @@
           </div>
           <!-- コンテンツエリア -->
           <div class="flex justify-center pb-8 bg-white">
-            <div class="mt-4">
-              <!-- トーク詳細 -->
-              <img
-                class="lg:h-full h-4/5 filter-gray"
-                src="~/assets/images/icons/title-point.svg"
-                alt="section-icon"
-              />
-              <p class="font-bold leading-7 lg:leading-8">
-                トーク詳細 / Descrip
-              </p>
-            </div>
-
-            <div class="w-10/12 pt-4 border-t lg:mb-4">
-              <!-- <p class="text-xl font-bold">Speaker</p>
-              <p class="font-medium leading-7 lg:leading-8">
-                {{ speakerName }}
-              </p> -->
-              <div
-                class="leading-7 lg:leading-8 list_style"
-                v-html="$md.render(speakerProfile)"
-              ></div>
+            <div class="w-11/12 pt-2 mt-4 border-t lg:mb-4">
               <div class="mt-4">
-                <p class="text-xl font-bold">{{ $t('elevatorPitch') }}</p>
-                <div
-                  class="leading-7 lg:leading-8 list_style"
-                  v-html="$md.render(elevatorPitch)"
-                ></div>
-              </div>
-              <div class="mt-4">
-                <p class="text-xl font-bold">{{ $t('requiredKnowledge') }}</p>
-                <div
-                  class="leading-7 lg:leading-8 list_style"
-                  v-html="$md.render(prerequisiteKnowledge)"
-                ></div>
-              </div>
-              <div class="mt-4">
-                <p class="text-xl font-bold">
-                  {{ $t('knowledgeGained') }}
-                </p>
-                <div
-                  class="leading-7 lg:leading-8 list_style"
-                  v-html="$md.render(audienceTakeaway)"
-                ></div>
-              </div>
-
-              <!-- セッション情報 -->
-              <div class="grid grid-cols-1 mt-4 lg:grid-cols-3">
-                <p class="my-1 font-bold">Track</p>
-                <div class="col-span-2 underline text-blue-green">
-                  <p class="my-1">
-                    <outer-link
-                      :label="track"
-                      to="https://pyconjp.blogspot.com/2021/05/2021-proposal-track.html"
-                    />
-                  </p>
-                </div>
-                <p class="my-1 font-bold">Level</p>
-                <div class="col-span-2 underline text-blue-green">
-                  <p class="my-1">
-                    <outer-link
-                      :label="audiencePythonLevel"
-                      to="https://pyconjp.blogspot.com/2021/05/2021-proposal-audience.html"
-                    />
-                  </p>
-                </div>
-
-                <p class="my-1 font-bold">Language of Talk</p>
-                <div class="col-span-2">
-                  <p class="my-1">
-                    {{ langOfTalk }}
-                  </p>
-                </div>
-                <!-- <p class="my-1 font-bold">Language of Slide</p>
-                <div class="col-span-2">
-                  <p class="my-1">
-                    {{ langOfSlide }}
-                  </p>
-                </div> -->
-              </div>
-
-              <div class="mt-4">
-                <p class="text-xl font-bold">Description</p>
                 <div
                   v-show="!readMore"
                   class="flex flex-col items-center justify-center cursor-pointer"
                   @click.stop="readMore = true"
                 >
                   <p class="mt-2 underline">Read more</p>
-
                   <img
                     class="lg:h-full h-4/5"
-                    src="~/assets/images/icons/down-arrow.svg"
+                    src="@/assets/images/icons/down-arrow.svg"
                     alt="down-arrow-icon"
                   />
                 </div>
-                <div
-                  v-show="readMore"
-                  class="leading-7 lg:leading-8 list_style"
-                  v-html="$md.render(description)"
-                ></div>
+                <div v-show="readMore">
+                  <div class="flex flex-row content-center">
+                    <div class="self-center mr-1 section_icon" />
+                    <p class="text-xl font-bold">トーク詳細 / Description</p>
+                  </div>
+                  <div
+                    class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                    v-html="$md.render(sessionDescription)"
+                  ></div>
+
+                  <div
+                    v-if="sessionChoiceReason && sessionChoiceReason != ''"
+                    class="mt-4"
+                  >
+                    <div class="flex flex-row content-center">
+                      <div class="self-center mr-1 section_icon" />
+                      <p class="text-xl font-bold">
+                        この題材を選んだ理由やきっかけ / Why did you chose this
+                        topic?
+                      </p>
+                    </div>
+                    <div
+                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      v-html="$md.render(sessionChoiceReason)"
+                    ></div>
+                  </div>
+                  <div
+                    v-if="
+                      sessionRequiredKnowledge && sessionRequiredKnowledge != ''
+                    "
+                    class="mt-4"
+                  >
+                    <div class="flex flex-row content-center">
+                      <div class="self-center mr-1 section_icon" />
+                      <p class="text-xl font-bold">
+                        オーディエンスに求める前提知識 / Prior knowledges
+                        speakers assume the audience to have
+                      </p>
+                    </div>
+                    <div
+                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      v-html="$md.render(sessionRequiredKnowledge)"
+                    ></div>
+                  </div>
+                  <div
+                    v-if="
+                      sessionRequiredKnowledge && sessionRequiredKnowledge != ''
+                    "
+                    class="mt-4"
+                  >
+                    <div class="flex flex-row content-center">
+                      <div class="self-center mr-1 section_icon" />
+                      <p class="text-xl font-bold">
+                        オーディエンスのPythonレベル / Audience experiment
+                      </p>
+                    </div>
+                    <outer-link
+                      to="https://pyconjp.blogspot.com/2020/04/pyconjp-2020-proposal-audience-information.html"
+                      class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                      >{{ sessionAudienceExperiment }}</outer-link
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 発表者の情報 -->
+          <div class="flex justify-center pb-8 bg-white">
+            <div class="w-11/12 pt-4 border-t lg:mb-4">
+              <div class="mt-4">
+                <div v-if="sessionAvatar">
+                  <!--avatar-->
+                  <img
+                    class="lg:h-full h-4/5"
+                    :src="sessionAvatar"
+                    alt="section-icon"
+                  />
+                </div>
+                <div>
+                  <p
+                    class="text-lg font-bold leading-7 underline lg:leading-8 text-primary-700"
+                  >
+                    {{ speakerName }}
+                  </p>
+                  <div
+                    class="mt-4 font-medium leading-7 lg:leading-8 list_style"
+                    v-html="$md.render(speakerProfile)"
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
@@ -309,10 +241,14 @@
 </template>
 
 <script>
+import moment from 'moment/moment'
 import OuterLink from '@/components/Elements/OuterLink'
+
 export default {
   name: 'SessionDetailModal',
-  components: { OuterLink },
+  components: {
+    OuterLink,
+  },
   props: {
     sessionData: {
       type: Object,
@@ -326,8 +262,6 @@ export default {
           prerequisite_knowledge: '',
           audience_takeaway: '',
           track: '',
-          audience_python_level: '',
-          audience_expertise: '',
           language: '',
           languageOfPresentationMaterial: '',
           description: '',
@@ -335,6 +269,10 @@ export default {
           start: '',
           end: '',
           abstract: '',
+          choiceReason: '',
+          requiredKnowledge: '',
+          audienceExperiment: '',
+          avatar: '',
         }
       },
     },
@@ -345,21 +283,22 @@ export default {
       sessionTitle: '',
       speakerName: '',
       speakerProfile: '',
-      // youtubeLink: '',
-      // documentLink: '',
-      elevatorPitch: '',
+      youtubeLink: '',
+      documentLink: '',
+      sessionAbstract: '',
       prerequisiteKnowledge: '',
-      audienceTakeaway: '',
       track: '',
-      audiencePythonLevel: '',
       langOfTalk: '',
       langOfSlide: '',
-      description: '',
-      // Read more表示しているかどうか
+      sessionDescription: '',
       readMore: false,
       sessionStart: '',
       sessionEnd: '',
       sessionRoom: '',
+      sessionChoiceReason: '',
+      sessionRequiredKnowledge: '',
+      sessionAudienceExperiment: '',
+      sessionAvatar: '',
     }
   },
   computed: {
@@ -377,20 +316,21 @@ export default {
     this.sessionTitle = this.sessionData.title
     this.speakerName = this.sessionData.speakers[0].name
     this.speakerProfile = this.sessionData.speakers[0].biography
-    this.elevatorPitch = this.sessionData.abstract
+    this.sessionAbstract = this.sessionData.abstract
     this.prerequisiteKnowledge = this.sessionData.requiredKnowledge
-    this.audienceTakeaway = this.sessionData.knowledge
     this.track = this.sessionData.track
-    this.audiencePythonLevel = this.sessionData.audienceExperiment
     this.langOfTalk = this.sessionData.language
     this.langOfSlide = this.sessionData.languageOfPresentationMaterial
-    // this.description = this.sessionData.description
-    this.description = this.sessionData.description.replace(/\n/g, '\n\n')
-    // this.youtubeLink = this.sessionData.recording_url //None
-    // this.documentLink = this.sessionData.slide_url //None
-    this.sessionStart = this.sessionData.start
-    this.sessionEnd = this.sessionData.end
+    this.sessionDescription = this.sessionData.description
+    this.youtubeLink = this.sessionData.recording_url
+    this.documentLink = this.sessionData.slide_url
+    this.sessionStart = moment(this.sessionData.start).format('MMM DD h:mm a')
+    this.sessionEnd = moment(this.sessionData.end).format('h:mm a')
     this.sessionRoom = this.sessionData.room
+    this.sessionChoiceReason = this.sessionData.choiceReason
+    this.sessionRequiredKnowledge = this.sessionData.requiredKnowledge
+    this.sessionAudienceExperiment = this.sessionData.audienceExperiment
+    this.sessionAvatar = this.sessionData.avatar
   },
 }
 </script>
@@ -488,17 +428,26 @@ ul {
     }
   }
 }
+.section_icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('@/assets/images/icons/title-point.svg');
+}
+
+.abstract_line {
+  border-left: 2px solid #e5bc10;
+}
 </style>
 
 <i18n>
   {
     "en": {
-      "elevatorPitch": "Elevator Pitch",
+      "sessionAbstract": "Elevator Pitch",
       "requiredKnowledge": "Prerequisite knowledge required from the audience",
       "knowledgeGained": "Knowledge that the audience can take home"
     },
     "ja": {
-      "elevatorPitch": "エレベーターピッチ",
+      "sessionAbstract": "エレベーターピッチ",
       "requiredKnowledge": "聴衆に求める前提知識",
       "knowledgeGained": "聴衆が持ち帰ることができるもの"
     }
