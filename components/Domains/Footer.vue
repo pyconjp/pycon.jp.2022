@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-white component-border-top font-noto">
+  <div class="relative text-white font-noto">
     <div
       class="relative bg-center bg-no-repeat pt-7 pb-7 bg-tertiary-900 bg-footer lg:bg-right-bottom"
     >
@@ -20,6 +20,9 @@
                 :to="localePath(child.link)"
                 class="hover:opacity-70"
               >
+                {{ $t(child.title) }}
+              </nuxt-link>
+              <nuxt-link v-else-if="child.disable" to="#" class="opacity-50">
                 {{ $t(child.title) }}
               </nuxt-link>
               <outer-link v-else :to="$t(child.link)">

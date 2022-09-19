@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     return {
-      title: 'pycon.jp.2022',
+      title: 'PyCon JP 2022',
       htmlAttrs: {
         lang: 'en',
       },
@@ -100,6 +100,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/content',
     'nuxt-i18n',
+    '@nuxtjs/dayjs',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -147,4 +148,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  privateRuntimeConfig: {
+    pretalxAuthKey: process.env.PRETALX_AUTH_KEY,
+  },
 }
