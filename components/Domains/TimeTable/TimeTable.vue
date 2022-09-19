@@ -354,7 +354,9 @@ export default {
     openSessionModal(talk) {
       if (talk !== undefined) {
         this.isModal = true
-        this.$router.push({ path: `/timetable/?id=${talk.code}` })
+        this.$router.push(
+          this.localePath({ path: `/timetable/?id=${talk.code}` })
+        )
         // const talkInfo = this.getTargetSessionDataById(code)
         this.modalDisplaySessionData = talk
       }
