@@ -2,7 +2,7 @@
   <div>
     <subpage-hero-section
       :title="['CONTENTS FOR', 'BEGINNERS']"
-      subtitle="初心者向けコンテンツ"
+      subtitle="初学者向けコンテンツ"
     />
     <div class="component-border-top bg-secondary-400">
       <div class="mt-12">
