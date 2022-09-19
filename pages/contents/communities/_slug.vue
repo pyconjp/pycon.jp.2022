@@ -52,9 +52,10 @@ export default {
     }
   },
   mounted() {
-    if (this.components && !this.current) {
+    if (this.communities && !this.current) {
       const randomCommunity =
         this.communities[Math.floor(Math.random() * this.communities.length)]
+      console.log(randomCommunity)
       this.$router.push(
         (this.$i18n.locale === 'en' ? '/en/' : '') +
           '/contents/communities/' +
