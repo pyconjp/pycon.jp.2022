@@ -9,7 +9,7 @@
             <chevron-right-icon class="mx-auto text-primary-400" />
           </div>
           <div class="flex-1">
-            {{ community.name }}
+            {{ community.title }}
           </div>
         </div>
       </nuxt-link>

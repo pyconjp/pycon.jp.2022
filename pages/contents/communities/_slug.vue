@@ -15,11 +15,14 @@
 
       <div v-if="current" class="my-8 flex items-center">
         <div class="font-noto mx-auto text-[30px] font-bold">
-          {{ current.name }}
+          {{ current.title }}
         </div>
       </div>
 
-      <div v-if="current" class="w-10/12 flex mx-auto gap-6 mb-4">
+      <div
+        v-if="current"
+        class="w-10/12 flex mx-auto gap-6 mb-4 lg:flex-row flex-col"
+      >
         <community-menu :communities="communities" class="lg:w-[280px]" />
         <community-body :community="current" class="flex-1" />
       </div>
@@ -40,12 +43,7 @@ export default {
   components: { CommunityBody, CommunityMenu, SubpageHeroSection },
   async asyncData({ $content, params, error }) {
     const slug = params.slug
-    const communities = await $content('communities')
-      .fetch()
-      .then((content) => content.body)
-      .catch(() => {
-        error({ statusCode: 404, message: 'Not Found' })
-      })
+    const communities = await $content('communities').fetch()
     const current = communities.find((community) => community.slug === slug)
 
     return {
