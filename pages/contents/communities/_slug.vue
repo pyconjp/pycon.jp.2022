@@ -52,7 +52,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.current)
     if (this.communities && !this.current) {
       const randomCommunity =
         this.communities[Math.floor(Math.random() * this.communities.length)]
