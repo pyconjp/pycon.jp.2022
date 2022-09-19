@@ -52,8 +52,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this)
-    if (!this.current) {
+    if (this.components && !this.current) {
       const randomCommunity =
         this.communities[Math.floor(Math.random() * this.communities.length)]
       this.$router.push(
