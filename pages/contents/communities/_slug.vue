@@ -21,7 +21,7 @@
 
       <div
         v-if="current"
-        class="w-10/12 flex mx-auto gap-6 mb-4 lg:flex-row flex-col"
+        class="w-10/12 flex mx-auto gap-6 mb-4 lg:flex-row flex-col-reverse"
       >
         <community-menu :communities="communities" class="lg:w-[280px]" />
         <community-body :community="current" class="flex-1" />
