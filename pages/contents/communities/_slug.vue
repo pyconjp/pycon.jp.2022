@@ -41,7 +41,7 @@ import CommunityBody from '@/components/Domains/CommunityPage/CommunityBody'
 
 export default {
   components: { CommunityBody, CommunityMenu, SubpageHeroSection },
-  async asyncData({ $content, params, error }) {
+  async asyncData({ $content, params }) {
     const slug = params.slug
     const communities = await $content('communities').fetch()
     const current = communities.find((community) => community.slug === slug)
@@ -52,6 +52,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this)
     if (!this.current) {
       const randomCommunity =
         this.communities[Math.floor(Math.random() * this.communities.length)]
