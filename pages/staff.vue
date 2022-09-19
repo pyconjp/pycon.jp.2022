@@ -1,7 +1,7 @@
 <template>
   <div>
     <subpage-hero-section :title="['Staff', '']" subtitle="スタッフ" />
-    <chair-person-section />
+    <chair-section />
     <staff-section />
     <day-staff-section />
     <review-staff-section />
@@ -11,7 +11,7 @@
 
 <script>
 import SubpageHeroSection from '~/components/Elements/SubpageHeroSection'
-import ChairPersonSection from '@/components/Domains/StaffPage/ChairPersonSection'
+import ChairSection from '@/components/Domains/StaffPage/ChairSection'
 import StaffSection from '@/components/Domains/StaffPage/StaffSection'
 import DayStaffSection from '@/components/Domains/StaffPage/DayStaffSection'
 import ReviewStaffSection from '@/components/Domains/StaffPage/ReviewStaffSection'
@@ -21,7 +21,7 @@ export default {
   name: 'StaffPage',
   components: {
     SubpageHeroSection,
-    ChairPersonSection,
+    ChairSection,
     StaffSection,
     DayStaffSection,
     ReviewStaffSection,
