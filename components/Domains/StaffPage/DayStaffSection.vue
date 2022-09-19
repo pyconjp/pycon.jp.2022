@@ -1,29 +1,22 @@
 <template>
   <div>
-    <div class="component-border-top bg-secondary-400">
-      <div class="flex flex-col items-center">
-        <div class="mt-10">
-          <img
-            src="@/assets/images/conference_vector.svg"
-            alt="Keynote vector"
-            class="mid-vector"
-          />
-        </div>
-        <div class="mt-16 coc-section-title font-noto">当日スタッフ</div>
+    <div class="flex flex-col items-center">
+      <div class="mt-10">
+        <img
+          src="@/assets/images/conference_vector.svg"
+          alt="Keynote vector"
+          class="mid-vector"
+        />
+      </div>
+      <div class="mt-16 coc-section-title font-noto">当日スタッフ</div>
 
-        <div
-          class="items-center w-11/12 mx-auto mt-10  bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-        >
-          <div class="items-center my-24 coc-content">
-            <div class="font-medium font-noto">
-              <p>メンバーをパネルでペタペタするとか</p>
-            </div>
+      <div
+        class="items-center w-11/12 mx-auto mt-10 bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
+      >
+        <div class="items-center my-24 coc-content">
+          <div class="font-medium font-noto">
+            <p>メンバーをパネルでペタペタするとか</p>
           </div>
-        </div>
-
-        <div class="mt-10 snake-face-base">
-          <!--snake face-->
-          <div class="hidden snake-face lg:block" />
         </div>
       </div>
     </div>
@@ -99,20 +92,6 @@ li:before {
   top: 0.6em;
   content: '';
   background: #e84118;
-}
-
-.snake-face-base {
-  width: 100%;
-  height: 90px;
-}
-
-.snake-face {
-  position: absolute;
-  width: 150px;
-  height: 90px;
-  right: 85px;
-
-  background-image: url('@/assets/images/section_bg_img_left_black.svg');
 }
 </style>
 

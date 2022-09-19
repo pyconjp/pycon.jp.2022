@@ -1,7 +1,5 @@
 <template>
-  <div class="component-border-top bg-secondary-400">
-    <section-title main="CHAIR" sub="座長" />
-
+  <div>
     <div class="flex flex-col items-center">
       <!-- Chair start -->
       <div class="flex flex-col w-10/12 mt-2 lg:w-7/12">
@@ -10,7 +8,7 @@
             <!-- left image -->
             <div class="relative w-full lg:flex-1">
               <img
-                class="relative object-cover w-11/12 w-full h-5/6 keynote-clip lg:flex-1"
+                class="relative object-cover w-full h-5/6 keynote-clip lg:flex-1"
                 :src="require('@/assets/images/staff/selina.jpg')"
                 :alt="'chair_img'"
               />
@@ -31,21 +29,13 @@
         </div>
       </div>
     </div>
-    <div class="mt-10 snake-face-base">
-      <!--snake face-->
-      <div class="hidden snake-face lg:block" />
-    </div>
   </div>
 </template>
 
 <script>
-import SectionTitle from '@/components/Elements/SectionTitle'
-
 export default {
   name: 'ChierPersonSection',
-  components: {
-    SectionTitle,
-  },
+  components: {},
   data: () => ({}),
 }
 </script>
@@ -66,20 +56,6 @@ export default {
   font-size: 18px;
   line-height: 100%;
   color: #1a1623;
-}
-
-.snake-face-base {
-  width: 100%;
-  height: 90px;
-}
-
-.snake-face {
-  position: absolute;
-  width: 150px;
-  height: 90px;
-  right: 85px;
-
-  background-image: url('@/assets/images/section_bg_img_left_orange.svg');
 }
 </style>
 
