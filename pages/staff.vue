@@ -14,6 +14,7 @@
     </div>
 
     <div class="text-center component-border-top bg-tertiary-100">
+      <section-title main="STAFF" sub="スタッフ" :primary="false" />
       <staff-section />
       <!--snake face-->
       <div class="mt-10 snake-face-base">
@@ -22,6 +23,7 @@
     </div>
 
     <div class="text-center component-border-top bg-secondary-400">
+      <section-title main="STAFF ON THE DAY" sub="当日スタッフ" />
       <day-staff-section />
       <!--snake face-->
       <div class="mt-10 snake-face-base">
@@ -30,6 +32,11 @@
     </div>
 
     <div class="text-center component-border-top bg-tertiary-100">
+      <section-title
+        main="REVIEW STAFF"
+        sub="レビュースタッフ"
+        :primary="false"
+      />
       <review-staff-section />
       <!--snake face-->
       <div class="mt-10 snake-face-base">
