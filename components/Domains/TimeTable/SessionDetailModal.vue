@@ -143,14 +143,22 @@
                   />
                 </div>
                 <div v-show="readMore">
-                  <div class="flex flex-row content-center">
-                    <div class="self-center mr-1 section_icon" />
-                    <p class="text-xl font-bold">トーク詳細 / Description</p>
-                  </div>
                   <div
-                    class="mt-4 text-base font-medium leading-7 lg:leading-8 list_style"
-                    v-html="$md.render(sessionDescription)"
-                  ></div>
+                    v-if="
+                      sessionDescription &&
+                      sessionDescription != '' &&
+                      sessionDescription !== 'N/A'
+                    "
+                  >
+                    <div class="flex flex-row content-center">
+                      <div class="self-center mr-1 section_icon" />
+                      <p class="text-xl font-bold">トーク詳細 / Description</p>
+                    </div>
+                    <div
+                      class="mt-4 text-base font-medium leading-7 lg:leading-8 list_style"
+                      v-html="$md.render(sessionDescription)"
+                    ></div>
+                  </div>
 
                   <div
                     v-if="
@@ -297,8 +305,8 @@ export default {
       sessionStart: '',
       sessionEnd: '',
       sessionRoom: '',
-      // sessionChoiceReason: '',
-      // sessionRequiredKnowledge: '',
+      sessionChoiceReason: '',
+      sessionRequiredKnowledge: '',
       sessionAudienceExperiment: '',
       sessionAvatar: '',
     }

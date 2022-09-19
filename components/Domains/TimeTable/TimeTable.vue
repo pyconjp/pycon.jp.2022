@@ -189,8 +189,6 @@ export default {
         title: '',
       },
       keynoteInfo: {
-        // startTime: '',
-        // title: '',
         id: '',
         title: '',
         name: '',
