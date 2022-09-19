@@ -9,9 +9,9 @@ title: UDONPy
 Girls/Sphinx/TDD/データビジュアライゼーション)  
 やりたいなと思うテーマはありましたか？テーマ決めも、座談会を開催して決めているんですよ。  
 UDONPyどうぞよろしく。現場からは以上です。  
+[Python Boot Campその後 ― UDONPy](https://pyconjp.blogspot.com/2020/12/after-pycamp-udonpy.html)
 
 https://udonpy.connpass.com  
-[Python Boot Campその後 ― UDONPy](https://pyconjp.blogspot.com/2020/12/after-pycamp-udonpy.html)
 
 ![UDONPy](/communities/udonpy.png)
 
