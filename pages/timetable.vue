@@ -6,7 +6,7 @@
     />
     <div class="pt-12 bg-tertiary-100">
       <!-- TODO: 一時的にpretalxのリンクを載せる -->
-      <div class="flex justify-center w-full mb-8">
+      <!-- <div class="flex justify-center w-full mb-8">
         <news-card-base
           :primary="false"
           :title="$t('title').toString()"
@@ -18,7 +18,7 @@
             <SpeakerphoneIcon :class="'h-9 w-9 mr-4 text-secondary-400'" />
           </template>
         </news-card-base>
-      </div>
+      </div> -->
 
       <div class="flex justify-center w-full">
         <time-table
@@ -40,23 +40,32 @@
 </template>
 
 <script>
-import { SpeakerphoneIcon } from '@vue-hero-icons/solid'
-import { filterTalkList, getAllTalkList } from '../utils/timetable_functions'
+// import { SpeakerphoneIcon } from '@vue-hero-icons/solid'
+import {
+  filterTalkList,
+  // filterSpeakerList,
+  getAllTalkList,
+  // getAllSpeakerList,
+} from '../utils/timetable_functions'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
-import NewsCardBase from '@/components/Elements/NewsCardBase'
+// import NewsCardBase from '@/components/Elements/NewsCardBase'
 
 export default {
   name: 'TimeTablePage',
   components: {
     SubpageHeroSection,
     TimeTable,
-    NewsCardBase,
-    SpeakerphoneIcon,
+    // NewsCardBase,
+    // SpeakerphoneIcon,
   },
   async asyncData({ $config }) {
     const allTalkList = await getAllTalkList($config.pretalxAuthKey)
-    return { talkList: filterTalkList(allTalkList) }
+    // const allSpeakerList = await getAllSpeakerList($config.pretalxAuthKey)
+    return {
+      talkList: filterTalkList(allTalkList),
+      // speakerList: filterSpeakerList(allSpeakerList),
+    }
   },
   data() {
     return {
@@ -83,6 +92,12 @@ export default {
       const targetSessionData = this.talkList.filter(function (talk) {
         return talk.code === id
       })
+      // if (targetSessionData[0].speakers[0].avatar.length === 0) {
+      //   const targetSpeaker = this.speakerList.filter(function (speaker) {
+      //     return (speaker.code = targetSessionData[0].speakers[0].code)
+      //   })
+      //   targetSessionData[0].speakers[0].avatar = targetSpeaker[0].avatar
+      // }
       const dummyData = {
         title: '',
         talk_format: '',

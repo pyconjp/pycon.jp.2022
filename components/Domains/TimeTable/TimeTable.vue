@@ -47,8 +47,8 @@
     <FullWidthRow
       :background-color="secondaryColor"
       :text-color="primaryColor"
-      :title="openingInfo.title"
-      :time="openingInfo.startTime"
+      :data-info="openingInfo"
+      :handle-modal="openSessionModal"
       class="mt-24 lg:mt-2"
     ></FullWidthRow>
 
@@ -56,8 +56,8 @@
     <FullWidthRow
       :background-color="secondaryColor"
       :text-color="primaryColor"
-      :title="keynoteInfo.title"
-      :time="keynoteInfo.startTime"
+      :data-info="keynoteInfo"
+      :handle-modal="openSessionModal"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
@@ -65,8 +65,8 @@
     <FullWidthRow
       :background-color="primaryColor"
       text-color="white"
-      :title="lunchSessionInfo.title"
-      :time="lunchSessionInfo.startTime"
+      :data-info="lunchSessionInfo"
+      :handle-modal="openSessionModal"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
@@ -96,8 +96,8 @@
     <FullWidthRow
       :background-color="primaryColor"
       text-color="white"
-      :title="coffeeBreakInfo.title"
-      :time="coffeeBreakInfo.startTime"
+      :data-info="coffeeBreakInfo"
+      :handle-modal="openSessionModal"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
@@ -120,8 +120,8 @@
       v-if="targetDay === 1"
       :background-color="secondaryColor"
       :text-color="primaryColor"
-      :title="lightningTalkInfo.title"
-      :time="lightningTalkInfo.startTime"
+      :data-info="lightningTalkInfo"
+      :handle-modal="openSessionModal"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
@@ -129,8 +129,8 @@
     <FullWidthRow
       :background-color="secondaryColor"
       :text-color="primaryColor"
-      :title="closingInfo.title"
-      :time="closingInfo.startTime"
+      :data-info="closingInfo"
+      :handle-modal="openSessionModal"
       class="mt-12 lg:mt-2"
     ></FullWidthRow>
 
@@ -189,8 +189,28 @@ export default {
         title: '',
       },
       keynoteInfo: {
-        startTime: '',
+        // startTime: '',
+        // title: '',
+        id: '',
         title: '',
+        name: '',
+        profile: '',
+        elevator_pitch: '',
+        prerequisite_knowledge: '',
+        audience_takeaway: '',
+        track: '',
+        language: '',
+        languageOfPresentationMaterial: '',
+        description: '',
+        room: '',
+        start: '',
+        end: '',
+        abstract: '',
+        choiceReason: '',
+        requiredKnowledge: '',
+        audienceExperiment: '',
+        avatar: '',
+        startTime: '',
       },
       lunchSessionInfo: {
         startTime: '',
@@ -289,9 +309,12 @@ export default {
 
       const keynoteInfo = this.getSpecialSessionInfo(this.targetDay, 'keynote')
       if (keynoteInfo && keynoteInfo.length >= 1) {
+        // ToDo. keynoteに発表者情報が入ったら、317行目のspeakersは削除
         this.keynoteInfo = {
           startTime: this.$dayjs(keynoteInfo[0].start).format('HH:mm'),
           title: keynoteInfo[0].title,
+          ...keynoteInfo[0],
+          speakers: [{ code: '', name: '', biography: '', avatar: null }],
         }
       }
 
@@ -357,7 +380,6 @@ export default {
         this.$router.push(
           this.localePath({ path: `/timetable/?id=${talk.code}` })
         )
-        // const talkInfo = this.getTargetSessionDataById(code)
         this.modalDisplaySessionData = talk
       }
     },

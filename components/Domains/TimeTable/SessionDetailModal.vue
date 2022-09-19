@@ -153,7 +153,11 @@
                   ></div>
 
                   <div
-                    v-if="sessionChoiceReason && sessionChoiceReason != ''"
+                    v-if="
+                      sessionChoiceReason &&
+                      sessionChoiceReason != '' &&
+                      sessionChoiceReason !== 'N/A'
+                    "
                     class="mt-4"
                   >
                     <div class="flex flex-row content-center">
@@ -170,7 +174,9 @@
                   </div>
                   <div
                     v-if="
-                      sessionRequiredKnowledge && sessionRequiredKnowledge != ''
+                      sessionRequiredKnowledge &&
+                      sessionRequiredKnowledge != '' &&
+                      sessionRequiredKnowledge !== 'N/A'
                     "
                     class="mt-4"
                   >
@@ -291,8 +297,8 @@ export default {
       sessionStart: '',
       sessionEnd: '',
       sessionRoom: '',
-      sessionChoiceReason: '',
-      sessionRequiredKnowledge: '',
+      // sessionChoiceReason: '',
+      // sessionRequiredKnowledge: '',
       sessionAudienceExperiment: '',
       sessionAvatar: '',
     }
@@ -436,16 +442,5 @@ ul {
 </style>
 
 <i18n>
-  {
-    "en": {
-      "sessionAbstract": "Elevator Pitch",
-      "requiredKnowledge": "Prerequisite knowledge required from the audience",
-      "knowledgeGained": "Knowledge that the audience can take home"
-    },
-    "ja": {
-      "sessionAbstract": "エレベーターピッチ",
-      "requiredKnowledge": "聴衆に求める前提知識",
-      "knowledgeGained": "聴衆が持ち帰ることができるもの"
-    }
-  }
-  </i18n>
+  {  }
+</i18n>

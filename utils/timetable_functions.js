@@ -53,6 +53,17 @@ export function filterTalkList(talkList) {
   })
 }
 
+/* スピーカーリストからCODEとavatarだけ返す */
+// export function filterSpeakerList(speakerList) {
+//   return speakerList.map((speaker) => {
+//     return {
+//       code: speaker.code,
+//       name: speaker.name,
+//       avatar: speaker.avatar,
+//     }
+//   })
+// }
+
 export async function getAllTalkList(token) {
   const params = {
     state: 'confirmed',
@@ -80,3 +91,31 @@ export async function getAllTalkList(token) {
   }
   return talkList
 }
+
+// export async function getAllSpeakerList(token) {
+//   const params = {
+//     state: 'confirmed',
+//   }
+//   let speakerList = []
+//   let tmpResult = await axios.get(
+//     'https://pretalx.com/api/events/pyconjp2022/speakers/',
+//     {
+//       params,
+//       headers: {
+//         Authorization: `Token ${token}`,
+//       },
+//     }
+//   )
+//   // console.log(tmpResult)
+//   speakerList = speakerList.concat(tmpResult.data.results)
+//   while (tmpResult.data.next !== null) {
+//     tmpResult = await axios.get(tmpResult.data.next, {
+//       params,
+//       headers: {
+//         Authorization: `Token ${token}`,
+//       },
+//     })
+//     speakerList = speakerList.concat(tmpResult.data.results)
+//   }
+//   return speakerList
+// }
