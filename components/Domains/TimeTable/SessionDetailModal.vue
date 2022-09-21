@@ -18,19 +18,25 @@
                 <div class="font-bold leading-7 lg:leading-8">
                   {{ speakerName }}
                 </div>
-                <div class="flex flex-row content-center mt-2">
-                  <img
-                    class="self-center mr-2 lg:h-full h-4/5 filter-tartiary-600"
-                    src="@/assets/images/icons/calendar.svg"
-                    alt="calendar-icon"
-                  />
-                  <div>{{ sessionStart }} - {{ sessionEnd }} (Asia/Tokyo)</div>
-                  <img
-                    class="self-center ml-2 mr-2 lg:h-full h-4/5 filter-tartiary-600"
-                    src="@/assets/images/icons/location-marker.svg"
-                    alt="location-icon"
-                  />
-                  <div>{{ sessionRoom }}</div>
+                <div class="flex flex-col content-center mt-2 lg:flex-row">
+                  <div class="flex flex-row lg:mr-8">
+                    <img
+                      class="self-center mr-2 lg:h-full h-4/5 filter-tartiary-600"
+                      src="@/assets/images/icons/calendar.svg"
+                      alt="calendar-icon"
+                    />
+                    <div class="lg:whitespace-nowrap">
+                      {{ sessionStart }} - {{ sessionEnd }} (Asia/Tokyo)
+                    </div>
+                  </div>
+                  <div class="flex flex-row">
+                    <img
+                      class="self-center mr-2 lg:h-full h-4/5 filter-tartiary-600"
+                      src="@/assets/images/icons/location-marker.svg"
+                      alt="location-icon"
+                    />
+                    <div>{{ sessionRoom }}</div>
+                  </div>
                 </div>
                 <div class="mt-2">
                   <!-- 発表言語 -->
@@ -132,7 +138,7 @@
             <!--閉じるボタン-->
             <div class="relative w-1/12" @click.stop="$emit('close')">
               <div
-                class="cursor-pointer close hover:bg-gray-100 lg:top-6 -top-12 -left-5 lg:left-2"
+                class="cursor-pointer close hover:bg-gray-100 lg:top-6 top-1 -left-5 lg:left-2"
               >
                 <img
                   class="h-3/5"
@@ -245,7 +251,7 @@
                 <div v-if="sessionAvatar" class="mr-8">
                   <!--avatar-->
                   <img
-                    class="w-32 min-w-[128px] max-w-[128px]"
+                    class="w-20 lg:w-32 lg:min-w-[128px] lg:max-w-[128px] min-w-[80px]"
                     :src="sessionAvatar"
                     alt="avatar"
                   />
@@ -471,6 +477,7 @@ ul {
 }
 .section_icon {
   width: 20px;
+  min-width: 20px;
   height: 20px;
   background-image: url('@/assets/images/icons/title-point.svg');
 }
