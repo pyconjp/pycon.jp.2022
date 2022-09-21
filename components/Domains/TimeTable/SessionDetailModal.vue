@@ -72,11 +72,6 @@
                         'filter-blue-green': youtubeLink !== '',
                         'filter-gray': youtubeLink === '',
                       }"
-                    /> -->
-                    <img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/video.svg"
-                      alt="video-icon"
                     />
                     <p
                       class="ml-2 text-xl font-normal"
@@ -84,9 +79,13 @@
                         'text-blue-green': youtubeLink !== '',
                         'text-gray-500': youtubeLink === '',
                       }"
-                    >
-                      Video
-                    </p>
+                    > -->
+                    <img
+                      class="self-center lg:h-full h-4/5 filter-gray"
+                      src="@/assets/images/icons/video.svg"
+                      alt="video-icon"
+                    />
+                    <p class="ml-2 text-xl font-normal text-gray-500">Video</p>
                     <!-- </outer-link> -->
                   </div>
                   <!--スライド-->
@@ -105,11 +104,6 @@
                         'filter-blue-green': documentLink !== '',
                         'filter-gray': documentLink === '',
                       }"
-                    /> -->
-                    <img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/documents.svg"
-                      alt="documents-icon"
                     />
                     <div
                       class="ml-2 text-xl font-normal whitespace-nowrap"
@@ -117,6 +111,14 @@
                         'text-blue-green': documentLink !== '',
                         'text-gray-500': documentLink === '',
                       }"
+                    > -->
+                    <img
+                      class="self-center lg:h-full h-4/5 filter-gray"
+                      src="@/assets/images/icons/documents.svg"
+                      alt="documents-icon"
+                    />
+                    <div
+                      class="ml-2 text-xl font-normal text-gray-500 whitespace-nowrap"
                     >
                       Document (<span v-if="langOfSlide === 'Japanese only'"
                         >日本語</span
@@ -242,7 +244,11 @@
               <div class="flex flex-row mt-4">
                 <div v-if="sessionAvatar" class="mr-8">
                   <!--avatar-->
-                  <img class="w-32" :src="sessionAvatar" alt="avatar" />
+                  <img
+                    class="w-32 min-w-[128px] max-w-[128px]"
+                    :src="sessionAvatar"
+                    alt="avatar"
+                  />
                 </div>
                 <div>
                   <p
@@ -307,8 +313,8 @@ export default {
       sessionTitle: '',
       speakerName: '',
       speakerProfile: '',
-      youtubeLink: '',
-      documentLink: '',
+      // youtubeLink: '',
+      // documentLink: '',
       sessionAbstract: '',
       prerequisiteKnowledge: '',
       track: '',
@@ -347,8 +353,8 @@ export default {
     this.langOfTalk = this.sessionData.language
     this.langOfSlide = this.sessionData.languageOfPresentationMaterial
     this.sessionDescription = this.sessionData.description
-    this.youtubeLink = this.sessionData.recording_url
-    this.documentLink = this.sessionData.slide_url
+    // this.youtubeLink = this.sessionData.recording_url
+    // this.documentLink = this.sessionData.slide_url
     this.sessionStart = moment(this.sessionData.start).format('MMM DD h:mm a')
     this.sessionEnd = moment(this.sessionData.end).format('h:mm a')
     this.sessionRoom = this.sessionData.room
@@ -449,6 +455,17 @@ ul {
         text-decoration: underline;
         color: #1097aa;
       }
+    }
+    pre {
+      font-family: Fira Code;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      color: #3d3b45;
+      background: #efeff1;
+      padding: 16px;
+      margin: 8px;
     }
   }
 }
