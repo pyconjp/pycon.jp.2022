@@ -56,14 +56,15 @@
                 </div>
                 <div class="flex flex-row content-center mt-4">
                   <!-- Youtube -->
-                  <outer-link
+                  <!-- <outer-link
                     :to="youtubeLink"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="flex mr-8 hover:opacity-70"
                     :class="{ 'pointer-events-none': youtubeLink === '' }"
-                  >
-                    <img
+                  > -->
+                  <div class="flex mr-8 pointer-events-none">
+                    <!-- <img
                       class="self-center lg:h-full h-4/5"
                       src="@/assets/images/icons/video.svg"
                       alt="video-icon"
@@ -71,6 +72,11 @@
                         'filter-blue-green': youtubeLink !== '',
                         'filter-gray': youtubeLink === '',
                       }"
+                    /> -->
+                    <img
+                      class="self-center lg:h-full h-4/5 filter-gray"
+                      src="@/assets/images/icons/video.svg"
+                      alt="video-icon"
                     />
                     <p
                       class="ml-2 text-xl font-normal"
@@ -81,9 +87,11 @@
                     >
                       Video
                     </p>
-                  </outer-link>
+                    <!-- </outer-link> -->
+                  </div>
                   <!--スライド-->
-                  <outer-link
+                  <div class="flex mr-8 pointer-events-none">
+                    <!-- <outer-link
                     :to="documentLink"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -97,6 +105,11 @@
                         'filter-blue-green': documentLink !== '',
                         'filter-gray': documentLink === '',
                       }"
+                    /> -->
+                    <img
+                      class="self-center lg:h-full h-4/5 filter-gray"
+                      src="@/assets/images/icons/documents.svg"
+                      alt="documents-icon"
                     />
                     <div
                       class="ml-2 text-xl font-normal whitespace-nowrap"
@@ -109,7 +122,8 @@
                         >日本語</span
                       ><span v-else>English</span>)
                     </div>
-                  </outer-link>
+                    <!-- </outer-link> -->
+                  </div>
                 </div>
               </div>
             </div>
