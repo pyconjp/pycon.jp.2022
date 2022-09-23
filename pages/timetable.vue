@@ -5,21 +5,6 @@
       subtitle="タイムテーブル"
     />
     <div class="pt-12 bg-tertiary-100">
-      <!-- TODO: 一時的にpretalxのリンクを載せる -->
-      <!-- <div class="flex justify-center w-full mb-8">
-        <news-card-base
-          :primary="false"
-          :title="$t('title').toString()"
-          :description="$t('description').toString()"
-          url="https://pretalx.com/pyconjp2022/schedule/"
-          class="block w-10/12"
-        >
-          <template #icon>
-            <SpeakerphoneIcon :class="'h-9 w-9 mr-4 text-secondary-400'" />
-          </template>
-        </news-card-base>
-      </div> -->
-
       <div class="flex justify-center w-full">
         <time-table
           ref="child"
@@ -29,7 +14,7 @@
         ></time-table>
       </div>
 
-      <div class="w-10/12 lg:text-base text-xs mx-auto mt-4 text-tertiary-600">
+      <div class="w-10/12 mx-auto mt-4 text-xs lg:text-base text-tertiary-600">
         {{ $t('annotation') }}
       </div>
 
@@ -44,19 +29,15 @@
 </template>
 
 <script>
-// import { SpeakerphoneIcon } from '@vue-hero-icons/solid'
 import { filterTalkList, getAllTalkList } from '../utils/timetable_functions'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
-// import NewsCardBase from '@/components/Elements/NewsCardBase'
 
 export default {
   name: 'TimeTablePage',
   components: {
     SubpageHeroSection,
     TimeTable,
-    // NewsCardBase,
-    // SpeakerphoneIcon,
   },
   async asyncData({ $config }) {
     const allTalkList = await getAllTalkList($config.pretalxAuthKey)
