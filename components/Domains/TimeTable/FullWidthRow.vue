@@ -1,5 +1,9 @@
 <template>
-  <div class="relative w-full rounded shadow-sm" :style="bgStyleObject">
+  <div
+    class="relative w-full rounded shadow-sm"
+    :style="bgStyleObject"
+    @click="clickSessionModal(dataInfo)"
+  >
     <div class="flex items-center justify-center w-full h-12">
       <img
         class="w-6"
@@ -7,13 +11,13 @@
         alt="timetable section snake"
       />
       <p class="ml-2 font-bold font-noto" :style="textStyleObject">
-        {{ title }}
+        {{ dataInfo.title }}
       </p>
     </div>
     <p
       class="absolute -top-8 left-0 lg:top-0 lg:-left-[42px] font-noto font-medium"
     >
-      {{ time }}
+      {{ dataInfo.startTime }}
     </p>
   </div>
 </template>
@@ -38,6 +42,23 @@ export default {
       type: String,
       default: '',
     },
+    handleModal: {
+      type: Function,
+      required: true,
+    },
+    dataInfo: {
+      type: Object,
+      default() {
+        return {
+          title: '',
+          startTime: '',
+          speakers: [{ code: '', name: '', biography: '', avatar: '' }],
+          track: '',
+          start: '',
+          room: '',
+        }
+      },
+    },
   },
   data() {
     return {
@@ -48,6 +69,13 @@ export default {
         color: this.textColor,
       },
     }
+  },
+  methods: {
+    clickSessionModal(dataInfo) {
+      if (dataInfo.room) {
+        this.handleModal(dataInfo)
+      }
+    },
   },
 }
 </script>

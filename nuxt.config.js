@@ -101,6 +101,7 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
     '@nuxtjs/dayjs',
+    '@nuxtjs/markdownit',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -144,6 +145,9 @@ export default {
     vueI18n: {
       silentTranslationWarn: true,
     },
+  },
+  markdownit: {
+    runtime: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
