@@ -11,6 +11,8 @@
           class="w-10/12"
           refs="chlid"
           :talk-list="talkList"
+          :videos="videos"
+          :documents="documents"
         ></time-table>
       </div>
 
@@ -29,7 +31,8 @@
 </template>
 
 <script>
-import { filterTalkList, getAllTalkList } from '../utils/timetable_functions'
+import { filterTalkList, getAllTalkList } from '@/utils/timetable_functions'
+import mixinVideoDocuments from '@/utils/mixin_video_documents'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
 
@@ -39,6 +42,7 @@ export default {
     SubpageHeroSection,
     TimeTable,
   },
+  mixins: [mixinVideoDocuments],
   async asyncData({ $config }) {
     const allTalkList = await getAllTalkList($config.pretalxAuthKey)
     return {

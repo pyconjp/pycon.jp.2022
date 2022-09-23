@@ -138,6 +138,8 @@
     <SessionDetailModal
       v-if="isModal"
       :session-data="modalDisplaySessionData"
+      :videos="videos"
+      :documents="documents"
       @close="closeSessionModal"
     ></SessionDetailModal>
   </div>
@@ -176,6 +178,18 @@ export default {
       type: Array,
       default() {
         return []
+      },
+    },
+    videos: {
+      type: Object,
+      default() {
+        return {}
+      },
+    },
+    documents: {
+      type: Object,
+      default() {
+        return {}
       },
     },
   },
