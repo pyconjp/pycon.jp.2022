@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     return {
-      title: 'pycon.jp.2022',
+      title: 'PyCon JP 2022',
       htmlAttrs: {
         lang: 'en',
       },

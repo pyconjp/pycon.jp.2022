@@ -153,7 +153,7 @@ import SessionDetailModal from '@/components/Domains/TimeTable/SessionDetailModa
 const fullConfig = resolveConfig(tailwindConfig)
 const specialSessionCode = {
   opening: ['QS8ZYM', 'V9SGFS'],
-  keynote: ['HFEB37', 'TLNEJQ'],
+  keynote: ['TLNEJQ', 'HFEB37'],
   closing: ['AUNGB9', 'UQP9YT'],
   coffeeBreak: ['EB87SG', 'UD8FLV'],
   lunchSession: ['S3DU8Z', 'NHY3TK'],

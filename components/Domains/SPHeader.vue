@@ -6,7 +6,7 @@
     }"
   >
     <div
-      class="relative flex flex-row items-center w-full h-full"
+      class="relative flex flex-row items-center w-full h-full font-noto"
       :class="isSPHeaderOpen ? 'justify-center' : 'justify-start'"
     >
       <div v-if="!isSPHeaderOpen" class="flex flex-row items-center">
@@ -43,6 +43,9 @@
                   :to="localePath(child.link)"
                   @click.native="isSPHeaderOpen = false"
                 >
+                  {{ $t(child.title) }}
+                </nuxt-link>
+                <nuxt-link v-else-if="child.disable" to="#" class="opacity-50">
                   {{ $t(child.title) }}
                 </nuxt-link>
                 <outer-link v-else :to="$t(child.link)">
@@ -210,7 +213,6 @@ export default {
 }
 
 .sp-header-section div {
-  font-family: 'Noto Sans JP';
   font-size: 14px;
   font-weight: 500;
   margin-top: 14px;
@@ -225,7 +227,6 @@ a {
 }
 
 .sp-header-section div:nth-of-type(1) {
-  font-family: 'Noto Sans JP';
   font-size: 14px;
   font-weight: 700;
   margin-top: 0px;
