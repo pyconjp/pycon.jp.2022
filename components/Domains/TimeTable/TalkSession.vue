@@ -1,5 +1,8 @@
 <template>
-  <div class="flex lg:p-4 bg-white rounded lg:min-h-[180px]">
+  <div
+    class="flex lg:p-4 bg-white cursor-pointer rounded lg:min-h-[180px]"
+    @click="clickSessionModal(talk)"
+  >
     <div
       v-if="!$device.isDesktop"
       class="flex items-center justify-center w-1/3 bg-tertiary-200"
@@ -79,6 +82,15 @@ export default {
           room: '',
         }
       },
+    },
+    handleModal: {
+      type: Function,
+      required: true,
+    },
+  },
+  methods: {
+    clickSessionModal(talk) {
+      this.handleModal(talk)
     },
   },
 }

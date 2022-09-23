@@ -55,26 +55,18 @@
           </template>
         </div>
 
-        <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
-        <!--          <div class="conference-timetable font-noto">タイムテーブル詳細</div>-->
-        <!--          <img src="@/assets/images/right_allow.svg" />-->
-        <!--          </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="flex flex-col items-center mt-10">-->
-        <!--          <img-->
-        <!--            src="@/assets/images/conference_vector.svg"-->
-        <!--            alt="Keynote vector"-->
-        <!--            class="conference-small-vector"-->
-        <!--          />-->
-        <!--          <div class="mt-10"></div>-->
-        <!--          <div class="conference-label font-noto">Documents</div>-->
-        <!--          <div class="mt-1 conference-description font-noto">当日配布物</div>-->
-        <!--        </div>-->
-
-        <!--        <div class="flex flex-col items-center mt-10">-->
-        <!--          <img src="@/assets/images/documents.svg" />-->
-        <!--        </div>-->
+        <div class="mt-12 flex lg:w-full lg:items-end flex-col">
+          <nuxt-link :to="localePath('/timetable')">
+            <div class="px-9 py-3 bg-tertiary-50 text-primary-700 rounded">
+              <div
+                class="font-noto underline text-xl font-bold lg:text-left text-center"
+              >
+                {{ $t('timetable') }}
+                <ArrowNarrowRightIcon class="inline w-6 h-6 my-auto" />
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
       </div>
       <div class="mt-10 snake-face-base">
         <!--snake face-->
@@ -85,6 +77,7 @@
 </template>
 
 <script>
+import { ArrowNarrowRightIcon } from '@vue-hero-icons/solid'
 import SectionTitle from '@/components/Elements/SectionTitle'
 
 const KEYNOTE_INFO = {
@@ -100,6 +93,7 @@ export default {
   name: 'ConferenceSection',
   components: {
     SectionTitle,
+    ArrowNarrowRightIcon,
   },
   data: () => ({ keynote_info: KEYNOTE_INFO }),
 }
@@ -184,7 +178,6 @@ export default {
 }
 </style>
 
-<!-- ↓JSONフォーマットです -->
 <i18n>
 {
   "en": {
@@ -199,7 +192,8 @@ export default {
       "name": "Hiromu Nishiuchi",
       "title": "",
       "desc": "After working as an Assistant Professor in the Department of Medical Communication at the University of Tokyo Graduate School of Medicine, Deputy Director of the University Hospital Medical Information Network Research Center, and a visiting researcher at Dana-Farber/Harvard Cancer Research Center, he founded Data Vehicle, Inc. in November 2014. He is engaged in the development and sales of extended analytics tools such as \"dataDiver,\" utilizing his own expertise, as well as supporting public and private sector data utilization projects. His publications include the \"Statistics is the Strongest Study\" series, which has sold over 500,000 copies, and \"Statistics Will Save Japan\" (Chuokoron Shinsha). He is also a member of the Advisory Board of EBPM (Evidence Based Policy Making) of the Cabinet Office since 2020."
-    }
+    },
+    "timetable": "Timetable"
   },
   "ja": {
     "keynote1": {
@@ -213,7 +207,8 @@ export default {
       "name": "西内 啓 / Hiromu Nishiuchi",
       "title": "",
       "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。"
-    }
+    },
+    "timetable": "タイムテーブル詳細"
   }
 }
 </i18n>

@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 z-50 px-5 py-3 bg-white shadow-md header">
+  <nav class="sticky top-0 z-20 px-5 py-3 bg-white shadow-md header">
     <div class="flex flex-nowrap">
       <div class="my-auto">
         <nuxt-link to="/">
