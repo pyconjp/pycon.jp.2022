@@ -55,26 +55,18 @@
           </template>
         </div>
 
-        <!--        <div class="mt-10 mr-auto conference-frame-timetable lg:mr-0">-->
-        <!--          <div class="conference-timetable font-noto">タイムテーブル詳細</div>-->
-        <!--          <img src="@/assets/images/right_allow.svg" />-->
-        <!--          </div>-->
-        <!--        </div>-->
-
-        <!--        <div class="flex flex-col items-center mt-10">-->
-        <!--          <img-->
-        <!--            src="@/assets/images/conference_vector.svg"-->
-        <!--            alt="Keynote vector"-->
-        <!--            class="conference-small-vector"-->
-        <!--          />-->
-        <!--          <div class="mt-10"></div>-->
-        <!--          <div class="conference-label font-noto">Documents</div>-->
-        <!--          <div class="mt-1 conference-description font-noto">当日配布物</div>-->
-        <!--        </div>-->
-
-        <!--        <div class="flex flex-col items-center mt-10">-->
-        <!--          <img src="@/assets/images/documents.svg" />-->
-        <!--        </div>-->
+        <div class="mt-12 flex lg:w-full lg:items-end flex-col">
+          <nuxt-link :to="localePath('/timetable')">
+            <div class="px-9 py-3 bg-tertiary-50 text-primary-700 rounded">
+              <div
+                class="font-noto underline text-xl font-bold lg:text-left text-center"
+              >
+                {{ $t('timetable') }}
+                <ArrowNarrowRightIcon class="inline w-6 h-6 my-auto" />
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
       </div>
       <div class="mt-10 snake-face-base">
         <!--snake face-->
@@ -85,6 +77,7 @@
 </template>
 
 <script>
+import { ArrowNarrowRightIcon } from '@vue-hero-icons/solid'
 import SectionTitle from '@/components/Elements/SectionTitle'
 
 const KEYNOTE_INFO = {
@@ -100,6 +93,7 @@ export default {
   name: 'ConferenceSection',
   components: {
     SectionTitle,
+    ArrowNarrowRightIcon,
   },
   data: () => ({ keynote_info: KEYNOTE_INFO }),
 }
@@ -184,7 +178,6 @@ export default {
 }
 </style>
 
-<!-- ↓JSONフォーマットです -->
 <i18n>
 {
   "en": {
@@ -199,7 +192,8 @@ export default {
       "name": "Mark Shannon",
       "title": "",
       "desc": "I've been using Python since 2005, and have been contributing to CPython since 2010.<br/>After a long interlude working on static analysis tools, I have returned to working on speeding up Python over the last couple of years.<br/>My academic and commercial work is focused on compilers, virtual machines and static analysis for Python.My PhD was on building virtual machines for dynamic languages.I am the author of various PEPs including 412, 590, 626 and 659.<br/>I am currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
-    }
+    },
+    "timetable": "Timetable"
   },
   "ja": {
     "keynote1": {
@@ -213,7 +207,8 @@ export default {
       "name": "Mark Shannon",
       "title": "",
       "desc": "2005年からPythonを使い始め、2010年からCPythonにコントリビュートしています。<br/>静的解析ツールの開発に長い間携わっていた後、ここ数年はPythonの高速化に取り組んでいます。<br/>私の学術的および商業的な研究は、Pythonのコンパイラ、仮想マシン、静的解析に重点を置いています。私の博士号は、動的言語用の仮想マシンの構築に関するものでした。412, 590, 626, 659 など、さまざまな PEP の著者でもあります。<br/>現在は、Microsoftの資金提供による \"Faster CPython\"チームの技術リーダーとして働いています。"
-    }
+    },
+    "timetable": "タイムテーブル詳細"
   }
 }
 </i18n>

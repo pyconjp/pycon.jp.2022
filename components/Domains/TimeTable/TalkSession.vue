@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex lg:p-4 bg-white rounded lg:min-h-[180px]"
+    class="flex lg:p-4 bg-white cursor-pointer rounded lg:min-h-[180px]"
     @click="clickSessionModal(talk)"
   >
     <div
