@@ -56,9 +56,7 @@ export default {
       const randomCommunity =
         this.communities[Math.floor(Math.random() * this.communities.length)]
       this.$router.push(
-        (this.$i18n.locale === 'en' ? '/en/' : '') +
-          '/contents/communities/' +
-          randomCommunity.slug
+        this.localePath('/contents/communities/' + randomCommunity.slug)
       )
     }
   },
