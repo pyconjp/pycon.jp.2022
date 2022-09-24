@@ -101,6 +101,7 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
     '@nuxtjs/dayjs',
+    '@nuxtjs/markdownit',
   ],
   generate: {
     async routes() {
@@ -151,6 +152,9 @@ export default {
     vueI18n: {
       silentTranslationWarn: true,
     },
+  },
+  markdownit: {
+    runtime: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
