@@ -4,8 +4,8 @@
       :title="['CONTENTS FOR', 'BEGINNERS']"
       subtitle="初学者向けコンテンツ"
     />
-    <div class="component-border-top bg-secondary-400">
-      <div class="mt-12">
+    <div class="bg-secondary-400">
+      <div class="pt-12">
         <img
           src="@/assets/images/conference_vector.svg"
           alt="separator"
