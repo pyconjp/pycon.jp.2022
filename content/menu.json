@@ -57,6 +57,11 @@
             "title": "common.menu.contents.communities",
             "link": "/contents/communities",
             "innerlink": true
+          },
+          {
+            "title": "common.menu.contents.beginners",
+            "link": "/contents/beginners",
+            "innerlink": true
           }
         ]
   },

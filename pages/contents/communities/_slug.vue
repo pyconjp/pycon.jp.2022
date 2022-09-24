@@ -24,7 +24,7 @@
         class="w-10/12 flex mx-auto gap-6 mb-4 lg:flex-row flex-col-reverse"
       >
         <community-menu :communities="communities" class="lg:w-[280px]" />
-        <community-body :community="current" class="flex-1" />
+        <content-body :document="current" class="flex-1" />
       </div>
 
       <div class="snake-face-base">
@@ -36,11 +36,11 @@
 
 <script>
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
-import CommunityMenu from '@/components/Domains/CommunityPage/CommunityMenu'
-import CommunityBody from '@/components/Domains/CommunityPage/CommunityBody'
+import CommunityMenu from '@/components/Domains/Content/CommunityMenu'
+import ContentBody from '~/components/Domains/Content/ContentBody'
 
 export default {
-  components: { CommunityBody, CommunityMenu, SubpageHeroSection },
+  components: { ContentBody, CommunityMenu, SubpageHeroSection },
   async asyncData({ $content, params }) {
     const slug = params.slug
     const communities = await $content('communities').fetch()
