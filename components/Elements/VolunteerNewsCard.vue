@@ -38,13 +38,13 @@ export default {
 {
   "ja": {
     "title": "スタッフ募集",
-    "description": "PyCon JP 2022では、一緒にイベントを創り上げるボランティアスタッフを募集しています",
-    "url": "https://pyconjp.blogspot.com/2022/02/pycon-jp-2022.html"
+    "description": "PyCon JP 2022では、一緒にイベントを創り上げる当日スタッフを募集しています",
+    "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-conf-day-of-staff.html"
   },
   "en": {
     "title": "Volunteers wanted!",
-    "description": "PyCon JP 2022 is looking for volunteers to help create the event together!",
-    "url": "https://pyconjp.blogspot.com/2022/02/pycon-jp-2022.html"
+    "description": "PyCon JP 2022 is looking for conference day of staff volunteers to help create the event together!",
+    "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-conf-day-of-staff.html"
   }
 }
 </i18n>
