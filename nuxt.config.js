@@ -103,6 +103,13 @@ export default {
     '@nuxtjs/dayjs',
     '@nuxtjs/markdownit',
   ],
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('communities').only(['slug']).fetch()
+      return files.map((file) => 'contents/communities/' + file.slug)
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
