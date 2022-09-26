@@ -192,7 +192,7 @@ export default {
   },
   "en": {
     "title": "Sponsors wanted!",
-    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, June 14 2022 - Saturday, September 16 2022 11:59:59PM JST. We look forward to receiving applications from companies that want to appeal to the Python community!",
+    "description": "Sponsorships for PyCon JP 2022 are now being accepted, with the second call for applications being accepted from Tuesday, June 14 2022 - Saturday, September 16 2022 11:59:59PM JST. We look forward to receiving applications from companies that want to appeal to the Python communities!",
     "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
     "link": "Sponsorship Application Form"
   }
