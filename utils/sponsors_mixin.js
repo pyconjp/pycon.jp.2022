@@ -9,6 +9,7 @@ export default {
       medias: [],
       venues: [],
       patrons: [],
+      psfs: [],
     }
   },
   async fetch() {
@@ -25,6 +26,7 @@ export default {
       let md = 0
       let ve = 0
       let pt = 0
+      let cnt_psf = 0
       this.sponsors.body.sort((a, b) => a.order - b.order)
       for (let i = 0; i < this.sponsors.body.length; i++) {
         const sponsorRow = this.sponsors.body[i]
@@ -54,6 +56,9 @@ export default {
         } else if (sponsorRow.sponsor_type === 'Patron') {
           // パトロンスポンサー
           this.patrons[pt++] = hashi18n
+        } else if (sponsorRow.sponsor_type === 'PSF') {
+          // PSF
+          this.psfs[cnt_psf++] = hashi18n
         }
       }
     },
