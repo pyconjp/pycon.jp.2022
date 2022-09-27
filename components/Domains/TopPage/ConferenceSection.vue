@@ -185,7 +185,7 @@ export default {
       "date": "OCTOBER 14 2022 10:30AM -",
       "name": "Mark Shannon",
       "title": "",
-      "desc": "Mark has been using Python since 2005, and has been contributing to CPython since 2010. After a long interlude working on static analysis tools, he has returned to working on speeding up Python over the last couple of years. His academic and commercial work is focused on compilers, virtual machines and static analysis for Python. His PhD was on building virtual machines for dynamic languages. He is the author of various PEPs including 412, 590, 626 and 659. <br/>Mark is currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
+      "desc": "Mark has been using Python since 2005, and has been contributing to CPython since 2010. After a long interlude working on static analysis tools, he has returned to working on speeding up Python over the last couple of years. His academic and commercial work is focused on compilers, virtual machines and static analysis for Python. His Ph.D. was on building virtual machines for dynamic languages. He is the author of various PEPs including 412, 590, 626 and 659. <br/>Mark is currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
     },
     "keynote2": {
       "date": "OCTOBER 15 2022 10:30AM -",
