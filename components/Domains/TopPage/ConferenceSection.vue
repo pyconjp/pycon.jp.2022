@@ -185,7 +185,7 @@ export default {
       "date": "OCTOBER 14 2022 10:30AM -",
       "name": "Mark Shannon",
       "title": "",
-      "desc": "I've been using Python since 2005, and have been contributing to CPython since 2010.<br/>After a long interlude working on static analysis tools, I have returned to working on speeding up Python over the last couple of years.<br/>My academic and commercial work is focused on compilers, virtual machines and static analysis for Python.My PhD was on building virtual machines for dynamic languages.I am the author of various PEPs including 412, 590, 626 and 659.<br/>I am currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
+      "desc": "Mark has been using Python since 2005, and has been contributing to CPython since 2010. After a long interlude working on static analysis tools, he has returned to working on speeding up Python over the last couple of years. His academic and commercial work is focused on compilers, virtual machines and static analysis for Python. His Ph.D. was on building virtual machines for dynamic languages. He is the author of various PEPs including 412, 590, 626 and 659. <br/>Mark is currently working as the technical lead of the \"Faster CPython\" team funded by Microsoft."
     },
     "keynote2": {
       "date": "OCTOBER 15 2022 10:30AM -",
@@ -200,7 +200,7 @@ export default {
       "date": "2022.10.14 10:30 -",
       "name": "Mark Shannon",
       "title": "",
-      "desc": "2005年からPythonを使い始め、2010年からCPythonにコントリビュートしています。<br/>静的解析ツールの開発に長い間携わっていた後、ここ数年はPythonの高速化に取り組んでいます。<br/>私の学術的および商業的な研究は、Pythonのコンパイラ、仮想マシン、静的解析に重点を置いています。私の博士号は、動的言語用の仮想マシンの構築に関するものでした。412, 590, 626, 659 など、さまざまな PEP の著者でもあります。<br/>現在は、Microsoftの資金提供による \"Faster CPython\"チームの技術リーダーとして働いています。"
+      "desc": "2005年からPythonを使い始め、2010年からCPythonにコントリビュートしています。静的解析ツールの開発に長い間携わっていた後、ここ数年はPythonの高速化に取り組んでいます。彼の学術的および商業的な研究は、Pythonのコンパイラ、仮想マシン、静的解析に重点を置いています。博士号は、動的言語用の仮想マシンの構築に関するもので、412, 590, 626, 659 など、さまざまな PEP の著者でもあります。<br/>現在は、Microsoftの資金提供による \"Faster CPython\"チームの技術リーダーとして働いています。"
     },
     "keynote2": {
       "date": "2022.10.15 10:30 -",
