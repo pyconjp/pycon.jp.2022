@@ -138,8 +138,7 @@
     <SessionDetailModal
       v-if="isModal"
       :session-data="modalDisplaySessionData"
-      :videos="videos"
-      :documents="documents"
+      :approval-data="approvalData"
       @close="closeSessionModal"
     ></SessionDetailModal>
   </div>
@@ -180,18 +179,18 @@ export default {
         return []
       },
     },
-    videos: {
+    approvalData: {
       type: Object,
       default() {
         return {}
       },
     },
-    documents: {
-      type: Object,
-      default() {
-        return {}
-      },
-    },
+    // documents: {
+    //   type: Object,
+    //   default() {
+    //     return {}
+    //   },
+    // },
   },
   data() {
     return {

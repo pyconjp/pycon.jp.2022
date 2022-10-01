@@ -11,8 +11,7 @@
           class="w-10/12"
           refs="chlid"
           :talk-list="talkList"
-          :videos="videos"
-          :documents="documents"
+          :approval-data="approvalData"
         ></time-table>
       </div>
 

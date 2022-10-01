@@ -62,60 +62,64 @@
                 </div>
                 <div class="flex flex-row content-center mt-4">
                   <!-- Youtube -->
-                  <outer-link
-                    :to="youtubeLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex mr-8 hover:opacity-70"
-                    :class="{ 'pointer-events-none': youtubeLink === '' }"
-                  >
-                    <img
-                      class="self-center lg:h-full h-4/5"
-                      src="@/assets/images/icons/video.svg"
-                      alt="video-icon"
-                      :class="{
-                        'filter-blue-green': youtubeLink !== '',
-                        'filter-gray': youtubeLink === '',
-                      }"
-                    />
-                    <p
-                      class="ml-2 text-xl font-normal"
-                      :class="{
-                        'text-blue-green': youtubeLink !== '',
-                        'text-gray-500': youtubeLink === '',
-                      }"
+                  <div v-if="showApprovalVideo">
+                    <outer-link
+                      :to="youtubeLink"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex mr-8 hover:opacity-70"
+                      :class="{ 'pointer-events-none': youtubeLink === '' }"
                     >
-                      Video
-                    </p>
-                  </outer-link>
+                      <img
+                        class="self-center lg:h-full h-4/5"
+                        src="@/assets/images/icons/video.svg"
+                        alt="video-icon"
+                        :class="{
+                          'filter-blue-green': youtubeLink !== '',
+                          'filter-gray': youtubeLink === '',
+                        }"
+                      />
+                      <p
+                        class="ml-2 text-xl font-normal"
+                        :class="{
+                          'text-blue-green': youtubeLink !== '',
+                          'text-gray-500': youtubeLink === '',
+                        }"
+                      >
+                        Video
+                      </p>
+                    </outer-link>
+                  </div>
                   <!--スライド-->
-                  <outer-link
-                    :to="documentLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex hover:opacity-70"
-                    :class="{ 'pointer-events-none': documentLink === '' }"
-                    ><img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/documents.svg"
-                      alt="documents-icon"
-                      :class="{
-                        'filter-blue-green': documentLink !== '',
-                        'filter-gray': documentLink === '',
-                      }"
-                    />
-                    <div
-                      class="ml-2 text-xl font-normal whitespace-nowrap"
-                      :class="{
-                        'text-blue-green': documentLink !== '',
-                        'text-gray-500': documentLink === '',
-                      }"
-                    >
-                      Document (<span v-if="langOfSlide === 'Japanese only'"
-                        >日本語</span
-                      ><span v-else>English</span>)
-                    </div>
-                  </outer-link>
+                  <div v-if="showApprovalDoc">
+                    <outer-link
+                      :to="documentLink"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex hover:opacity-70"
+                      :class="{ 'pointer-events-none': documentLink === '' }"
+                      ><img
+                        class="self-center lg:h-full h-4/5 filter-gray"
+                        src="@/assets/images/icons/documents.svg"
+                        alt="documents-icon"
+                        :class="{
+                          'filter-blue-green': documentLink !== '',
+                          'filter-gray': documentLink === '',
+                        }"
+                      />
+                      <div
+                        class="ml-2 text-xl font-normal whitespace-nowrap"
+                        :class="{
+                          'text-blue-green': documentLink !== '',
+                          'text-gray-500': documentLink === '',
+                        }"
+                      >
+                        Document (<span v-if="langOfSlide === 'Japanese only'"
+                          >日本語</span
+                        ><span v-else>English</span>)
+                      </div>
+                    </outer-link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -296,18 +300,18 @@ export default {
         }
       },
     },
-    videos: {
+    approvalData: {
       type: Object,
       default() {
         return {}
       },
     },
-    documents: {
-      type: Object,
-      default() {
-        return {}
-      },
-    },
+    // documents: {
+    //   type: Object,
+    //   default() {
+    //     return {}
+    //   },
+    // },
   },
   data() {
     return {
@@ -317,6 +321,8 @@ export default {
       speakerProfile: '',
       youtubeLink: '',
       documentLink: '',
+      showApprovalVideo: false,
+      showApprovalDoc: false,
       sessionAbstract: '',
       prerequisiteKnowledge: '',
       track: '',
@@ -355,8 +361,10 @@ export default {
     this.langOfTalk = this.sessionData.language
     this.langOfSlide = this.sessionData.languageOfPresentationMaterial
     this.sessionDescription = this.sessionData.description
-    this.youtubeLink = this.videos[this.sessionData.code]
-    this.documentLink = this.documents[this.sessionData.code]
+    this.youtubeLink = this.approvalData[this.sessionData.code][0]
+    this.documentLink = this.approvalData[this.sessionData.code][1]
+    this.showApprovalVideo = this.approvalData[this.sessionData.code][2]
+    this.showApprovalDoc = this.approvalData[this.sessionData.code][3]
     this.sessionStart = moment(this.sessionData.start).format('MMM DD h:mm a')
     this.sessionEnd = moment(this.sessionData.end).format('h:mm a')
     this.sessionRoom = this.sessionData.room
