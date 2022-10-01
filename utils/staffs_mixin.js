@@ -2,14 +2,8 @@ export default {
   data() {
     return {
       staffs: [],
-      diamond: [],
-      platinums: [],
-      golds: [],
       day_staffs: [],
-      medias: [],
-      venues: [],
-      patrons: [],
-      psfs: [],
+      noc: [],
     }
   },
   async fetch() {
@@ -19,42 +13,19 @@ export default {
   },
   methods: {
     filter_staffs() {
-      let dm = 0
-      let pl = 0
-      let g = 0
-      let sl = 0
-      let md = 0
-      let ve = 0
-      let pt = 0
+      let noc = 0
+      let day = 0
       this.staffs.body.sort((a, b) => a.order - b.order)
       for (let i = 0; i < this.staffs.body.length; i++) {
         const sponsorRow = this.staffs.body[i]
         const hashi18n = this.split_i18n(sponsorRow)
 
-        if (sponsorRow.staff_type === 'Diamond') {
+        if (sponsorRow.staff_type === 'NOC') {
           // ダイアモンドスポンサー
-          this.diamond[dm++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Platinum') {
-          // プラチナスポンサー
-          this.platinums[pl++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Gold') {
-          // ゴールドスポンサー
-          this.golds[g++] = hashi18n
+          this.noc[noc++] = hashi18n
         } else if (sponsorRow.staff_type === 'Day') {
           // シルバースポンサー
-          this.day_staffs[sl++] = hashi18n
-        } else if (sponsorRow.staff_type === '未確定') {
-          // シルバースポンサー
-          this.day_staffs[sl++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Media') {
-          // 特別スポンサー: メディア
-          this.medias[md++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Venue') {
-          // 特別スポンサー: 会場提供
-          this.venues[ve++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Patron') {
-          // パトロンスポンサー
-          this.patrons[pt++] = hashi18n
+          this.day_staffs[day++] = hashi18n
         }
       }
     },
