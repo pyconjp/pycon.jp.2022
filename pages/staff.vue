@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <!-- スタッフ募集 9/13（1か月前）までシルバースタッフだけ募集予定 -->
+    <!-- スタッフ募集  -->
     <div class="text-center component-border-top bg-primary-500">
       <div
         class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"

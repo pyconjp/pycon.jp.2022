@@ -1,13 +1,22 @@
 <template>
-  <div>
-    <div class="flex flex-col items-center">
-      <div
-        class="items-center w-11/12 mx-auto mt-10 bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-      >
-        <div class="items-center my-24 coc-content">
-          <div class="font-medium font-noto">
-            <p>メンバーをパネルでペタペタするとか</p>
-          </div>
+  <!-- 当日スタッフ -->
+  <div v-if="staffs && silvers && silvers.length > 0">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+      <div v-for="staff in silvers" :key="staff.id" class="flex-1 m-5">
+        <!--会社名-->
+        <div class="mt-2 underline">
+          <outer-link
+            :to="staff[$i18n.locale].twitter"
+            class="text-2xl font-bold font-noto text-primary-700"
+          >
+            {{ staff[$i18n.locale].name }}
+            <img
+              :alt="twitter"
+              class="inline w-6 h-6"
+              data-v-bf323f94=""
+              :src="require('@/assets/images/sns/twitter.svg')"
+            />
+          </outer-link>
         </div>
       </div>
     </div>
@@ -15,13 +24,14 @@
 </template>
 
 <script>
+import OuterLink from '@/components/Elements/OuterLink'
+import staffsMixin from '@/utils/staffs_mixin'
+
 export default {
-  name: 'DayStaffSection',
-  components: {},
-  data() {
-    return {}
+  name: 'DayStaff',
+  components: {
+    OuterLink,
   },
+  mixins: [staffsMixin],
 }
 </script>
-
-<style scoped></style>
