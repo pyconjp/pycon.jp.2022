@@ -306,12 +306,6 @@ export default {
         return {}
       },
     },
-    // documents: {
-    //   type: Object,
-    //   default() {
-    //     return {}
-    //   },
-    // },
   },
   data() {
     return {
