@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 z-50 px-5 py-3 bg-white shadow-md header">
+  <nav class="sticky top-0 z-20 px-5 py-3 bg-white shadow-md header">
     <div class="flex flex-nowrap">
       <div class="my-auto">
         <nuxt-link to="/">
@@ -23,7 +23,7 @@
             </p>
             <div class="arrow-bottom"></div>
             <div
-              class="invisible rounded-md shadow-md child-menu top-7 group-hover:visible"
+              class="invisible rounded-md shadow-md child-menu font-noto top-7 group-hover:visible"
             >
               <div
                 v-for="(child, j) in menu.children"
@@ -31,6 +31,16 @@
                 class="child-menu-record"
               >
                 <nuxt-link v-if="child.innerlink" :to="localePath(child.link)">
+                  <div class="flex w-full pt-2 pb-2 ml-6">
+                    <div class="arrow-right"></div>
+                    <span class="ml-6">{{ $t(child.title) }}</span>
+                  </div>
+                </nuxt-link>
+                <nuxt-link
+                  v-else-if="child.disable"
+                  class="child-menu-record disable-color"
+                  to="#"
+                >
                   <div class="flex w-full pt-2 pb-2 ml-6">
                     <div class="arrow-right"></div>
                     <span class="ml-6">{{ $t(child.title) }}</span>
@@ -161,7 +171,6 @@ export default {
   width: 270px;
   color: white;
   font-size: 15px;
-  font-family: 'Noto Sans JP';
   white-space: normal;
 }
 

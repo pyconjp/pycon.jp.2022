@@ -2,17 +2,17 @@
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
     <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
-      <sponsor-news-card :primary="false" />
+      <volunteer-news-card :primary="false" />
     </div>
     <div
-      class="bg-tertiary-50 w-10/12 lg:w-7/12 mx-auto text-left chipped-card"
+      class="w-10/12 mx-auto text-left bg-tertiary-50 lg:w-7/12 chipped-card"
     >
-      <div class="pt-16 px-14 pb-10 lg:pb-5 text-lg">
+      <div class="pt-16 pb-10 text-lg px-14 lg:pb-5">
         <ul class="space-y-6">
           <li
             v-for="post in posts[$i18n.locale]"
             :key="post.id"
-            class="align-middle lg:inline-flex w-full"
+            class="w-full align-middle lg:inline-flex"
           >
             <span class="text-tertiary-600 mr-4 published flex-[0_0_8rem]">
               {{ post.published }}
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div
-        class="text-center lg:text-right underline text-lg text-primary-700 font-bold pr-8 pb-14"
+        class="pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700 pb-14"
       >
         <outer-link class="more-news" to="https://pyconjp.blogspot.com/">
           {{ $t('more_blogs') }}
@@ -35,7 +35,7 @@
     </div>
 
     <div class="snake-face-base">
-      <div class="snake-face hidden lg:block" />
+      <div class="hidden snake-face lg:block" />
     </div>
   </div>
 </template>
@@ -43,14 +43,14 @@
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
-import SponsorNewsCard from '@/components/Elements/SponsorNewsCard'
+import VolunteerNewsCard from '@/components/Elements/VolunteerNewsCard'
 
 export default {
   name: 'NewsSection',
   components: {
+    VolunteerNewsCard,
     OuterLink,
     SectionTitle,
-    SponsorNewsCard,
   },
   props: {
     posts: {

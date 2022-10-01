@@ -8,48 +8,62 @@
         <div class="flex flex-col gap-5">
           <div v-for="(faq, index) in $t('faq')" :key="index" class="flex-1">
             <div
-              class="question py-5 border-dashed border-b-[1px] border-tertiary-400"
+              class="pb-2 flex lg:flex-row flex-col gap-1 lg:gap-4 border-dashed border-b-[1px] border-tertiary-400"
             >
-              <i18n
-                :path="`faq.${index}.question.text`"
-                tag="span"
-                class="block lg:inline"
-              >
-                <template #link>
-                  <outer-link
-                    :to="$t(`faq.${index}.question.url`).toString()"
-                    class="inline underline text-primary-800"
-                  >
-                    {{ $t(`faq.${index}.question.link`) }}
-                    <component
-                      :is="$t(`faq.${index}.question.icon`).toString()"
-                      class="inline w-4 h-4 mb-2"
-                    />
-                  </outer-link>
-                </template>
-              </i18n>
+              <img
+                src="~/assets/images/faq-question.svg"
+                alt="faq-question-icon"
+                class="w-[36px]"
+              />
+              <div class="flex-1 lg:my-auto">
+                <i18n
+                  :path="`faq.${index}.question.text`"
+                  tag="span"
+                  class="block lg:inline"
+                >
+                  <template #link>
+                    <outer-link
+                      :to="$t(`faq.${index}.question.url`).toString()"
+                      class="inline underline text-primary-800"
+                    >
+                      {{ $t(`faq.${index}.question.link`) }}
+                      <component
+                        :is="$t(`faq.${index}.question.icon`).toString()"
+                        class="inline w-4 h-4 mb-2"
+                      />
+                    </outer-link>
+                  </template>
+                </i18n>
+              </div>
             </div>
             <div
-              class="answer py-5 border-solid border-b-[1px] border-tertiary-400"
+              class="pt-2 pb-5 flex lg:flex-row flex-col gap-1 lg:gap-4 border-solid border-b-[1px] border-tertiary-400"
             >
-              <i18n
-                :path="`faq.${index}.answer.text`"
-                tag="span"
-                class="block lg:inline"
-              >
-                <template #link>
-                  <outer-link
-                    :to="$t(`faq.${index}.answer.url`).toString()"
-                    class="inline underline text-primary-800"
-                  >
-                    {{ $t(`faq.${index}.answer.link`) }}
-                    <component
-                      :is="$t(`faq.${index}.answer.icon`).toString()"
-                      class="inline w-4 h-4 mb-2"
-                    />
-                  </outer-link>
-                </template>
-              </i18n>
+              <img
+                src="~/assets/images/faq-answer.svg"
+                alt="faq-answer-icon"
+                class="w-[36px]"
+              />
+              <div class="flex-1 lg:my-auto">
+                <i18n
+                  :path="`faq.${index}.answer.text`"
+                  tag="span"
+                  class="block lg:inline"
+                >
+                  <template #link>
+                    <outer-link
+                      :to="$t(`faq.${index}.answer.url`).toString()"
+                      class="inline underline text-primary-800"
+                    >
+                      {{ $t(`faq.${index}.answer.link`) }}
+                      <component
+                        :is="$t(`faq.${index}.answer.icon`).toString()"
+                        class="inline w-4 h-4 mb-2"
+                      />
+                    </outer-link>
+                  </template>
+                </i18n>
+              </div>
             </div>
           </div>
         </div>
@@ -78,18 +92,6 @@ export default {
 </script>
 
 <style scoped>
-.question:before {
-  content: url('@/assets/images/faq-question.svg');
-  display: inline-block;
-  margin-right: 16px;
-}
-
-.answer:before {
-  content: url('@/assets/images/faq-answer.svg');
-  display: inline-block;
-  margin-right: 16px;
-}
-
 .snake-face-base {
   width: 100%;
   height: 36px;
@@ -120,7 +122,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "{link}をご確認ください。",
+          "text": "スポンサーの募集は終了しました。",
           "link": "こちら",
           "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship.html",
           "icon": "ExternalLinkIcon"
@@ -153,6 +155,20 @@ export default {
           "url": "https://pyconjp.blogspot.com/2022/08/financial-aid-ja.html",
           "icon": "ExternalLinkIcon"
         }
+      },
+      {
+        "question": {
+          "text": "会場に託児所はありますか。",
+          "link": "",
+          "url": "",
+          "icon": ""
+        },
+        "answer": {
+          "text": "託児所は完全予約制となります。詳細は{link}をご確認ください。申し込みの締め切りは2022/10/04です。",
+          "link": "こちら",
+          "url": "https://drive.google.com/file/d/15y7XlA-QGSrHwacM1c6xbk8GYpCDAKKv/view",
+          "icon": "ExternalLinkIcon"
+        }
       }
     ]
   },
@@ -166,10 +182,10 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "Please check {link}.",
-          "link": "here",
-          "url": "https://pyconjp.blogspot.com/2022/05/pyconjp2022-sponsorship-en.html",
-          "icon": "ExternalLinkIcon"
+          "text": "It was over.",
+          "link": "",
+          "url": "",
+          "icon": ""
         }
       },
       {
@@ -197,6 +213,20 @@ export default {
           "text": "Please refer to {link}",
           "link": "PyCon JP 2022 Financial Aid for travel expenses",
           "url": "https://pyconjp.blogspot.com/2022/08/financial-aid-en.html",
+          "icon": "ExternalLinkIcon"
+        }
+      },
+      {
+        "question": {
+          "text": "Is there childcare available at the venue?",
+          "link": "",
+          "url": "",
+          "icon": ""
+        },
+        "answer": {
+          "text": "Child care is by appointment only. Please check {link} for more details. Deadline for registration is October 4 2022 (JST).",
+          "link": "here",
+          "url": "https://drive.google.com/file/d/15y7XlA-QGSrHwacM1c6xbk8GYpCDAKKv/view",
           "icon": "ExternalLinkIcon"
         }
       }

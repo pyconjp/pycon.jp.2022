@@ -26,7 +26,9 @@
         "sponsorApplicationRequirementsLink": "https://drive.google.com/file/d/1i6YZAAoy9f4iPY7eCpc94vub_PuKH2wP/view"
       },
       "contents": {
-        "contents": "Contents"
+        "contents": "Contents",
+        "communities": "Python Communities",
+        "beginners": "First steps of Python"
       },
       "volunteer": {
         "volunteer": "Volunteers"
@@ -46,8 +48,7 @@
   "pages": {
     "hero": {
       "venue": "TOC Ariake Convention Hall",
-      "venue-info": "Venue Info",
-      "ticket": "Get Ticket"
+      "venue-info": "Venue Info"
     },
     "index": {
       "overviewDescription": "PyCon JP is a conference for Python users to gather, exchange information and interact with Python and software using Python. Through PyCon JP, the goal is to gather Python users together, exchange knowledge and information on various fields related to Python, connect with new friends and communities, and increase work and business opportunities.",
