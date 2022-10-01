@@ -1,5 +1,5 @@
-id,name_ja,name_en,logo_file,staff_type,twitter,github,facebook,order
-1,稲森 景,"Akira Inamori",https://avatars.githubusercontent.com/u/8357830?v=4,NOC,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
+id,name_ja,name_en,img_file,staff_type,twitter,github,facebook,order
+1,稲森 景,"Akira Inamori",https://img02.hamazo.tv/usr/hibi/071114_hoge.gif,NOC,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
 2,稲森 景,"Akira Inamori",https://avatars.githubusercontent.com/u/8357830?v=4,Day,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
 3,Elastic,Elastic,,Silver,,,,,30
 4,株式会社はてな,"Hatena Co., Ltd.",,Silver,,,,,2

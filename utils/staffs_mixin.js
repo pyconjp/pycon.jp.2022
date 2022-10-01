@@ -5,7 +5,7 @@ export default {
       diamond: [],
       platinums: [],
       golds: [],
-      silvers: [],
+      day_staffs: [],
       medias: [],
       venues: [],
       patrons: [],
@@ -40,12 +40,12 @@ export default {
         } else if (sponsorRow.staff_type === 'Gold') {
           // ゴールドスポンサー
           this.golds[g++] = hashi18n
-        } else if (sponsorRow.staff_type === 'Silver') {
+        } else if (sponsorRow.staff_type === 'Day') {
           // シルバースポンサー
-          this.silvers[sl++] = hashi18n
+          this.day_staffs[sl++] = hashi18n
         } else if (sponsorRow.staff_type === '未確定') {
           // シルバースポンサー
-          this.silvers[sl++] = hashi18n
+          this.day_staffs[sl++] = hashi18n
         } else if (sponsorRow.staff_type === 'Media') {
           // 特別スポンサー: メディア
           this.medias[md++] = hashi18n
@@ -70,18 +70,13 @@ export default {
       // name
       hashJa.name = row.name_ja
       hashEn.name = row.name_en
-      // introduction
-      if (row.introduction_ja) {
-        hashJa.introduction = row.introduction_ja
-        hashEn.introduction = row.introduction_en
-      }
       // url
-      hashJa.url = row.url
-      hashEn.url = row.url
-      // logo_file
-      if (row.logo_file && row.logo_file.length > 0) {
-        hashJa.logo_file = row.logo_file
-        hashEn.logo_file = row.logo_file
+      hashJa.twitter = row.twitter
+      hashEn.twitter = row.twitter
+      // img_file
+      if (row.img_file && row.img_file.length > 0) {
+        hashJa.img_file = row.img_file
+        hashEn.img_file = row.img_file
       }
       // staff_type
       if (row.staff_type) {
