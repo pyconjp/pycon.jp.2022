@@ -22,6 +22,9 @@
               >
                 {{ $t(child.title) }}
               </nuxt-link>
+              <nuxt-link v-else-if="child.disable" to="#" class="opacity-50">
+                {{ $t(child.title) }}
+              </nuxt-link>
               <outer-link v-else :to="$t(child.link)">
                 {{ $t(child.title) }}
               </outer-link>

@@ -38,19 +38,32 @@
       {
         "title": "common.menu.sponsor.sponsorApplicationInformation",
         "link": "common.menu.sponsor.sponsorApplicationInformationLink",
-        "innerlink": false
+        "innerlink": false,
+        "disable": true
       },
       {
         "title": "common.menu.sponsor.sponsorApplicationRequirements",
         "link": "common.menu.sponsor.sponsorApplicationRequirementsLink",
-        "innerlink": false
+        "innerlink": false,
+        "disable": true
       }
     ]
   },
   {
     "category": "contents",
     "title": "common.menu.contents.contents",
-    "children": []
+        "children": [
+          {
+            "title": "common.menu.contents.communities",
+            "link": "/contents/communities",
+            "innerlink": true
+          },
+          {
+            "title": "common.menu.contents.beginners",
+            "link": "/contents/beginners",
+            "innerlink": true
+          }
+        ]
   },
   {
     "category": "volunteer",

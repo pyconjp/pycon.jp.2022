@@ -67,7 +67,6 @@ export async function getAllTalkList(token) {
       },
     }
   )
-  // console.log(tmpResult)
   talkList = talkList.concat(tmpResult.data.results)
   while (tmpResult.data.next !== null) {
     tmpResult = await axios.get(tmpResult.data.next, {

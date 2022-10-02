@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     return {
-      title: 'pycon.jp.2022',
+      title: 'PyCon JP 2022',
       htmlAttrs: {
         lang: 'en',
       },
@@ -101,7 +101,15 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
     '@nuxtjs/dayjs',
+    '@nuxtjs/markdownit',
   ],
+  generate: {
+    async routes() {
+      const { $content } = require('@nuxt/content')
+      const files = await $content('communities').only(['slug']).fetch()
+      return files.map((file) => 'contents/communities/' + file.slug)
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -144,6 +152,9 @@ export default {
     vueI18n: {
       silentTranslationWarn: true,
     },
+  },
+  markdownit: {
+    runtime: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

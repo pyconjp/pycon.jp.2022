@@ -214,7 +214,7 @@ li:before {
   "en": {
     "coc": {
       "p1": "PyCon JP Code of Conduct (hereinafter referred to as the \"Code of Conduct\") is an event (hereinafter referred to as the \"Event\") held by the General Incorporated Association PyCon JP Association (hereinafter referred to as the \"PyCon JP\"). All the participants who participate in this event are required to read all the terms of this agreement and agree to this code of conduct.",
-      "p2": "PyCon JP is a conference organized and run by volunteers in the Japanese Python community that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other developers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.",
+      "p2": "PyCon JP is a conference organized and run by volunteers in the Japanese Python communities that is dedicated to advancing and promoting the Python programming language. Through holding the PyCon JP conference, Python users can gather and exchange information with other developers from a wide variety of fields. It is our aim to create new relationships between the different communities and businesses using Python.",
       "p3": "Inappropriate Behavior",
       "p4": "Examples of unacceptable behavior by participants include:",
       "p5-list": [
@@ -230,7 +230,7 @@ li:before {
         "Excessive swearing",
         "Unwelcome sexual attention or advances",
         "Unwelcome physical contact, including simulated physical contact without consent or after a request to stop",
-        "Sustained disruption of online community discussions, in-person presentations, or other in-person events",
+        "Sustained disruption of online communities discussions, in-person presentations, or other in-person events",
         "Continued one-on-one communication after requests to cease",
         "Other conduct that is inappropriate for a professional audience including people of many different backgrounds",
         "Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention."
