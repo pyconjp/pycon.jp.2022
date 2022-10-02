@@ -23,6 +23,11 @@
         "title": "common.menu.event.timetable",
         "link": "/timetable",
         "innerlink": true
+      },
+      {
+        "title": "common.menu.event.events",
+        "link": "/events",
+        "innerlink": true
       }
     ]
   },
@@ -52,18 +57,18 @@
   {
     "category": "contents",
     "title": "common.menu.contents.contents",
-        "children": [
-          {
-            "title": "common.menu.contents.communities",
-            "link": "/contents/communities",
-            "innerlink": true
-          },
-          {
-            "title": "common.menu.contents.beginners",
-            "link": "/contents/beginners",
-            "innerlink": true
-          }
-        ]
+    "children": [
+      {
+        "title": "common.menu.contents.communities",
+        "link": "/contents/communities",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.contents.beginners",
+        "link": "/contents/beginners",
+        "innerlink": true
+      }
+    ]
   },
   {
     "category": "volunteer",
