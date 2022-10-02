@@ -9,26 +9,102 @@
         />
       </div>
 
-      <div class="mt-16 coc-section-title font-noto">チーム -1-</div>
-
-      <div
-        class="items-center w-11/12 mx-auto mt-10 bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-      >
-        <div class="items-center my-24 coc-content">
-          <div class="font-medium font-noto">
-            <p>メンバーをパネルでペタペタするとか</p>
+      <div class="mt-16 section-title font-noto">NOC</div>
+      <div class="font-medium font-noto">
+        <div v-if="staffs && noc && noc.length > 0">
+          <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
+              <!--会社名-->
+              <div class="mt-2">
+                <img
+                  class="inline"
+                  width="60px"
+                  height="60px"
+                  :src="staff[$i18n.locale].img_file"
+                />
+                {{ staff[$i18n.locale].name }}
+                <outer-link
+                  :to="staff[$i18n.locale].twitter"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/twitter.svg')"
+                  />
+                </outer-link>
+                <outer-link
+                  :to="staff[$i18n.locale].github"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/github.svg')"
+                  />
+                </outer-link>
+                <outer-link
+                  :to="staff[$i18n.locale].facebook"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/facebook.svg')"
+                  />
+                </outer-link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-16 coc-section-title font-noto">チーム -2-</div>
-
-      <div
-        class="items-center w-11/12 mx-auto mt-10 bg-tertiary-50 lg:w-8/12 chipped-card lg:mb-4"
-      >
-        <div class="items-center my-24 coc-content">
-          <div class="font-medium font-noto">
-            <p>メンバーをパネルでペタペタするとか</p>
+      <div class="mt-16 section-title font-noto">NOC</div>
+      <div class="font-medium font-noto">
+        <div v-if="staffs && noc && noc.length > 0">
+          <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
+              <!--会社名-->
+              <div class="mt-2">
+                <img
+                  class="inline"
+                  width="60px"
+                  height="60px"
+                  :src="staff[$i18n.locale].img_file"
+                />
+                {{ staff[$i18n.locale].name }}
+                <outer-link
+                  :to="staff[$i18n.locale].twitter"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/twitter.svg')"
+                  />
+                </outer-link>
+                <outer-link
+                  :to="staff[$i18n.locale].github"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/github.svg')"
+                  />
+                </outer-link>
+                <outer-link
+                  :to="staff[$i18n.locale].facebook"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/facebook.svg')"
+                  />
+                </outer-link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -37,12 +113,15 @@
 </template>
 
 <script>
+import OuterLink from '@/components/Elements/OuterLink'
+import staffsMixin from '@/utils/staffs_mixin'
+
 export default {
   name: 'StaffSection',
-  components: {},
-  data() {
-    return {}
+  components: {
+    OuterLink,
   },
+  mixins: [staffsMixin],
 }
 </script>
 
@@ -53,7 +132,7 @@ export default {
   text-align: center;
 }
 
-.coc-section-title {
+.section-title {
   height: 30px;
   left: calc(50% - 143.58px / 2 - 0.42px);
   top: 71.01px;
