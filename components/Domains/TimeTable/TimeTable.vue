@@ -138,6 +138,7 @@
     <SessionDetailModal
       v-if="isModal"
       :session-data="modalDisplaySessionData"
+      :approval-data="approvalData"
       @close="closeSessionModal"
     ></SessionDetailModal>
   </div>
@@ -176,6 +177,12 @@ export default {
       type: Array,
       default() {
         return []
+      },
+    },
+    approvalData: {
+      type: Object,
+      default() {
+        return {}
       },
     },
   },
