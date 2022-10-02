@@ -1,9 +1,9 @@
 <template>
   <!-- レビュースタッフ -->
-  <div class="grid grid-cols-1 lg:grid-cols-5">
+  <div class="grid grid-cols-1 mx-60 lg:grid-cols-4">
     <div v-for="staff in review_staff_list" :key="staff" class="flex-1 m-5">
       <!--会社名-->
-      <div class="mt-2 underline">
+      <div class="mt-2">
         {{ staff }}
       </div>
     </div>

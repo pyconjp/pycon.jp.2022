@@ -12,7 +12,7 @@
       <div class="mt-16 section-title font-noto">NOC</div>
       <div class="font-medium font-noto">
         <div v-if="staffs && noc && noc.length > 0">
-          <div class="grid grid-cols-1 lg:grid-cols-3">
+          <div class="grid-cols-1 mx-50grid lg:grid-cols-5">
             <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
               <!--会社名-->
               <div class="mt-2">
@@ -62,7 +62,7 @@
       <div class="mt-16 section-title font-noto">NOC</div>
       <div class="font-medium font-noto">
         <div v-if="staffs && noc && noc.length > 0">
-          <div class="grid grid-cols-1 lg:grid-cols-3">
+          <div class="grid grid-cols-1 lg:grid-cols-5">
             <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
               <!--会社名-->
               <div class="mt-2">
