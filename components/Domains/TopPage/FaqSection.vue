@@ -224,7 +224,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "Child care is by appointment only. The registration period closed at October 4 2022 23:59(JST).",
+          "text": "Child care is by appointment only. The registration period closed at October 4 2022 11:59PM(JST).",
           "link": "",
           "url": "",
           "icon": "ExternalLinkIcon"
