@@ -13,6 +13,7 @@
       },
       "event": {
         "event": "Events",
+        "events": "Event List",
         "timetable": "TimeTable",
         "tutorial": "Tutorial",
         "sprint": "Sprint"
