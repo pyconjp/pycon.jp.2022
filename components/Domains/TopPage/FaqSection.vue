@@ -164,7 +164,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "託児所は完全予約制となります。詳細は{link}をご確認ください。申し込みの締め切りは2022/10/04です。",
+          "text": "託児所は完全予約制となります。詳細は{link}をご確認ください。申し込みの締め切りは2022/10/07です。",
           "link": "こちら",
           "url": "https://drive.google.com/file/d/15y7XlA-QGSrHwacM1c6xbk8GYpCDAKKv/view",
           "icon": "ExternalLinkIcon"
@@ -224,7 +224,7 @@ export default {
           "icon": ""
         },
         "answer": {
-          "text": "Child care is by appointment only. Please check {link} for more details. Deadline for registration is October 4 2022 (JST).",
+          "text": "Child care is by appointment only. Please check {link} for more details. Deadline for registration is October 7 2022 (JST).",
           "link": "here",
           "url": "https://drive.google.com/file/d/15y7XlA-QGSrHwacM1c6xbk8GYpCDAKKv/view",
           "icon": "ExternalLinkIcon"
