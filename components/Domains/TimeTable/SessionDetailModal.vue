@@ -367,13 +367,13 @@ export default {
     this.sessionRequiredKnowledge = this.sessionData.requiredKnowledge
     this.sessionAudienceExperiment = this.sessionData.audienceExperiment
   },
-  mounted() {
-    const modal = document.querySelector('.modal')
-    disableBodyScroll(modal)
-  },
-  beforeDestroy() {
-    clearAllBodyScrollLocks()
-  },
+  // mounted() {
+  //   const modal = document.querySelector('.modal')
+  //   disableBodyScroll(modal)
+  // },
+  // beforeDestroy() {
+  //   clearAllBodyScrollLocks()
+  // },
 }
 </script>
 
