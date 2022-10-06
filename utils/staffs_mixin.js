@@ -2,8 +2,8 @@ export default {
   data() {
     return {
       staffs: [],
+      core_staffs: [],
       day_staffs: [],
-      noc: [],
     }
   },
   async fetch() {
@@ -13,19 +13,19 @@ export default {
   },
   methods: {
     filter_staffs() {
-      let noc = 0
-      let day = 0
+      let coreStaff = 0
+      let dayStaff = 0
       this.staffs.body.sort((a, b) => a.order - b.order)
       for (let i = 0; i < this.staffs.body.length; i++) {
         const sponsorRow = this.staffs.body[i]
         const hashi18n = this.split_i18n(sponsorRow)
 
-        if (sponsorRow.staff_type === 'NOC') {
-          // ダイアモンドスポンサー
-          this.noc[noc++] = hashi18n
+        if (sponsorRow.staff_type === 'Core') {
+          // スタッフ
+          this.core_staffs[coreStaff++] = hashi18n
         } else if (sponsorRow.staff_type === 'Day') {
-          // シルバースポンサー
-          this.day_staffs[day++] = hashi18n
+          // 当日スタッフ
+          this.day_staffs[dayStaff++] = hashi18n
         }
       }
     },

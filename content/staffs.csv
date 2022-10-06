@@ -1,5 +1,25 @@
-id,name_ja,name_en,img_file,staff_type,twitter,github,facebook,order
-1,稲森 景,"Akira Inamori",https://img02.hamazo.tv/usr/hibi/071114_hoge.gif,NOC,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
-2,稲森 景,"Akira Inamori",https://avatars.githubusercontent.com/u/8357830?v=4,Day,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
-3,稲森 景2,"Akira Inamori",https://avatars.githubusercontent.com/u/8357830?v=4,Day,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
-4,稲森 景3,"Akira Inamori",https://avatars.githubusercontent.com/u/8357830?v=4,Day,https://twitter.com/ainamori,https://github.com/ainamori,https://www.facebook.com/ainamori01,35
+﻿id,staff_type,name_ja,name_en,img_file,twitter,facebook,github
+1,Core,Peacock,Peacock,https://pbs.twimg.com/profile_images/1097755018516516864/Ua5Rw3nd_400x400.png,peacock0803sz,peacock0803sz,peacock0803sz
+2,,片寄 里菜(selina),Lina Katayose,https://pbs.twimg.com/profile_images/1294169425931689993/0_j1Asid_400x400.jpg,https://twitter.com/selina787b,https://www.facebook.com/lina.katayose,https://github.com/se-lina/
+3,Core,かめちゃん,kame-chan,https://pbs.twimg.com/profile_images/652387218/1253701102922_400x400.jpg,okusama27,,okusama27
+4,Core,mary,mary,https://pbs.twimg.com/profile_images/1125619278105825280/GslQxSYh_400x400.jpg,mary_tuba,,
+5,Core,吉田 健太,Kenta Yoshida,https://drive.google.com/file/d/0B2LqxGTtH5UHajc0VnNwb1ZtaEU/view?usp=sharing&resourcekey=0-5F6kPcz21mqQmdFbpcecEg,https://twitter.com/yoshiken_tut,,https://github.com/yoshiken
+6,Core,小山哲志,KOYAMA Tetsuji,https://avatars.githubusercontent.com/u/49316,koyhoge,koyhoge,koyhoge
+7,Core,ナツ,natsu,,,,
+8,Core,中村 航也,Koya Nakamura,https://ca.slack-edge.com/T024G2ZE8-U01V39Z5X5L-b4ba4705e1ab-512,,,k-nakamura
+9,Core,ちゃんゆー,chanyou,https://www.gravatar.com/avatar/69a81d6d4d66a348e72f7a28b265fdbe?s=200,chanyou0311,chanyou0311,chanyou0311
+10,Core,吉田　俊輔,Shunsuke Yoshida,https://twitter.com/koedoyoshida/photo,https://twitter.com/koedoyoshida,https://www.facebook.com/koedoyoshida,https://github.com/koedoyoshida
+11,Core,Shinko,Shinko,https://drive.google.com/file/d/1kC5_9-o37t78bN51S3LMdzud9at1AxQr/view?usp=sharing,https://twitter.com/shinkolab,,https://github.com/ShinkoLab
+12,Core,パナくま,panakuma,https://pbs.twimg.com/profile_images/1251518161838419969/pyGVZK2b_400x400.jpg,https://twitter.com/pana_pana_kuma,https://www.facebook.com/panakuma8787/,https://github.com/panakuma
+13,Core,倉本拓実,Takumi Kuramoto,https://twitter.com/katura46/photo,https://twitter.com/katura46,https://www.facebook.com/katura46,https://github.com/try46
+14,Core,稲森 景,Akira Inamori,https://pbs.twimg.com/profile_images/1153932534553534464/hYEHwLc8_400x400.jpg,https://twitter.com/ainamori,https://www.facebook.com/ainamori01,https://github.com/ainamori
+15,Core,高倉 佑輔,Iosif Takakura,https://avatars.githubusercontent.com/u/1094632,https://twitter.com/huideyeren,https://www.facebook.com/iosif.takakura.yusuke,https://github.com/huideyeren
+16,Core,seigot,seigot,,,,https://github.com/seigot
+17,Core,岡松 伸太郎,Shintaro Okamatsu,https://twitter.com/shin_okamatsu/photo,shin_okamatsu,shin.okamatsu,
+18,Core,hanai,hanai,https://twitter.com/hanahiro_aze/photo,https://twitter.com/hanahiro_aze,,
+19,Core,あっきー,Akky,https://twitter.com/papi_tokei/photo,https://twitter.com/papi_tokei,,https://github.com/papi-tokei
+20,Core,岡 裕也,Yuya Oka,https://avatars.githubusercontent.com/u/9856514?,nnsnodnb,nnsnodnb,nnsnodnb
+21,Core,夏米,Natsukome,https://yt3.ggpht.com/yti/AJo0G0nENvfkYLFXWufPEK2qxs9tTXPfi21gtrbeiprLoQ=s88-c-k-c0x00ffffff-no-rj-mo,,,
+22,Core,ボビエル,Bobier,https://avatars.githubusercontent.com/u/114851874?v=4,https://twitter.com/YukiBobier,,https://github.com/YukiBobier
+23,Core,田上 亮,Ryo Tagami,,,,
+24,Core,野々山明広,Akihiro Nonoyama,,,,

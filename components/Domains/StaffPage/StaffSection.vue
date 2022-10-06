@@ -1,112 +1,36 @@
 <template>
-  <div>
-    <div class="flex flex-col items-center">
-      <div class="mt-10">
-        <img
-          src="@/assets/images/conference_vector.svg"
-          alt="Keynote vector"
-          class="mid-vector"
-        />
-      </div>
-
-      <div class="mt-16 section-title font-noto">NOC</div>
-      <div class="font-medium font-noto">
-        <div v-if="staffs && noc && noc.length > 0">
-          <div class="grid-cols-1 mx-50grid lg:grid-cols-5">
-            <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
-              <!--会社名-->
-              <div class="mt-2">
-                <img
-                  class="inline"
-                  width="60px"
-                  height="60px"
-                  :src="staff[$i18n.locale].img_file"
-                />
-                {{ staff[$i18n.locale].name }}
-                <outer-link
-                  :to="staff[$i18n.locale].twitter"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/twitter.svg')"
-                  />
-                </outer-link>
-                <outer-link
-                  :to="staff[$i18n.locale].github"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/github.svg')"
-                  />
-                </outer-link>
-                <outer-link
-                  :to="staff[$i18n.locale].facebook"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/facebook.svg')"
-                  />
-                </outer-link>
-              </div>
-            </div>
-          </div>
+  <div v-if="staffs && core_staffs && core_staffs.length > 0">
+    <div class="grid-cols-1 mx-60 grid lg:grid-cols-4">
+      <div v-for="staff in core_staffs" :key="staff.id" class="mt-10">
+        <div class="inline bg-tertiary-50 w-[60px] h-[60px] mr-1">
+          <img
+            class="inline sponsor-chipped-card"
+            width="60px"
+            height="60px"
+            :src="staff[$i18n.locale].img_file"
+          />
         </div>
-      </div>
-
-      <div class="mt-16 section-title font-noto">NOC</div>
-      <div class="font-medium font-noto">
-        <div v-if="staffs && noc && noc.length > 0">
-          <div class="grid grid-cols-1 lg:grid-cols-5">
-            <div v-for="staff in noc" :key="staff.id" class="flex-1 m-5">
-              <!--会社名-->
-              <div class="mt-2">
-                <img
-                  class="inline"
-                  width="60px"
-                  height="60px"
-                  :src="staff[$i18n.locale].img_file"
-                />
-                {{ staff[$i18n.locale].name }}
-                <outer-link
-                  :to="staff[$i18n.locale].twitter"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/twitter.svg')"
-                  />
-                </outer-link>
-                <outer-link
-                  :to="staff[$i18n.locale].github"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/github.svg')"
-                  />
-                </outer-link>
-                <outer-link
-                  :to="staff[$i18n.locale].facebook"
-                  class="text-2xl font-bold font-noto text-primary-700"
-                >
-                  <img
-                    class="inline w-6 h-6"
-                    data-v-bf323f94=""
-                    :src="require('@/assets/images/sns/facebook.svg')"
-                  />
-                </outer-link>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{ staff[$i18n.locale].name }}
+        <outer-link
+          :to="staff[$i18n.locale].twitter"
+          class="text-2xl font-bold font-noto text-primary-700"
+        >
+          <img
+            class="inline w-6 h-6"
+            data-v-bf323f94=""
+            :src="require('@/assets/images/sns/twitter.svg')"
+          />
+        </outer-link>
+        <outer-link
+          :to="staff[$i18n.locale].facebook"
+          class="text-2xl font-bold font-noto text-primary-700"
+        >
+          <img
+            class="inline w-6 h-6"
+            data-v-bf323f94=""
+            :src="require('@/assets/images/sns/facebook.svg')"
+          />
+        </outer-link>
       </div>
     </div>
   </div>
