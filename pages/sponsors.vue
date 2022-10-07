@@ -21,7 +21,7 @@
           sub="プラチナスポンサー"
           :primary="false"
         />
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center lg:mt-8">
           <platinum-list :needs-introduction="true" />
         </div>
         <!-- snake -->
@@ -32,7 +32,7 @@
       <!-- ゴールドスポンサー -->
       <div class="text-center component-border-top bg-secondary-400">
         <section-title main="GOLD" sub="ゴールドスポンサー" />
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center lg:mt-8">
           <gold-list :needs-introduction="true" />
         </div>
 
@@ -48,7 +48,7 @@
           sub="シルバースポンサー"
           :primary="false"
         />
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center lg:mt-8">
           <silver-list />
         </div>
 
