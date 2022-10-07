@@ -1,37 +1,5 @@
 <template>
   <div v-if="sponsors">
-    <div v-if="psfs && psfs.length > 0" class="flex flex-col mb-12">
-      <div v-for="psf in psfs" :key="psf.id" class="flex-1 my-5">
-        <div class="flex flex-col items-center justify-center">
-          <!--ロゴ-->
-          <div
-            class="sponsor-chipped-card bg-tertiary-50 w-[375px] h-[201px] lg:ml-5 lg:mr-5"
-          >
-            <outer-link :to="psf[$i18n.locale].url">
-              <img
-                v-if="psf[$i18n.locale].logo_file"
-                :src="
-                  require(`@/assets/images/sponsors/${
-                    psf[$i18n.locale].logo_file
-                  }`)
-                "
-                class="object-contain w-full h-full p-5"
-              />
-            </outer-link>
-          </div>
-          <!--会社名-->
-          <div class="mt-2 underline">
-            <outer-link
-              :to="psf[$i18n.locale].url"
-              class="text-2xl font-bold font-noto text-primary-700"
-            >
-              {{ psf[$i18n.locale].name }}
-              <ExternalLinkIcon class="inline w-4 h-4 mb-2" />
-            </outer-link>
-          </div>
-        </div>
-      </div>
-    </div>
     <div
       v-if="platinums && platinums.length > 0"
       class="flex flex-col lg:flex-row"
