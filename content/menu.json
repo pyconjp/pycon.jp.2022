@@ -12,6 +12,11 @@
         "title": "common.menu.about.guideline",
         "link": "common.menu.about.guidelineLink",
         "innerlink": false
+      },
+      {
+        "title": "common.menu.about.venue",
+        "link": "/venue",
+        "innerlink": true
       }
     ]
   },
