@@ -97,7 +97,7 @@
       </div>
       <div class="snake-face-base">
         <div class="self-end hidden lg:block">
-          <div class="snake-face-primary" />
+          <div class="snake-face-secondary-last" />
         </div>
       </div>
     </div>
