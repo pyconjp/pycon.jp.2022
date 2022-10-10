@@ -44,18 +44,6 @@
         "title": "common.menu.sponsor.sponsorList",
         "link": "/sponsors",
         "innerlink": true
-      },
-      {
-        "title": "common.menu.sponsor.sponsorApplicationInformation",
-        "link": "common.menu.sponsor.sponsorApplicationInformationLink",
-        "innerlink": false,
-        "disable": true
-      },
-      {
-        "title": "common.menu.sponsor.sponsorApplicationRequirements",
-        "link": "common.menu.sponsor.sponsorApplicationRequirementsLink",
-        "innerlink": false,
-        "disable": true
       }
     ]
   },
