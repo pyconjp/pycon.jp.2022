@@ -166,12 +166,19 @@ export default {
   &::before {
     content: '';
     position: absolute;
-    top: 1.5rem;
+    top: 1.2rem;
     left: -1rem;
-    width: calc(100% + 0.5rem);
-    height: calc(100% - 0.5rem);
+    width: calc(100% + 0.2rem);
+    height: calc(100% - 0.2rem);
     background-color: #b32f0f;
     @include clip;
+
+    @media (min-width: 1024px) {
+      top: 1.5rem;
+      left: -1rem;
+      width: calc(100% + 0.5rem);
+      height: calc(100% - 0.5rem);
+    }
   }
 
   & img {
