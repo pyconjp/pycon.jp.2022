@@ -124,6 +124,18 @@ export default {
           "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-ja.html",
           "description": "今年のスプリントは10/16(日)、東京都江東区にあるTOC有明コンベンションホール(20F)にて開催いたします。\nスプリント用のconnpassイベントページに登録いただければ、どなたでも無料で参加いただけます！スプリント参加にあたってPyCon JP 2022のチケットは必要ありません。"
         }
+      },
+      {
+        "title": {
+          "main": "LT",
+          "sub": "Lightning Talk"
+        },
+        "detail": {
+          "title": "Lightning Talk",
+          "image": "lt.jpg",
+          "url": "https://pyconjp.blogspot.com/2022/10/lt-application-2022-ja.html.html",
+          "description": "Day1(10/14)の18:00 JSTからLighting Talkを開催いたします。\nこの時間で発表して頂ける方を募集します。発表時間は5分です。\n好奇心あふれる、面白い、または技術的な話をPyCon JP 2022の参加者に向けてLTとして発表してみませんか?皆さんの応募をお待ちしております。"
+        }
       }
     ]
   },
@@ -139,6 +151,18 @@ export default {
           "image": "sprint.jpg",
           "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-en.html",
           "description": "This year's sprint will be held on Sunday, October 16 at TOC Ariake Convention Hall (20F) in Koto-ku, Tokyo.\nAnyone who registers on the connpass event page for the sprint can attend for free! You do not need a ticket for PyCon JP 2022 to participate in a sprint."
+        }
+      },
+      {
+        "title": {
+          "main": "LT",
+          "sub": "Lightning Talk"
+        },
+        "detail": {
+          "title": "Lightning Talk",
+          "image": "lt.jpg",
+          "url": "https://pyconjp.blogspot.com/2022/10/lt-application-2022-en.html.html",
+          "description": "Lighting Talk will be held on Day1 (OCTOBER 14) at 18:00 JST.\nWe are looking for people who can give a talk at this time.The presentation time is 5 minutes.\nWould you like to present a curious, interesting, or technical topic as an LT to PyCon JP 2022 attendees? We are looking forward to your application."
         }
       }
     ]
