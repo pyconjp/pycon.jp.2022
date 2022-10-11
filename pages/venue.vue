@@ -13,7 +13,7 @@
                 :to="require('@/assets/images/venue/venue_rotated.png')"
               >
                 <img
-                  class="relative object-cover w-11/12 h-5/6 relative w-full lg:flex-1"
+                  class="relative object-cover w-11/12 h-5/6 relative w-full lg:flex-1 hover:opacity-75"
                   src="@/assets/images/venue/venue.png"
                   alt="会場案内"
                 />
@@ -166,23 +166,11 @@ export default {
   &::before {
     content: '';
     position: absolute;
-    top: 1.2rem;
-    left: -1rem;
-    width: calc(100% + 0.2rem);
-    height: calc(100% - 0.2rem);
-    background-color: #b32f0f;
-    @include clip;
-
-    @media (min-width: 1024px) {
-      top: 1.5rem;
-      left: -1rem;
-      width: calc(100% + 0.5rem);
-      height: calc(100% - 0.5rem);
-    }
-  }
-
-  & img {
-    @include clip;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfd;
   }
 }
 </style>
