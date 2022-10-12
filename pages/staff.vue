@@ -43,42 +43,6 @@
         <div class="hidden snake-face-right-yello lg:block" />
       </div>
     </div>
-
-    <!-- スタッフ募集  -->
-    <div class="text-center component-border-top bg-primary-500">
-      <div
-        class="w-10/12 mx-auto mt-24 mb-12 text-left bg-tertiary-50 lg:w-7/12 chipped-card"
-      >
-        <div class="px-6 py-8 text-lg lg:py-16 lg:px-24">
-          <div class="flex flex-col">
-            <div class="flex flex-row pb-8 pl-8 text-left">
-              <div class="mr-1 contact-text-icon" />
-              <div
-                class="font-bold contact-text-title text-tertiary-900 font-fira"
-              >
-                {{ $t('title') }}
-              </div>
-            </div>
-            <div class="pb-8 pl-8 text-left">
-              {{ $t('description') }}
-            </div>
-
-            <div
-              class="pb-8 pr-8 text-lg font-bold text-center underline lg:text-right text-primary-700"
-            >
-              <outer-link :to="$t('url').toString()">
-                {{ $t('link') }}
-                <ArrowNarrowRightIcon class="inline w-4 h-4 mb-2" />
-              </outer-link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- snake -->
-      <div class="snake-face-base">
-        <div class="hidden snake-face-left-black lg:block" />
-      </div>
-    </div>
   </div>
 </template>
 
@@ -99,8 +63,8 @@ export default {
     ChairSection,
     StaffSection,
     DayStaffSection,
-    ReviewStaffSection,
-  },
+    ReviewStaffSection
+  }
 }
 </script>
 

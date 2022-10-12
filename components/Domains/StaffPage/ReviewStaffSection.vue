@@ -1,10 +1,12 @@
 <template>
   <!-- レビュースタッフ -->
-  <div class="grid grid-cols-1 mx-60 lg:grid-cols-4">
-    <div v-for="staff in review_staff_list" :key="staff" class="flex-1 m-5">
-      <!--会社名-->
-      <div class="mt-2">
-        {{ staff }}
+  <div class="font-medium font-noto">
+    <div class="grid grid-cols-1 mx-60 lg:grid-cols-4">
+      <div v-for="staff in review_staff_list" :key="staff" class="flex-1 m-5">
+        <!--会社名-->
+        <div class="mt-2">
+          {{ staff }}
+        </div>
       </div>
     </div>
   </div>
@@ -34,8 +36,8 @@ export default {
       'Ike Tohru',
       '武中 翔',
       '川松裕史',
-      'dhesusan',
-    ],
-  }),
+      'dhesusan'
+    ]
+  })
 }
 </script>

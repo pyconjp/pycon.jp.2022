@@ -5,12 +5,14 @@
       <div class="grid grid-cols-1 lg:grid-cols-4 mx-60">
         <div v-for="staff in day_staffs" :key="staff.id" class="flex-1 m-5">
           <div class="inline bg-tertiary-50 w-[60px] h-[60px] mr-1">
-            <img
-              class="inline sponsor-chipped-card"
-              width="60px"
-              height="60px"
-              :src="staff[$i18n.locale].img_file"
-            />
+            <div v-if="staff[$i18n.locale].img_file">
+              <img
+                class="inline sponsor-chipped-card"
+                width="60px"
+                height="60px"
+                :src="staff[$i18n.locale].img_file"
+              />
+            </div>
           </div>
           {{ staff[$i18n.locale].name }}
           <outer-link
@@ -46,9 +48,9 @@ import staffsMixin from '@/utils/staffs_mixin'
 export default {
   name: 'DayStaff',
   components: {
-    OuterLink,
+    OuterLink
   },
-  mixins: [staffsMixin],
+  mixins: [staffsMixin]
 }
 </script>
 

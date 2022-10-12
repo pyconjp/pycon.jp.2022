@@ -3,7 +3,7 @@ export default {
     return {
       staffs: [],
       core_staffs: [],
-      day_staffs: [],
+      day_staffs: []
     }
   },
   async fetch() {
@@ -44,6 +44,10 @@ export default {
       // url
       hashJa.twitter = row.twitter
       hashEn.twitter = row.twitter
+      hashJa.facebook = row.facebook
+      hashEn.facebook = row.facebook
+      hashJa.github = row.github
+      hashEn.github = row.github
       // img_file
       if (row.img_file && row.img_file.length > 0) {
         hashJa.img_file = row.img_file
@@ -59,6 +63,6 @@ export default {
       hashi18n.en = hashEn
 
       return hashi18n
-    },
-  },
+    }
+  }
 }

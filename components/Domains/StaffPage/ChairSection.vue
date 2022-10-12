@@ -25,7 +25,7 @@
                 v-html="$t('chair.description')"
               ></p>
               <outer-link
-                :to="$t('chair.twitter')"
+                :to="$t('chair.sns.twitter')"
                 class="text-2xl font-bold font-noto text-primary-700"
               >
                 <img
@@ -35,7 +35,7 @@
                 />
               </outer-link>
               <outer-link
-                :to="$t('chair.facebook')"
+                :to="$t('chair.sns.facebook')"
                 class="text-2xl font-bold font-noto text-primary-700"
               >
                 <img
@@ -58,9 +58,9 @@ import OuterLink from '@/components/Elements/OuterLink'
 export default {
   name: 'ChierPersonSection',
   components: {
-    OuterLink,
+    OuterLink
   },
-  data: () => ({}),
+  data: () => ({})
 }
 </script>
 
