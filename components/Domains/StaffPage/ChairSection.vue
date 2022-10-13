@@ -21,29 +21,31 @@
                 v-html="'片寄 里菜 / Lina KATAYOSE(selina)'"
               ></div>
               <p
-                class="mt-5 font-bold font-noto chair-description"
+                class="mt-5 font-noto chair-description"
                 v-html="$t('chair.description')"
               ></p>
-              <outer-link
-                :to="$t('chair.sns.twitter')"
-                class="text-2xl font-bold font-noto text-primary-700"
-              >
-                <img
-                  class="inline w-6 h-6"
-                  data-v-bf323f94=""
-                  :src="require('@/assets/images/sns/twitter.svg')"
-                />
-              </outer-link>
-              <outer-link
-                :to="$t('chair.sns.facebook')"
-                class="text-2xl font-bold font-noto text-primary-700"
-              >
-                <img
-                  class="inline w-6 h-6"
-                  data-v-bf323f94=""
-                  :src="require('@/assets/images/sns/facebook.svg')"
-                />
-              </outer-link>
+              <div class="inline">
+                <outer-link
+                  :to="$t('chair.sns.twitter')"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/twitter.svg')"
+                  />
+                </outer-link>
+                <outer-link
+                  :to="$t('chair.sns.facebook')"
+                  class="text-2xl font-bold font-noto text-primary-700"
+                >
+                  <img
+                    class="inline w-6 h-6"
+                    data-v-bf323f94=""
+                    :src="require('@/assets/images/sns/facebook.svg')"
+                  />
+                </outer-link>
+              </div>
             </div>
           </div>
         </div>
@@ -66,15 +68,11 @@ export default {
 
 <style lang="scss" scoped>
 .chair-name {
-  font-style: normal;
-  font-weight: 700;
   line-height: 100%;
   font-size: 24px;
 }
 
 .chair-description {
-  font-style: normal;
-  font-weight: 500;
   font-size: 18px;
   line-height: 100%;
   color: #1a1623;
