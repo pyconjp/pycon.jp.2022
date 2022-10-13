@@ -1,23 +1,23 @@
 ﻿staff_type,id,名前,ユーザー名,(以降スタッフのみ)Web掲載に同意します,name_ja,name_en,img_file,twiter,facebook,github
 Core,2,高井 陽一,peacock0803sz,同意します,Peacock,Peacock,https://pbs.twimg.com/profile_images/1097755018516516864/Ua5Rw3nd_400x400.png,peacock0803sz,peacock0803sz,peacock0803sz
-Core,3,村上沙織,saori_murakami,同意します,,,,,,
+,3,村上沙織,saori_murakami,同意します,,,,,,
 Core,4,大村和子,okusama27,同意します,かめちゃん,kame-chan,https://pbs.twimg.com/profile_images/652387218/1253701102922_400x400.jpg,okusama27,,okusama27
 Core,5,板谷藍子,mary_tuba,同意します,mary,mary,https://pbs.twimg.com/profile_images/1125619278105825280/GslQxSYh_400x400.jpg,mary_tuba,,
 Core,6,吉田 健太,yoshiken_tut,同意します,吉田 健太,Kenta Yoshida,https://drive.google.com/file/d/0B2LqxGTtH5UHajc0VnNwb1ZtaEU/view?resourcekey=0-5F6kPcz21mqQmdFbpcecEg,https://twitter.com/yoshiken_tut,,https://github.com/yoshiken
 Core,7,小山哲志,koyhoge,同意します,小山哲志,KOYAMA Tetsuji,https://avatars.githubusercontent.com/u/49316,koyhoge,koyhoge,koyhoge
-Core,8,松土 慎太郎,shintaro011224,同意します,,,,https://mobile.twitter.com/shintaromatsudo,,https://github.com/shintaromatsudo
+Core,8,松土 慎太郎,shintaro011224,同意します,Shintaro,Shintaro,,https://mobile.twitter.com/shintaromatsudo,,https://github.com/shintaromatsudo
 Core,9,川村　愛美,natsu_bm,同意します,ナツ,natsu,,,,
 Core,10,中村 航也,ko-nakamura,同意します,中村 航也,Koya Nakamura,https://ca.slack-edge.com/T024G2ZE8-U01V39Z5X5L-b4ba4705e1ab-512,,,k-nakamura
-Core,11,謝　慧恬,EtenSya,同意します,,,,,,
+,11,謝　慧恬,EtenSya,同意します,,,,,,
 Core,12,中村 優,chanyou0311,同意します,ちゃんゆー,chanyou,https://www.gravatar.com/avatar/69a81d6d4d66a348e72f7a28b265fdbe?s=200,chanyou0311,chanyou0311,chanyou0311
 Core,13,吉田　俊輔,koedoyoshida,同意します,吉田　俊輔,Shunsuke Yoshida,https://pbs.twimg.com/profile_images/59247041/panda_400x400.jpg,https://twitter.com/koedoyoshida,https://www.facebook.com/koedoyoshida,https://github.com/koedoyoshida
-Core,14,佐々木 新幸,shinkolab,同意します,,Shinko,https://drive.google.com/file/d/1kC5_9-o37t78bN51S3LMdzud9at1AxQr/view?usp=sharing,https://twitter.com/shinkolab,,https://github.com/ShinkoLab
+Core,14,佐々木 新幸,shinkolab,同意します,Shinko,Shinko,https://drive.google.com/file/d/1kC5_9-o37t78bN51S3LMdzud9at1AxQr/view?usp=sharing,https://twitter.com/shinkolab,,https://github.com/ShinkoLab
 Core,15,熊田樹央,pana_pana_kuma,同意します,パナくま,panakuma,https://pbs.twimg.com/profile_images/1251518161838419969/pyGVZK2b_400x400.jpg,https://twitter.com/pana_pana_kuma,https://www.facebook.com/panakuma8787/,https://github.com/panakuma
 Core,16,倉本拓実,katura46,同意します,倉本拓実,Takumi Kuramoto,https://pbs.twimg.com/profile_images/1180059309750669314/YUD8jLIZ_400x400.jpg,https://twitter.com/katura46,https://www.facebook.com/katura46,https://github.com/try46
-Core,17,板谷郷司,H_Shinonome,同意します,,,,,,
+Core,17,板谷郷司,H_Shinonome,同意します,しののめ,Shinonome,https://pbs.twimg.com/profile_images/1157821832260546562/HUg5tLM__400x400.jpg,https://twitter.com/H_Shinonome,https://www.facebook.com/hiyou.shinonome,
 Core,18,Akira Inamori,ainamori01,同意します,稲森 景,Akira Inamori,https://avatars.githubusercontent.com/u/8357830?v=4,https://twitter.com/ainamori,https://www.facebook.com/ainamori01,https://github.com/ainamori
 Core,19,高倉 佑輔,huideyeren,同意します,高倉 佑輔,Iosif Takakura,https://avatars.githubusercontent.com/u/1094632,https://twitter.com/huideyeren,https://www.facebook.com/iosif.takakura.yusuke,https://github.com/huideyeren
-,20,宮脇一晃,MiyawakiKazuaki,,,,,,,
+,20,宮脇一晃,MiyawakiKazuaki,宮脇一晃,Kazuaki Miyawaki,,,,,
 Core,21,高田征吾,seigot,同意します,seigot,seigot,,,,https://github.com/seigot
 Core,22,岡松 伸太郎,shin_okamatsu,同意します,岡松 伸太郎,Shintaro Okamatsu,https://pbs.twimg.com/profile_images/1121313500/shin2_s_400x400.jpg,shin_okamatsu,shin.okamatsu,
 Core,23,大崎　有依,Yuinana,同意します,nana,nana,https://pbs.twimg.com/profile_images/952809404822257664/UQjMPETj_400x400.jpg,https://twitter.com/nana_marux,,
