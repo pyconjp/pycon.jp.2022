@@ -23,13 +23,13 @@ RV9ZK9,pyconjp_2,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Playwright�
 PR3QXD,pyconjp_3,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Network Science with Python,Mridul Seth,en,English only,,OK,,OK
 LZ8JUB,pyconjp_4,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,setuptoolsの最近,Atsushi Odagiri,ja-JP,Japanese only,,OK,,OK
 EEA8FG,pyconjp_5,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,実践：日本語文章生成　Transformersライブラリで学ぶ実装の守破離,石原祥太郎,ja-JP,Japanese only,,OK,https://speakerdeck.com/upura/introduction-of-japanese-text-generation-with-transformers,OK
-J9XNYA,pyconjp_1,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,GeoDjango ORMと地理空間データの世界,阿部涼平,ja-JP,Japanese only,https://youtu.be/4dPXOZeTg2Y,OK,,OK
-GFM7LS,pyconjp_2,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,AST（Abstract Syntax Tree）に入門する,安本雅啓,ja-JP,Japanese only,https://youtu.be/D3nBkJwEUB4,OK,,OK
-FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better project maintenance with static analysis,Tushar Sadhwani,en,English only,https://youtu.be/-Tbaedxz_4c,OK,,OK
-3EUVUY,pyconjp_4,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,エッジAI開発入門,Kento Kawasaki,ja-JP,Japanese only,https://youtu.be/YhCwt_lROH0,OK,,OK
-K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,https://youtu.be/kK8NnAj5gJU,OK,,OK
-RLTBKP,pyconjp_1,2022-10-14T18:00:00+09:00,2022-10-14T18:30:00+09:00,LT,運営,ja-JP,Japanese only,,OK,,NG
-AUNGB9,pyconjp_1,2022-10-14T18:30:00+09:00,2022-10-14T19:00:00+09:00,Closing Day1,運営,ja-JP,Japanese only,,OK,,NG
+J9XNYA,pyconjp_1,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,GeoDjango ORMと地理空間データの世界,阿部涼平,ja-JP,Japanese only,,OK,,OK
+GFM7LS,pyconjp_2,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,AST（Abstract Syntax Tree）に入門する,安本雅啓,ja-JP,Japanese only,,OK,,OK
+FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better project maintenance with static analysis,Tushar Sadhwani,en,English only,,OK,,OK
+3EUVUY,pyconjp_4,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,エッジAI開発入門,Kento Kawasaki,ja-JP,Japanese only,,OK,,OK
+K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,,OK,,OK
+RLTBKP,pyconjp_1,2022-10-14T18:00:00+09:00,2022-10-14T18:30:00+09:00,LT,運営,ja-JP,Japanese only,https://youtu.be/4dPXOZeTg2Y,OK,,NG
+AUNGB9,pyconjp_1,2022-10-14T18:30:00+09:00,2022-10-14T19:00:00+09:00,Closing Day1,運営,ja-JP,Japanese only,https://youtu.be/4dPXOZeTg2Y,OK,,NG
 V9SGFS,pyconjp_1,2022-10-15T10:00:00+09:00,2022-10-15T10:30:00+09:00,Opening Day2,運営,ja-JP,Japanese only,,OK,,NG
 HFEB37,pyconjp_1,2022-10-15T10:30:00+09:00,2022-10-15T11:30:00+09:00,基調講演: 西内 啓氏,西内 啓氏,ja-JP,Japanese only,,OK,,OK
 NHY3TK,pyconjp_1,2022-10-15T11:30:00+09:00,2022-10-15T13:00:00+09:00,Lunch + session Day2,運営,ja-JP,Japanese only,,NG,,NG
