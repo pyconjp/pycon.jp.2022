@@ -30,14 +30,14 @@ FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better proj
 K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,,OK,,OK
 RLTBKP,pyconjp_1,2022-10-14T18:00:00+09:00,2022-10-14T18:30:00+09:00,LT,運営,ja-JP,Japanese only,,OK,,NG
 AUNGB9,pyconjp_1,2022-10-14T18:30:00+09:00,2022-10-14T19:00:00+09:00,Closing Day1,運営,ja-JP,Japanese only,,OK,,NG
-V9SGFS,pyconjp_1,2022-10-15T10:00:00+09:00,2022-10-15T10:30:00+09:00,Opening Day2,運営,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,NG
-HFEB37,pyconjp_1,2022-10-15T10:30:00+09:00,2022-10-15T11:30:00+09:00,基調講演: 西内 啓氏,西内 啓氏,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,OK
+V9SGFS,pyconjp_1,2022-10-15T10:00:00+09:00,2022-10-15T10:30:00+09:00,Opening Day2,運営,ja-JP,Japanese only,,OK,,NG
+HFEB37,pyconjp_1,2022-10-15T10:30:00+09:00,2022-10-15T11:30:00+09:00,基調講演: 西内 啓氏,西内 啓氏,ja-JP,Japanese only,,OK,,OK
 NHY3TK,pyconjp_1,2022-10-15T11:30:00+09:00,2022-10-15T13:00:00+09:00,Lunch + session Day2,運営,ja-JP,Japanese only,,NG,,NG
-ELUNPR,pyconjp_1,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Automate the Boring Stuff with Slackbot(ver.2),Takanori Suzuki,ja-JP,English only,,OK,,OK
-X8H3UD,pyconjp_2,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Security Best Practices for Django Applications,Gajendra Deshpande,en,English only,,OK,,OK
-7WEVVE,pyconjp_3,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Data driven approach to analyze the efficacy of LEED certified buildings using python.,Tabassum Mushtary Meem,en,English only,,OK,,OK
-ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,,OK
-HV7UAA,pyconjp_5,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Pythonで公的統計APIのオープンデータ活用,Ryo YOSHI,ja-JP,Japanese only,,OK,,OK
+ELUNPR,pyconjp_1,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Automate the Boring Stuff with Slackbot(ver.2),Takanori Suzuki,ja-JP,English only,https://youtu.be/LVdxCWdhROU,OK,,OK
+X8H3UD,pyconjp_2,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Security Best Practices for Django Applications,Gajendra Deshpande,en,English only,https://youtu.be/nZr1Wks07vc,OK,,OK
+7WEVVE,pyconjp_3,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Data driven approach to analyze the efficacy of LEED certified buildings using python.,Tabassum Mushtary Meem,en,English only,https://youtu.be/8hpczkdBjhI,OK,,OK
+ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,https://youtu.be/kQDLNzmUplM,OK,,OK
+HV7UAA,pyconjp_5,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Pythonで公的統計APIのオープンデータ活用,Ryo YOSHI,ja-JP,Japanese only,https://youtu.be/wyksN-3rYuM,OK,,OK
 CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,,OK,,OK
 PDTWEW,pyconjp_2,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Modernizing development workflow for a 7-year old 74K LoC Python project using Pantsbuild,Joongi Kim,en,English only,,OK,,OK
 PAQPX8,pyconjp_3,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Reinforcement learning for guiding swarm of robots using python,Raihan Seraj,en,English only,,OK,,OK
