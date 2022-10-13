@@ -1,7 +1,7 @@
 <template>
   <div class="font-medium font-noto">
     <div v-if="staffs && core_staffs && core_staffs.length > 0">
-      <div class="grid-cols-2 lg:mx-60 grid lg:grid-cols-4">
+      <div class="grid-cols-3 lg:mx-60 grid lg:grid-cols-4">
         <div v-for="staff in core_staffs" :key="staff.id" class="mt-10">
           <div class="inline bg-tertiary-50 w-[60px] h-[60px] mr-1">
             <div v-if="staff[$i18n.locale].img_file">
