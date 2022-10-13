@@ -79,6 +79,7 @@
                           'filter-gray': youtubeLink === '',
                         }"
                       />
+                      <!-- 配信が終わったら、Live -> Videoに変更する -->
                       <p
                         class="ml-2 text-xl font-normal"
                         :class="{
@@ -86,7 +87,7 @@
                           'text-gray-500': youtubeLink === '',
                         }"
                       >
-                        Video
+                        Live
                       </p>
                     </outer-link>
                   </div>
@@ -266,7 +267,7 @@
 
 <script>
 import moment from 'moment/moment'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+// import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
