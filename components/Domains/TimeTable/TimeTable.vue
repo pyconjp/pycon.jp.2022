@@ -309,6 +309,8 @@ export default {
         this.openingInfo = {
           startTime: this.$dayjs(openingInfo[0].start).format('HH:mm'),
           title: openingInfo[0].title,
+          ...openingInfo[0],
+          speakers: [{ code: '', name: '', biography: '', avatar: null }],
         }
       }
 
@@ -350,6 +352,8 @@ export default {
         this.lightningTalkInfo = {
           startTime: this.$dayjs(lightningTalkInfo[0].start).format('HH:mm'),
           title: lightningTalkInfo[0].title,
+          ...lightningTalkInfo[0],
+          speakers: [{ code: '', name: '', biography: '', avatar: null }],
         }
       }
 
@@ -358,6 +362,8 @@ export default {
         this.closingInfo = {
           startTime: this.$dayjs(closingInfo[0].start).format('HH:mm'),
           title: closingInfo[0].title,
+          ...closingInfo[0],
+          speakers: [{ code: '', name: '', biography: '', avatar: null }],
         }
       }
 
