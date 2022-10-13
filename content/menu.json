@@ -12,6 +12,11 @@
         "title": "common.menu.about.guideline",
         "link": "common.menu.about.guidelineLink",
         "innerlink": false
+      },
+      {
+        "title": "common.menu.about.venue",
+        "link": "/venue",
+        "innerlink": true
       }
     ]
   },
@@ -22,6 +27,11 @@
       {
         "title": "common.menu.event.timetable",
         "link": "/timetable",
+        "innerlink": true
+      },
+      {
+        "title": "common.menu.event.events",
+        "link": "/events",
         "innerlink": true
       }
     ]
@@ -34,18 +44,6 @@
         "title": "common.menu.sponsor.sponsorList",
         "link": "/sponsors",
         "innerlink": true
-      },
-      {
-        "title": "common.menu.sponsor.sponsorApplicationInformation",
-        "link": "common.menu.sponsor.sponsorApplicationInformationLink",
-        "innerlink": false,
-        "disable": true
-      },
-      {
-        "title": "common.menu.sponsor.sponsorApplicationRequirements",
-        "link": "common.menu.sponsor.sponsorApplicationRequirementsLink",
-        "innerlink": false,
-        "disable": true
       }
     ]
   },

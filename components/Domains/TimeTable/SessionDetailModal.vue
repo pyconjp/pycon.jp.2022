@@ -62,75 +62,63 @@
                 </div>
                 <div class="flex flex-row content-center mt-4">
                   <!-- Youtube -->
-                  <!-- <outer-link
-                    :to="youtubeLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex mr-8 hover:opacity-70"
-                    :class="{ 'pointer-events-none': youtubeLink === '' }"
-                  > -->
-                  <div class="flex mr-8 pointer-events-none">
-                    <!-- <img
-                      class="self-center lg:h-full h-4/5"
-                      src="@/assets/images/icons/video.svg"
-                      alt="video-icon"
-                      :class="{
-                        'filter-blue-green': youtubeLink !== '',
-                        'filter-gray': youtubeLink === '',
-                      }"
-                    />
-                    <p
-                      class="ml-2 text-xl font-normal"
-                      :class="{
-                        'text-blue-green': youtubeLink !== '',
-                        'text-gray-500': youtubeLink === '',
-                      }"
-                    > -->
-                    <img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/video.svg"
-                      alt="video-icon"
-                    />
-                    <p class="ml-2 text-xl font-normal text-gray-500">Video</p>
-                    <!-- </outer-link> -->
+                  <div v-if="showApprovalVideo">
+                    <outer-link
+                      :to="youtubeLink"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex mr-8 hover:opacity-70"
+                      :class="{ 'pointer-events-none': youtubeLink === '' }"
+                    >
+                      <img
+                        class="self-center lg:h-full h-4/5"
+                        src="@/assets/images/icons/video.svg"
+                        alt="video-icon"
+                        :class="{
+                          'filter-blue-green': youtubeLink !== '',
+                          'filter-gray': youtubeLink === '',
+                        }"
+                      />
+                      <p
+                        class="ml-2 text-xl font-normal"
+                        :class="{
+                          'text-blue-green': youtubeLink !== '',
+                          'text-gray-500': youtubeLink === '',
+                        }"
+                      >
+                        Video
+                      </p>
+                    </outer-link>
                   </div>
                   <!--スライド-->
-                  <div class="flex mr-8 pointer-events-none">
-                    <!-- <outer-link
-                    :to="documentLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="flex hover:opacity-70"
-                    :class="{ 'pointer-events-none': documentLink === '' }"
-                    ><img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/documents.svg"
-                      alt="documents-icon"
-                      :class="{
-                        'filter-blue-green': documentLink !== '',
-                        'filter-gray': documentLink === '',
-                      }"
-                    />
-                    <div
-                      class="ml-2 text-xl font-normal whitespace-nowrap"
-                      :class="{
-                        'text-blue-green': documentLink !== '',
-                        'text-gray-500': documentLink === '',
-                      }"
-                    > -->
-                    <img
-                      class="self-center lg:h-full h-4/5 filter-gray"
-                      src="@/assets/images/icons/documents.svg"
-                      alt="documents-icon"
-                    />
-                    <div
-                      class="ml-2 text-xl font-normal text-gray-500 whitespace-nowrap"
-                    >
-                      Document (<span v-if="langOfSlide === 'Japanese only'"
-                        >日本語</span
-                      ><span v-else>English</span>)
-                    </div>
-                    <!-- </outer-link> -->
+                  <div v-if="showApprovalDoc">
+                    <outer-link
+                      :to="documentLink"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="flex hover:opacity-70"
+                      :class="{ 'pointer-events-none': documentLink === '' }"
+                      ><img
+                        class="self-center lg:h-full h-4/5 filter-gray"
+                        src="@/assets/images/icons/documents.svg"
+                        alt="documents-icon"
+                        :class="{
+                          'filter-blue-green': documentLink !== '',
+                          'filter-gray': documentLink === '',
+                        }"
+                      />
+                      <div
+                        class="ml-2 text-xl font-normal whitespace-nowrap"
+                        :class="{
+                          'text-blue-green': documentLink !== '',
+                          'text-gray-500': documentLink === '',
+                        }"
+                      >
+                        Document (<span v-if="langOfSlide === 'Japanese only'"
+                          >日本語</span
+                        ><span v-else>English</span>)
+                      </div>
+                    </outer-link>
                   </div>
                 </div>
               </div>
@@ -278,6 +266,7 @@
 
 <script>
 import moment from 'moment/moment'
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import OuterLink from '@/components/Elements/OuterLink'
 
 export default {
@@ -290,7 +279,7 @@ export default {
       type: Object,
       default() {
         return {
-          id: '',
+          code: '',
           title: '',
           name: '',
           profile: '',
@@ -312,6 +301,12 @@ export default {
         }
       },
     },
+    approvalData: {
+      type: Object,
+      default() {
+        return {}
+      },
+    },
   },
   data() {
     return {
@@ -319,8 +314,10 @@ export default {
       sessionTitle: '',
       speakerName: '',
       speakerProfile: '',
-      // youtubeLink: '',
-      // documentLink: '',
+      youtubeLink: '',
+      documentLink: '',
+      showApprovalVideo: false,
+      showApprovalDoc: false,
       sessionAbstract: '',
       prerequisiteKnowledge: '',
       track: '',
@@ -359,8 +356,10 @@ export default {
     this.langOfTalk = this.sessionData.language
     this.langOfSlide = this.sessionData.languageOfPresentationMaterial
     this.sessionDescription = this.sessionData.description
-    // this.youtubeLink = this.sessionData.recording_url
-    // this.documentLink = this.sessionData.slide_url
+    this.youtubeLink = this.approvalData[this.sessionData.code][0]
+    this.documentLink = this.approvalData[this.sessionData.code][1]
+    this.showApprovalVideo = this.approvalData[this.sessionData.code][2]
+    this.showApprovalDoc = this.approvalData[this.sessionData.code][3]
     this.sessionStart = moment(this.sessionData.start).format('MMM DD h:mm a')
     this.sessionEnd = moment(this.sessionData.end).format('h:mm a')
     this.sessionRoom = this.sessionData.room
@@ -368,6 +367,13 @@ export default {
     this.sessionRequiredKnowledge = this.sessionData.requiredKnowledge
     this.sessionAudienceExperiment = this.sessionData.audienceExperiment
   },
+  // mounted() {
+  //   const modal = document.querySelector('.modal')
+  //   disableBodyScroll(modal)
+  // },
+  // beforeDestroy() {
+  //   clearAllBodyScrollLocks()
+  // },
 }
 </script>
 
