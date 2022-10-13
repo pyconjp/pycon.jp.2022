@@ -58,9 +58,9 @@ import OuterLink from '@/components/Elements/OuterLink'
 export default {
   name: 'ChierPersonSection',
   components: {
-    OuterLink
+    OuterLink,
   },
-  data: () => ({})
+  data: () => ({}),
 }
 </script>
 
@@ -100,8 +100,8 @@ export default {
   },
   "en": {
     "chair": {
-      "name": "片寄 里菜",
-      "description": "うさぎ大好き。PyConJP2022座長。車やDrone, Raspberry Piなどガジェットが好きです。ピアノ,バイオリン,ドラムを特訓中。プログラマー、エンジニアではなく科学者(Scientist)を目指す。Pyladies Tokyo Staff, 株式会社moegi代表、航空宇宙学修了。三アマ取得",
+      "name": "Lina Katayose",
+      "description": "She first attended PyCon JP 2016. After then, she participated as a speaker in 2017,2018, and in 2020 as an invited speaker. Overseas, she has attended PyCon US, PyCon Taiwan, and PyCon Thailand. She is a rabbit lover. She also loves cars, Drone, Raspberry Pi, and other gadgets. Currently training piano and violin. She is a Pyladies Tokyo Staff member and a representative of moegi, Inc. Graduated from Tokai University with a degree in Aeronautics and Astronautics. Senior Research Fellow, Keio Research Institute at SFC, Keio University.",
       "sns": {
         "twitter": "https://twitter.com/selina787b",
         "github": null,
