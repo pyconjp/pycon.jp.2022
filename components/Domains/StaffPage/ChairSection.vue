@@ -17,11 +17,11 @@
             <!-- right text -->
             <div class="flex flex-col lg:mt-0 lg:ml-10 w-12/12 lg:flex-[2_2_0]">
               <div
-                class="font-bold chair-name text-primary-900"
+                class="font-bold font-fira text-primary-900"
                 v-html="'片寄 里菜 / Lina KATAYOSE(selina)'"
               ></div>
               <p
-                class="mt-5 font-bold chair-description"
+                class="mt-5 font-bold font-noto chair-description"
                 v-html="$t('chair.description')"
               ></p>
               <outer-link
@@ -66,7 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 .chair-name {
-  font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
@@ -74,7 +73,6 @@ export default {
 }
 
 .chair-description {
-  font-family: 'Noto Sans JP';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

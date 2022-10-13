@@ -1,7 +1,7 @@
 <template>
   <div class="font-medium font-noto">
     <div v-if="staffs && core_staffs && core_staffs.length > 0">
-      <div class="grid-cols-1 mx-60 grid lg:grid-cols-4">
+      <div class="grid-cols-2 lg:mx-60 grid lg:grid-cols-4">
         <div v-for="staff in core_staffs" :key="staff.id" class="mt-10">
           <div class="inline bg-tertiary-50 w-[60px] h-[60px] mr-1">
             <div v-if="staff[$i18n.locale].img_file">
@@ -14,26 +14,30 @@
             </div>
           </div>
           {{ staff[$i18n.locale].name }}
-          <outer-link
-            :to="staff[$i18n.locale].twitter"
-            class="text-2xl font-bold font-noto text-primary-700"
-          >
-            <img
-              class="inline w-6 h-6"
-              data-v-bf323f94=""
-              :src="require('@/assets/images/sns/twitter.svg')"
-            />
-          </outer-link>
-          <outer-link
-            :to="staff[$i18n.locale].facebook"
-            class="text-2xl font-bold font-noto text-primary-700"
-          >
-            <img
-              class="inline w-6 h-6"
-              data-v-bf323f94=""
-              :src="require('@/assets/images/sns/facebook.svg')"
-            />
-          </outer-link>
+          <div v-if="staff[$i18n.locale].twitter" class="inline">
+            <outer-link
+              :to="staff[$i18n.locale].twitter"
+              class="text-2xl font-bold font-noto text-primary-700"
+            >
+              <img
+                class="inline w-6 h-6"
+                data-v-bf323f94=""
+                :src="require('@/assets/images/sns/twitter.svg')"
+              />
+            </outer-link>
+          </div>
+          <div v-if="staff[$i18n.locale].facebook" class="inline">
+            <outer-link
+              :to="staff[$i18n.locale].facebook"
+              class="text-2xl font-bold font-noto text-primary-700"
+            >
+              <img
+                class="inline w-6 h-6"
+                data-v-bf323f94=""
+                :src="require('@/assets/images/sns/facebook.svg')"
+              />
+            </outer-link>
+          </div>
         </div>
       </div>
     </div>
@@ -47,9 +51,9 @@ import staffsMixin from '@/utils/staffs_mixin'
 export default {
   name: 'StaffSection',
   components: {
-    OuterLink
+    OuterLink,
   },
-  mixins: [staffsMixin]
+  mixins: [staffsMixin],
 }
 </script>
 
