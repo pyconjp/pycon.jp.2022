@@ -3,8 +3,8 @@ QS8ZYM,pyconjp_1,2022-10-14T10:00:00+09:00,2022-10-14T10:30:00+09:00,Opening Day
 TLNEJQ,pyconjp_1,2022-10-14T10:30:00+09:00,2022-10-14T11:30:00+09:00,Keynote: Mark Shanonn,Mark Shanonn,en,English only,https://youtu.be/4dPXOZeTg2Y,OK,,OK
 S3DU8Z,pyconjp_1,2022-10-14T11:30:00+09:00,2022-10-14T13:00:00+09:00,Lunch & PyCon JP Association 公開 MTG,運営,ja-JP,Japanese only,,NG,,NG
 KJFKZH,pyconjp_1,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Sphinxを通して考える、「拡張」の仕方,Kazuya Takei (attakei),ja-JP,Japanese only,,OK,,OK
-SUUBQM,pyconjp_2,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"Introducing new game development stack using XState, PyScript and Atri",Shyam Swaroop,en,English only,,OK,,OK
-NBBLRL,pyconjp_3,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Working with Rust and Python using PyO3,Quazi Nafiul Islam,en,English only,,OK,,OK
+SUUBQM,pyconjp_2,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"Introducing new game development stack using XState, PyScript and Atri",Shyam Swaroop,en,English only,,NG,,NG
+NBBLRL,pyconjp_3,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Working with Rust and Python using PyO3,Quazi Nafiul Islam,en,English only,,NG,,NG
 ZJB8DS,pyconjp_4,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"詳解 print(\""Hello, world\"")",Rei Suyama,ja-JP,Japanese only,,OK,,OK
 NPMTSH,pyconjp_5,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,業務改善の面白さ ~毎日更新されるビジュアルコンテンツの差分をわかりやすくするためのプロトタイプを作るまで~,まりーな,ja-JP,Japanese only,,OK,,OK
 8BMTTD,pyconjp_1,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pybind11を用いたC拡張の開発,Takayuki Suzuki,ja-JP,Both,,OK,,OK
