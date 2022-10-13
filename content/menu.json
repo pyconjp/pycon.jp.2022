@@ -66,6 +66,12 @@
   {
     "category": "volunteer",
     "title": "common.menu.volunteer.volunteer",
-    "children": []
+    "children": [
+      {
+        "title": "common.menu.volunteer.volunteer",
+        "link": "/staff",
+        "innerlink": true
+      }
+    ]
   }
 ]
