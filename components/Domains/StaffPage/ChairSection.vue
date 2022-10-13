@@ -97,7 +97,7 @@ export default {
   "en": {
     "chair": {
       "name": "Lina Katayose",
-      "description": "She first attended PyCon JP 2016. After then, she participated as a speaker in 2017,2018, and in 2020 as an invited speaker. Overseas, she has attended PyCon US, PyCon Taiwan, and PyCon Thailand. She is a rabbit lover. She also loves cars, Drone, Raspberry Pi, and other gadgets. Currently training piano and violin. She is a Pyladies Tokyo Staff member and a representative of moegi, Inc. Graduated from Tokai University with a degree in Aeronautics and Astronautics. Senior Research Fellow, Keio Research Institute at SFC, Keio University.",
+      "description": "Lina attended Pycon JP in 2016 for the first time. Participated in 2017 and 2018 as a speaker, and as an invited speaker in 2020. She also attended Pycon overseas, such as in the US, Taiwan, and Thailand. Loves rabbits, cars, drones, and gadgets such as Raspberry Pi as well. Currently taking special lessons in piano and violin. Always wants to be a scientist, not a programmer or an engineer. An active member of Pyladies Tokyo and a founder of moegi Inc. Lina graduated from Tokai University with a BS and an MS in Aeronautics and Astronautics. She is currently a Senior Research Fellow at the Keio Research Institute at SFC（Shonan Fujisawa Campus）.",
       "sns": {
         "twitter": "https://twitter.com/selina787b",
         "github": null,
