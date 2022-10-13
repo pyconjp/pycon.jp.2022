@@ -47,6 +47,18 @@
               />
             </outer-link>
           </div>
+          <div v-if="staff[$i18n.locale].github" class="inline">
+            <outer-link
+              :to="staff[$i18n.locale].github"
+              class="text-2xl font-bold font-noto text-primary-700"
+            >
+              <img
+                class="inline w-6 h-6"
+                data-v-bf323f94=""
+                :src="require('@/assets/images/sns/github.svg')"
+              />
+            </outer-link>
+          </div>
         </div>
       </div>
     </div>
