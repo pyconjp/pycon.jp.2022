@@ -12,6 +12,14 @@
                 :src="staff[$i18n.locale].img_file"
               />
             </div>
+            <div v-else>
+              <img
+                class="inline sponsor-chipped-card"
+                width="60px"
+                height="60px"
+                :src="require('@/assets/images/staff/staff_icon_default.png')"
+              />
+            </div>
           </div>
           {{ staff[$i18n.locale].name }}
           <div v-if="staff[$i18n.locale].twitter" class="inline">
