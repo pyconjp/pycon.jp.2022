@@ -44,14 +44,14 @@ PAQPX8,pyconjp_3,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Reinforceme
 CRFBMR,pyconjp_4,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Python Social Authで学ぶ、OAuth2.0認可コードフローにおける異常系への対処,Yuuki Takahashi,ja-JP,Japanese only,,OK,,OK
 PCBGF8,pyconjp_5,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Pythonではじめる地理空間情報,小俣 博司 (Hiroshi Omata),ja-JP,Japanese only,,OK,,OK
 UD8FLV,pyconjp_1,2022-10-15T14:40:00+09:00,2022-10-15T15:10:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
-7UKP7H,pyconjp_1,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,データに関する堅牢性と可読性を向上させるpydanticとpanderaの活用方法の提案,桂川大輝,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,OK
-ANQJZ9,pyconjp_2,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Building Pytest Plugins,Phebe Polk,en,English only,https://youtu.be/nZr1Wks07vc,OK,,OK
-7DE8QY,pyconjp_3,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Jupyter - Under the Hood,Dhanshree Arora,en,English only,https://youtu.be/8hpczkdBjhI,OK,,OK
-JWM39L,pyconjp_4,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,続・絵を読む技術 Pythonで読むイラストの心理戦略,ひろさじ / Hirosaji,ja-JP,Japanese only,https://youtu.be/kQDLNzmUplM,OK,,OK
-QRYKXS,pyconjp_5,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,SQL クエリ解析による E2E データリネージの実現,Toshifumi Tsutsumi,ja-JP,Japanese only,https://youtu.be/wyksN-3rYuM,OK,,OK
-K3GJVU,pyconjp_1,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Python使いのためのスポーツデータ解析のきほん - PySparkとメジャーリーグデータを添えて,Shinichi Nakagawa(@shinyorke),ja-JP,Japanese only,,OK,,OK
-NKRG7V,pyconjp_2,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,What's new in Python 3.11 and beyond,Anthony Shaw,en,Both,,OK,,OK
-8LXKRJ,pyconjp_3,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Effective data science teams with Jupyter and databooks,Murilo Cunha,en,English only,,OK,,OK
-RLTTET,pyconjp_4,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,はじめての量子コンピューター,濵村 一航,ja-JP,Japanese only,,OK,,OK
-J9PTD8,pyconjp_5,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,情報システム部門の業務におけるPythonの活用,Keito FUKUSHIMA,ja-JP,Japanese only,,OK,,OK
+7UKP7H,pyconjp_1,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,データに関する堅牢性と可読性を向上させるpydanticとpanderaの活用方法の提案,桂川大輝,ja-JP,Japanese only,,OK,,OK
+ANQJZ9,pyconjp_2,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Building Pytest Plugins,Phebe Polk,en,English only,,OK,,OK
+7DE8QY,pyconjp_3,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Jupyter - Under the Hood,Dhanshree Arora,en,English only,,OK,,OK
+JWM39L,pyconjp_4,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,続・絵を読む技術 Pythonで読むイラストの心理戦略,ひろさじ / Hirosaji,ja-JP,Japanese only,,OK,,OK
+QRYKXS,pyconjp_5,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,SQL クエリ解析による E2E データリネージの実現,Toshifumi Tsutsumi,ja-JP,Japanese only,,OK,,OK
+K3GJVU,pyconjp_1,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Python使いのためのスポーツデータ解析のきほん - PySparkとメジャーリーグデータを添えて,Shinichi Nakagawa(@shinyorke),ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,OK
+NKRG7V,pyconjp_2,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,What's new in Python 3.11 and beyond,Anthony Shaw,en,Both,https://youtu.be/nZr1Wks07vc,OK,,OK
+8LXKRJ,pyconjp_3,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Effective data science teams with Jupyter and databooks,Murilo Cunha,en,English only,https://youtu.be/8hpczkdBjhI,OK,,OK
+RLTTET,pyconjp_4,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,はじめての量子コンピューター,濵村 一航,ja-JP,Japanese only,https://youtu.be/kQDLNzmUplM,OK,,OK
+J9PTD8,pyconjp_5,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,情報システム部門の業務におけるPythonの活用,Keito FUKUSHIMA,ja-JP,Japanese only,https://youtu.be/wyksN-3rYuM,OK,,OK
 UQP9YT,pyconjp_1,2022-10-15T16:50:00+09:00,2022-10-15T17:40:00+09:00,Closing Day2,運営,ja-JP,Japanese only,,OK,,NG
