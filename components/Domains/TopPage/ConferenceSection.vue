@@ -27,7 +27,7 @@
                 <div class="relative w-full lg:flex-1">
                   <div class="keynote-bg">
                     <img
-                      class="relative object-cover w-11/12 h-5/6 keynote-clip relative w-full lg:flex-1"
+                      class="relative object-cover w-11/12 w-full h-5/6 keynote-clip lg:flex-1"
                       :src="keynote_info[keynote].image"
                       :alt="`${keynote}_img`"
                     />
