@@ -34,7 +34,7 @@
         >
           {{ event.description }}
         </div>
-        <outer-link :to="event.url" v-if="event.url">
+        <outer-link v-if="event.url" :to="event.url">
           <div
             class="py-2 mt-1 whitespace-nowrap text-center rounded shadow-md font-noto bg-primary-700 text-tertiary-100 w-1/2 mx-auto mt-6 font-bold"
           >
