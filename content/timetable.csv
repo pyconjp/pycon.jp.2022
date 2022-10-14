@@ -10,7 +10,7 @@ NPMTSH,pyconjp_5,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,業務改�
 8BMTTD,pyconjp_1,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pybind11を用いたC拡張の開発,Takayuki Suzuki,ja-JP,Both,,OK,,OK
 8SAWQX,pyconjp_2,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,イベント駆動アーキテクチャについて,Masataka Arai,ja-JP,Japanese only,,OK,,OK
 NSNR9E,pyconjp_3,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Tracking the invisible: Geoinformatics and Human Social Behavior,Violeta Sosa,en,English only,,OK,,OK
-LPYF7C,pyconjp_4,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pythonとアスタリスク 🐍🌟💫🐍🌟💫,nikkie,ja-JP,Japanese only,,OK,,OK
+LPYF7C,pyconjp_4,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pythonとアスタリスク 🐍🌟💫🐍🌟💫,nikkie,ja-JP,Japanese only,,OK,https://ftnext.github.io/2022_slides/pyconjp/python_and_star.html#/,OK
 7YAHLF,pyconjp_5,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pandas卒業？大規模データを様々なパッケージで高速処理してみる,fujine,ja-JP,Japanese only,,OK,https://speakerdeck.com/mhrtech/pyconjp2022-hpc,OK
 JDAAHW,pyconjp_1,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Pythonに上級テクニックは要らない（そして正しい付き合い方）,清原弘貴,ja-JP,Japanese only,,OK,,OK
 TYSXUS,pyconjp_2,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python/PyQtとQGISではじめる公共交通分析,Kanahiro Iguchi,ja-JP,Both,,OK,,OK
