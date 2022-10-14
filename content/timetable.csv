@@ -16,7 +16,7 @@ JDAAHW,pyconjp_1,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Pythonに�
 TYSXUS,pyconjp_2,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python/PyQtとQGISではじめる公共交通分析,Kanahiro Iguchi,ja-JP,Both,,OK,,OK
 GQ7U8B,pyconjp_3,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Don’t let your data model `drift` away!,Neeraj Pandey,en,English only,,OK,,OK
 J7S98E,pyconjp_4,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,"Python3.11新機能asyncio.TaskGroup()と2022年asyncioの\""Hello-ish world\""",Junya Fukuda,ja-JP,Japanese only,,OK,,OK
-VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,,OK
+VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,https://speakerdeck.com/taishii/pycon-jp-2022,OK
 EB87SG,pyconjp_1,2022-10-14T15:30:00+09:00,2022-10-14T16:20:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
 JKLGKZ,pyconjp_1,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Fast API と学ぶ WebRTC,Takayuki Kawazoe,ja-JP,Japanese only,,OK,,OK
 RV9ZK9,pyconjp_2,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Playwrightを使って簡単に自動テストしてみる,Takahiro Hama,ja-JP,Japanese only,,OK,,OK
