@@ -18,16 +18,16 @@ GQ7U8B,pyconjp_3,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Don’t let
 J7S98E,pyconjp_4,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,"Python3.11新機能asyncio.TaskGroup()と2022年asyncioの\""Hello-ish world\""",Junya Fukuda,ja-JP,Japanese only,,OK,,OK
 VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,https://speakerdeck.com/taishii/pycon-jp-2022,OK
 EB87SG,pyconjp_1,2022-10-14T15:30:00+09:00,2022-10-14T16:20:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
-JKLGKZ,pyconjp_1,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Fast API と学ぶ WebRTC,Takayuki Kawazoe,ja-JP,Japanese only,https://youtu.be/4dPXOZeTg2Y,OK,,OK
-RV9ZK9,pyconjp_2,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Playwrightを使って簡単に自動テストしてみる,Takahiro Hama,ja-JP,Japanese only,https://youtu.be/D3nBkJwEUB4,OK,,OK
-PR3QXD,pyconjp_3,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Network Science with Python,Mridul Seth,en,English only,https://youtu.be/-Tbaedxz_4c,OK,,OK
-LZ8JUB,pyconjp_4,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,setuptoolsの最近,Atsushi Odagiri,ja-JP,Japanese only,https://youtu.be/YhCwt_lROH0,OK,,OK
-EEA8FG,pyconjp_5,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,実践：日本語文章生成　Transformersライブラリで学ぶ実装の守破離,石原祥太郎,ja-JP,Japanese only,https://youtu.be/kK8NnAj5gJU,OK,https://speakerdeck.com/upura/introduction-of-japanese-text-generation-with-transformers,OK
-J9XNYA,pyconjp_1,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,GeoDjango ORMと地理空間データの世界,阿部涼平,ja-JP,Japanese only,,OK,,OK
-GFM7LS,pyconjp_2,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,AST（Abstract Syntax Tree）に入門する,安本雅啓,ja-JP,Japanese only,,OK,,OK
-FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better project maintenance with static analysis,Tushar Sadhwani,en,English only,,OK,,OK
-3EUVUY,pyconjp_4,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,エッジAI開発入門,Kento Kawasaki,ja-JP,Japanese only,,OK,,OK
-K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,,OK,https://speakerdeck.com/takapy/nlpwohuo-yong-sitaonbodeingugai-shan-tokorudosutatowen-ti-henodui-ce,OK
+JKLGKZ,pyconjp_1,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Fast API と学ぶ WebRTC,Takayuki Kawazoe,ja-JP,Japanese only,,OK,,OK
+RV9ZK9,pyconjp_2,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Playwrightを使って簡単に自動テストしてみる,Takahiro Hama,ja-JP,Japanese only,,OK,,OK
+PR3QXD,pyconjp_3,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Network Science with Python,Mridul Seth,en,English only,,OK,,OK
+LZ8JUB,pyconjp_4,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,setuptoolsの最近,Atsushi Odagiri,ja-JP,Japanese only,,OK,,OK
+EEA8FG,pyconjp_5,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,実践：日本語文章生成　Transformersライブラリで学ぶ実装の守破離,石原祥太郎,ja-JP,Japanese only,,OK,https://speakerdeck.com/upura/introduction-of-japanese-text-generation-with-transformers,OK
+J9XNYA,pyconjp_1,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,GeoDjango ORMと地理空間データの世界,阿部涼平,ja-JP,Japanese only,https://youtu.be/4dPXOZeTg2Y,OK,,OK
+GFM7LS,pyconjp_2,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,AST（Abstract Syntax Tree）に入門する,安本雅啓,ja-JP,Japanese only,https://youtu.be/D3nBkJwEUB4,OK,,OK
+FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better project maintenance with static analysis,Tushar Sadhwani,en,English only,https://youtu.be/-Tbaedxz_4c,OK,,OK
+3EUVUY,pyconjp_4,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,エッジAI開発入門,Kento Kawasaki,ja-JP,Japanese only,https://youtu.be/YhCwt_lROH0,OK,,OK
+K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,https://youtu.be/kK8NnAj5gJU,OK,https://speakerdeck.com/takapy/nlpwohuo-yong-sitaonbodeingugai-shan-tokorudosutatowen-ti-henodui-ce,OK
 RLTBKP,pyconjp_1,2022-10-14T18:00:00+09:00,2022-10-14T18:30:00+09:00,LT,運営,ja-JP,Japanese only,,OK,,NG
 AUNGB9,pyconjp_1,2022-10-14T18:30:00+09:00,2022-10-14T19:00:00+09:00,Closing Day1,運営,ja-JP,Japanese only,,OK,,NG
 V9SGFS,pyconjp_1,2022-10-15T10:00:00+09:00,2022-10-15T10:30:00+09:00,Opening Day2,運営,ja-JP,Japanese only,,OK,,NG
