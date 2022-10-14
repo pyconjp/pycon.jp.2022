@@ -34,13 +34,19 @@
         >
           {{ event.description }}
         </div>
-        <outer-link :to="event.url">
+        <outer-link :to="event.url" v-if="event.url">
           <div
             class="py-2 mt-1 whitespace-nowrap text-center rounded shadow-md font-noto bg-primary-700 text-tertiary-100 w-1/2 mx-auto mt-6 font-bold"
           >
             {{ $t('details.link') }}
           </div>
         </outer-link>
+        <div
+          v-else
+          class="py-2 mt-1 whitespace-nowrap text-center rounded shadow-md font-noto bg-primary-700 text-tertiary-100 w-1/2 mx-auto mt-6 font-bold opacity-75"
+        >
+          {{ $t('details.ended') }}
+        </div>
       </div>
     </div>
   </div>
@@ -83,12 +89,14 @@ export default {
 {
   "ja": {
     "details": {
-      "link": "詳しくはこちら"
+      "link": "詳しくはこちら",
+      "ended": "終了しました"
     }
   },
   "en": {
     "details": {
-      "link": "For more information..."
+      "link": "For more information...",
+      "ended": "Closed"
     }
   }
 }
