@@ -16,7 +16,7 @@ JDAAHW,pyconjp_1,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Pythonに�
 TYSXUS,pyconjp_2,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python/PyQtとQGISではじめる公共交通分析,Kanahiro Iguchi,ja-JP,Both,,OK,,OK
 GQ7U8B,pyconjp_3,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Don’t let your data model `drift` away!,Neeraj Pandey,en,English only,,OK,,OK
 J7S98E,pyconjp_4,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,"Python3.11新機能asyncio.TaskGroup()と2022年asyncioの\""Hello-ish world\""",Junya Fukuda,ja-JP,Japanese only,,OK,,OK
-VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,,OK
+VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,https://speakerdeck.com/taishii/pycon-jp-2022,OK
 EB87SG,pyconjp_1,2022-10-14T15:30:00+09:00,2022-10-14T16:20:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
 JKLGKZ,pyconjp_1,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Fast API と学ぶ WebRTC,Takayuki Kawazoe,ja-JP,Japanese only,,OK,,OK
 RV9ZK9,pyconjp_2,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Playwrightを使って簡単に自動テストしてみる,Takahiro Hama,ja-JP,Japanese only,,OK,,OK
@@ -38,17 +38,17 @@ X8H3UD,pyconjp_2,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Security Be
 7WEVVE,pyconjp_3,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Data driven approach to analyze the efficacy of LEED certified buildings using python.,Tabassum Mushtary Meem,en,English only,,OK,,OK
 ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,,OK
 HV7UAA,pyconjp_5,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Pythonで公的統計APIのオープンデータ活用,Ryo YOSHI,ja-JP,Japanese only,,OK,,OK
-CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,OK
-PDTWEW,pyconjp_2,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Modernizing development workflow for a 7-year old 74K LoC Python project using Pantsbuild,Joongi Kim,en,English only,https://youtu.be/nZr1Wks07vc,OK,,OK
-PAQPX8,pyconjp_3,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Reinforcement learning for guiding swarm of robots using python,Raihan Seraj,en,English only,https://youtu.be/8hpczkdBjhI,OK,,OK
-CRFBMR,pyconjp_4,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Python Social Authで学ぶ、OAuth2.0認可コードフローにおける異常系への対処,Yuuki Takahashi,ja-JP,Japanese only,https://youtu.be/kQDLNzmUplM,OK,,OK
-PCBGF8,pyconjp_5,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Pythonではじめる地理空間情報,小俣 博司 (Hiroshi Omata),ja-JP,Japanese only,https://youtu.be/wyksN-3rYuM,OK,,OK
+CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,,OK,,OK
+PDTWEW,pyconjp_2,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Modernizing development workflow for a 7-year old 74K LoC Python project using Pantsbuild,Joongi Kim,en,English only,,OK,,OK
+PAQPX8,pyconjp_3,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Reinforcement learning for guiding swarm of robots using python,Raihan Seraj,en,English only,,OK,,OK
+CRFBMR,pyconjp_4,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Python Social Authで学ぶ、OAuth2.0認可コードフローにおける異常系への対処,Yuuki Takahashi,ja-JP,Japanese only,,OK,,OK
+PCBGF8,pyconjp_5,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Pythonではじめる地理空間情報,小俣 博司 (Hiroshi Omata),ja-JP,Japanese only,,OK,,OK
 UD8FLV,pyconjp_1,2022-10-15T14:40:00+09:00,2022-10-15T15:10:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
-7UKP7H,pyconjp_1,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,データに関する堅牢性と可読性を向上させるpydanticとpanderaの活用方法の提案,桂川大輝,ja-JP,Japanese only,,OK,,OK
-ANQJZ9,pyconjp_2,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Building Pytest Plugins,Phebe Polk,en,English only,,OK,,OK
-7DE8QY,pyconjp_3,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Jupyter - Under the Hood,Dhanshree Arora,en,English only,,OK,,OK
-JWM39L,pyconjp_4,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,続・絵を読む技術 Pythonで読むイラストの心理戦略,ひろさじ / Hirosaji,ja-JP,Japanese only,,OK,,OK
-QRYKXS,pyconjp_5,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,SQL クエリ解析による E2E データリネージの実現,Toshifumi Tsutsumi,ja-JP,Japanese only,,OK,,OK
+7UKP7H,pyconjp_1,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,データに関する堅牢性と可読性を向上させるpydanticとpanderaの活用方法の提案,桂川大輝,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,,OK
+ANQJZ9,pyconjp_2,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Building Pytest Plugins,Phebe Polk,en,English only,https://youtu.be/nZr1Wks07vc,OK,,OK
+7DE8QY,pyconjp_3,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,Jupyter - Under the Hood,Dhanshree Arora,en,English only,https://youtu.be/8hpczkdBjhI,OK,,OK
+JWM39L,pyconjp_4,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,続・絵を読む技術 Pythonで読むイラストの心理戦略,ひろさじ / Hirosaji,ja-JP,Japanese only,https://youtu.be/kQDLNzmUplM,OK,,OK
+QRYKXS,pyconjp_5,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,SQL クエリ解析による E2E データリネージの実現,Toshifumi Tsutsumi,ja-JP,Japanese only,https://youtu.be/wyksN-3rYuM,OK,,OK
 K3GJVU,pyconjp_1,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Python使いのためのスポーツデータ解析のきほん - PySparkとメジャーリーグデータを添えて,Shinichi Nakagawa(@shinyorke),ja-JP,Japanese only,,OK,,OK
 NKRG7V,pyconjp_2,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,What's new in Python 3.11 and beyond,Anthony Shaw,en,Both,,OK,,OK
 8LXKRJ,pyconjp_3,2022-10-15T16:00:00+09:00,2022-10-15T16:30:00+09:00,Effective data science teams with Jupyter and databooks,Murilo Cunha,en,English only,,OK,,OK
