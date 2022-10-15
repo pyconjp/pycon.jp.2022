@@ -42,7 +42,7 @@ export default {
     "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-ja.html"
   },
   "en": {
-    "title": "Volunteers wanted!",
+    "title": "Sprint leaders/participants wanted!",
     "description": "A sprint will be held on Sunday, October 16. You do not need a ticket for PyCon JP 2022 to participate in the sprint.",
     "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-en.html"
   }
