@@ -37,12 +37,12 @@ export default {
 <i18n>
 {
   "ja": {
-    "title": "スプリントリーダー/参加者募集中",
+    "title": "スプリント開催!",
     "description": "10/16(日)にスプリントを開催します。スプリント参加にあたってPyCon JP 2022のチケットは必要ありません。",
     "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-ja.html"
   },
   "en": {
-    "title": "Sprint leaders/participants wanted!",
+    "title": "Sprint Held!",
     "description": "A sprint will be held on Sunday, October 16. You do not need a ticket for PyCon JP 2022 to participate in the sprint.",
     "url": "https://pyconjp.blogspot.com/2022/09/pyconjp2022-sprint-en.html"
   }
