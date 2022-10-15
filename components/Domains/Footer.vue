@@ -118,13 +118,13 @@ const SNS = [
     name: 'twitter',
     account: '@pyconjapan',
     url: 'https://twitter.com/pyconjapan',
-    logo: 'twitter.svg',
+    logo: 'twitter_w.svg',
   },
   {
     name: 'facebook',
     account: '@PyConJP',
     url: 'https://www.facebook.com/PyConJP/',
-    logo: 'facebook.svg',
+    logo: 'facebook_w.svg',
   },
 ]
 
