@@ -2,20 +2,20 @@ code,room,start,end,title,name,language,languageOfPresentationMaterial,Video,app
 QS8ZYM,pyconjp_1,2022-10-14T10:00:00+09:00,2022-10-14T10:30:00+09:00,Opening Day1,運営,ja-JP,Japanese only,,OK,,NG
 TLNEJQ,pyconjp_1,2022-10-14T10:30:00+09:00,2022-10-14T11:30:00+09:00,Keynote: Mark Shanonn,Mark Shanonn,en,English only,,OK,,OK
 S3DU8Z,pyconjp_1,2022-10-14T11:30:00+09:00,2022-10-14T13:00:00+09:00,Lunch & PyCon JP Association 公開 MTG,運営,ja-JP,Japanese only,,NG,,NG
-KJFKZH,pyconjp_1,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Sphinxを通して考える、「拡張」の仕方,Kazuya Takei (attakei),ja-JP,Japanese only,,OK,,OK
+KJFKZH,pyconjp_1,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Sphinxを通して考える、「拡張」の仕方,Kazuya Takei (attakei),ja-JP,Japanese only,,OK,https://speakerdeck.com/attakei/first-approach-for-development-sphinx-extension,OK
 SUUBQM,pyconjp_2,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"Introducing new game development stack using XState, PyScript and Atri",Shyam Swaroop,en,English only,,NG,,NG
 NBBLRL,pyconjp_3,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,Working with Rust and Python using PyO3,Quazi Nafiul Islam,en,English only,,NG,,NG
-ZJB8DS,pyconjp_4,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"詳解 print(\""Hello, world\"")",Rei Suyama,ja-JP,Japanese only,,OK,,OK
+ZJB8DS,pyconjp_4,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,"詳解 print(\""Hello, world\"")",Rei Suyama,ja-JP,Japanese only,,OK,https://docs.google.com/presentation/d/19b0jIIj2-KmwXf49eWM2dgzZPeSuxABDyib_lpyTCxU/mobilepresent?slide=id.p,OK
 NPMTSH,pyconjp_5,2022-10-14T13:00:00+09:00,2022-10-14T13:30:00+09:00,業務改善の面白さ ~毎日更新されるビジュアルコンテンツの差分をわかりやすくするためのプロトタイプを作るまで~,まりーな,ja-JP,Japanese only,,OK,,OK
-8BMTTD,pyconjp_1,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pybind11を用いたC拡張の開発,Takayuki Suzuki,ja-JP,Both,,OK,,OK
-8SAWQX,pyconjp_2,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,イベント駆動アーキテクチャについて,Masataka Arai,ja-JP,Japanese only,,OK,,OK
+8BMTTD,pyconjp_1,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pybind11を用いたC拡張の開発,Takayuki Suzuki,ja-JP,Both,,OK,https://www.slideshare.net/takayukisuzuki3745/developmentcextensionwithpybind11pdf,OK
+8SAWQX,pyconjp_2,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,イベント駆動アーキテクチャについて,Masataka Arai,ja-JP,Japanese only,,OK,https://speakerdeck.com/massa142/event-driven-architecture,OK
 NSNR9E,pyconjp_3,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Tracking the invisible: Geoinformatics and Human Social Behavior,Violeta Sosa,en,English only,,OK,,OK
-LPYF7C,pyconjp_4,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pythonとアスタリスク 🐍🌟💫🐍🌟💫,nikkie,ja-JP,Japanese only,,OK,,OK
+LPYF7C,pyconjp_4,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pythonとアスタリスク 🐍🌟💫🐍🌟💫,nikkie,ja-JP,Japanese only,,OK,https://ftnext.github.io/2022_slides/pyconjp/python_and_star.html#,OK
 7YAHLF,pyconjp_5,2022-10-14T13:50:00+09:00,2022-10-14T14:20:00+09:00,Pandas卒業？大規模データを様々なパッケージで高速処理してみる,fujine,ja-JP,Japanese only,,OK,https://speakerdeck.com/mhrtech/pyconjp2022-hpc,OK
-JDAAHW,pyconjp_1,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Pythonに上級テクニックは要らない（そして正しい付き合い方）,清原弘貴,ja-JP,Japanese only,,OK,,OK
-TYSXUS,pyconjp_2,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python/PyQtとQGISではじめる公共交通分析,Kanahiro Iguchi,ja-JP,Both,,OK,,OK
-GQ7U8B,pyconjp_3,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Don’t let your data model `drift` away!,Neeraj Pandey,en,English only,,OK,,OK
-J7S98E,pyconjp_4,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,"Python3.11新機能asyncio.TaskGroup()と2022年asyncioの\""Hello-ish world\""",Junya Fukuda,ja-JP,Japanese only,,OK,,OK
+JDAAHW,pyconjp_1,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Pythonに上級テクニックは要らない（そして正しい付き合い方）,清原弘貴,ja-JP,Japanese only,,OK,http://slides.hirokiky.org/pyconjp2022.html#1,OK
+TYSXUS,pyconjp_2,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python/PyQtとQGISではじめる公共交通分析,Kanahiro Iguchi,ja-JP,Both,,OK,https://docs.google.com/presentation/d/1170n3dQLIJlGiZBqlHM6nfZz3Bx_EKYIOCwjmn6tc8Y/edit#slide=id.gfe69acb67b_0_691,OK
+GQ7U8B,pyconjp_3,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Don’t let your data model `drift` away!,Neeraj Pandey,en,English only,,NG,,NG
+J7S98E,pyconjp_4,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,"Python3.11新機能asyncio.TaskGroup()と2022年asyncioの\""Hello-ish world\""",Junya Fukuda,ja-JP,Japanese only,,OK,https://speakerdeck.com/jrfk/python3-dot-11xin-ji-neng-asyncio-dot-taskgroup-to2022nian-asynciono-hello-ish-world,OK
 VZXWTG,pyconjp_5,2022-10-14T14:40:00+09:00,2022-10-14T15:10:00+09:00,Python ライブラリ開発における失敗談 〜開発者に選ばれるライブラリを作るために必要なこと〜,池田 大志,ja-JP,Japanese only,,OK,https://speakerdeck.com/taishii/pycon-jp-2022,OK
 EB87SG,pyconjp_1,2022-10-14T15:30:00+09:00,2022-10-14T16:20:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
 JKLGKZ,pyconjp_1,2022-10-14T16:20:00+09:00,2022-10-14T16:50:00+09:00,Fast API と学ぶ WebRTC,Takayuki Kawazoe,ja-JP,Japanese only,,OK,,OK
@@ -27,21 +27,21 @@ J9XNYA,pyconjp_1,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,GeoDjango O
 GFM7LS,pyconjp_2,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,AST（Abstract Syntax Tree）に入門する,安本雅啓,ja-JP,Japanese only,,OK,,OK
 FDW3Z8,pyconjp_3,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,Better project maintenance with static analysis,Tushar Sadhwani,en,English only,,OK,,OK
 3EUVUY,pyconjp_4,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,エッジAI開発入門,Kento Kawasaki,ja-JP,Japanese only,,OK,,OK
-K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,,OK,,OK
+K7K3BG,pyconjp_5,2022-10-14T17:10:00+09:00,2022-10-14T17:40:00+09:00,NLPを活用したアプリチュートリアルの改善とコールドスタート問題への対策,Takanobu Nozawa,ja-JP,Japanese only,,OK,https://speakerdeck.com/takapy/nlpwohuo-yong-sitaonbodeingugai-shan-tokorudosutatowen-ti-henodui-ce,OK
 RLTBKP,pyconjp_1,2022-10-14T18:00:00+09:00,2022-10-14T18:30:00+09:00,LT,運営,ja-JP,Japanese only,,OK,,NG
 AUNGB9,pyconjp_1,2022-10-14T18:30:00+09:00,2022-10-14T19:00:00+09:00,Closing Day1,運営,ja-JP,Japanese only,,OK,,NG
 V9SGFS,pyconjp_1,2022-10-15T10:00:00+09:00,2022-10-15T10:30:00+09:00,Opening Day2,運営,ja-JP,Japanese only,,OK,,NG
 HFEB37,pyconjp_1,2022-10-15T10:30:00+09:00,2022-10-15T11:30:00+09:00,基調講演: 西内 啓氏,西内 啓氏,ja-JP,Japanese only,,OK,,OK
 NHY3TK,pyconjp_1,2022-10-15T11:30:00+09:00,2022-10-15T13:00:00+09:00,Lunch + session Day2,運営,ja-JP,Japanese only,,NG,,NG
-ELUNPR,pyconjp_1,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Automate the Boring Stuff with Slackbot(ver.2),Takanori Suzuki,ja-JP,English only,,OK,,OK
+ELUNPR,pyconjp_1,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Automate the Boring Stuff with Slackbot(ver.2),Takanori Suzuki,ja-JP,English only,,OK,https://slides.takanory.net/slides/20221015pyconjp/#/,OK
 X8H3UD,pyconjp_2,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Security Best Practices for Django Applications,Gajendra Deshpande,en,English only,,OK,,OK
 7WEVVE,pyconjp_3,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Data driven approach to analyze the efficacy of LEED certified buildings using python.,Tabassum Mushtary Meem,en,English only,,OK,,OK
-ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,,OK
+ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,https://speakerdeck.com/denzow/oqian-hamadaben-dang-nodjango-asgiwozhi-ranai-pyconjp2022,OK
 HV7UAA,pyconjp_5,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Pythonで公的統計APIのオープンデータ活用,Ryo YOSHI,ja-JP,Japanese only,,OK,,OK
-CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,,OK,,OK
+CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,,OK,https://speakerdeck.com/atamaplus/pycon-jp-2022-atama-plus-pylint,OK
 PDTWEW,pyconjp_2,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Modernizing development workflow for a 7-year old 74K LoC Python project using Pantsbuild,Joongi Kim,en,English only,,OK,,OK
 PAQPX8,pyconjp_3,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Reinforcement learning for guiding swarm of robots using python,Raihan Seraj,en,English only,,OK,,OK
-CRFBMR,pyconjp_4,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Python Social Authで学ぶ、OAuth2.0認可コードフローにおける異常系への対処,Yuuki Takahashi,ja-JP,Japanese only,,OK,,OK
+CRFBMR,pyconjp_4,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Python Social Authで学ぶ、OAuth2.0認可コードフローにおける異常系への対処,Yuuki Takahashi,ja-JP,Japanese only,,OK,https://speakerdeck.com/yktakaha4/python-social-authdexue-bu-oauth2-dot-0ren-ke-kodohuroniokeruyi-chang-xi-henodui-chu,OK
 PCBGF8,pyconjp_5,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Pythonではじめる地理空間情報,小俣 博司 (Hiroshi Omata),ja-JP,Japanese only,,OK,,OK
 UD8FLV,pyconjp_1,2022-10-15T14:40:00+09:00,2022-10-15T15:10:00+09:00,Coffee Break,運営,ja-JP,Japanese only,,NG,,NG
 7UKP7H,pyconjp_1,2022-10-15T15:10:00+09:00,2022-10-15T15:40:00+09:00,データに関する堅牢性と可読性を向上させるpydanticとpanderaの活用方法の提案,桂川大輝,ja-JP,Japanese only,,OK,,OK
