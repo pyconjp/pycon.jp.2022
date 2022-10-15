@@ -36,7 +36,7 @@ NHY3TK,pyconjp_1,2022-10-15T11:30:00+09:00,2022-10-15T13:00:00+09:00,Lunch + ses
 ELUNPR,pyconjp_1,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Automate the Boring Stuff with Slackbot(ver.2),Takanori Suzuki,ja-JP,English only,,OK,https://slides.takanory.net/slides/20221015pyconjp/#/,OK
 X8H3UD,pyconjp_2,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Security Best Practices for Django Applications,Gajendra Deshpande,en,English only,,OK,,OK
 7WEVVE,pyconjp_3,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Data driven approach to analyze the efficacy of LEED certified buildings using python.,Tabassum Mushtary Meem,en,English only,,OK,,OK
-ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,,OK
+ZX3NRW,pyconjp_4,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,お前はまだ本当のDjango ASGIを知らない。,denzow,ja-JP,Japanese only,,OK,https://speakerdeck.com/denzow/oqian-hamadaben-dang-nodjango-asgiwozhi-ranai-pyconjp2022,OK
 HV7UAA,pyconjp_5,2022-10-15T13:00:00+09:00,2022-10-15T13:30:00+09:00,Pythonで公的統計APIのオープンデータ活用,Ryo YOSHI,ja-JP,Japanese only,,OK,,OK
 CNFPPT,pyconjp_1,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,コーディング規約自動化: PyLintのカスタムルールを作ろう,Takayuki Hirayama,ja-JP,Japanese only,https://youtu.be/LVdxCWdhROU,OK,https://speakerdeck.com/atamaplus/pycon-jp-2022-atama-plus-pylint,OK
 PDTWEW,pyconjp_2,2022-10-15T13:50:00+09:00,2022-10-15T14:20:00+09:00,Modernizing development workflow for a 7-year old 74K LoC Python project using Pantsbuild,Joongi Kim,en,English only,https://youtu.be/nZr1Wks07vc,OK,,OK
