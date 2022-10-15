@@ -27,7 +27,7 @@
                 <div class="relative w-full lg:flex-1">
                   <div class="keynote-bg">
                     <img
-                      class="relative object-cover w-11/12 h-5/6 keynote-clip relative w-full lg:flex-1"
+                      class="relative object-cover w-11/12 w-full h-5/6 keynote-clip lg:flex-1"
                       :src="keynote_info[keynote].image"
                       :alt="`${keynote}_img`"
                     />
@@ -206,7 +206,7 @@ export default {
       "date": "2022.10.15 10:30 -",
       "name": "西内 啓 / Hiromu Nishiuchi",
       "title": "",
-      "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Plicy Making: 科学的根拠に基づく政策立案政策立案)アドバイザリーボードメンバーも務める。"
+      "desc": "東京大学大学院医学系研究科医療コミュニケーション学分野助教、大学病院医療情報ネットワーク研究センター副センター長、ダナファーバー/ハーバードがん研究センター客員研究員を経て、2014年11月より株式会社データビークルを創業。<br/>      自身のノウハウを活かした拡張アナリティクスツール「dataDiver」などの開発・販売と、官民のデータ活用プロジェクト支援に従事。著書に累計50万部を突破した『統計学が最強の学問である』シリーズのほか、『統計学が日本を救う』（中央公論新社）など。<br/>      2020年より内閣府EBPM(Evidence Based Policy Making: 科学的根拠に基づく政策立案)アドバイザリーボードメンバーも務める。"
     },
     "timetable": "タイムテーブル詳細"
   }

@@ -188,7 +188,7 @@ export default {
   },
   data() {
     return {
-      targetDay: 1,
+      targetDay: 2,
       primaryColor: fullConfig.theme.colors.primary[700],
       secondaryColor: fullConfig.theme.colors.secondary[400],
       openingInfo: {
