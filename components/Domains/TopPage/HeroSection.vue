@@ -58,13 +58,11 @@
               {{ $t('ticket.conference') }}
             </div>
           </outer-link>
-          <outer-link to="https://connpass.com/event/261187">
-            <div
-              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded hover:opacity-75"
-            >
-              {{ $t('ticket.party') }}
-            </div>
-          </outer-link>
+          <div
+            class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
+          >
+            {{ $t('ticket.party') }}
+          </div>
         </div>
         <div class="lg:w-96 w-full mt-10 lg:mt-0">
           <a
@@ -112,7 +110,7 @@ export default {
     "sprint_date": "2022.10.16(Sun)",
     "ticket": {
       "conference": "カンファレンスチケット",
-      "party": "Official Partyチケット"
+      "party": "Official Partyチケット (完売)"
     }
   },
   "en": {
@@ -120,7 +118,7 @@ export default {
     "sprint_date": "OCTOBER 16, 2022",
     "ticket": {
       "conference": "Conference Ticket",
-      "party": "Official Party Ticket"
+      "party": "Official Party Ticket (Sold out)"
     }
   }
 }
