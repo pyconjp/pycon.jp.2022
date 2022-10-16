@@ -1,9 +1,6 @@
 <template>
   <div class="text-center component-border-top bg-secondary-400">
     <section-title main="NEWS" sub="ニュース" class="mb-14" />
-    <div class="w-10/12 lg:w-7/12 flex gap-4 mx-auto flex-col mb-9">
-      <sprint-news-card :primary="false" />
-    </div>
     <div
       class="w-10/12 mx-auto text-left bg-tertiary-50 lg:w-7/12 chipped-card"
     >
@@ -43,12 +40,10 @@
 <script>
 import SectionTitle from '@/components/Elements/SectionTitle'
 import OuterLink from '@/components/Elements/OuterLink'
-import SprintNewsCard from '@/components/Elements/SprintNewsCard'
 
 export default {
   name: 'NewsSection',
   components: {
-    SprintNewsCard,
     OuterLink,
     SectionTitle,
   },
