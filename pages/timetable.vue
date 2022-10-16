@@ -1,10 +1,9 @@
 <template>
   <div>
-    <subpage-hero-section :title="['Time', 'Table']" subtitle="タイムテーブル">
-      <div class="w-10/12 lg:w-7/12 mx-auto">
-        <sprint-news-card :primary="true" />
-      </div>
-    </subpage-hero-section>
+    <subpage-hero-section
+      :title="['Time', 'Table']"
+      subtitle="タイムテーブル"
+    />
     <div class="pt-12 bg-tertiary-100">
       <div class="flex justify-center w-full">
         <time-table
@@ -35,12 +34,10 @@ import { filterTalkList, getAllTalkList } from '@/utils/timetable_functions'
 import mixinVideoDocuments from '@/utils/mixin_video_documents'
 import SubpageHeroSection from '@/components/Elements/SubpageHeroSection'
 import TimeTable from '@/components/Domains/TimeTable/TimeTable'
-import SprintNewsCard from '@/components/Elements/SprintNewsCard'
 
 export default {
   name: 'TimeTablePage',
   components: {
-    SprintNewsCard,
     SubpageHeroSection,
     TimeTable,
   },
