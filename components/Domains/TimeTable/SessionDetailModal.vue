@@ -79,7 +79,6 @@
                           'filter-gray': youtubeLink === '',
                         }"
                       />
-                      <!-- 配信が終わったら、Live -> Videoに変更する -->
                       <p
                         class="ml-2 text-xl font-normal"
                         :class="{
@@ -87,7 +86,7 @@
                           'text-gray-500': youtubeLink === '',
                         }"
                       >
-                        Live
+                        Video
                       </p>
                     </outer-link>
                   </div>
