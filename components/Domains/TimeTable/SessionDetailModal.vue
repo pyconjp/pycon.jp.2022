@@ -114,9 +114,11 @@
                           'text-gray-500': documentLink === '',
                         }"
                       >
-                        Document (<span v-if="langOfSlide === 'Japanese only'"
+                        Document
+                        <!-- (<span
+                          v-if="langOfSlide === 'Japanese only'"
                           >日本語</span
-                        ><span v-else>English</span>)
+                        ><span v-else>English</span>) -->
                       </div>
                     </outer-link>
                   </div>
