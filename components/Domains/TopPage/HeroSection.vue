@@ -53,14 +53,14 @@
           </outer-link>
           <outer-link to="https://connpass.com/event/255827">
             <div
-              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded hover:opacity-75"
+              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
             >
               {{ $t('ticket.conference') }}
             </div>
           </outer-link>
           <outer-link to="https://connpass.com/event/261187">
             <div
-              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded hover:opacity-75"
+              class="font-noto font-bold mt-1 bg-primary-700 text-tertiary-100 lg:text-xl text-2xl w-full text-center py-2 shadow-md rounded opacity-75"
             >
               {{ $t('ticket.party') }}
             </div>
@@ -111,16 +111,16 @@ export default {
     "conference_date": "2022.10.14(Fri)-15(Sat)",
     "sprint_date": "2022.10.16(Sun)",
     "ticket": {
-      "conference": "カンファレンスチケット",
-      "party": "Official Partyチケット"
+      "conference": "カンファレンスチケット (CLOSED)",
+      "party": "Official Partyチケット (CLOSED)"
     }
   },
   "en": {
     "conference_date": "OCTOBER 14 - 15, 2022",
     "sprint_date": "OCTOBER 16, 2022",
     "ticket": {
-      "conference": "Conference Ticket",
-      "party": "Official Party Ticket"
+      "conference": "Conference Ticket (CLOSED)",
+      "party": "Official Party Ticket (CLOSED)"
     }
   }
 }

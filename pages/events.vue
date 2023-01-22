@@ -133,7 +133,6 @@ export default {
         "detail": {
           "title": "Lightning Talk",
           "image": "lt.jpg",
-          "url": "https://pyconjp.blogspot.com/2022/10/lt-application-2022-ja.html.html",
           "description": "Day1(10/14)の18:00 JSTからLightning Talkを開催いたします。\nこの時間で発表して頂ける方を募集します。発表時間は5分です。\n好奇心あふれる、面白い、または技術的な話をPyCon JP 2022の参加者に向けてLTとして発表してみませんか?皆さんの応募をお待ちしております。"
         }
       }
@@ -161,7 +160,6 @@ export default {
         "detail": {
           "title": "Lightning Talk",
           "image": "lt.jpg",
-          "url": "https://pyconjp.blogspot.com/2022/10/lt-application-2022-en.html.html",
           "description": "Lightning Talk will be held on Day1 (OCTOBER 14) at 18:00 JST.\nWe are looking for people who can give a talk at this time.The presentation time is 5 minutes.\nWould you like to present a curious, interesting, or technical topic as an LT to PyCon JP 2022 attendees? We are looking forward to your application."
         }
       }
