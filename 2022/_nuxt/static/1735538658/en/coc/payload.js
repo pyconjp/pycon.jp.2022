@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/coc", {data:[{}],fetch:{},mutations:void 0});
